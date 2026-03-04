@@ -9,6 +9,8 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const location = useLocation()
   const isHomePage = location.pathname === '/'
+  const isAboutPage = location.pathname === '/about'
+  const isTransparentPage = isHomePage || isAboutPage
 
   const toggleMenu = () => setIsOpen(!isOpen)
 
@@ -20,17 +22,17 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const navBgClass = isHomePage
+  const navBgClass = isTransparentPage
     ? isScrolled 
       ? 'bg-white/95 backdrop-blur-md shadow-lg' 
       : 'bg-transparent'
     : 'bg-white/95 backdrop-blur-md shadow-lg'
 
-  const textColorClass = isHomePage && !isScrolled ? 'text-white' : 'text-gray-800'
-  const hoverColorClass = isHomePage && !isScrolled ? 'hover:text-cyan-400' : 'hover:text-blue-600'
+  const textColorClass = isTransparentPage && !isScrolled ? 'text-white' : 'text-gray-800'
+  const hoverColorClass = isTransparentPage && !isScrolled ? 'hover:text-cyan-400' : 'hover:text-blue-600'
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-50 rounded-b-3xl transition-all duration-300 ${navBgClass}`}>
+    <nav className={`fixed top-0 left-0 w-full z-50  transition-all duration-300 ${navBgClass}`}>
       <div className='container mx-auto px-4 py-4'>
         <div className='flex justify-between items-center'>
           {/* Logo */}
