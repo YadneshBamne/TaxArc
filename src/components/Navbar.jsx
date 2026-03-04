@@ -7,6 +7,8 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [prevScrollPos, setPrevScrollPos] = useState(0)
+  const [visible, setVisible] = useState(true)
   const location = useLocation()
   const isHomePage = location.pathname === '/'
   const isAboutPage = location.pathname === '/about'
@@ -16,11 +18,23 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
+      const currentScrollPos = window.scrollY
+      
+      // Determine if scrolled past threshold
+      setIsScrolled(currentScrollPos > 50)
+      
+      // Determine visibility based on scroll direction
+      // Show navbar when scrolling up or at the top
+      // Hide navbar when scrolling down (and not at the top)
+      const shouldBeVisible = prevScrollPos > currentScrollPos || currentScrollPos < 10
+      
+      setVisible(shouldBeVisible)
+      setPrevScrollPos(currentScrollPos)
     }
+    
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  }, [prevScrollPos])
 
   const navBgClass = isTransparentPage
     ? isScrolled 
@@ -32,7 +46,7 @@ const Navbar = () => {
   const hoverColorClass = isTransparentPage && !isScrolled ? 'hover:text-cyan-400' : 'hover:text-blue-600'
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-50  transition-all duration-300 ${navBgClass}`}>
+    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${navBgClass} ${visible ? 'translate-y-0' : '-translate-y-full'}`}>
       <div className='container mx-auto px-4 py-4'>
         <div className='flex justify-between items-center'>
           {/* Logo */}
