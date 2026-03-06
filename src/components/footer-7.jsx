@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Linkedin, Facebook, Instagram } from "lucide-react";
+import LegalModal from './LegalModal';
 
 const defaultSections = [
   {
@@ -32,7 +33,7 @@ const defaultSections = [
         icon: <Phone className="size-4" />
       },
       { 
-        name: "1801, Navratna Corporate Park, Ashok Vatika, Ahmedabad, Gujarat 380058", 
+        name: "Tower B,  1801-1802, 1819-1820, Navratna Corporate Park, Ambli Road, Ashok Vatika, Bopal, Ahmedabad, Gujarat 380058", 
         href: "#",
         icon: <MapPin className="size-4" />
       },
@@ -47,8 +48,8 @@ const defaultSocialLinks = [
 ];
 
 const defaultLegalLinks = [
-  { name: "Terms and Conditions", href: "/terms" },
-  { name: "Privacy Policy", href: "/terms" },
+  { name: "Terms and Conditions", type: "terms" },
+  { name: "Privacy Policy", type: "privacy" },
 ];
 
 export const Footer7 = ({
@@ -60,12 +61,25 @@ export const Footer7 = ({
   },
 
   sections = defaultSections,
-  description = "Strategic Offshore Partner for US Tax & Accounting Excellence",
+  description = "Your Outsourced Team for US Tax & Accounting Excellence",
   socialLinks = defaultSocialLinks,
   copyright = "© 2026 TaxArc Global. All rights reserved.",
   legalLinks = defaultLegalLinks
 }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [modalType, setModalType] = useState('terms')
+
+  const openModal = (type) => {
+    setModalType(type)
+    setIsModalOpen(true)
+  }
+
+  const closeModal = () => {
+    setIsModalOpen(false)
+  }
+
   return (
+    <>
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div
@@ -74,7 +88,7 @@ export const Footer7 = ({
             {/* Logo */}
             <div className="flex items-center gap-3 lg:justify-start">
               <Link to={logo.url}>
-                <img src={logo.src} alt={logo.alt} title={logo.title} className="h-12" />
+                <img src={logo.src} alt={logo.alt} title={logo.title} className="h-25" />
               </Link>
             </div>
             <p className="text-sm text-gray-600 leading-relaxed">
@@ -99,7 +113,7 @@ export const Footer7 = ({
                     <li key={linkIdx} className="font-medium hover:text-[#17D3CF] transition-colors">
                       {link.icon ? (
                         <a href={link.href} className="flex items-start gap-2" target={link.href.startsWith('http') ? "_blank" : undefined} rel={link.href.startsWith('http') ? "noopener noreferrer" : undefined}>
-                          <span className="text-[#17D3CF] mt-0.5">{link.icon}</span>
+                          <span className="text-[#015482] mt-0.5">{link.icon}</span>
                           <span className="flex-1">{link.name}</span>
                         </a>
                       ) : (
@@ -118,13 +132,19 @@ export const Footer7 = ({
           <ul className="order-1 flex flex-col gap-4 md:order-2 md:flex-row md:gap-6">
             {legalLinks.map((link, idx) => (
               <li key={idx} className="hover:text-[#17D3CF] transition-colors">
-                <Link to={link.href}> {link.name}</Link>
+                <button onClick={() => openModal(link.type)} className="cursor-pointer">
+                  {link.name}
+                </button>
               </li>
             ))}
           </ul>
         </div>
       </div>
     </section>
+
+    {/* Legal Modal */}
+    <LegalModal isOpen={isModalOpen} onClose={closeModal} type={modalType} />
+    </>
   );
 };
 

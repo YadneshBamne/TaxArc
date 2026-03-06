@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import ReactDOM from 'react-dom'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, X, ChevronDown } from 'lucide-react'
 import { motion, AnimatePresence } from 'motion/react'
@@ -16,22 +17,19 @@ const Navbar = () => {
 
   const toggleMenu = () => setIsOpen(!isOpen)
 
+  // Close menu on route change
+  useEffect(() => {
+    setIsOpen(false)
+  }, [location.pathname])
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.scrollY
-      
-      // Determine if scrolled past threshold
       setIsScrolled(currentScrollPos > 50)
-      
-      // Determine visibility based on scroll direction
-      // Show navbar when scrolling up or at the top
-      // Hide navbar when scrolling down (and not at the top)
       const shouldBeVisible = prevScrollPos > currentScrollPos || currentScrollPos < 10
-      
       setVisible(shouldBeVisible)
       setPrevScrollPos(currentScrollPos)
     }
-    
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [prevScrollPos])
@@ -43,104 +41,109 @@ const Navbar = () => {
   const textColorClass = !isScrolled ? 'text-white' : 'text-gray-800'
   const hoverColorClass = !isScrolled ? 'hover:text-cyan-400' : 'hover:text-blue-600'
 
-  return (
-    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${navBgClass} ${visible ? 'translate-y-0' : '-translate-y-full'}`}>
-      <div className='container mx-auto px-4 py-4'>
-        <div className='flex justify-between items-center'>
-          {/* Logo */}
-          <Link to="/" className='flex items-center'>
-            <img 
-              src="/brand.png" 
-              alt="TaxArc Global" 
-              className='h-15 w-auto'
-            />
-          </Link>
+  // Mobile menu rendered as a portal to body — escapes the nav's transform stacking context
+  const mobileMenu = (
+    <AnimatePresence>
+      {isOpen && (
+        <>
+          {/* Backdrop */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            onClick={toggleMenu}
+            style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.5)', zIndex: 99990 }}
+          />
+          
+          {/* Slide Menu */}
+          <motion.div
+            initial={{ x: '100%' }}
+            animate={{ x: 0 }}
+            exit={{ x: '100%' }}
+            transition={{ type: 'tween', duration: 0.3, ease: 'easeInOut' }}
+            style={{ position: 'fixed', top: 0, right: 0, height: '100%', width: '16rem', background: 'white', boxShadow: '0 25px 50px rgba(0,0,0,0.25)', zIndex: 99991, overflowY: 'auto' }}
+          >
+            <div className='p-6 pt-20 space-y-4'>
+              <Link to="/" className='block py-3 text-gray-800 hover:text-[#17D3CF] font-medium text-lg border-b border-gray-100' onClick={toggleMenu}>Home</Link>
+              <Link to="/about" className='block py-3 text-gray-800 hover:text-[#17D3CF] font-medium text-lg border-b border-gray-100' onClick={toggleMenu}>About Us</Link>
+              <Link to="/new-taxation" className='block py-3 text-gray-800 hover:text-[#17D3CF] font-medium text-lg border-b border-gray-100' onClick={toggleMenu}>Tax Preparation</Link>
+              <Link to="/bookkeeping-accounting-services" className='block py-3 text-gray-800 hover:text-[#17D3CF] font-medium text-lg border-b border-gray-100' onClick={toggleMenu}>Accounting & Bookkeeping</Link>
+              <Link to="/payroll" className='block py-3 text-gray-800 hover:text-[#17D3CF] font-medium text-lg border-b border-gray-100' onClick={toggleMenu}>Payroll</Link>
+              <Link to="/contact" className='block py-3 text-gray-800 hover:text-[#17D3CF] font-medium text-lg' onClick={toggleMenu}>Contact Us</Link>
+            </div>
+          </motion.div>
+        </>
+      )}
+    </AnimatePresence>
+  )
 
-          {/* Desktop Menu */}
-          <div className='hidden md:flex items-center space-x-8'>
-            <Link to="/" className={`${textColorClass} ${hoverColorClass} transition font-medium`}>
-              Home
+  return (
+    <>
+      <nav 
+        className={`fixed top-0 left-0 w-full transition-all duration-300 ${navBgClass} ${visible ? 'translate-y-0' : '-translate-y-full'}`}
+        style={{ zIndex: 9998 }}
+      >
+        <div className='container mx-auto px-4 py-4'>
+          <div className='flex justify-between items-center'>
+            {/* Logo */}
+            <Link to="/" className='flex items-center'>
+              <img 
+                src="/brand1.png" 
+                alt="TaxArc Global" 
+                className='h-18 w-auto'
+              />
             </Link>
-            <Link to="/about" className={`${textColorClass} ${hoverColorClass} transition font-medium`}>
-              About Us
-            </Link>
-            
-            {/* Services Dropdown */}
-            <div 
-              className='relative'
-              onMouseEnter={() => setServicesOpen(true)}
-              onMouseLeave={() => setServicesOpen(false)}
-            >
-              <button className={`${textColorClass} ${hoverColorClass} transition flex items-center font-medium`}>
-                Services
-                <ChevronDown className='w-4 h-4 ml-1' />
-              </button>
+
+            {/* Desktop Menu */}
+            <div className='hidden md:flex items-center space-x-8'>
+              <Link to="/" className={`${textColorClass} ${hoverColorClass} transition font-medium text-lg`}>Home</Link>
+              <Link to="/about" className={`${textColorClass} ${hoverColorClass} transition font-medium text-lg`}>About Us</Link>
               
-              <AnimatePresence>
-                {servicesOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    className='absolute top-full left-0 mt-2 bg-white shadow-lg rounded-md py-2 w-64'
-                  >
-                    <Link to="/new-taxation" className='block px-4 py-2 text-gray-800 hover:bg-cyan-50 hover:text-blue-600 transition'>
-                      Tax Preparation
-                    </Link>
-                    <Link to="/bookkeeping-accounting-services" className='block px-4 py-2 text-gray-800 hover:bg-cyan-50 hover:text-blue-600 transition'>
-                      Bookkeeping & Accounting
-                    </Link>
-                    <Link to="/payroll" className='block px-4 py-2 text-gray-800 hover:bg-cyan-50 hover:text-blue-600 transition'>
-                      Payroll Services
-                    </Link>
-                    <Link to="/new-payroll" className='block px-4 py-2 text-gray-800 hover:bg-cyan-50 hover:text-blue-600 transition'>
-                      New Payroll
-                    </Link>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+              {/* Services Dropdown */}
+              <div 
+                className='relative'
+                onMouseEnter={() => setServicesOpen(true)}
+                onMouseLeave={() => setServicesOpen(false)}
+              >
+                <button className={`${textColorClass} ${hoverColorClass} transition flex items-center font-medium text-lg`}>
+                  Services
+                  <ChevronDown className='w-4 h-4 ml-1' />
+                </button>
+                <AnimatePresence>
+                  {servicesOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      className='absolute top-full left-0 mt-2 bg-white shadow-lg rounded-md py-2 w-64'
+                    >
+                      <Link to="/new-taxation" className='block px-4 py-2 text-gray-800 hover:bg-cyan-50 hover:text-[#17D3CF] transition'>Tax Preparation</Link>
+                      <Link to="/bookkeeping-accounting-services" className='block px-4 py-2 text-gray-800 hover:bg-cyan-50 hover:text-[#17D3CF] transition'>Accounting & Bookkeeping</Link>
+                      <Link to="/payroll" className='block px-4 py-2 text-gray-800 hover:bg-cyan-50 hover:text-[#17D3CF] transition'>Payroll</Link>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+
+              <Link to="/contact" className={`${textColorClass} ${hoverColorClass} transition font-medium text-lg`}>Contact Us</Link>
             </div>
 
-            <Link to="/contact" className={`${textColorClass} ${hoverColorClass} transition font-medium`}>
-              Contact Us
-            </Link>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button 
-            onClick={toggleMenu}
-            className={`md:hidden ${textColorClass}`}
-          >
-            {isOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
-        <AnimatePresence>
-          {isOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              className='md:hidden mt-4 space-y-2 bg-white/95 backdrop-blur-md rounded-lg p-4'
+            {/* Mobile Menu Button */}
+            <button 
+              onClick={toggleMenu}
+              className={`md:hidden ${textColorClass}`}
+              style={{ zIndex: 99992 }}
             >
-              <Link to="/" className='block py-2 text-gray-800 hover:text-blue-600'>
-                Home
-              </Link>
-              <Link to="/about" className='block py-2 text-gray-800 hover:text-blue-600'>
-                About Us
-              </Link>
-              <Link to="/services" className='block py-2 text-gray-800 hover:text-blue-600'>
-                Services
-              </Link>
-              <Link to="/contact" className='block py-2 text-gray-800 hover:text-blue-600'>
-                Contact Us
-              </Link>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
-    </nav>
+              {isOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      {/* Mobile menu portalled to body to escape nav's transform stacking context */}
+      {ReactDOM.createPortal(mobileMenu, document.body)}
+    </>
   )
 }
 

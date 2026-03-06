@@ -26,7 +26,7 @@ const BookkeepingAccounting = () => {
             transition={{ duration: 0.8 }}
           >
             <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
-             Bookkeeping & Accounting
+             Accounting & Bookkeeping
             </h1>
             <p className='text-xl md:text-2xl text-white font-light'>
               Clean Books. Clear Insights. Confident Decisions.
@@ -54,7 +54,7 @@ const BookkeepingAccounting = () => {
               className='text-center mb-12'
             >
               <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-6'>
-                Our Bookkeeping & Accounting <span className='text-[#17D3CF] italic font-serif'>Services</span>
+                Our Accounting & Bookkeeping <span className='text-[#015482] italic font-inter'>Services</span>
               </h2>
               <p className='text-base md:text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto'>
                 We provide full-scope accounting support across QuickBooks Online, QuickBooks Desktop, Xero, and other major software. For accounting firms, we act as a white-label, back-office team handling the bookkeeping work you'd rather not staff internally. For businesses, we become your outsourced accounting department — managing everything from daily transactions to month-end close.
@@ -72,7 +72,7 @@ const BookkeepingAccounting = () => {
               {/* Service 1 */}
               <div className='text-center'>
                 <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <FileText className='w-8 h-8 text-[#17D3CF]' />
+                  <FileText className='w-8 h-8 text-[#015482]' />
                 </div>
                 <p className='text-sm font-medium text-gray-900'>
                   Monthly<br />Bookkeeping
@@ -82,7 +82,7 @@ const BookkeepingAccounting = () => {
               {/* Service 2 */}
               <div className='text-center'>
                 <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <LandmarkIcon className='w-8 h-8 text-[#17D3CF]' />
+                  <LandmarkIcon className='w-8 h-8 text-[#015482]' />
                 </div>
                 <p className='text-sm font-medium text-gray-900'>
                   Accounts Payable<br />& Receivable
@@ -92,7 +92,7 @@ const BookkeepingAccounting = () => {
               {/* Service 3 */}
               <div className='text-center'>
                 <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <CheckCircle2 className='w-8 h-8 text-[#17D3CF]' />
+                  <CheckCircle2 className='w-8 h-8 text-[#015482]' />
                 </div>
                 <p className='text-sm font-medium text-gray-900'>
                   Chart of Accounts<br />Setup & Restructuring
@@ -102,7 +102,7 @@ const BookkeepingAccounting = () => {
               {/* Service 4 */}
               <div className='text-center'>
                 <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <BookUser className='w-8 h-8 text-[#17D3CF]' />
+                  <BookUser className='w-8 h-8 text-[#015482]' />
                 </div>
                 <p className='text-sm font-medium text-gray-900'>
                   Catch-up & Clean-Up<br /> Accounting
@@ -112,7 +112,7 @@ const BookkeepingAccounting = () => {
               {/* Service 5 */}
               <div className='text-center'>
                 <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <DollarSign className='w-8 h-8 text-[#17D3CF]' />
+                  <DollarSign className='w-8 h-8 text-[#015482]' />
                 </div>
                 <p className='text-sm font-medium text-gray-900'>
                   Financial Statement<br />Preparation
@@ -122,7 +122,7 @@ const BookkeepingAccounting = () => {
               {/* Service 6 */}
               <div className='text-center'>
                 <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <ChartBarBigIcon className='w-8 h-8 text-[#17D3CF]' />
+                  <ChartBarBigIcon className='w-8 h-8 text-[#015482]' />
                 </div>
                 <p className='text-sm font-medium text-gray-900'>
                   White-Label<br />Bookkeeping
@@ -132,7 +132,7 @@ const BookkeepingAccounting = () => {
               {/* Service 7 */}
               <div className='text-center'>
                 <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <Database className='w-8 h-8 text-[#17D3CF]' />
+                  <Database className='w-8 h-8 text-[#015482]' />
                 </div>
                 <p className='text-sm font-medium text-gray-900'>
                   QuickBooks & Xero <br/>Setup / Migration
@@ -142,7 +142,7 @@ const BookkeepingAccounting = () => {
               {/* Service 8 */}
               <div className='text-center'>
                 <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <Zap className='w-8 h-8 text-[#17D3CF]' />
+                  <Zap className='w-8 h-8 text-[#015482]' />
                 </div>
                 <p className='text-sm font-medium text-gray-900'>
                   Month End &<br />Year-End Close
@@ -166,7 +166,7 @@ const BookkeepingAccounting = () => {
               className='text-center mb-16'
             >
               <h2 className='text-3xl md:text-4xl font-bold text-gray-900'>
-                Key <span className='text-[#17D3CF] italic font-serif'>Benefits</span>
+                Key <span className='text-[#015482] italic font-inter'>Benefits</span>
               </h2>
             </motion.div>
 
@@ -181,7 +181,7 @@ const BookkeepingAccounting = () => {
               {/* Benefit 1 */}
               <div className='flex items-start gap-4'>
                 <div className='w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <CheckCircle2 className='w-6 h-6 text-[#17D3CF]' />
+                  <CheckCircle2 className='w-6 h-6 text-[#015482]' />
                 </div>
                 <div>
                   <h3 className='text-lg font-bold text-gray-900 mb-2'>Audit-Ready Records</h3>
@@ -194,7 +194,7 @@ const BookkeepingAccounting = () => {
               {/* Benefit 2 */}
               <div className='flex items-start gap-4'>
                 <div className='w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <Clock className='w-6 h-6 text-[#17D3CF]' />
+                  <Clock className='w-6 h-6 text-[#015482]' />
                 </div>
                 <div>
                   <h3 className='text-lg font-bold text-gray-900 mb-2'>Time-recovered</h3>
@@ -207,7 +207,7 @@ const BookkeepingAccounting = () => {
               {/* Benefit 3 */}
               <div className='flex items-start gap-4'>
                 <div className='w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <FileText className='w-6 h-6 text-[#17D3CF]' />
+                  <FileText className='w-6 h-6 text-[#015482]' />
                 </div>
                 <div>
                   <h3 className='text-lg font-bold text-gray-900 mb-2'>Tax-season efficiency</h3>
@@ -220,7 +220,7 @@ const BookkeepingAccounting = () => {
               {/* Benefit 4 */}
               <div className='flex items-start gap-4'>
                 <div className='w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <BarChart3 className='w-6 h-6 text-[#17D3CF]' />
+                  <BarChart3 className='w-6 h-6 text-[#015482]' />
                 </div>
                 <div>
                   <h3 className='text-lg font-bold text-gray-900 mb-2'>Decision-grade reporting</h3>
@@ -233,7 +233,7 @@ const BookkeepingAccounting = () => {
               {/* Benefit 5 */}
               <div className='flex items-start gap-4'>
                 <div className='w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <Layers className='w-6 h-6 text-[#17D3CF]' />
+                  <Layers className='w-6 h-6 text-[#015482]' />
                 </div>
                 <div>
                   <h3 className='text-lg font-bold text-gray-900 mb-2'>Scalable processes</h3>
@@ -275,18 +275,17 @@ const BookkeepingAccounting = () => {
               className='order-1 lg:order-2 flex flex-col justify-center'
             >
               <h2 className='text-4xl md:text-5xl font-bold text-gray-900 mb-8 leading-tight'>
-                Work with Experts<br />
-                to Grow Faster &<br />
-                Run <span className='font-serif italic bg-[#17D3CF] bg-clip-text text-transparent'>Smarter</span>
+                Your Business Deserves Better.<br />
+                Scale Smarter with<br /> <span className='font-inter italic bg-[#015482] bg-clip-text text-transparent'>TaxArc Global</span>.
               </h2>
               
               <Link 
                 to="/contact" 
-                className='inline-flex items-center bg-white border-2 border-gray-300 text-gray-900 px-8 py-3 rounded-full hover:border-blue-700 hover:bg-blue-50 transition group font-semibold w-fit'
+                className='inline-flex items-center bg-white border-2 border-gray-300 text-gray-900 px-8 py-3 rounded-full hover:border-[#17d3cf] hover:bg-blue-50 transition group font-semibold w-fit'
               >
                 Get Started
                 <motion.div
-                  className='ml-3 w-8 h-8 bg-blue-700 rounded-full flex items-center justify-center'
+                  className='ml-3 w-8 h-8 bg-[#015482] hover:bg-[#17d3cf] rounded-full flex items-center justify-center'
                   whileHover={{ scale: 1.1 }}
                 >
                   <ArrowRight className='w-5 h-5 text-white' />

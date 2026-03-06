@@ -75,12 +75,8 @@ const Contact = () => {
 
   const services = [
     "Tax Preparation",
-    "Filing 1099 and issue forms",
-    "Sales Tax Service",
     "Accounting and Bookkeeping",
-    "Management Consultation",
-    "Audit & Assurance",
-    "Payroll Services",
+    "Payroll",
   ];
 
   const handleSubmit = (e) => {
@@ -105,7 +101,7 @@ const Contact = () => {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage:
-              "url(https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070)",
+              "url(./Navratna.jpg)",
           }}
         >
           <div className="absolute inset-0 bg-black/50"></div>
@@ -154,7 +150,6 @@ const Contact = () => {
       >
         {/* Heading */}
         <div>
-          <p className="text-[#17D3CF] text-sm font-semibold mb-2">[Find Us]</p>
           <h2 className="text-4xl font-bold text-gray-900 mb-3">Get In Touch</h2>
           <p className="text-gray-500 leading-relaxed">
             We'd love to hear from you. Reach out via any of the channels below and we'll respond promptly.
@@ -162,30 +157,29 @@ const Contact = () => {
         </div>
 
         {/* Divider */}
-        <div className="w-16 h-1 bg-[#17D3CF] rounded-full" />
+        <div className="w-16 h-1 bg-[#015482] rounded-full" />
 
         {/* Contact Cards */}
         <div className="space-y-4">
 
           {/* Address */}
-          <div className="flex items-start gap-5 p-5 rounded-2xl border border-gray-100 hover:border-[#17D3CF]/40 hover:shadow-md transition-all duration-300 group">
-            <div className="w-12 h-12 bg-[#17D3CF]/10 group-hover:bg-[#17D3CF] rounded-xl flex items-center justify-center shrink-0 transition-colors duration-300">
-              <MapPin className="w-5 h-5 text-[#17D3CF] group-hover:text-white transition-colors duration-300" />
+          <div className="flex items-start gap-5 p-5 rounded-2xl border border-gray-100 hover:border-[#015482]/40 hover:shadow-md transition-all duration-300 group">
+            <div className="w-12 h-12 bg-[#015482]/10 group-hover:bg-[#015482] rounded-xl flex items-center justify-center shrink-0 transition-colors duration-300">
+              <MapPin className="w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300" />
             </div>
             <div>
               <p className="text-xs text-gray-400 font-medium uppercase tracking-wider mb-1">Office Address</p>
               <h3 className="text-base font-bold text-gray-900 mb-1">TaxArc Global</h3>
               <p className="text-sm text-gray-600 leading-relaxed">
-                1820, Navratna Corporate Park,<br />
-                Ashok Vatika, Ahmedabad, Gujarat 380058
+                Tower B, 1801-1802, 1819-1820, Navratna Corporate Park, Ambli Road, Ashok Vatika, Bopal, Ahmedabad, Gujarat 380058
               </p>
             </div>
           </div>
 
           {/* Email */}
-          <div className="flex items-start gap-5 p-5 rounded-2xl border border-gray-100 hover:border-[#17D3CF]/40 hover:shadow-md transition-all duration-300 group">
-            <div className="w-12 h-12 bg-[#17D3CF]/10 group-hover:bg-[#17D3CF] rounded-xl flex items-center justify-center shrink-0 transition-colors duration-300">
-              <Mail className="w-5 h-5 text-[#17D3CF] group-hover:text-white transition-colors duration-300" />
+          <div className="flex items-start gap-5 p-5 rounded-2xl border border-gray-100 hover:border-[#015482]/40 hover:shadow-md transition-all duration-300 group">
+            <div className="w-12 h-12 bg-[#015482]/10 group-hover:bg-[#015482] rounded-xl flex items-center justify-center shrink-0 transition-colors duration-300">
+              <Mail className="w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300" />
             </div>
             <div>
               <p className="text-xs text-gray-400 font-medium uppercase tracking-wider mb-1">Email Us</p>
@@ -200,9 +194,9 @@ const Contact = () => {
           </div>
 
           {/* Phone */}
-          <div className="flex items-start gap-5 p-5 rounded-2xl border border-gray-100 hover:border-[#17D3CF]/40 hover:shadow-md transition-all duration-300 group">
-            <div className="w-12 h-12 bg-[#17D3CF]/10 group-hover:bg-[#17D3CF] rounded-xl flex items-center justify-center shrink-0 transition-colors duration-300">
-              <Phone className="w-5 h-5 text-[#17D3CF] group-hover:text-white transition-colors duration-300" />
+          <div className="flex items-start gap-5 p-5 rounded-2xl border border-gray-100 hover:border-[#015482]/40 hover:shadow-md transition-all duration-300 group">
+            <div className="w-12 h-12 bg-[#015482]/10 group-hover:bg-[#015482] rounded-xl flex items-center justify-center shrink-0 transition-colors duration-300">
+              <Phone className="w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300" />
             </div>
             <div>
               <p className="text-xs text-gray-400 font-medium uppercase tracking-wider mb-1">Call Us</p>
@@ -246,53 +240,7 @@ const Contact = () => {
 </section>
 
       {/* Office Images Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Waiting Room */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="relative rounded-2xl overflow-hidden shadow-lg group"
-              >
-                <img
-                  src="./Navratna.jpg"
-                  alt="Waiting Room"
-                  className="w-full h-80 object-cover"
-                />
-                <div className="absolute top-4 left-4">
-                  <span className="bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold text-gray-900 shadow-md">
-                    Waiting Room
-                  </span>
-                </div>
-              </motion.div>
 
-              {/* Working Space */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="relative rounded-2xl overflow-hidden shadow-lg group"
-              >
-                <img
-                  src="./Navratna.jpg"
-                  alt="Working Space"
-                  className="w-full h-80 object-cover"
-                />
-                <div className="absolute top-4 left-4">
-                  <span className="bg-[#38373E] backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold text-white shadow-md">
-                    Working space
-                  </span>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Drop Us a Message Section */}
       <section className="mt-10 bg-gray-50">
@@ -308,49 +256,16 @@ const Contact = () => {
                 className="w-full lg:w-auto lg:max-w-md space-y-8"
               >
                 <div>
-                  <p className="text-[#17D3CF] text-sm font-semibold mb-3">
-                    [Contact]
-                  </p>
-                  <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                    Drop Us a <span className="italic font-serif">Message</span>
+                  <h2 className="text-4xl md:text-5xl mt-4 font-bold text-gray-900 mb-4">
+                    Drop Us a <br/> <span className="italic text-[#015482] font-inter">Message</span>
                   </h2>
                   <p className="text-gray-600 leading-relaxed">
-                    We're always happy to hear from you and will get back to you
+                    We're always happy to hear from you <br/>and will get back to you<br/>
                     as soon as possible.
                   </p>
                 </div>
 
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-[#17D3CF]/10 rounded-full flex items-center justify-center">
-                      <Mail className="w-5 h-5 text-[#17D3CF]" />
-                    </div>
-                    <div>
-                      <p className="text-sm text-gray-600 mb-1">Email</p>
-                      <a
-                        href="mailto:harshika.vora@gmail.com"
-                        className="text-gray-900 font-medium hover:text-[#17D3CF] transition-colors"
-                      >
-                        harshika.vora@gmail.com
-                      </a>
-                    </div>
-                  </div>
 
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-[#17D3CF]/10 rounded-full flex items-center justify-center">
-                      <Phone className="w-5 h-5 text-[#17D3CF]" />
-                    </div>
-                    <div>
-                      <p className="text-sm text-gray-600 mb-1">Call</p>
-                      <a
-                        href="tel:+919909469067"
-                        className="text-gray-900 font-medium hover:text-[#17D3CF] transition-colors"
-                      >
-                        +91 99094 69067
-                      </a>
-                    </div>
-                  </div>
-                </div>
               </motion.div>
 
               {/* Right - Contact Form */}
@@ -380,7 +295,7 @@ const Contact = () => {
                       onChange={handleChange}
                       placeholder="Enter your name"
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#17D3CF] focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#015482] focus:border-transparent transition-all"
                     />
                   </div>
 
@@ -399,7 +314,7 @@ const Contact = () => {
                       onChange={handleChange}
                       placeholder="Enter email address"
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#17D3CF] focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#015482] focus:border-transparent transition-all"
                     />
                   </div>
 
@@ -418,11 +333,35 @@ const Contact = () => {
                       placeholder="I want to collaborate"
                       required
                       rows={5}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#17D3CF] focus:border-transparent transition-all resize-none"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#015482] focus:border-transparent transition-all resize-none"
                     />
                   </div>
 
-                  <button className="w-full flex items-center justify-between bg-teal-400 hover:bg-teal-500 transition text-white font-medium text-sm px-6 py-3.5 rounded-full">
+                  {/* Selected Services Badges */}
+                  {formData.services.length > 0 && (
+                    <div className='p-4 border border-gray-200 rounded-lg bg-gray-50'>
+                      <p className='text-sm font-semibold text-gray-700 mb-3'>Your Selected Services</p>
+                      <div className='flex flex-wrap gap-2'>
+                        {formData.services.map((service) => (
+                          <span
+                            key={service}
+                            className='inline-flex items-center gap-1.5 bg-[#015482] text-white text-xs font-medium px-3 py-1.5 rounded-full'
+                          >
+                            {service}
+                            <button
+                              type='button'
+                              onClick={() => handleServiceToggle(service)}
+                              className='hover:text-gray-300 transition-colors ml-1'
+                            >
+                              ✕
+                            </button>
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  <button className="w-full flex items-center justify-between bg-[#015482] hover:bg-[#17D3CF] transition text-white font-medium text-sm px-6 py-3.5 rounded-full">
                     <span>Send Message</span>
                     <span className="w-8 h-8 bg-opacity-20 rounded-full flex items-center justify-center">
                       <ArrowUpRight size={25} className="text-white" />
@@ -438,7 +377,7 @@ const Contact = () => {
       {/* Remote Services Section */}
       {/* Remote Services Section */}
       <section>
-        <div className="container mx-auto">
+        <div className="container mx-auto p-6">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -447,7 +386,7 @@ const Contact = () => {
               transition={{ duration: 0.6 }}
               className="mt-10"
             >
-              <h3 className="text-xl font-bold text-gray-900 mb-1">
+              <h3 className="text-xl  font-bold text-gray-900 mb-1">
                 Remote Services of Interest For Your Practice
               </h3>
               <p className="text-sm text-gray-600 mb-8">
@@ -470,7 +409,7 @@ const Contact = () => {
                         width: "20px",
                         height: "20px",
                         borderRadius: "50%",
-                        border: "2px solid #4DB6AC",
+                        border: "2px solid #015482",
                         backgroundColor: "white",
                         display: "flex",
                         alignItems: "center",
@@ -484,7 +423,7 @@ const Contact = () => {
                             width: "10px",
                             height: "10px",
                             borderRadius: "50%",
-                            backgroundColor: "#4DB6AC",
+                            backgroundColor: "#015482",
                           }}
                         />
                       )}

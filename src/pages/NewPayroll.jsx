@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'motion/react'
 import { Link } from 'react-router-dom'
-import { FileText,ArrowRight, ArrowLeftRight, Settings, Sparkles, CreditCard, TrendingUp, Database, Building2, CheckCircle2, Clock, BarChart3, Layers, Banknote, LandmarkIcon, BookUser, DollarSign, ChartBarBigIcon, SparkleIcon, Zap } from 'lucide-react'
+import { FileText, ArrowRight, ArrowLeftRight, Settings, Sparkles, CreditCard, TrendingUp, Database, Building2, CheckCircle2, Clock, BarChart3, Layers, Banknote, LandmarkIcon, BookUser, DollarSign, ChartBarBigIcon, SparkleIcon, Zap, Globe, UserPlus, Receipt, Briefcase, Handshake, DatabaseIcon, GlobeX, Globe2, UserIcon } from 'lucide-react'
 
 const NewPayroll = () => {
   return (
@@ -50,101 +50,120 @@ const NewPayroll = () => {
               className='text-center mb-12'
             >
               <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-6'>
-               Our Payroll<span className='text-[#17D3CF] italic font-serif'> Services</span>
+               Our Payroll<span className='text-[#015482] italic font-inter'> Services</span>
               </h2>
               <p className='text-base md:text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto'>
                 We provide comprehensive payroll processing for businesses of all sizes and white-label payroll management for accounting firms serving business clients. Whether you need end-to-end outsourced payroll or a dependable back-office partner to handle the processing behind your client-facing service, we deliver accuracy, compliance, and efficiency at every pay cycle.
               </p>
             </motion.div>
 
-            {/* Services Grid */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className='grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8'
-            >
-              {/* Service 1 */}
-              <div className='text-center'>
-                <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <FileText className='w-8 h-8 text-[#17D3CF]' />
-                </div>
-                <p className='text-sm font-medium text-gray-900'>
-                  Data<br />Gathering
-                </p>
-              </div>
+            {/* Row 1 - 4 items */}
+            <div className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-12'>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className='flex flex-col items-center text-center'
+              >
+                <Briefcase fill='#CCD9ED' className='w-12 h-12 text-[#015482] mb-4' />
+                <p className='text-sm font-semibold'>Full-Cycle<br />Payroll Processing</p>
+              </motion.div>
 
-              {/* Service 2 */}
-              <div className='text-center'>
-                <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <LandmarkIcon className='w-8 h-8 text-[#17D3CF]' />
-                </div>
-                <p className='text-sm font-medium text-gray-900'>
-                  Tax Preparation<br />& Review
-                </p>
-              </div>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className='flex flex-col items-center text-center'
+              >
+                <FileText fill='#CCD9ED' className='w-12 h-12 text-[#015482] mb-4' />
+                <p className='text-sm font-semibold'>Federal Payroll<br />Tax Compliance</p>
+              </motion.div>
 
-              {/* Service 3 */}
-              <div className='text-center'>
-                <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <CheckCircle2 className='w-8 h-8 text-[#17D3CF]' />
-                </div>
-                <p className='text-sm font-medium text-gray-900'>
-                 Adjustments <br />& Reconciliationss
-                </p>
-              </div>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className='flex flex-col items-center text-center'
+              >
+                <Globe className='w-12 h-12 text-[#015482] mb-4' />
+                <p className='text-sm font-semibold'>State & Local<br />Payroll Tax Filings</p>
+              </motion.div>
 
-              {/* Service 4 */}
-              <div className='text-center'>
-                <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <BookUser className='w-8 h-8 text-[#17D3CF]' />
-                </div>
-                <p className='text-sm font-medium text-gray-900'>
-                  Tax Planning <br /> & Advisory
-                </p>
-              </div>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className='flex flex-col items-center text-center'
+              >
+                <LandmarkIcon fill='#CCD9ED' className='w-12 h-12 text-[#015482] mb-4' />
+                <p className='text-sm font-semibold'>Direct Deposit<br />Management</p>
+              </motion.div>
+            </div>
 
-              {/* Service 5 */}
-              <div className='text-center'>
-                <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <DollarSign className='w-8 h-8 text-[#17D3CF]' />
-                </div>
-                <p className='text-sm font-medium text-gray-900'>
-                  Financial Statement<br />Preparation
-                </p>
-              </div>
+            {/* Row 2 - 3 items */}
+            <div className='grid grid-cols-2 md:grid-cols-3 gap-8 mb-12 max-w-3xl mx-auto'>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className='flex flex-col items-center text-center'
+              >
+                <UserPlus className='w-12 h-12 text-[#015482] mb-4' />
+                <p className='text-sm font-semibold'>New Hire<br />Reporting</p>
+              </motion.div>
 
-              {/* Service 6 */}
-              <div className='text-center'>
-                <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <ChartBarBigIcon className='w-8 h-8 text-[#17D3CF]' />
-                </div>
-                <p className='text-sm font-medium text-gray-900'>
-                  White-Label<br />Bookkeeping
-                </p>
-              </div>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                className='flex flex-col items-center text-center'
+              >
+                <Database fill='#CCD9ED' className='w-12 h-12 text-[#015482] mb-4' />
+                <p className='text-sm font-semibold'>W-2 & 1099<br />Preparation & Filing</p>
+              </motion.div>
 
-              {/* Service 7 */}
-              <div className='text-center'>
-                <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <Database className='w-8 h-8 text-[#17D3CF]' />
-                </div>
-                <p className='text-sm font-medium text-gray-900'>
-                  QuickBooks & Xero <br/>Setup / Migration
-                </p>
-              </div>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                className='col-span-2 md:col-span-1 flex flex-col items-center text-center'
+              >
+                <Receipt className='w-12 h-12 text-[#015482] mb-4' />
+                <p className='text-sm font-semibold'>Sales Tax<br />Compliance</p>
+              </motion.div>
+            </div>
 
-              {/* Service 8 */}
-              <div className='text-center'>
-                <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <Zap className='w-8 h-8 text-[#17D3CF]' />
-                </div>
-                <p className='text-sm font-medium text-gray-900'>
-                  Month End &<br />Year-End Close
-                </p>
-              </div>
-            </motion.div>
+            {/* Row 3 - 2 items */}
+            <div className='grid grid-cols-2 gap-8 max-w-xl mx-auto'>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.7 }}
+                className='flex flex-col items-center text-center'
+              >
+                <Handshake className='w-12 h-12 text-[#015482] mb-4' />
+                <p className='text-sm font-semibold'>White-Label<br />Payroll for Firms</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.8 }}
+                className='flex flex-col items-center text-center'
+              >
+                <BarChart3 className='w-12 h-12 text-[#015482] mb-4' />
+                <p className='text-sm font-semibold'>Payroll<br />Reporting</p>
+              </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -162,7 +181,7 @@ const NewPayroll = () => {
               className='text-center mb-16'
             >
               <h2 className='text-3xl md:text-4xl font-bold text-gray-900'>
-                Key <span className='text-[#17D3CF] italic font-serif'>Benefits</span>
+                Key <span className='text-[#015482] italic font-inter'>Benefits</span>
               </h2>
             </motion.div>
 
@@ -177,12 +196,12 @@ const NewPayroll = () => {
               {/* Benefit 1 */}
               <div className='flex items-start gap-4'>
                 <div className='w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <CheckCircle2 className='w-6 h-6 text-[#17D3CF]' />
+                  <Clock className='w-6 h-6 text-[#015482]' />
                 </div>
                 <div>
-                  <h3 className='text-lg font-bold text-gray-900 mb-2'>Audit-Ready Records</h3>
+                  <h3 className='text-lg font-bold text-gray-900 mb-2'>Timely compliance</h3>
                   <p className='text-sm text-gray-600'>
-                    Well-maintained books that hold up under any compliance or due diligence review.
+                    Every federal and state deposit and filing submitted accurately and on time
                   </p>
                 </div>
               </div>
@@ -190,12 +209,12 @@ const NewPayroll = () => {
               {/* Benefit 2 */}
               <div className='flex items-start gap-4'>
                 <div className='w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <Clock className='w-6 h-6 text-[#17D3CF]' />
+                  <DatabaseIcon className='w-6 h-6 text-[#015482]' />
                 </div>
                 <div>
-                  <h3 className='text-lg font-bold text-gray-900 mb-2'>Time-recovered</h3>
+                  <h3 className='text-lg font-bold text-gray-900 mb-2'>Seamless GL integration</h3>
                   <p className='text-sm text-gray-600'>
-                    Daily tasks done efficiently so leadership can focus on strategy, not spreadsheets.
+                    Payroll journal entries post directly to your accounting system, eliminating duplicate data entry
                   </p>
                 </div>
               </div>
@@ -203,12 +222,12 @@ const NewPayroll = () => {
               {/* Benefit 3 */}
               <div className='flex items-start gap-4'>
                 <div className='w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <FileText className='w-6 h-6 text-[#17D3CF]' />
+                  <CheckCircle2 className='w-6 h-6 text-[#015482]' />
                 </div>
                 <div>
-                  <h3 className='text-lg font-bold text-gray-900 mb-2'>Tax-season efficiency</h3>
+                  <h3 className='text-lg font-bold text-gray-900 mb-2'>Operational efficiency</h3>
                   <p className='text-sm text-gray-600'>
-                    Organized records significantly reduce the time and cost of year-end tax preparation.
+                    Eliminate hours of manual processing per pay cycle — for your team or your clients
                   </p>
                 </div>
               </div>
@@ -216,12 +235,12 @@ const NewPayroll = () => {
               {/* Benefit 4 */}
               <div className='flex items-start gap-4'>
                 <div className='w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <BarChart3 className='w-6 h-6 text-[#17D3CF]' />
+                  <Globe2 className='w-6 h-6 text-[#015482]' />
                 </div>
                 <div>
-                  <h3 className='text-lg font-bold text-gray-900 mb-2'>Decision-grade reporting</h3>
+                  <h3 className='text-lg font-bold text-gray-900 mb-2'>Multi-state capability</h3>
                   <p className='text-sm text-gray-600'>
-                    Management reports built for financial review — not just compliance.
+                   We handle nexus analysis, state registration guidance, and multi-jurisdiction tax management
                   </p>
                 </div>
               </div>
@@ -229,12 +248,23 @@ const NewPayroll = () => {
               {/* Benefit 5 */}
               <div className='flex items-start gap-4'>
                 <div className='w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <Layers className='w-6 h-6 text-[#17D3CF]' />
+                  <UserIcon className='w-6 h-6 text-[#015482]' />
                 </div>
                 <div>
-                  <h3 className='text-lg font-bold text-gray-900 mb-2'>Scalable processes</h3>
+                  <h3 className='text-lg font-bold text-gray-900 mb-2'>Employee and client confidence</h3>
                   <p className='text-sm text-gray-600'>
-                    We put in place the right structure so accounting doesn't slow down your own business.
+                    Reliable, on-time payroll builds trust at every level
+                  </p>
+                </div>
+              </div>
+              <div className='flex items-start gap-4'>
+                <div className='w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
+                  <Building2 className='w-6 h-6 text-[#015482]' />
+                </div>
+                <div>
+                  <h3 className='text-lg font-bold text-gray-900 mb-2'>Scalable for growth</h3>
+                  <p className='text-sm text-gray-600'>
+                    From a 3-person start up to a 150-employee business, our process scales without disruption
                   </p>
                 </div>
               </div>
@@ -255,7 +285,7 @@ const NewPayroll = () => {
             >
               <div className='relative w-full max-w-xl mx-auto lg:mx-0'>
                 <img 
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2088" 
+                  src="https://images.unsplash.com/photo-1555436169-20e93ea9a7ff?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
                   alt="Work with experts" 
                   className='rounded-3xl w-full h-auto shadow-lg object-cover'
                 />
@@ -271,18 +301,17 @@ const NewPayroll = () => {
               className='order-1 lg:order-2 flex flex-col justify-center'
             >
               <h2 className='text-4xl md:text-5xl font-bold text-gray-900 mb-8 leading-tight'>
-                Work with Experts<br />
-                to Grow Faster &<br />
-                Run <span className='font-serif italic bg-[#17D3CF] bg-clip-text text-transparent'>Smarter</span>
+                Your Business Deserves Better.<br />
+                Scale Smarter with<br /> <span className='font-inter italic bg-[#015482] bg-clip-text text-transparent'>TaxArc Global</span>.
               </h2>
               
               <Link 
                 to="/contact" 
-                className='inline-flex items-center bg-white border-2 border-gray-300 text-gray-900 px-8 py-3 rounded-full hover:border-blue-700 hover:bg-blue-50 transition group font-semibold w-fit'
+                className='inline-flex items-center bg-white border-2 border-gray-300 text-gray-900 px-8 py-3 rounded-full hover:border-[#17D3CF] hover:bg-blue-50 transition group font-semibold w-fit'
               >
                 Get Started
                 <motion.div
-                  className='ml-3 w-8 h-8 bg-blue-700 rounded-full flex items-center justify-center'
+                  className='ml-3 w-8 h-8 bg-[#015482] hover:bg-[#17D3CF] rounded-full flex items-center justify-center'
                   whileHover={{ scale: 1.1 }}
                 >
                   <ArrowRight className='w-5 h-5 text-white' />

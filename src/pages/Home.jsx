@@ -87,13 +87,13 @@ const Home = () => {
               transition={{ duration: 0.8 }}
               className='text-5xl md:text-6xl font-bold text-white mb-6 leading-tight'
             >
-              Strategic Offshore Partner for
+               Your Outsourced Team for
             </motion.h1>
             <motion.p 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className='text-4xl md:text-4xl font-1 italic text-white mb-10 leading-tight'
+              className='text-4xl md:text-4xl font-inter italic text-white mb-10 leading-tight'
             >
               US Tax & Accounting Excellence
             </motion.p>
@@ -132,9 +132,9 @@ const Home = () => {
                 viewport={{ once: true }}
               >
                 <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>
-                  Our Guiding Philosophy - ARC
+                  Our Philosophy - ARC
                 </h2>
-                <p className='text-3xl font-1 italic mb-6 bg-[#015482] bg-clip-text text-transparent'>
+                <p className='text-3xl font-inter italic mb-6 bg-[#015482] bg-clip-text text-transparent'>
                   Accuracy, Reliability and Confidentiality
                 </p>
                 <p className='text-gray-700 mb-8 leading-relaxed'>
@@ -175,7 +175,7 @@ const Home = () => {
             className='mb-12'
           >
             <h2 className='text-3xl md:text-4xl font-bold text-gray-900'>
-              Explore Our <span className='font-serif italic text-[#015482]'>Services</span>
+              Explore Our <span className='font-inter italic text-[#015482]'>Services</span>
             </h2>
           </motion.div>
 
@@ -197,7 +197,7 @@ const Home = () => {
                 title: 'Payroll Management',
                 image: 'https://images.unsplash.com/photo-1554224154-22dec7ec8818?q=80&w=2070',
                 description: 'From payroll processing and tax withholdings to quarterly filings and year-end reporting, TaxArc Global provides structured, end-to-end payroll support built around US federal and state compliance requirements. Our team integrates seamlessly into your workflow, handling complexity so your practice doesn\'t have to.',
-                link: '/new-payroll'
+                link: '/payroll'
               }
             ].map((service, index) => (
               <motion.div
@@ -255,7 +255,7 @@ const Home = () => {
                     transition={{ duration: 0.6 }}
                     className='text-4xl md:text-5xl font-bold mb-4'
                   >
-                    Why Choose <span className='italic text-[#015482]'>Us?</span>
+                    Why <span className='font-inter italic text-[#015482]'>Us?</span>
                   </motion.h2>
                 </div>
       
@@ -357,7 +357,7 @@ const Home = () => {
                         <Users className='w-6 h-6 text-[#015482]' />
                       </div>
                       <div>
-                        <h3 className='text-xl font-bold mb-3'>Scalable Engagement Model</h3>
+                        <h3 className='text-xl font-bold mb-3'>Flexible Engagement Model</h3>
                         <p className='text-gray-600 leading-relaxed'>
                           Flexible team sizing to accommodate seasonal peaks, project expansions, or ongoing support needs.
                         </p>
@@ -389,7 +389,7 @@ const Home = () => {
               </div>
             </section>
 
-                  <section className='py-20 bg-gray-50'>
+                  <section className='py-20'>
                     <div className='container mx-auto px-4'>
                       <div className='text-center mb-12'>
                         <h2 className='text-4xl md:text-5xl font-bold mb-4'>
@@ -408,9 +408,9 @@ const Home = () => {
                             { src: "./6.png",  },
                             { src: "./7.png",  },
                             { src: "./8.png",  },
-                            { src: "./9.png",  },
+                            { src: "./gusto.png",  },
                             { src: "./10.png",  },
-                            { src: "./11.png",  },
+                            { src: "./taxact.svg",  },
                           ]}
                           speed={logoLoopConfig.speed}
                           direction="left"
@@ -455,9 +455,8 @@ const Home = () => {
               className='order-1 lg:order-2 flex flex-col justify-center'
             >
               <h2 className='text-4xl md:text-5xl font-bold text-gray-900 mb-8 leading-tight'>
-                Work with Experts<br />
-                to Grow Faster &<br />
-                Run <span className='font-serif italic bg-[#17D3CF] bg-clip-text text-transparent'>Smarter</span>
+                Your Business Deserves Better.<br />
+                Scale Smarter with<br /> <span className='font-inter italic bg-[#015482] bg-clip-text text-transparent'>TaxArc Global</span>.
               </h2>
               
               <Link 

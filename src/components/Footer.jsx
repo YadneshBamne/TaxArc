@@ -1,10 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Mail, Phone, MapPin, Linkedin, Facebook, Instagram } from 'lucide-react'
+import LegalModal from './LegalModal'
 
 const Footer = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [modalType, setModalType] = useState('terms')
+
+  const openModal = (type) => {
+    setModalType(type)
+    setIsModalOpen(true)
+  }
+
+  const closeModal = () => {
+    setIsModalOpen(false)
+  }
+
   return (
-    <footer className='bg-gray-900 text-white'>
+    <>
+      <footer className='bg-gray-900 text-white'>
       {/* Main Footer Content */}
       <div className='container mx-auto px-4 py-16'>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12'>
@@ -127,17 +141,27 @@ const Footer = () => {
 
             {/* Legal Links */}
             <div className='flex items-center gap-6'>
-              <Link to="/terms" className='text-gray-400 hover:text-[#17D3CF] text-sm transition-colors'>
+              <button 
+                onClick={() => openModal('terms')} 
+                className='text-gray-400 hover:text-[#17D3CF] text-sm transition-colors cursor-pointer'
+              >
                 Terms & Conditions
-              </Link>
-              <Link to="/terms" className='text-gray-400 hover:text-[#17D3CF] text-sm transition-colors'>
+              </button>
+              <button 
+                onClick={() => openModal('privacy')} 
+                className='text-gray-400 hover:text-[#17D3CF] text-sm transition-colors cursor-pointer'
+              >
                 Privacy Policy
-              </Link>
+              </button>
             </div>
           </div>
         </div>
       </div>
-    </footer>
+      </footer>
+
+      {/* Legal Modal */}
+      <LegalModal isOpen={isModalOpen} onClose={closeModal} type={modalType} />
+    </>
   )
 }
 

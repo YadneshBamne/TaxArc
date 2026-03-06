@@ -50,7 +50,7 @@ const NewTaxation = () => {
               className='text-center mb-12'
             >
               <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-6'>
-               Our Tax Preparation <span className='text-[#17D3CF] italic font-serif'>Services</span>
+               Our Tax Preparation <span className='text-[#015482] italic font-inter'>Services</span>
               </h2>
               <p className='text-base md:text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto'>
                 We function as a seamless extension of your practice. You remain the firm of record and client-facing professionals. We work in the background — preparing returns to your specifications, using your preferred software, and delivering review-ready work products. Our process is built around accuracy and reliability, confidentiality.
@@ -68,7 +68,7 @@ const NewTaxation = () => {
               {/* Service 1 */}
               <div className='text-center'>
                 <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <FileText className='w-8 h-8 text-[#17D3CF]' />
+                  <FileText className='w-8 h-8 text-[#015482]' />
                 </div>
                 <p className='text-sm font-medium text-gray-900'>
                   Data<br />Gathering
@@ -78,7 +78,7 @@ const NewTaxation = () => {
               {/* Service 2 */}
               <div className='text-center'>
                 <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <LandmarkIcon className='w-8 h-8 text-[#17D3CF]' />
+                  <LandmarkIcon className='w-8 h-8 text-[#015482]' />
                 </div>
                 <p className='text-sm font-medium text-gray-900'>
                   Tax Preparation<br />& Review
@@ -88,7 +88,7 @@ const NewTaxation = () => {
               {/* Service 3 */}
               <div className='text-center'>
                 <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <CheckCircle2 className='w-8 h-8 text-[#17D3CF]' />
+                  <CheckCircle2 className='w-8 h-8 text-[#015482]' />
                 </div>
                 <p className='text-sm font-medium text-gray-900'>
                  Adjustments <br />& Reconciliationss
@@ -98,7 +98,7 @@ const NewTaxation = () => {
               {/* Service 4 */}
               <div className='text-center'>
                 <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <BookUser className='w-8 h-8 text-[#17D3CF]' />
+                  <BookUser className='w-8 h-8 text-[#015482]' />
                 </div>
                 <p className='text-sm font-medium text-gray-900'>
                   Tax Planning <br /> & Advisory
@@ -108,7 +108,7 @@ const NewTaxation = () => {
               {/* Service 5 */}
               <div className='text-center'>
                 <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <DollarSign className='w-8 h-8 text-[#17D3CF]' />
+                  <DollarSign className='w-8 h-8 text-[#015482]' />
                 </div>
                 <p className='text-sm font-medium text-gray-900'>
                   Financial Statement<br />Preparation
@@ -118,7 +118,7 @@ const NewTaxation = () => {
               {/* Service 6 */}
               <div className='text-center'>
                 <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <ChartBarBigIcon className='w-8 h-8 text-[#17D3CF]' />
+                  <ChartBarBigIcon className='w-8 h-8 text-[#015482]' />
                 </div>
                 <p className='text-sm font-medium text-gray-900'>
                   White-Label<br />Bookkeeping
@@ -128,7 +128,7 @@ const NewTaxation = () => {
               {/* Service 7 */}
               <div className='text-center'>
                 <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <Database className='w-8 h-8 text-[#17D3CF]' />
+                  <Database className='w-8 h-8 text-[#015482]' />
                 </div>
                 <p className='text-sm font-medium text-gray-900'>
                   QuickBooks & Xero <br/>Setup / Migration
@@ -138,7 +138,7 @@ const NewTaxation = () => {
               {/* Service 8 */}
               <div className='text-center'>
                 <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <Zap className='w-8 h-8 text-[#17D3CF]' />
+                  <Zap className='w-8 h-8 text-[#015482]' />
                 </div>
                 <p className='text-sm font-medium text-gray-900'>
                   Month End &<br />Year-End Close
@@ -162,7 +162,7 @@ const NewTaxation = () => {
               className='text-center mb-16'
             >
               <h2 className='text-3xl md:text-4xl font-bold text-gray-900'>
-                Key <span className='text-[#17D3CF] italic font-serif'>Benefits</span>
+                Key <span className='text-[#015482] italic font-inter'>Benefits</span>
               </h2>
             </motion.div>
 
@@ -177,7 +177,7 @@ const NewTaxation = () => {
               {/* Benefit 1 */}
               <div className='flex items-start gap-4'>
                 <div className='w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <CheckCircle2 className='w-6 h-6 text-[#17D3CF]' />
+                  <CheckCircle2 className='w-6 h-6 text-[#015482]' />
                 </div>
                 <div>
                   <h3 className='text-lg font-bold text-gray-900 mb-2'>Audit-Ready Records</h3>
@@ -190,7 +190,7 @@ const NewTaxation = () => {
               {/* Benefit 2 */}
               <div className='flex items-start gap-4'>
                 <div className='w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <Clock className='w-6 h-6 text-[#17D3CF]' />
+                  <Clock className='w-6 h-6 text-[#015482]' />
                 </div>
                 <div>
                   <h3 className='text-lg font-bold text-gray-900 mb-2'>Time-recovered</h3>
@@ -203,7 +203,7 @@ const NewTaxation = () => {
               {/* Benefit 3 */}
               <div className='flex items-start gap-4'>
                 <div className='w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <FileText className='w-6 h-6 text-[#17D3CF]' />
+                  <FileText className='w-6 h-6 text-[#015482]' />
                 </div>
                 <div>
                   <h3 className='text-lg font-bold text-gray-900 mb-2'>Tax-season efficiency</h3>
@@ -216,7 +216,7 @@ const NewTaxation = () => {
               {/* Benefit 4 */}
               <div className='flex items-start gap-4'>
                 <div className='w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <BarChart3 className='w-6 h-6 text-[#17D3CF]' />
+                  <BarChart3 className='w-6 h-6 text-[#015482]' />
                 </div>
                 <div>
                   <h3 className='text-lg font-bold text-gray-900 mb-2'>Decision-grade reporting</h3>
@@ -229,7 +229,7 @@ const NewTaxation = () => {
               {/* Benefit 5 */}
               <div className='flex items-start gap-4'>
                 <div className='w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <Layers className='w-6 h-6 text-[#17D3CF]' />
+                  <Layers className='w-6 h-6 text-[#015482]' />
                 </div>
                 <div>
                   <h3 className='text-lg font-bold text-gray-900 mb-2'>Scalable processes</h3>
@@ -271,18 +271,17 @@ const NewTaxation = () => {
               className='order-1 lg:order-2 flex flex-col justify-center'
             >
               <h2 className='text-4xl md:text-5xl font-bold text-gray-900 mb-8 leading-tight'>
-                Work with Experts<br />
-                to Grow Faster &<br />
-                Run <span className='font-serif italic bg-[#17D3CF] bg-clip-text text-transparent'>Smarter</span>
+                Your Business Deserves Better.<br />
+                Scale Smarter with<br /> <span className='font-inter italic bg-[#015482] bg-clip-text text-transparent'>TaxArc Global</span>.
               </h2>
               
               <Link 
                 to="/contact" 
-                className='inline-flex items-center bg-white border-2 border-gray-300 text-gray-900 px-8 py-3 rounded-full hover:border-blue-700 hover:bg-blue-50 transition group font-semibold w-fit'
+                className='inline-flex items-center bg-white border-2 border-gray-300 text-gray-900 px-8 py-3 rounded-full hover:border-[#17d3cf] hover:bg-blue-50 transition group font-semibold w-fit'
               >
                 Get Started
                 <motion.div
-                  className='ml-3 w-8 h-8 bg-blue-700 rounded-full flex items-center justify-center'
+                  className='ml-3 w-8 h-8 bg-[#015482] hover:bg-[#17d3cf] rounded-full flex items-center justify-center'
                   whileHover={{ scale: 1.1 }}
                 >
                   <ArrowRight className='w-5 h-5 text-white' />

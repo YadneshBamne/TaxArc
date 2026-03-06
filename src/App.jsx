@@ -27,8 +27,8 @@ const App = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/bookkeeping-accounting-services" element={<BookkeepingAccounting />} />
             <Route path="/new-taxation" element={<NewTaxation />} />
-            <Route path="/new-payroll" element={<NewPayroll />} />
-            <Route path="/payroll" element={<Payroll />} />
+            <Route path="/payroll" element={<NewPayroll />} />
+            {/* <Route path="/payroll" element={<Payroll />} /> */}
             <Route path="/services" element={<Services />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/404-v2" element={<NotFound />} />

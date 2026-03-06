@@ -117,8 +117,8 @@ const About = () => {
               <h2 className='text-4xl md:text-5xl font-bold mb-2'>
                 Meet our CEO
               </h2>
-              <h3 className='text-4xl md:text-5xl font-serif italic text-[#17d3cf] mb-4'>
-                Harshika Vora.
+              <h3 className='text-4xl md:text-5xl font-inter italic text-[#015482] mb-4'>
+                Harshika Vora
               </h3>
               <p className='text-lg font-semibold text-gray-800 mb-6'>
                 CA (India) and U.S. CPA (License Awaited)
@@ -203,8 +203,8 @@ const About = () => {
               <h2 className='text-4xl md:text-5xl font-bold mb-2'>
                 Meet our Strategic Advisor
               </h2>
-              <h3 className='text-4xl md:text-5xl font-serif italic text-[#17d3cf] mb-4'>
-                Hemant R. Vora.
+              <h3 className='text-4xl md:text-5xl font-inter italic text-[#015482] mb-4'>
+                Hemant R. Vora
               </h3>
               <p className='text-lg font-semibold text-gray-800 mb-6'>
                 CA (India), FCA, Inter CS, LLB, B.Com<br />
@@ -244,11 +244,11 @@ const About = () => {
             className='text-center mb-16'
           >
             <h2 className='text-4xl md:text-5xl font-bold mb-4'>
-              Our <span className='italic text-[#015482]'>Vision, Mission & Values</span>
+              Our <span className='font-inter italic text-[#015482]'>Vision & Mission</span>
             </h2>
           </motion.div>
 
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto'>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto'>
             {/* Vision Card */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -294,163 +294,148 @@ const About = () => {
                 </p>
               </div>
             </motion.div>
-
-            {/* Values Card */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className=' rounded-2xl overflow-hidden shadow-2xl'
-            >
-              <div className='bg-[#015482] h-42 flex items-center justify-center'>
-                <h3 className='text-2xl font-bold text-white'>VALUES</h3>
-              </div>
-              <div className='relative  pt-20 pb-10 px-6'>
-                <div className='absolute -top-10 left-1/2 -translate-x-1/2'>
-                  <div className='w-20 h-20 bg-[#015482] rotate-45 flex items-center justify-center'>
-                    <Gem className='w-20 h-20 text-white -rotate-45' />
-                  </div>
-                </div>
-                <p className='text-center text-gray-700 text-sm leading-relaxed mt-4'>
-                  Simple text inserted<br />
-                  outsourced accounting and tax support,<br />
-                  powered by qualified professionals,<br />
-                  structured processes, intelligent<br />
-                  technology and strict confidentiality.
-                </p>
-              </div>
-            </motion.div>
           </div>
         </div>
       </section>
 
       {/* Workflow Process Section */}
-      <section className='py-20 bg-gray-50'>
-        <div className='container mx-auto px-4'>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className='text-center mb-16'
-          >
-            <h2 className='text-4xl md:text-5xl font-bold mb-4'>
-              Our <span className='italic text-[#015482]'>Workflow Process</span>
-            </h2>
-          </motion.div>
+<section className='py-20 bg-gray-50'>
+  <div className='container mx-auto px-4'>
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className='text-center mb-16'
+    >
+      <h2 className='text-4xl md:text-5xl font-bold mb-4'>
+        Our <span className='italic text-[#015482]'>Workflow Process</span>
+      </h2>
+    </motion.div>
 
-          <div className='max-w-6xl mx-auto'>
-            {/* Row 1 */}
-            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6'>
-              {/* Card 1 */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className='bg-white border-2 border-[#17D3CF] rounded-2xl p-6 text-center relative'
-              >
-                <h3 className='text-xl font-bold mb-3'>Task<br />Initiation</h3>
-                <p className='text-sm text-gray-600'>Job assigned<br />by client</p>
-                <ArrowRight className='hidden lg:block absolute -right-8 top-1/2 -translate-y-1/2 w-6 h-6 text-gray-400' />
-              </motion.div>
+    <div className='max-w-6xl mx-auto space-y-20'>
+      {[
+        [
+          { step: '01', title: 'Task\nInitiation', desc: 'Job assigned by client', icon: 'search' },
+          { step: '02', title: 'Deadline\nSetting', desc: 'Agreement on task completion time', icon: 'person' },
+          { step: '03', title: 'Data\nExchange', desc: 'Sharing of necessary documents', icon: 'doc' },
+          { step: '04', title: 'Client\nReview', desc: 'Client reviews and responds to queries', icon: 'wifi' },
+          { step: '05', title: 'Query\nCompilation', desc: 'List of queries prepared by client', icon: 'doc' },
+        ],
+        [
+          { step: '06', title: 'Task\nPreparation', desc: 'Arrow assigns processes data', icon: 'search' },
+          { step: '07', title: 'Final\nReview', desc: 'Senior manager checks for accuracy', icon: 'person' },
+          { step: '08', title: 'Delivery', desc: 'Task is completed & delivered', icon: 'doc' },
+          { step: '09', title: 'Feedback', desc: 'Note what worked well, and where there is scope of improvement', icon: 'wifi' },
+        ],
+      ].map((row, rowIndex) => (
+        <div key={rowIndex}>
 
-              {/* Card 2 */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className='bg-white border-2 border-[#17D3CF] rounded-2xl p-6 text-center relative'
-              >
-                <h3 className='text-xl font-bold mb-3'>Deadline<br />Setting</h3>
-                <p className='text-sm text-gray-600'>Agreement on task<br />completion time</p>
-                <ArrowRight className='hidden lg:block absolute -right-8 top-1/2 -translate-y-1/2 w-6 h-6 text-gray-400' />
-              </motion.div>
-
-              {/* Card 3 */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className='bg-white border-2 border-[#17D3CF] rounded-2xl p-6 text-center relative'
-              >
-                <h3 className='text-xl font-bold mb-3'>Data<br />Exchange</h3>
-                <p className='text-sm text-gray-600'>Sharing of<br />necessary documents</p>
-                <ArrowRight className='hidden lg:block absolute -right-8 top-1/2 -translate-y-1/2 w-6 h-6 text-gray-400' />
-              </motion.div>
-
-              {/* Card 4 */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className='bg-white border-2 border-[#17D3CF] rounded-2xl p-6 text-center'
-              >
-                <h3 className='text-xl font-bold mb-3'>Client<br />Review</h3>
-                <p className='text-sm text-gray-600'>Client reviews and<br />responds to queries</p>
-              </motion.div>
+          {/* ── DESKTOP layout (md+): horizontal pins + cards ── */}
+          <div className='hidden md:block'>
+            {/* Icons row with connector line */}
+            <div className='relative flex items-center justify-around mb-6'>
+              <div
+                className='absolute h-0.5 bg-[#015482] z-0'
+                style={{
+                  top: '32px',
+                  left: `${100 / (2 * row.length)}%`,
+                  right: `${100 / (2 * row.length)}%`,
+                }}
+              />
+              {row.map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: -20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  className='relative z-10 flex flex-col items-center'
+                  style={{ width: `${100 / row.length}%` }}
+                >
+                  <div className='w-16 h-16 rounded-full border-2 border-[#015482] bg-white flex items-center justify-center shadow-sm'>
+                    <svg viewBox='0 0 40 40' className='w-7 h-7' fill='none' stroke='#015482' strokeWidth='1.8' strokeLinecap='round' strokeLinejoin='round'>
+                      {item.icon === 'search' && (<><circle cx='18' cy='18' r='7' /><line x1='23' y1='23' x2='30' y2='30' /><line x1='15' y1='18' x2='21' y2='18' /><line x1='18' y1='15' x2='18' y2='21' /></>)}
+                      {item.icon === 'person' && (<><circle cx='20' cy='13' r='5' /><path d='M10 32c0-5.5 4.5-10 10-10s10 4.5 10 10' /><line x1='27' y1='9' x2='31' y2='13' /><line x1='31' y1='9' x2='27' y2='13' /></>)}
+                      {item.icon === 'doc' && (<><rect x='10' y='5' width='20' height='30' rx='2' /><line x1='14' y1='13' x2='26' y2='13' /><line x1='14' y1='19' x2='26' y2='19' /><line x1='14' y1='25' x2='20' y2='25' /></>)}
+                      {item.icon === 'wifi' && (<><path d='M8 20 Q20 8 32 20' /><path d='M12 24 Q20 15 28 24' /><path d='M16 28 Q20 22 24 28' /><circle cx='20' cy='31' r='1.5' fill='#015482' /></>)}
+                    </svg>
+                  </div>
+                  <div style={{ width: 0, height: 0, borderLeft: '7px solid transparent', borderRight: '7px solid transparent', borderTop: '10px solid #015482' }} />
+                </motion.div>
+              ))}
             </div>
 
-            {/* Row 2 */}
-            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
-              {/* Card 5 */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className='bg-white border-2 border-[#17D3CF] rounded-2xl p-6 text-center relative'
-              >
-                <h3 className='text-xl font-bold mb-3'>Query<br />Compilation</h3>
-                <p className='text-sm text-gray-600'>List of queries<br />prepared by client</p>
-                <ArrowRight className='hidden lg:block absolute -right-8 top-1/2 -translate-y-1/2 w-6 h-6 text-gray-400' />
-              </motion.div>
-
-              {/* Card 6 */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                className='bg-white border-2 border-[#17D3CF] rounded-2xl p-6 text-center relative'
-              >
-                <h3 className='text-xl font-bold mb-3'>Task<br />Preparation</h3>
-                <p className='text-sm text-gray-600'>Arrow assigns<br />processes data</p>
-                <ArrowRight className='hidden lg:block absolute -right-8 top-1/2 -translate-y-1/2 w-6 h-6 text-gray-400' />
-              </motion.div>
-
-              {/* Card 7 */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-                className='bg-white border-2 border-[#17D3CF] rounded-2xl p-6 text-center relative'
-              >
-                <h3 className='text-xl font-bold mb-3'>Final<br />Review</h3>
-                <p className='text-sm text-gray-600'>Senior manager<br />checks for accuracy</p>
-                <ArrowRight className='hidden lg:block absolute -right-8 top-1/2 -translate-y-1/2 w-6 h-6 text-gray-400' />
-              </motion.div>
-
-              {/* Card 8 */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.7 }}
-                className='bg-white border-2 border-[#17D3CF] rounded-2xl p-6 text-center'
-              >
-                <h3 className='text-xl font-bold mb-3'>Delivery &<br />Feedback</h3>
-                <p className='text-sm text-gray-600'>Task is delivered &<br />feedback is taken for<br />scope of improvement</p>
-              </motion.div>
+            {/* Cards row */}
+            <div className='grid gap-4' style={{ gridTemplateColumns: `repeat(${row.length}, 1fr)` }}>
+              {row.map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  className='flex flex-col items-center'
+                >
+                  <div className='w-full border-2 border-[#015482] rounded-xl p-4 text-center bg-white flex flex-col justify-start' style={{ minHeight: '130px' }}>
+                    <h3 className='text-sm font-bold text-gray-900 mb-2 leading-snug whitespace-pre-line'>{item.title}</h3>
+                    <p className='text-xs text-gray-500 leading-relaxed'>{item.desc}</p>
+                  </div>
+                  <div className='mt-3 bg-[#015482] text-white text-xs font-semibold px-5 py-1.5 rounded-full'>
+                    Step {item.step}
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
+
+          {/* ── MOBILE layout: vertical stacked list with left connector ── */}
+          <div className='md:hidden relative'>
+            {/* Vertical line */}
+            <div className='absolute left-8 top-0 bottom-0 w-0.5 bg-[#015482] z-0' />
+
+            <div className='space-y-6'>
+              {row.map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  className='relative flex items-start gap-4'
+                >
+                  {/* Pin circle on left */}
+                  <div className='relative z-10 flex flex-col items-center flex-shrink-0'>
+                    <div className='w-16 h-16 rounded-full border-2 border-[#015482] bg-white flex items-center justify-center shadow-sm'>
+                      <svg viewBox='0 0 40 40' className='w-7 h-7' fill='none' stroke='#015482' strokeWidth='1.8' strokeLinecap='round' strokeLinejoin='round'>
+                        {item.icon === 'search' && (<><circle cx='18' cy='18' r='7' /><line x1='23' y1='23' x2='30' y2='30' /><line x1='15' y1='18' x2='21' y2='18' /><line x1='18' y1='15' x2='18' y2='21' /></>)}
+                        {item.icon === 'person' && (<><circle cx='20' cy='13' r='5' /><path d='M10 32c0-5.5 4.5-10 10-10s10 4.5 10 10' /><line x1='27' y1='9' x2='31' y2='13' /><line x1='31' y1='9' x2='27' y2='13' /></>)}
+                        {item.icon === 'doc' && (<><rect x='10' y='5' width='20' height='30' rx='2' /><line x1='14' y1='13' x2='26' y2='13' /><line x1='14' y1='19' x2='26' y2='19' /><line x1='14' y1='25' x2='20' y2='25' /></>)}
+                        {item.icon === 'wifi' && (<><path d='M8 20 Q20 8 32 20' /><path d='M12 24 Q20 15 28 24' /><path d='M16 28 Q20 22 24 28' /><circle cx='20' cy='31' r='1.5' fill='#015482' /></>)}
+                      </svg>
+                    </div>
+                    {/* Pin tail pointing right toward card */}
+                    <div style={{ width: 0, height: 0, borderTop: '7px solid transparent', borderBottom: '7px solid transparent', borderLeft: '10px solid #015482', position: 'absolute', right: '-10px', top: '50%', transform: 'translateY(-50%)' }} />
+                  </div>
+
+                  {/* Card */}
+                  <div className='flex-1 border-2 border-[#015482] rounded-xl p-4 bg-white'>
+                    <h3 className='text-sm font-bold text-gray-900 mb-1 leading-snug whitespace-pre-line'>{item.title}</h3>
+                    <p className='text-xs text-gray-500 leading-relaxed mb-3'>{item.desc}</p>
+                    <div className='inline-block bg-[#015482] text-white text-xs font-semibold px-4 py-1 rounded-full'>
+                      Step {item.step}
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* IT Infrastructure and Security Measures Section */}
       <section className='py-20 bg-white'>
@@ -463,7 +448,7 @@ const About = () => {
             className='text-center mb-16'
           >
             <h2 className='text-4xl md:text-5xl font-bold mb-4'>
-              Our IT Infrastructure and <span className='italic text-[#015482]'>Security Measures</span>
+              Our IT Infrastructure and <span className='font-inter italic text-[#015482]'>Security Measures</span>
             </h2>
           </motion.div>
 
@@ -617,7 +602,7 @@ const About = () => {
                   <h2 className='text-4xl md:text-5xl font-bold text-gray-900 mb-1'>
                     Friendly Asked
                   </h2>
-                  <h3 className='text-4xl md:text-5xl italic font-serif text-gray-900 mb-12'>
+                  <h3 className='text-4xl md:text-5xl italic font-inter text-[#015482] mb-12'>
                     Questions.
                   </h3>
 
@@ -631,7 +616,7 @@ const About = () => {
                     </p>
                     <a
                       href='tel:+919909469067'
-                      className='inline-flex items-center gap-3 bg-[#17D3CF] hover:bg-[#15c2be] text-white px-6 py-3 rounded-full font-medium transition-colors'
+                      className='inline-flex items-center gap-3 bg-[#015482] hover:bg-[#15c2be] text-white px-6 py-3 rounded-full font-medium transition-colors'
                     >
                       <span>Make A Call</span>
                       <Phone className='w-5 h-5' />
@@ -663,13 +648,13 @@ const About = () => {
                         </span>
                         <div className='shrink-0'>
                           {openFaq === index ? (
-                            <div className='w-8 h-8 flex items-center justify-center text-gray-400'>
+                            <div className='w-8 h-8 flex items-center justify-center text-[#015482]'>
                               <svg width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2'>
                                 <line x1='5' y1='12' x2='19' y2='12' />
                               </svg>
                             </div>
                           ) : (
-                            <div className='w-8 h-8 bg-[#17D3CF] rounded-full flex items-center justify-center'>
+                            <div className='w-8 h-8 bg-[#015482] rounded-full flex items-center justify-center'>
                               <svg width='16' height='16' viewBox='0 0 16 16' fill='none' stroke='white' strokeWidth='2'>
                                 <line x1='8' y1='3' x2='8' y2='13' />
                                 <line x1='3' y1='8' x2='13' y2='8' />
