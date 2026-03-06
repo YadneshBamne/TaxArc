@@ -61,7 +61,7 @@ export const Footer7 = ({
   },
 
   sections = defaultSections,
-  description = "Your Outsourced Team for US Tax & Accounting Excellence",
+  description = "TaxArc Global is a global tax & accounting firm registered with the Institute of Chartered Accountants of India (ICAI) based out in Ahmedabad, Gujarat.",
   socialLinks = defaultSocialLinks,
   copyright = "© 2026 TaxArc Global. All rights reserved.",
   legalLinks = defaultLegalLinks
@@ -86,11 +86,7 @@ export const Footer7 = ({
           className="flex w-full flex-col justify-between gap-10 lg:flex-row lg:items-start lg:text-left">
           <div className="flex w-full flex-col justify-between gap-6 lg:items-start lg:max-w-md">
             {/* Logo */}
-            <div className="flex items-center gap-3 lg:justify-start">
-              <Link to={logo.url}>
-                <img src={logo.src} alt={logo.alt} title={logo.title} className="h-25" />
-              </Link>
-            </div>
+
             <p className="text-sm text-gray-600 leading-relaxed">
               {description}
             </p>
