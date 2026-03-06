@@ -54,7 +54,7 @@ const defaultLegalLinks = [
 export const Footer7 = ({
   logo = {
     url: "/",
-    src: "/logo.svg",
+    src: "/brand.png",
     alt: "TaxArc Global",
     title: "TaxArc Global",
   },

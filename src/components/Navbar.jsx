@@ -50,9 +50,9 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className='flex items-center'>
             <img 
-              src="/logo.svg" 
+              src="/brand.png" 
               alt="TaxArc Global" 
-              className='h-12 w-auto'
+              className='h-15 w-auto'
             />
           </Link>
 
