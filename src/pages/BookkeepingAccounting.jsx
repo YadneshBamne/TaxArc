@@ -12,7 +12,7 @@ const BookkeepingAccounting = () => {
         <div 
           className='absolute inset-0 bg-cover bg-center bg-no-repeat'
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1554224311-beee460ae6bb?q=80&w=2070)',
+            backgroundImage: 'url(./photo1.jpg)',
           }}
         >
           <div className='absolute inset-0 bg-black/40'></div>
@@ -26,7 +26,7 @@ const BookkeepingAccounting = () => {
             transition={{ duration: 0.8 }}
           >
             <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
-              Accounting & Bookkeeping
+             Bookkeeping & Accounting
             </h1>
             <p className='text-xl md:text-2xl text-white font-light'>
               Clean Books. Clear Insights. Confident Decisions.
@@ -36,44 +36,10 @@ const BookkeepingAccounting = () => {
       </section>
 
       {/* Quote Section */}
-      <section className='py-20 bg-white'>
-        <div className='container mx-auto px-4'>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className='max-w-4xl mx-auto text-center'
-          >
-            <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>
-              "Accounting is the language of business"
-            </h2>
-            <p className='text-lg text-gray-600'>
-              Warren Buffett
-            </p>
-          </motion.div>
-        </div>
-      </section>
+
 
       {/* Main Content Section */}
-      <section className='py-16 bg-gray-50'>
-        <div className='container mx-auto px-4'>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className='max-w-5xl mx-auto'
-          >
-            <p className='text-lg md:text-xl text-gray-900 leading-relaxed mb-6 text-center font-semibold'>
-              We live by this quote at TaxArc Global.
-            </p>
-            <p className='text-base md:text-lg text-gray-700 leading-relaxed text-center'>
-              Whether you're an accounting firm looking to offload bookkeeping work from your senior staff, or a business owner who needs reliable financials to make smarter decisions — disorganized, incomplete, or inaccurate books are a liability you can't afford. TaxArc Global delivers structured, meticulous accounting and bookkeeping services that give every stakeholder — from founders to CFOs to external auditors — confidence in the numbers.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+
 
       {/* Services Section */}
       <section className='py-20 bg-white'>

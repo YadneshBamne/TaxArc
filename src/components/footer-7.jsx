@@ -41,9 +41,9 @@ const defaultSections = [
 ];
 
 const defaultSocialLinks = [
-  { icon: <Linkedin className="size-5" />, href: "https://linkedin.com", label: "LinkedIn" },
-  { icon: <Facebook className="size-5" />, href: "https://facebook.com", label: "Facebook" },
-  { icon: <Instagram className="size-5" />, href: "https://instagram.com", label: "Instagram" },
+  { icon: <Linkedin className="size-5" />, href: "https://www.linkedin.com/company/taxarcglobal/about/?viewAsMember=true", label: "LinkedIn" },
+  { icon: <Facebook className="size-5" />, href: "https://www.facebook.com/profile.php?id=61586478143120", label: "Facebook" },
+  { icon: <Instagram className="size-5" />, href: "https://www.instagram.com/taxarc_global?igsh=ZnpxbzR1YnN6azdv&utm_source=qr", label: "Instagram" },
 ];
 
 const defaultLegalLinks = [
@@ -66,7 +66,7 @@ export const Footer7 = ({
   legalLinks = defaultLegalLinks
 }) => {
   return (
-    <section className="py-20 bg-white border-t border-gray-200">
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div
           className="flex w-full flex-col justify-between gap-10 lg:flex-row lg:items-start lg:text-left">

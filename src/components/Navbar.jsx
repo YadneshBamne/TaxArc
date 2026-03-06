@@ -86,17 +86,17 @@ const Navbar = () => {
                     exit={{ opacity: 0, y: -10 }}
                     className='absolute top-full left-0 mt-2 bg-white shadow-lg rounded-md py-2 w-64'
                   >
+                    <Link to="/new-taxation" className='block px-4 py-2 text-gray-800 hover:bg-cyan-50 hover:text-blue-600 transition'>
+                      Tax Preparation
+                    </Link>
                     <Link to="/bookkeeping-accounting-services" className='block px-4 py-2 text-gray-800 hover:bg-cyan-50 hover:text-blue-600 transition'>
                       Bookkeeping & Accounting
                     </Link>
-                    <Link to="/new-taxation" className='block px-4 py-2 text-gray-800 hover:bg-cyan-50 hover:text-blue-600 transition'>
-                      Taxation
+                    <Link to="/payroll" className='block px-4 py-2 text-gray-800 hover:bg-cyan-50 hover:text-blue-600 transition'>
+                      Payroll Services
                     </Link>
                     <Link to="/new-payroll" className='block px-4 py-2 text-gray-800 hover:bg-cyan-50 hover:text-blue-600 transition'>
                       New Payroll
-                    </Link>
-                    <Link to="/payroll" className='block px-4 py-2 text-gray-800 hover:bg-cyan-50 hover:text-blue-600 transition'>
-                      Payroll Services
                     </Link>
                   </motion.div>
                 )}

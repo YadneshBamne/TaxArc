@@ -1,8 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Shield, CheckCircle, TrendingUp, ArrowUpRight } from 'lucide-react'
+import { ArrowRight, Shield, CheckCircle,BookOpen,Clock,DollarSign,Users, TrendingUp, ArrowUpRight } from 'lucide-react'
 import { motion } from 'motion/react'
 import { Accordion } from '../components'
+import { useState,useEffect } from 'react'
+import LogoLoop from '../components/LogoLoop'
 
 const Home = () => {
   const accordionItems = [
@@ -19,6 +21,48 @@ const Home = () => {
       content: 'Your financial information is sensitive and deserves the highest level of protection. We maintain strict confidentiality protocols and security measures to safeguard your data. Trust is the foundation of our relationship, and we take that responsibility seriously.'
     }
   ]
+    const [logoLoopConfig, setLogoLoopConfig] = useState({
+      height: 200,
+      logoHeight: 80,
+      gap: 80,
+      speed: 100
+    })
+  
+    useEffect(() => {
+      const updateLogoLoopConfig = () => {
+        const width = window.innerWidth
+        
+        if (width < 640) {
+          // Mobile
+          setLogoLoopConfig({
+            height: 120,
+            logoHeight: 50,
+            gap: 40,
+            speed: 60
+          })
+        } else if (width < 1024) {
+          // Tablet
+          setLogoLoopConfig({
+            height: 160,
+            logoHeight: 65,
+            gap: 60,
+            speed: 80
+          })
+        } else {
+          // Desktop
+          setLogoLoopConfig({
+            height: 200,
+            logoHeight: 80,
+            gap: 80,
+            speed: 100
+          })
+        }
+      }
+  
+      updateLogoLoopConfig()
+      window.addEventListener('resize', updateLogoLoopConfig)
+      return () => window.removeEventListener('resize', updateLogoLoopConfig)
+    }, [])
 
   return (
     <div className='w-full bg-white'>
@@ -28,7 +72,7 @@ const Home = () => {
         <div 
           className='absolute inset-0 bg-cover bg-center bg-no-repeat'
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2073)',
+            backgroundImage: 'url(./bg.jpg)',
           }}
         >
           <div className='absolute inset-0 bg-linear-to-r from-black/60 via-black/50 to-black/30'></div>
@@ -64,7 +108,7 @@ const Home = () => {
               >
                 Connect with us
                 <motion.div
-                  className='ml-3 w-10 h-10 bg-blue-600 hover:bg-[#04A1A8] rounded-full flex items-center justify-center transition-all ease-in'
+                  className='ml-3 w-10 h-10 bg-[#015482] hover:bg-[#17d3cf] rounded-full flex items-center justify-center transition-all ease-in'
 
                 >
                   < ArrowUpRight className='w-5 h-5 text-white' />
@@ -201,8 +245,188 @@ const Home = () => {
         </div>
       </section>
 
+            <section className='py-20 bg-white'>
+              <div className='container mx-auto px-4'>
+                <div className='text-center mb-16'>
+                  <motion.h2 
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    className='text-4xl md:text-5xl font-bold mb-4'
+                  >
+                    Why Choose <span className='italic text-blue-700'>Us?</span>
+                  </motion.h2>
+                </div>
+      
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto'>
+                  {/* Card 1 */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    className='bg-white p-8 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow'
+                  >
+                    <div className='flex items-start gap-4'>
+                      <div className='w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center shrink-0'>
+                        <BookOpen className='w-6 h-6 text-blue-700' />
+                      </div>
+                      <div>
+                        <h3 className='text-xl font-bold mb-3'>Experienced Indian CA & CPA (US)-led firm</h3>
+                        <p className='text-gray-600 leading-relaxed'>
+                          Our teams of CPAs, Chartered Accountants, and experienced tax and accounting professionals bring deep, specialized knowledge of US tax regulations, US GAAP, and federal and state compliance
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+      
+                  {/* Card 2 */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.1 }}
+                    className='bg-white p-8 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow'
+                  >
+                    <div className='flex items-start gap-4'>
+                      <div className='w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center shrink-0'>
+                        <Clock className='w-6 h-6 text-blue-700' />
+                      </div>
+                      <div>
+                        <h3 className='text-xl font-bold mb-3'>Turnaround You Can Rely On</h3>
+                        <p className='text-gray-600 leading-relaxed'>
+                          Defined timelines, structured workflows, and deadline-driven delivery, especially critical during peak tax season.
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+      
+                  {/* Card 3 */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    className='bg-white p-8 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow'
+                  >
+                    <div className='flex items-start gap-4'>
+                      <div className='w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center shrink-0'>
+                        <Shield className='w-6 h-6 text-blue-700' />
+                      </div>
+                      <div>
+                        <h3 className='text-xl font-bold mb-3'>Data Security & Confidentiality</h3>
+                        <p className='text-gray-600 leading-relaxed'>
+                          NDA-backed engagements, secure file transfer protocols, and strict data privacy practices — your client data is always protected.
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+      
+                  {/* Card 4 */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                    className='bg-white p-8 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow'
+                  >
+                    <div className='flex items-start gap-4'>
+                      <div className='w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center shrink-0'>
+                        <DollarSign className='w-6 h-6 text-blue-700' />
+                      </div>
+                      <div>
+                        <h3 className='text-xl font-bold mb-3'>Cost Efficiency</h3>
+                        <p className='text-gray-600 leading-relaxed'>
+                          Significant reduction in operational costs compared to in-house staffing — without compromising on quality or accuracy.
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+      
+                  {/* Card 5 */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.4 }}
+                    className='bg-white p-8 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow'
+                  >
+                    <div className='flex items-start gap-4'>
+                      <div className='w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center shrink-0'>
+                        <Users className='w-6 h-6 text-blue-700' />
+                      </div>
+                      <div>
+                        <h3 className='text-xl font-bold mb-3'>Scalable Engagement Model</h3>
+                        <p className='text-gray-600 leading-relaxed'>
+                          Flexible team sizing to accommodate seasonal peaks, project expansions, or ongoing support needs.
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+      
+                  {/* Card 6 */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.5 }}
+                    className='bg-white p-8 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow'
+                  >
+                    <div className='flex items-start gap-4'>
+                      <div className='w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center shrink-0'>
+                        <TrendingUp className='w-6 h-6 text-blue-700' />
+                      </div>
+                      <div>
+                        <h3 className='text-xl font-bold mb-3'>Quality & Continuous Improvement</h3>
+                        <p className='text-gray-600 leading-relaxed'>
+                          Regular internal reviews, quality control checkpoints, and process optimization to ensure excellence in every engagement.
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+                </div>
+              </div>
+            </section>
+
+                  <section className='py-20 bg-gray-50'>
+                    <div className='container mx-auto px-4'>
+                      <div className='text-center mb-12'>
+                        <h2 className='text-4xl md:text-5xl font-bold mb-4'>
+                          Tools we <span className='italic text-blue-700'>work with</span>.
+                        </h2>
+                      </div>
+                      
+                      <div style={{ height: `${logoLoopConfig.height}px`, position: 'relative', overflow: 'hidden' }} className='mt-10'>
+                        <LogoLoop
+                          logos={[
+                            { src: "./1.png", alt: "QuickBooks" },
+                            { src: "./2.png" },
+                            { src: "./3.png", },
+                            { src: "./4.png", },
+                            { src: "./5.png", },
+                            { src: "./6.png",  },
+                            { src: "./7.png",  },
+                            { src: "./8.png",  },
+                            { src: "./9.png",  },
+                            { src: "./10.png",  },
+                            { src: "./11.png",  },
+                          ]}
+                          speed={logoLoopConfig.speed}
+                          direction="left"
+                          logoHeight={logoLoopConfig.logoHeight}
+                          gap={logoLoopConfig.gap}
+                          hoverSpeed={0}
+                          fadeOut
+                          fadeOutColor="#f9fafb"
+                          ariaLabel="Tools we work with"
+                        />
+                      </div>
+                    </div>
+                  </section>
+
       {/* Work with Experts Section */}
-      <section className='py-20 bg-white'>
+      <section className='mb-30 bg-white'>
         <div className='container mx-auto px-4'>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center'>
             {/* Left Column - Image */}
@@ -215,7 +439,7 @@ const Home = () => {
             >
               <div className='relative w-full max-w-xl mx-auto lg:mx-0'>
                 <img 
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2088" 
+                  src="./homepageleft.jpeg" 
                   alt="Work with experts" 
                   className='rounded-3xl w-full h-auto shadow-lg object-cover'
                 />

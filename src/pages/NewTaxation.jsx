@@ -12,7 +12,7 @@ const NewTaxation = () => {
         <div 
           className='absolute inset-0 bg-cover bg-center bg-no-repeat'
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1554224311-beee460ae6bb?q=80&w=2070)',
+            backgroundImage: 'url(./photo3.jpg)',
           }}
         >
           <div className='absolute inset-0 bg-black/40'></div>

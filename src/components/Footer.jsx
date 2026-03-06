@@ -95,7 +95,7 @@ const Footer = () => {
             {/* Social Links */}
             <div className='flex items-center gap-6'>
               <a 
-                href="https://linkedin.com" 
+                href="https://www.linkedin.com/company/taxarcglobal/about/?viewAsMember=true" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className='text-gray-400 hover:text-[#17D3CF] transition-colors'
@@ -103,7 +103,7 @@ const Footer = () => {
                 <Linkedin className='w-5 h-5' />
               </a>
               <a 
-                href="https://facebook.com" 
+                href="https://www.facebook.com/profile.php?id=61586478143120" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className='text-gray-400 hover:text-[#17D3CF] transition-colors'
@@ -111,7 +111,7 @@ const Footer = () => {
                 <Facebook className='w-5 h-5' />
               </a>
               <a 
-                href="https://instagram.com" 
+                href="https://www.instagram.com/taxarc_global?igsh=ZnpxbzR1YnN6azdv&utm_source=qr " 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className='text-gray-400 hover:text-[#17D3CF] transition-colors'
