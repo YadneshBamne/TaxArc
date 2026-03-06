@@ -243,10 +243,10 @@ const Contact = () => {
 
 
       {/* Drop Us a Message Section */}
-      <section className="mt-10 bg-gray-50">
+      <section className="mt-10 ">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="flex flex-col lg:flex-row justify-between items-start gap-12 lg:gap-20">
+            <div className="flex flex-col lg:flex-row justify-between items-center gap-12 lg:gap-20">
               {/* Left - Message Header & Contact Info */}
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
@@ -339,7 +339,7 @@ const Contact = () => {
 
                   {/* Selected Services Badges */}
                   {formData.services.length > 0 && (
-                    <div className='p-4 border border-gray-200 rounded-lg bg-gray-50'>
+                    <div className='p-4 border border-gray-200 rounded-lg '>
                       <p className='text-sm font-semibold text-gray-700 mb-3'>Your Selected Services</p>
                       <div className='flex flex-wrap gap-2'>
                         {formData.services.map((service) => (

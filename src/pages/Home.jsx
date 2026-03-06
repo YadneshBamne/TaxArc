@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom'
 import { ArrowRight, Shield, CheckCircle,BookOpen,Clock,DollarSign,Users, TrendingUp, ArrowUpRight } from 'lucide-react'
 import { motion } from 'motion/react'
 import { Accordion } from '../components'
-import { useState,useEffect } from 'react'
-import LogoLoop from '../components/LogoLoop'
+
 
 const Home = () => {
   const accordionItems = [
@@ -21,48 +20,7 @@ const Home = () => {
       content: 'Your financial information is sensitive and deserves the highest level of protection. We maintain strict confidentiality protocols and security measures to safeguard your data. Trust is the foundation of our relationship, and we take that responsibility seriously.'
     }
   ]
-    const [logoLoopConfig, setLogoLoopConfig] = useState({
-      height: 200,
-      logoHeight: 80,
-      gap: 80,
-      speed: 100
-    })
-  
-    useEffect(() => {
-      const updateLogoLoopConfig = () => {
-        const width = window.innerWidth
-        
-        if (width < 640) {
-          // Mobile
-          setLogoLoopConfig({
-            height: 120,
-            logoHeight: 50,
-            gap: 40,
-            speed: 60
-          })
-        } else if (width < 1024) {
-          // Tablet
-          setLogoLoopConfig({
-            height: 160,
-            logoHeight: 65,
-            gap: 60,
-            speed: 80
-          })
-        } else {
-          // Desktop
-          setLogoLoopConfig({
-            height: 200,
-            logoHeight: 80,
-            gap: 80,
-            speed: 100
-          })
-        }
-      }
-  
-      updateLogoLoopConfig()
-      window.addEventListener('resize', updateLogoLoopConfig)
-      return () => window.removeEventListener('resize', updateLogoLoopConfig)
-    }, [])
+
 
   return (
     <div className='w-full bg-white'>
@@ -397,30 +355,8 @@ const Home = () => {
                         </h2>
                       </div>
                       
-                      <div style={{ height: `${logoLoopConfig.height}px`, position: 'relative', overflow: 'hidden' }} className='mt-15'>
-                        <LogoLoop
-                          logos={[
-                            { src: "./1.png", alt: "QuickBooks" },
-                            { src: "./2.png" },
-                            { src: "./3.png", },
-                            { src: "./4.png", },
-                            { src: "./5.png", },
-                            { src: "./6.png",  },
-                            { src: "./7.png",  },
-                            { src: "./8.png",  },
-                            { src: "./gusto.png",  },
-                            { src: "./10.png",  },
-                            { src: "./taxact.svg",  },
-                          ]}
-                          speed={logoLoopConfig.speed}
-                          direction="left"
-                          logoHeight={logoLoopConfig.logoHeight}
-                          gap={logoLoopConfig.gap}
-                          hoverSpeed={0}
-                          fadeOut
-                          fadeOutColor="#f9fafb"
-                          ariaLabel="Tools we work with"
-                        />
+                      <div className='mt-10 flex justify-center'>
+                        <img src='./allogos.png' alt='Tools we work with' className='w-full max-w-4xl h-auto' />
                       </div>
                     </div>
                   </section>
