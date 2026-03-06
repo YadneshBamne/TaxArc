@@ -15,13 +15,13 @@ const AccordionItem = ({ title, content, isOpen, onClick, delay }) => {
         onClick={onClick}
         className='w-full py-5 flex justify-between items-center text-left group'
       >
-        <span className='font-medium text-lg text-gray-900'>{title}</span>
+        <span className='font-medium text-2xl text-gray-900'>{title}</span>
         <motion.div
           animate={{ rotate: isOpen ? 45 : 0 }}
           transition={{ duration: 0.3 }}
           className='shrink-0 ml-4'
         >
-          <div className='w-8 h-8 rounded-full bg-blue-700 flex items-center justify-center'>
+          <div className='w-8 h-8 rounded-full bg-[#015482] flex items-center justify-center'>
             <Plus className='w-5 h-5 text-white' strokeWidth={2.5} />
           </div>
         </motion.div>

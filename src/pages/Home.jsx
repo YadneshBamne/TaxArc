@@ -85,7 +85,7 @@ const Home = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight'
+              className='text-5xl md:text-6xl font-bold text-white mb-6 leading-tight'
             >
               Strategic Offshore Partner for
             </motion.h1>
@@ -93,7 +93,7 @@ const Home = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className='text-4xl md:text-6xl font-serif italic text-white mb-10 leading-tight'
+              className='text-4xl md:text-4xl font-1 italic text-white mb-10 leading-tight'
             >
               US Tax & Accounting Excellence
             </motion.p>
@@ -134,7 +134,7 @@ const Home = () => {
                 <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>
                   Our Guiding Philosophy - ARC
                 </h2>
-                <p className='text-4xl font-serif italic mb-6 bg-[#0141A3] bg-clip-text text-transparent'>
+                <p className='text-3xl font-1 italic mb-6 bg-[#015482] bg-clip-text text-transparent'>
                   Accuracy, Reliability and Confidentiality
                 </p>
                 <p className='text-gray-700 mb-8 leading-relaxed'>
@@ -175,7 +175,7 @@ const Home = () => {
             className='mb-12'
           >
             <h2 className='text-3xl md:text-4xl font-bold text-gray-900'>
-              Explore Our <span className='font-serif italic text-[#0141A3]'>Services</span>
+              Explore Our <span className='font-serif italic text-[#015482]'>Services</span>
             </h2>
           </motion.div>
 
@@ -229,7 +229,7 @@ const Home = () => {
                   {/* Arrow Button - Bottom Right */}
                   <Link 
                     to={service.link}
-                    className='absolute bottom-4 right-4 w-10 h-10 bg-blue-700 rounded-full flex items-center justify-center hover:bg-blue-800 transition-colors group/btn'
+                    className='absolute bottom-4 right-4 w-10 h-10 bg-[#015482] rounded-full flex items-center justify-center hover:bg-[#17d3cf] transition-colors group/btn'
                   >
                     <ArrowUpRight className='w-5 h-5 text-white group-hover/btn:scale-110 transition-transform' />
                   </Link>
@@ -255,7 +255,7 @@ const Home = () => {
                     transition={{ duration: 0.6 }}
                     className='text-4xl md:text-5xl font-bold mb-4'
                   >
-                    Why Choose <span className='italic text-blue-700'>Us?</span>
+                    Why Choose <span className='italic text-[#015482]'>Us?</span>
                   </motion.h2>
                 </div>
       
@@ -270,7 +270,7 @@ const Home = () => {
                   >
                     <div className='flex items-start gap-4'>
                       <div className='w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center shrink-0'>
-                        <BookOpen className='w-6 h-6 text-blue-700' />
+                        <BookOpen className='w-6 h-6 text-[#015482]' />
                       </div>
                       <div>
                         <h3 className='text-xl font-bold mb-3'>Experienced Indian CA & CPA (US)-led firm</h3>
@@ -291,7 +291,7 @@ const Home = () => {
                   >
                     <div className='flex items-start gap-4'>
                       <div className='w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center shrink-0'>
-                        <Clock className='w-6 h-6 text-blue-700' />
+                        <Clock className='w-6 h-6 text-[#015482]' />
                       </div>
                       <div>
                         <h3 className='text-xl font-bold mb-3'>Turnaround You Can Rely On</h3>
@@ -312,7 +312,7 @@ const Home = () => {
                   >
                     <div className='flex items-start gap-4'>
                       <div className='w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center shrink-0'>
-                        <Shield className='w-6 h-6 text-blue-700' />
+                        <Shield className='w-6 h-6 text-[#015482]' />
                       </div>
                       <div>
                         <h3 className='text-xl font-bold mb-3'>Data Security & Confidentiality</h3>
@@ -333,7 +333,7 @@ const Home = () => {
                   >
                     <div className='flex items-start gap-4'>
                       <div className='w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center shrink-0'>
-                        <DollarSign className='w-6 h-6 text-blue-700' />
+                        <DollarSign className='w-6 h-6 text-[#015482]' />
                       </div>
                       <div>
                         <h3 className='text-xl font-bold mb-3'>Cost Efficiency</h3>
@@ -354,7 +354,7 @@ const Home = () => {
                   >
                     <div className='flex items-start gap-4'>
                       <div className='w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center shrink-0'>
-                        <Users className='w-6 h-6 text-blue-700' />
+                        <Users className='w-6 h-6 text-[#015482]' />
                       </div>
                       <div>
                         <h3 className='text-xl font-bold mb-3'>Scalable Engagement Model</h3>
@@ -375,7 +375,7 @@ const Home = () => {
                   >
                     <div className='flex items-start gap-4'>
                       <div className='w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center shrink-0'>
-                        <TrendingUp className='w-6 h-6 text-blue-700' />
+                        <TrendingUp className='w-6 h-6 text-[#015482]' />
                       </div>
                       <div>
                         <h3 className='text-xl font-bold mb-3'>Quality & Continuous Improvement</h3>
@@ -393,11 +393,11 @@ const Home = () => {
                     <div className='container mx-auto px-4'>
                       <div className='text-center mb-12'>
                         <h2 className='text-4xl md:text-5xl font-bold mb-4'>
-                          Tools we <span className='italic text-blue-700'>work with</span>.
+                          Tools we <span className='italic text-[#015482]'>work with</span>.
                         </h2>
                       </div>
                       
-                      <div style={{ height: `${logoLoopConfig.height}px`, position: 'relative', overflow: 'hidden' }} className='mt-10'>
+                      <div style={{ height: `${logoLoopConfig.height}px`, position: 'relative', overflow: 'hidden' }} className='mt-15'>
                         <LogoLoop
                           logos={[
                             { src: "./1.png", alt: "QuickBooks" },
@@ -462,11 +462,11 @@ const Home = () => {
               
               <Link 
                 to="/contact" 
-                className='inline-flex items-center bg-white border-2 border-gray-300 text-gray-900 px-8 py-3 rounded-full hover:border-blue-700 hover:bg-blue-50 transition group font-semibold w-fit'
+                className='inline-flex items-center bg-white border-2 border-gray-300 text-gray-900 px-8 py-3 rounded-full hover:border[#015482] hover:bg-blue-50 transition group font-semibold w-fit'
               >
                 Get Started
                 <motion.div
-                  className='ml-3 w-8 h-8 bg-blue-700 rounded-full flex items-center justify-center'
+                  className='ml-3 w-8 h-8 bg-[#015482] hover:bg-[#17d3cf] rounded-full flex items-center justify-center'
                   whileHover={{ scale: 1.1 }}
                 >
                   <ArrowRight className='w-5 h-5 text-white' />

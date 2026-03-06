@@ -12,7 +12,7 @@ const Payroll = () => {
         <div 
           className='absolute inset-0 bg-cover bg-center bg-no-repeat'
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015)',
+            backgroundImage: 'url(https://plus.unsplash.com/premium_photo-1661758291735-353429c6a9c4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)',
           }}
         >
           <div className='absolute inset-0 bg-black/50'></div>
@@ -26,7 +26,7 @@ const Payroll = () => {
             transition={{ duration: 0.8 }}
           >
             <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
-              <span className='text-[#17D3CF]'>Payroll</span>
+              <span className='text-white'>Payroll</span>
             </h1>
             <p className='text-xl md:text-2xl text-white font-light'>
               Reliable Payroll management
@@ -211,7 +211,7 @@ const Payroll = () => {
                 className='relative min-h-96'
               >
                 <img 
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2088" 
+                  src="https://plus.unsplash.com/premium_photo-1661759663327-12395f019b7e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHBheXJvbGx8ZW58MHx8MHx8fDA%3D" 
                   alt="Work with experts" 
                   className='w-full h-full object-cover'
                 />

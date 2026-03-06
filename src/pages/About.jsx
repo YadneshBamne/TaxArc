@@ -117,7 +117,7 @@ const About = () => {
               <h2 className='text-4xl md:text-5xl font-bold mb-2'>
                 Meet our CEO
               </h2>
-              <h3 className='text-4xl md:text-5xl font-serif italic text-blue-700 mb-4'>
+              <h3 className='text-4xl md:text-5xl font-serif italic text-[#17d3cf] mb-4'>
                 Harshika Vora.
               </h3>
               <p className='text-lg font-semibold text-gray-800 mb-6'>
@@ -203,7 +203,7 @@ const About = () => {
               <h2 className='text-4xl md:text-5xl font-bold mb-2'>
                 Meet our Strategic Advisor
               </h2>
-              <h3 className='text-4xl md:text-5xl font-serif italic text-blue-700 mb-4'>
+              <h3 className='text-4xl md:text-5xl font-serif italic text-[#17d3cf] mb-4'>
                 Hemant R. Vora.
               </h3>
               <p className='text-lg font-semibold text-gray-800 mb-6'>
@@ -244,7 +244,7 @@ const About = () => {
             className='text-center mb-16'
           >
             <h2 className='text-4xl md:text-5xl font-bold mb-4'>
-              Our <span className='italic text-blue-700'>Vision, Mission & Values</span>
+              Our <span className='italic text-[#015482]'>Vision, Mission & Values</span>
             </h2>
           </motion.div>
 
@@ -257,12 +257,12 @@ const About = () => {
               transition={{ duration: 0.6 }}
               className='rounded-2xl overflow-hidden shadow-2xl'
             >
-              <div className='bg-[#0141A3] h-42 flex items-center justify-center'>
+              <div className='bg-[#015482] h-42 flex items-center justify-center'>
                 <h3 className='text-2xl font-bold text-white'>VISION</h3>
               </div>
               <div className='relative bg-gray-100 pt-20 pb-8 px-6'>
                 <div className='absolute -top-10 left-1/2 -translate-x-1/2'>
-                  <div className='w-20 h-20 bg-[#0141A3] rotate-45 flex items-center justify-center'>
+                  <div className='w-20 h-20 bg-[#015482] rotate-45 flex items-center justify-center'>
                     <Eye className='w-20 h-20 text-white -rotate-45' />
                   </div>
                 </div>
@@ -280,12 +280,12 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className=' rounded-2xl overflow-hidden shadow-2xl'
             >
-              <div className='bg-[#0141A3] h-42 flex items-center justify-center'>
+              <div className='bg-[#015482] h-42 flex items-center justify-center'>
                 <h3 className='text-2xl font-bold text-white'>MISSION</h3>
               </div>
               <div className='relative  pt-20 pb-10 px-6'>
                 <div className='absolute -top-10 left-1/2 -translate-x-1/2'>
-                  <div className='w-20 h-20 bg-[#0141A3] rotate-45 flex items-center justify-center'>
+                  <div className='w-20 h-20 bg-[#015482] rotate-45 flex items-center justify-center'>
                     <Target className='w-20 h-20 pb-2 text-white -rotate-45' />
                   </div>
                 </div>
@@ -303,12 +303,12 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className=' rounded-2xl overflow-hidden shadow-2xl'
             >
-              <div className='bg-[#0141A3] h-42 flex items-center justify-center'>
+              <div className='bg-[#015482] h-42 flex items-center justify-center'>
                 <h3 className='text-2xl font-bold text-white'>VALUES</h3>
               </div>
               <div className='relative  pt-20 pb-10 px-6'>
                 <div className='absolute -top-10 left-1/2 -translate-x-1/2'>
-                  <div className='w-20 h-20 bg-[#0141A3] rotate-45 flex items-center justify-center'>
+                  <div className='w-20 h-20 bg-[#015482] rotate-45 flex items-center justify-center'>
                     <Gem className='w-20 h-20 text-white -rotate-45' />
                   </div>
                 </div>
@@ -336,7 +336,7 @@ const About = () => {
             className='text-center mb-16'
           >
             <h2 className='text-4xl md:text-5xl font-bold mb-4'>
-              Our <span className='italic text-blue-700'>Workflow Process</span>
+              Our <span className='italic text-[#015482]'>Workflow Process</span>
             </h2>
           </motion.div>
 
@@ -463,7 +463,7 @@ const About = () => {
             className='text-center mb-16'
           >
             <h2 className='text-4xl md:text-5xl font-bold mb-4'>
-              Our IT Infrastructure and <span className='italic text-blue-700'>Security Measures</span>
+              Our IT Infrastructure and <span className='italic text-[#015482]'>Security Measures</span>
             </h2>
           </motion.div>
 
@@ -477,7 +477,7 @@ const About = () => {
                 transition={{ duration: 0.6 }}
                 className='flex flex-col items-center text-center'
               >
-                <Shield fill='#CCD9ED' className='w-12 h-12 text-blue-700 mb-4' />
+                <Shield fill='#CCD9ED' className='w-12 h-12 text-[#015482] mb-4' />
                 <p className='text-sm font-semibold'>Latest configuration<br />devices</p>
               </motion.div>
 
@@ -488,7 +488,7 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className='flex flex-col items-center text-center'
               >
-                <Lock fill='#CCD9ED' className='w-12 h-12 text-blue-700 mb-4' />
+                <Lock fill='#CCD9ED' className='w-12 h-12 text-[#015482] mb-4' />
                 <p className='text-sm font-semibold'>Licensed support<br />software</p>
               </motion.div>
 
@@ -499,7 +499,7 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className='flex flex-col items-center text-center'
               >
-                <UserCircle2  className='w-12 h-12 text-blue-700 mb-4' />
+                <UserCircle2  className='w-12 h-12 text-[#015482]  mb-4' />
                 <p className='text-sm font-semibold'>Secured<br />workstations</p>
               </motion.div>
 
@@ -510,7 +510,7 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className='flex flex-col items-center text-center'
               >
-                <Key className='w-12 h-12 text-blue-700 mb-4' />
+                <Key className='w-12 h-12 text-[#015482] mb-4' />
                 <p className='text-sm font-semibold'>No external<br />devices</p>
               </motion.div>
             </div>
@@ -524,7 +524,7 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className='flex flex-col items-center text-center'
               >
-                <Home className='w-12 h-12 text-blue-700 mb-4' />
+                <Home className='w-12 h-12 text-[#015482] mb-4' />
                 <p className='text-sm font-semibold'>100% on-site<br />operations</p>
               </motion.div>
 
@@ -535,7 +535,7 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 0.5 }}
                 className='flex flex-col items-center text-center'
               >
-                <Printer fill='#CCD9ED' className='w-12 h-12 text-blue-700 mb-4' />
+                <Printer fill='#CCD9ED' className='w-12 h-12 text-[#015482] mb-4' />
                 <p className='text-sm font-semibold'>Printing<br />restrictions</p>
               </motion.div>
 
@@ -546,7 +546,7 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 0.6 }}
                 className='flex flex-col items-center text-center'
               >
-                <Settings fill='#CCD9ED' className='w-12 h-12 text-blue-700 mb-4' />
+                <Settings fill='#CCD9ED' className='w-12 h-12 text-[#015482] mb-4' />
                 <p className='text-sm font-semibold'>Centralized<br />control</p>
               </motion.div>
 
@@ -557,7 +557,7 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 0.7 }}
                 className='flex flex-col items-center text-center'
               >
-                <Network fill='#CCD9ED' className='w-12 h-12 text-blue-700 mb-4' />
+                <Network fill='#CCD9ED' className='w-12 h-12 text-[#015482] mb-4' />
                 <p className='text-sm font-semibold'>Multiple LAN networks</p>
               </motion.div>
             </div>
@@ -571,7 +571,7 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 0.8 }}
                 className='flex flex-col items-center text-center'
               >
-                <Database fill='#CCD9ED' className='w-12 h-12 text-blue-700 mb-4' />
+                <Database fill='#CCD9ED' className='w-12 h-12 text-[#015482] mb-4' />
                 <p className='text-sm font-semibold'>Functional access<br />to data</p>
               </motion.div>
 
@@ -582,7 +582,7 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 0.9 }}
                 className='flex flex-col items-center text-center'
               >
-                <ShieldAlert fill='#CCD9ED' className='w-12 h-12 text-blue-700 mb-4' />
+                <ShieldAlert fill='#CCD9ED' className='w-12 h-12 text-[#015482] mb-4' />
                 <p className='text-sm font-semibold'>Harmful website<br />monitoring</p>
               </motion.div>
 
@@ -593,7 +593,7 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 1.0 }}
                 className='flex flex-col items-center text-center'
               >
-                <HardDrive fill='#CCD9ED' className='w-12 h-12 text-blue-700 mb-4' />
+                <HardDrive fill='#CCD9ED' className='w-12 h-12 text-[#015482] mb-4' />
                 <p className='text-sm font-semibold'>Automated<br />Backups</p>
               </motion.div>
             </div>

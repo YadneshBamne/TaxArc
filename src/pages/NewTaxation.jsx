@@ -35,45 +35,7 @@ const NewTaxation = () => {
         </div>
       </section>
 
-      {/* Quote Section */}
-      <section className='py-20 bg-white'>
-        <div className='container mx-auto px-4'>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className='max-w-4xl mx-auto text-center'
-          >
-            <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>
-              "Accounting is the language of business"
-            </h2>
-            <p className='text-lg text-gray-600'>
-              Warren Buffett
-            </p>
-          </motion.div>
-        </div>
-      </section>
 
-      {/* Main Content Section */}
-      <section className='py-16 bg-gray-50'>
-        <div className='container mx-auto px-4'>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className='max-w-5xl mx-auto'
-          >
-            <p className='text-lg md:text-xl text-gray-900 leading-relaxed mb-6 text-center font-semibold'>
-              We live by this quote at TaxArc Global.
-            </p>
-            <p className='text-base md:text-lg text-gray-700 leading-relaxed text-center'>
-              Whether you're an accounting firm looking to offload bookkeeping work from your senior staff, or a business owner who needs reliable financials to make smarter decisions — disorganized, incomplete, or inaccurate books are a liability you can't afford. TaxArc Global delivers structured, meticulous accounting and bookkeeping services that give every stakeholder — from founders to CFOs to external auditors — confidence in the numbers.
-            </p>
-          </motion.div>
-        </div>
-      </section>
 
       {/* Services Section */}
       <section className='py-20 bg-white'>
@@ -293,7 +255,7 @@ const NewTaxation = () => {
             >
               <div className='relative w-full max-w-xl mx-auto lg:mx-0'>
                 <img 
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2088" 
+                  src="https://images.unsplash.com/photo-1629904869392-ae2a682d4d01?q=80&w=1176&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
                   alt="Work with experts" 
                   className='rounded-3xl w-full h-auto shadow-lg object-cover'
                 />

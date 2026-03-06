@@ -36,14 +36,12 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [prevScrollPos])
 
-  const navBgClass = isTransparentPage
-    ? isScrolled 
-      ? 'bg-white/95 backdrop-blur-md shadow-lg' 
-      : 'bg-transparent'
-    : 'bg-white/95 backdrop-blur-md shadow-lg'
+  const navBgClass = isScrolled 
+    ? 'bg-white/95 backdrop-blur-md shadow-lg' 
+    : 'bg-transparent'
 
-  const textColorClass = isTransparentPage && !isScrolled ? 'text-white' : 'text-gray-800'
-  const hoverColorClass = isTransparentPage && !isScrolled ? 'hover:text-cyan-400' : 'hover:text-blue-600'
+  const textColorClass = !isScrolled ? 'text-white' : 'text-gray-800'
+  const hoverColorClass = !isScrolled ? 'hover:text-cyan-400' : 'hover:text-blue-600'
 
   return (
     <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${navBgClass} ${visible ? 'translate-y-0' : '-translate-y-full'}`}>

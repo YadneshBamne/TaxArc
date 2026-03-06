@@ -54,7 +54,7 @@ const BookkeepingAccounting = () => {
               className='text-center mb-12'
             >
               <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-6'>
-                Our Accounting & Bookkeeping <span className='text-[#17D3CF] italic font-serif'>Services</span>
+                Our Bookkeeping & Accounting <span className='text-[#17D3CF] italic font-serif'>Services</span>
               </h2>
               <p className='text-base md:text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto'>
                 We provide full-scope accounting support across QuickBooks Online, QuickBooks Desktop, Xero, and other major software. For accounting firms, we act as a white-label, back-office team handling the bookkeeping work you'd rather not staff internally. For businesses, we become your outsourced accounting department — managing everything from daily transactions to month-end close.
@@ -259,7 +259,7 @@ const BookkeepingAccounting = () => {
             >
               <div className='relative w-full max-w-xl mx-auto lg:mx-0'>
                 <img 
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2088" 
+                  src="https://images.unsplash.com/photo-1555436169-20e93ea9a7ff?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
                   alt="Work with experts" 
                   className='rounded-3xl w-full h-auto shadow-lg object-cover'
                 />
