@@ -60,9 +60,10 @@ const Navbar = () => {
           <motion.div
             initial={{ x: '100%' }}
             animate={{ x: 0 }}
+            className=' rounded-l-[2em]'
             exit={{ x: '100%' }}
             transition={{ type: 'tween', duration: 0.3, ease: 'easeInOut' }}
-            style={{ position: 'fixed', top: 0, right: 0, height: '100%', width: '16rem', background: 'white', boxShadow: '0 25px 50px rgba(0,0,0,0.25)', zIndex: 99991, overflowY: 'auto' }}
+            style={{ position: 'fixed', top: 0, right: 0, height: '100%', width: '18rem', background: 'white', boxShadow: '0 25px 50px rgba(0,0,0,0.25)', zIndex: 99991, overflowY: 'auto' }}
           >
             <div className='p-6 pt-20 space-y-4'>
               <Link to="/" className='block py-3 text-gray-800 hover:text-[#17D3CF] font-medium text-lg border-b border-gray-100' onClick={toggleMenu}>Home</Link>
@@ -91,7 +92,7 @@ const Navbar = () => {
               <img 
                 src="/brand1.png" 
                 alt="TaxArc Global" 
-                className='h-18 w-auto'
+                className='h-18 w-auto mb-1'
               />
             </Link>
 
