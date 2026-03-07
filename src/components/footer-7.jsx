@@ -8,14 +8,13 @@ const defaultSections = [
     title: "Main Pages",
     links: [
       { name: "Home", href: "/" },
-      { name: "Blog", href: "/services" },
+      { name: "Blog", href: "/" },
     ],
   },
   {
     title: "Company",
     links: [
       { name: "Contact", href: "/contact" },
-      { name: "Services", href: "/services" },
       { name: "About Us", href: "/about" },
     ],
   },

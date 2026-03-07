@@ -30,7 +30,7 @@ const Home = () => {
         <div 
           className='absolute inset-0 bg-cover bg-center bg-no-repeat'
           style={{
-            backgroundImage: 'url(./bg.jpg)',
+            backgroundImage: 'url(https://ik.imagekit.io/qxfudjvlf/taxarc/bg.jpg)',
           }}
         >
           <div className='absolute inset-0 bg-linear-to-r from-black/60 via-black/50 to-black/30'></div>
@@ -113,7 +113,7 @@ const Home = () => {
               className='relative'
             >
               <img 
-                src="./2ndsecphoto.jpg" 
+                src="https://ik.imagekit.io/qxfudjvlf/taxarc/2ndsecphoto.jpg" 
                 alt="Team working on accounting" 
                 className='rounded-lg shadow-xl w-full'
               />
@@ -141,15 +141,15 @@ const Home = () => {
             {[
               {
                 title: 'Tax Preparation',
-                image: './photo2.jpg',
+                image: 'https://ik.imagekit.io/qxfudjvlf/taxarc/photo2.jpg',
                 description: 'Accurate, IRS Compliant, deadline-driven tax preparation outsourcing to US CPAs, Enrolled Agents, and tax practices. Our trained professional teams handle individual and business returns with accuracy, compliance, and comprehensive functionality. Manage peak season workload without stretching your capacity.',
                 link: '/new-taxation'
               },
               {
                 title: 'Accounting & Bookkeeping',
-                image: './photo1.jpg',
+                image: 'https://ik.imagekit.io/qxfudjvlf/taxarc/photo1.jpg',
                 description: 'Precise, US GAAP-compliant accounting and bookkeeping outsourcing to US accounting firms, CPA practices and US businesses. Our dedicated teams manage everything from daily bookkeeping to year-end closing and financial reporting. Reduce administrative work and focus on what matters most: your clients.',
-                link: '/bookkeeping-accounting-services'
+                link: '/accounting-bookkeeping'
               },
               {
                 title: 'Payroll Management',
@@ -356,7 +356,7 @@ const Home = () => {
                       </div>
                       
                       <div className='mt-10 flex justify-center'>
-                        <img src='./allogos.png' alt='Tools we work with' className='w-full max-w-4xl h-auto' />
+                        <img src='https://ik.imagekit.io/qxfudjvlf/taxarc/allogos.png' alt='Tools we work with' className='w-full max-w-4xl h-auto' />
                       </div>
                     </div>
                   </section>
@@ -375,7 +375,7 @@ const Home = () => {
             >
               <div className='relative w-full max-w-xl mx-auto lg:mx-0'>
                 <img 
-                  src="./homepageleft.jpeg" 
+                  src="https://ik.imagekit.io/qxfudjvlf/taxarc/homepageleft.jpeg" 
                   alt="Work with experts" 
                   className='rounded-3xl w-full h-auto shadow-lg object-cover'
                 />

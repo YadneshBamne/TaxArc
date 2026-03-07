@@ -53,7 +53,7 @@ const About = () => {
           muted
           playsInline
         >
-          <source src='/C0027.MP4' type='video/mp4' />
+          <source src='https://ik.imagekit.io/qxfudjvlf/taxarc/C0027.MP4' type='video/mp4' />
         </video>
         <div className='absolute inset-0 bg-black/40'></div>
 
@@ -161,7 +161,7 @@ const About = () => {
             >
               <div className='relative w-full max-w-md lg:max-w-lg'>
                 <img
-                  src='./harshika.jpeg'
+                  src='https://ik.imagekit.io/qxfudjvlf/taxarc/harshika.jpeg'
                   alt='Harshika Vora - CEO of TaxArc Global'
                   className='w-full h-auto rounded-3xl  object-cover'
                 />
@@ -185,7 +185,7 @@ const About = () => {
             >
               <div className='relative w-full max-w-md lg:max-w-lg'>
                 <img
-                  src='./hemant.jpeg'
+                  src='https://ik.imagekit.io/qxfudjvlf/taxarc/hemant.jpeg'
                   alt='Hemant R. Vora - Strategic Advisor of TaxArc Global'
                   className='w-full h-auto rounded-3xl  object-cover'
                 />

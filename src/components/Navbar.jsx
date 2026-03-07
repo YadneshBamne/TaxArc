@@ -68,7 +68,7 @@ const Navbar = () => {
               <Link to="/" className='block py-3 text-gray-800 hover:text-[#17D3CF] font-medium text-lg border-b border-gray-100' onClick={toggleMenu}>Home</Link>
               <Link to="/about" className='block py-3 text-gray-800 hover:text-[#17D3CF] font-medium text-lg border-b border-gray-100' onClick={toggleMenu}>About Us</Link>
               <Link to="/new-taxation" className='block py-3 text-gray-800 hover:text-[#17D3CF] font-medium text-lg border-b border-gray-100' onClick={toggleMenu}>Tax Preparation</Link>
-              <Link to="/bookkeeping-accounting-services" className='block py-3 text-gray-800 hover:text-[#17D3CF] font-medium text-lg border-b border-gray-100' onClick={toggleMenu}>Accounting & Bookkeeping</Link>
+              <Link to="/accounting-bookkeeping" className='block py-3 text-gray-800 hover:text-[#17D3CF] font-medium text-lg border-b border-gray-100' onClick={toggleMenu}>Accounting & Bookkeeping</Link>
               <Link to="/payroll" className='block py-3 text-gray-800 hover:text-[#17D3CF] font-medium text-lg border-b border-gray-100' onClick={toggleMenu}>Payroll</Link>
               <Link to="/contact" className='block py-3 text-gray-800 hover:text-[#17D3CF] font-medium text-lg' onClick={toggleMenu}>Contact Us</Link>
             </div>
@@ -119,7 +119,7 @@ const Navbar = () => {
                       className='absolute top-full left-0 mt-2 bg-white shadow-lg rounded-md py-2 w-64'
                     >
                       <Link to="/new-taxation" className='block px-4 py-2 text-gray-800 hover:bg-cyan-50 hover:text-[#17D3CF] transition'>Tax Preparation</Link>
-                      <Link to="/bookkeeping-accounting-services" className='block px-4 py-2 text-gray-800 hover:bg-cyan-50 hover:text-[#17D3CF] transition'>Accounting & Bookkeeping</Link>
+                      <Link to="/accounting-bookkeeping" className='block px-4 py-2 text-gray-800 hover:bg-cyan-50 hover:text-[#17D3CF] transition'>Accounting & Bookkeeping</Link>
                       <Link to="/payroll" className='block px-4 py-2 text-gray-800 hover:bg-cyan-50 hover:text-[#17D3CF] transition'>Payroll</Link>
                     </motion.div>
                   )}

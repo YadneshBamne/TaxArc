@@ -12,7 +12,7 @@ const BookkeepingAccounting = () => {
         <div 
           className='absolute inset-0 bg-cover bg-center bg-no-repeat'
           style={{
-            backgroundImage: 'url(./photo1.jpg)',
+            backgroundImage: 'url(https://ik.imagekit.io/qxfudjvlf/taxarc/photo1.jpg)',
           }}
         >
           <div className='absolute inset-0 bg-black/40'></div>

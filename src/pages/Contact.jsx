@@ -101,7 +101,7 @@ const Contact = () => {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage:
-              "url(./Navratna.jpg)",
+              "url(https://ik.imagekit.io/qxfudjvlf/taxarc/Navratna.jpg)",
           }}
         >
           <div className="absolute inset-0 bg-black/50"></div>
