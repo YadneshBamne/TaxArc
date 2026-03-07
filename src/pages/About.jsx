@@ -103,7 +103,7 @@ const About = () => {
 
 
       {/* Meet Our CEO Section */}
-      <section className='py-20 bg-gray-50'>
+      <section className='py-20'>
         <div className='container mx-auto px-4'>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto'>
             {/* Left Content */}
@@ -299,7 +299,7 @@ const About = () => {
       </section>
 
       {/* Workflow Process Section */}
-<section className='py-20 bg-gray-50'>
+<section className='py-20 '>
   <div className='container mx-auto px-4'>
     <motion.div
       initial={{ opacity: 0, y: 30 }}
