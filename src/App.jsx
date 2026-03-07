@@ -29,7 +29,7 @@ const App = () => {
             <Route path="/new-taxation" element={<NewTaxation />} />
             <Route path="/payroll" element={<NewPayroll />} />
             {/* <Route path="/payroll" element={<Payroll />} /> */}
-            <Route path="/services" element={<Services />} />
+            {/* <Route path="/services" element={<Services />} /> */}
             <Route path="/terms" element={<Terms />} />
             <Route path="/404-v2" element={<NotFound />} />
             <Route path="*" element={<NotFound />} />
