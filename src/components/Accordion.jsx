@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Plus } from 'lucide-react'
 import { motion, AnimatePresence } from 'motion/react'
 
-const AccordionItem = ({ title, content, isOpen, onClick, delay }) => {
+const AccordionItem = ({ title, content, isOpen, onMouseEnter, onMouseLeave, delay }) => {
   return (
     <motion.div
       initial={{ opacity: 0, x: -20 }}
@@ -10,9 +10,10 @@ const AccordionItem = ({ title, content, isOpen, onClick, delay }) => {
       transition={{ duration: 0.5, delay }}
       viewport={{ once: true }}
       className='border-b border-gray-300 last:border-b-0'
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
     >
       <button
-        onClick={onClick}
         className='w-full py-5 flex justify-between items-center text-left group'
       >
         <span className='font-medium text-2xl text-gray-900'>{title}</span>
@@ -49,10 +50,6 @@ const AccordionItem = ({ title, content, isOpen, onClick, delay }) => {
 const Accordion = ({ items }) => {
   const [openIndex, setOpenIndex] = useState(null)
 
-  const handleClick = (index) => {
-    setOpenIndex(openIndex === index ? null : index)
-  }
-
   return (
     <div className='w-full'>
       {items.map((item, index) => (
@@ -61,7 +58,8 @@ const Accordion = ({ items }) => {
           title={item.title}
           content={item.content}
           isOpen={openIndex === index}
-          onClick={() => handleClick(index)}
+          onMouseEnter={() => setOpenIndex(index)}
+          onMouseLeave={() => setOpenIndex(null)}
           delay={index * 0.1}
         />
       ))}

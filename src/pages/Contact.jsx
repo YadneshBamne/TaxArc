@@ -119,7 +119,7 @@ const Contact = () => {
               Contact Us
             </h1>
             <p className="text-lg md:text-xl text-white leading-relaxed mb-4">
-              Based in Ahmedabad, India, we collaborate with CPA firms and
+              We collaborate with CPA firms and
               businesses across the globe. Our systems, communication processes,
               and delivery frameworks are built to work seamlessly across time
               zones— ensuring clarity, responsiveness, and consistent

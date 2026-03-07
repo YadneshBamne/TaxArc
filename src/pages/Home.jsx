@@ -1,11 +1,28 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Shield, CheckCircle,BookOpen,Clock,DollarSign,Users, TrendingUp, ArrowUpRight } from 'lucide-react'
 import { motion } from 'motion/react'
 import { Accordion } from '../components'
+import { Carousel, CarouselContent, CarouselItem } from '../components/ui/carousel'
 
+
+const arcImages = [
+  'https://ik.imagekit.io/qxfudjvlf/taxarc/2ndsecphoto.jpg',
+  'https://ik.imagekit.io/qxfudjvlf/taxarc/photo1.jpg',
+  'https://ik.imagekit.io/qxfudjvlf/taxarc/photo2.jpg',
+]
 
 const Home = () => {
+  const [carouselApi, setCarouselApi] = useState(null)
+
+  useEffect(() => {
+    if (!carouselApi) return
+    const interval = setInterval(() => {
+      carouselApi.scrollNext()
+    }, 3000)
+    return () => clearInterval(interval)
+  }, [carouselApi])
+
   const accordionItems = [
     {
       title: 'Accuracy',
@@ -45,7 +62,7 @@ const Home = () => {
               transition={{ duration: 0.8 }}
               className='text-5xl md:text-6xl font-bold text-white mb-6 leading-tight'
             >
-               Your Outsourced Team for
+               Outsourced Team for 
             </motion.h1>
             <motion.p 
               initial={{ opacity: 0, y: 30 }}
@@ -93,10 +110,10 @@ const Home = () => {
                   Our Philosophy - ARC
                 </h2>
                 <p className='text-3xl font-inter italic mb-6 bg-[#015482] bg-clip-text text-transparent'>
-                  Accuracy, Reliability and Confidentiality
+                  Accurate. Relibility. Confidentiality
                 </p>
                 <p className='text-gray-700 mb-8 leading-relaxed'>
-                  At TaxArc Global, our name reflects our operating philosophy ARC. This is the framework that governs how we deliver work, manage risk, and build long-term client partnerships. It helps us achieve the level of assurance expected by professionally managed organizations.
+                  This is the framework at TaxArc Global, our name reflects our operating philosophy A-R-C. This is the framework that governs how we deliver work, manage risk, and build long-term client partnerships. It helps us achieve the level of assurance expected by professionally managed organizations.
                 </p>
               </motion.div>
 
@@ -104,7 +121,7 @@ const Home = () => {
               <Accordion items={accordionItems} />
             </div>
 
-            {/* Right Column - Image */}
+            {/* Right Column - Image Carousel */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -112,11 +129,19 @@ const Home = () => {
               viewport={{ once: true }}
               className='relative'
             >
-              <img 
-                src="https://ik.imagekit.io/qxfudjvlf/taxarc/2ndsecphoto.jpg" 
-                alt="Team working on accounting" 
-                className='rounded-lg shadow-xl w-full'
-              />
+              <Carousel opts={{ loop: true }} setApi={setCarouselApi} className='w-full'>
+                <CarouselContent>
+                  {arcImages.map((src, i) => (
+                    <CarouselItem key={i}>
+                      <img
+                        src={src}
+                        alt="Team working on accounting"
+                        className='rounded-lg shadow-xl w-full'
+                      />
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+              </Carousel>
             </motion.div>
           </div>
         </div>
@@ -132,8 +157,8 @@ const Home = () => {
             viewport={{ once: true }}
             className='mb-12'
           >
-            <h2 className='text-3xl md:text-4xl font-bold text-gray-900'>
-              Explore Our <span className='font-inter italic text-[#015482]'>Services</span>
+            <h2 className='text-3xl md:text-4xl  font-bold text-gray-900'>
+              Explore Our <span className='font-inter italic  text-[#015482]'>Services</span>
             </h2>
           </motion.div>
 
@@ -194,7 +219,7 @@ const Home = () => {
                 </div>
 
                 {/* Description */}
-                <p className='text-gray-700 text-sm leading-relaxed text-center'>
+                <p className='text-gray-700 leading-relaxed text-center'>
                   {service.description}
                 </p>
               </motion.div>
@@ -215,6 +240,21 @@ const Home = () => {
                   >
                     Why <span className='font-inter italic text-[#015482]'>Us?</span>
                   </motion.h2>
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.15 }}
+                    className='mt-6'
+                  >
+                    <h3 className='text-lg font-semibold text-gray-900 mb-3'>
+                      Specialized Professionals, Seamlessly Integrated
+                    </h3>
+                    <p className='text-gray-700 leading-relaxed max-w-3xl mx-auto'>
+                      Our teams of CPAs, Chartered Accountants, and experienced tax and accounting professionals integrate seamlessly into your existing software ecosystem, minimizing onboarding time and ensuring a smooth, efficient transition from day one.
+                    </p>
+                  </motion.div>
                 </div>
       
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto'>

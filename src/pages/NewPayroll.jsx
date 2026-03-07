@@ -29,7 +29,7 @@ const NewPayroll = () => {
               Payroll
             </h1>
             <p className='text-xl md:text-2xl text-white font-light'>
-             Every Employee Paid Right<br/>Every Obligation Met.
+             Every Employee Paid Right.<br/>Every Obligation Met.
             </p>
           </motion.div>
         </div>

@@ -9,7 +9,7 @@ const About = () => {
     const faqs = [
     {
       question: "What services do you offer?",
-      answer: "We offer comprehensive accounting, bookkeeping, taxation, and payroll services for CPA firms and businesses. Our services include financial statement preparation, tax compliance, payroll processing, and customized accounting solutions."
+      answer: "We offer comprehensive Tax Preparation, Accounting & Bookkeeping and Payroll Services for CPA firms and businesses. Our services include financial statement preparation, tax compliance, payroll processing, and customized accounting solutions."
     },
     {
       question: "How do you ensure data security?",
@@ -81,19 +81,6 @@ const About = () => {
               secure, and dependable support across tax, accounting and bookkeeping operations to 
               businesses and professional organizations worldwide.
             </motion.p>
-
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className='text-lg md:text-xl text-white leading-relaxed'
-            >
-              We operate on a foundation of ARC—Accuracy, Reliability, and Confidentiality. These 
-              principles guide how we deliver services, manage risk, and build long-term partnerships, 
-              ensuring consistent outcomes and the level of assurance expected by professionally 
-              managed organizations.
-            </motion.p>
           </div>
         </div>
       </section>
@@ -115,7 +102,7 @@ const About = () => {
               className='order-2 lg:order-1'
             >
               <h2 className='text-4xl md:text-5xl font-bold mb-2'>
-                Meet our CEO
+                Meet our Founder
               </h2>
               <h3 className='text-4xl md:text-5xl font-inter italic text-[#015482] mb-4'>
                 Harshika Vora
@@ -354,12 +341,7 @@ const About = () => {
                   style={{ width: `${100 / row.length}%` }}
                 >
                   <div className='w-16 h-16 rounded-full border-2 border-[#015482] bg-white flex items-center justify-center shadow-sm'>
-                    <svg viewBox='0 0 40 40' className='w-7 h-7' fill='none' stroke='#015482' strokeWidth='1.8' strokeLinecap='round' strokeLinejoin='round'>
-                      {item.icon === 'search' && (<><circle cx='18' cy='18' r='7' /><line x1='23' y1='23' x2='30' y2='30' /><line x1='15' y1='18' x2='21' y2='18' /><line x1='18' y1='15' x2='18' y2='21' /></>)}
-                      {item.icon === 'person' && (<><circle cx='20' cy='13' r='5' /><path d='M10 32c0-5.5 4.5-10 10-10s10 4.5 10 10' /><line x1='27' y1='9' x2='31' y2='13' /><line x1='31' y1='9' x2='27' y2='13' /></>)}
-                      {item.icon === 'doc' && (<><rect x='10' y='5' width='20' height='30' rx='2' /><line x1='14' y1='13' x2='26' y2='13' /><line x1='14' y1='19' x2='26' y2='19' /><line x1='14' y1='25' x2='20' y2='25' /></>)}
-                      {item.icon === 'wifi' && (<><path d='M8 20 Q20 8 32 20' /><path d='M12 24 Q20 15 28 24' /><path d='M16 28 Q20 22 24 28' /><circle cx='20' cy='31' r='1.5' fill='#015482' /></>)}
-                    </svg>
+                    <span className='text-lg font-bold text-[#015482]'>{item.step}</span>
                   </div>
                   <div style={{ width: 0, height: 0, borderLeft: '7px solid transparent', borderRight: '7px solid transparent', borderTop: '10px solid #015482' }} />
                 </motion.div>
@@ -407,12 +389,7 @@ const About = () => {
                   {/* Pin circle on left */}
                   <div className='relative z-10 flex flex-col items-center flex-shrink-0'>
                     <div className='w-16 h-16 rounded-full border-2 border-[#015482] bg-white flex items-center justify-center shadow-sm'>
-                      <svg viewBox='0 0 40 40' className='w-7 h-7' fill='none' stroke='#015482' strokeWidth='1.8' strokeLinecap='round' strokeLinejoin='round'>
-                        {item.icon === 'search' && (<><circle cx='18' cy='18' r='7' /><line x1='23' y1='23' x2='30' y2='30' /><line x1='15' y1='18' x2='21' y2='18' /><line x1='18' y1='15' x2='18' y2='21' /></>)}
-                        {item.icon === 'person' && (<><circle cx='20' cy='13' r='5' /><path d='M10 32c0-5.5 4.5-10 10-10s10 4.5 10 10' /><line x1='27' y1='9' x2='31' y2='13' /><line x1='31' y1='9' x2='27' y2='13' /></>)}
-                        {item.icon === 'doc' && (<><rect x='10' y='5' width='20' height='30' rx='2' /><line x1='14' y1='13' x2='26' y2='13' /><line x1='14' y1='19' x2='26' y2='19' /><line x1='14' y1='25' x2='20' y2='25' /></>)}
-                        {item.icon === 'wifi' && (<><path d='M8 20 Q20 8 32 20' /><path d='M12 24 Q20 15 28 24' /><path d='M16 28 Q20 22 24 28' /><circle cx='20' cy='31' r='1.5' fill='#015482' /></>)}
-                      </svg>
+                      <span className='text-lg font-bold text-[#015482]'>{item.step}</span>
                     </div>
                     {/* Pin tail pointing right toward card */}
                     <div style={{ width: 0, height: 0, borderTop: '7px solid transparent', borderBottom: '7px solid transparent', borderLeft: '10px solid #015482', position: 'absolute', right: '-10px', top: '50%', transform: 'translateY(-50%)' }} />
