@@ -337,29 +337,81 @@ const Contact = () => {
                     />
                   </div>
 
-                  {/* Selected Services Badges */}
-                  {formData.services.length > 0 && (
-                    <div className='p-4 border border-gray-200 rounded-lg '>
-                      <p className='text-sm font-semibold text-gray-700 mb-3'>Your Selected Services</p>
-                      <div className='flex flex-wrap gap-2'>
-                        {formData.services.map((service) => (
-                          <span
-                            key={service}
-                            className='inline-flex items-center gap-1.5 bg-[#015482] text-white text-xs font-medium px-3 py-1.5 rounded-full'
+                  {/* Remote Services */}
+                  <div className="border border-gray-200 rounded-lg p-5">
+                    <p className="text-sm font-bold text-gray-900 mb-1">
+                      Remote Services of Interest
+                    </p>
+                    <p className="text-xs text-gray-500 mb-4">
+                      You can select more than one service.
+                    </p>
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-6 gap-y-4">
+                      {services.map((service) => (
+                        <label
+                          key={service}
+                          className="flex items-center gap-3 cursor-pointer"
+                        >
+                          <input
+                            type="checkbox"
+                            checked={formData.services.includes(service)}
+                            onChange={() => handleServiceToggle(service)}
+                            className="sr-only"
+                          />
+                          <div
+                            style={{
+                              width: "20px",
+                              height: "20px",
+                              borderRadius: "50%",
+                              border: "2px solid #015482",
+                              backgroundColor: "white",
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                              flexShrink: 0,
+                            }}
                           >
-                            {service}
-                            <button
-                              type='button'
-                              onClick={() => handleServiceToggle(service)}
-                              className='hover:text-gray-300 transition-colors ml-1'
-                            >
-                              ✕
-                            </button>
-                          </span>
-                        ))}
-                      </div>
+                            {formData.services.includes(service) && (
+                              <div
+                                style={{
+                                  width: "10px",
+                                  height: "10px",
+                                  borderRadius: "50%",
+                                  backgroundColor: "#015482",
+                                }}
+                              />
+                            )}
+                          </div>
+                          <span className="text-sm text-gray-900">{service}</span>
+                        </label>
+                      ))}
                     </div>
-                  )}
+
+                    {/* Selected Services Badges */}
+                    {formData.services.length > 0 && (
+                      <div className="mt-4 pt-4 border-t border-gray-100">
+                        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
+                          Selected
+                        </p>
+                        <div className="flex flex-wrap gap-2">
+                          {formData.services.map((service) => (
+                            <span
+                              key={service}
+                              className="inline-flex items-center gap-1.5 bg-[#015482] text-white text-xs font-medium px-3 py-1.5 rounded-full"
+                            >
+                              {service}
+                              <button
+                                type="button"
+                                onClick={() => handleServiceToggle(service)}
+                                className="hover:text-gray-300 transition-colors ml-1"
+                              >
+                                ✕
+                              </button>
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
 
                   <button className="w-full flex items-center justify-between bg-[#015482] hover:bg-[#17D3CF] transition text-white font-medium text-sm px-6 py-3.5 rounded-full">
                     <span>Send Message</span>
@@ -370,69 +422,6 @@ const Contact = () => {
                 </form>
               </motion.div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Remote Services Section */}
-      {/* Remote Services Section */}
-      <section>
-        <div className="container mx-auto p-6">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="mt-10"
-            >
-              <h3 className="text-xl  font-bold text-gray-900 mb-1">
-                Remote Services of Interest For Your Practice
-              </h3>
-              <p className="text-sm text-gray-600 mb-8">
-                You can select more than more services.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-x-16 gap-y-5">
-                {services.map((service) => (
-                  <label
-                    key={service}
-                    className="flex items-center gap-3 cursor-pointer"
-                  >
-                    <input
-                      type="checkbox"
-                      checked={formData.services.includes(service)}
-                      onChange={() => handleServiceToggle(service)}
-                      className="sr-only"
-                    />
-                    <div
-                      style={{
-                        width: "20px",
-                        height: "20px",
-                        borderRadius: "50%",
-                        border: "2px solid #015482",
-                        backgroundColor: "white",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        flexShrink: 0,
-                      }}
-                    >
-                      {formData.services.includes(service) && (
-                        <div
-                          style={{
-                            width: "10px",
-                            height: "10px",
-                            borderRadius: "50%",
-                            backgroundColor: "#015482",
-                          }}
-                        />
-                      )}
-                    </div>
-                    <span className="text-sm text-gray-900">{service}</span>
-                  </label>
-                ))}
-              </div>
-            </motion.div>
           </div>
         </div>
       </section>

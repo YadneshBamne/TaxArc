@@ -30,7 +30,7 @@ const Home = () => {
         <div 
           className='absolute inset-0 bg-cover bg-center bg-no-repeat'
           style={{
-            backgroundImage: 'url(https://ik.imagekit.io/qxfudjvlf/taxarc/bg.jpg)',
+            backgroundImage: 'url(https://ik.imagekit.io/qxfudjvlf/taxarc/unnamed%202.jpg.jpeg)',
           }}
         >
           <div className='absolute inset-0 bg-linear-to-r from-black/60 via-black/50 to-black/30'></div>

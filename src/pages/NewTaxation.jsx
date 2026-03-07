@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'motion/react'
 import { Link } from 'react-router-dom'
-import { FileText,ArrowRight, ArrowLeftRight, Settings, Sparkles, CreditCard, TrendingUp, Database, Building2, CheckCircle2, Clock, BarChart3, Layers, Banknote, LandmarkIcon, BookUser, DollarSign, ChartBarBigIcon, SparkleIcon, Zap } from 'lucide-react'
+import { FileText,ArrowRight, ArrowLeftRight, Settings, Sparkles, CreditCard, TrendingUp, Database, Building2, CheckCircle2, Clock, BarChart3, Layers, Banknote, LandmarkIcon, BookUser, DollarSign, ChartBarBigIcon, SparkleIcon, Zap, LockIcon, HandshakeIcon, Clock10 } from 'lucide-react'
 
 const NewTaxation = () => {
   return (
@@ -177,12 +177,12 @@ const NewTaxation = () => {
               {/* Benefit 1 */}
               <div className='flex items-start gap-4'>
                 <div className='w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <CheckCircle2 className='w-6 h-6 text-[#015482]' />
+                  <Banknote className='w-6 h-6 text-[#015482]' />
                 </div>
                 <div>
-                  <h3 className='text-lg font-bold text-gray-900 mb-2'>Audit-Ready Records</h3>
+                  <h3 className='text-lg font-bold text-gray-900 mb-2'>Capacity without the cost</h3>
                   <p className='text-sm text-gray-600'>
-                    Well-maintained books that hold up under any compliance or due diligence review.
+                    Handle peak-season volume without permanent headcount additions
                   </p>
                 </div>
               </div>
@@ -190,12 +190,12 @@ const NewTaxation = () => {
               {/* Benefit 2 */}
               <div className='flex items-start gap-4'>
                 <div className='w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <Clock className='w-6 h-6 text-[#015482]' />
+                  <LockIcon className='w-6 h-6 text-[#015482]' />
                 </div>
                 <div>
-                  <h3 className='text-lg font-bold text-gray-900 mb-2'>Time-recovered</h3>
+                  <h3 className='text-lg font-bold text-gray-900 mb-2'>Confidentiality assured</h3>
                   <p className='text-sm text-gray-600'>
-                    Daily tasks done efficiently so leadership can focus on strategy, not spreadsheets.
+                   Strict data handling protocols and NDA coverage on every engagement.
                   </p>
                 </div>
               </div>
@@ -203,12 +203,12 @@ const NewTaxation = () => {
               {/* Benefit 3 */}
               <div className='flex items-start gap-4'>
                 <div className='w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <FileText className='w-6 h-6 text-[#015482]' />
+                  <Clock10 className='w-6 h-6 text-[#015482]' />
                 </div>
                 <div>
-                  <h3 className='text-lg font-bold text-gray-900 mb-2'>Tax-season efficiency</h3>
+                  <h3 className='text-lg font-bold text-gray-900 mb-2'>Faster turnaround</h3>
                   <p className='text-sm text-gray-600'>
-                    Organized records significantly reduce the time and cost of year-end tax preparation.
+                    Prepared returns delivered within agreed SLAs so your review queue stays manageable.
                   </p>
                 </div>
               </div>
@@ -216,12 +216,12 @@ const NewTaxation = () => {
               {/* Benefit 4 */}
               <div className='flex items-start gap-4'>
                 <div className='w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <BarChart3 className='w-6 h-6 text-[#015482]' />
+                  <HandshakeIcon className='w-6 h-6 text-[#015482]' />
                 </div>
                 <div>
-                  <h3 className='text-lg font-bold text-gray-900 mb-2'>Decision-grade reporting</h3>
+                  <h3 className='text-lg font-bold text-gray-900 mb-2'>Flexible engagement</h3>
                   <p className='text-sm text-gray-600'>
-                    Management reports built for financial review — not just compliance.
+                    Per-return, monthly retainer, or seasonal block arrangements available.
                   </p>
                 </div>
               </div>
@@ -229,12 +229,12 @@ const NewTaxation = () => {
               {/* Benefit 5 */}
               <div className='flex items-start gap-4'>
                 <div className='w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <Layers className='w-6 h-6 text-[#015482]' />
+                  <CheckCircle2 className='w-6 h-6 text-[#015482]' />
                 </div>
                 <div>
-                  <h3 className='text-lg font-bold text-gray-900 mb-2'>Scalable processes</h3>
+                  <h3 className='text-lg font-bold text-gray-900 mb-2'>Consistent quality</h3>
                   <p className='text-sm text-gray-600'>
-                    We put in place the right structure so accounting doesn't slow down your own business.
+                    Multi-point internal review before delivery — you receive work that's ready to sign.
                   </p>
                 </div>
               </div>
