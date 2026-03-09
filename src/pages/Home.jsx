@@ -8,9 +8,9 @@ import { LogoLoop } from '../components/LogoLoop'
 
 
 const arcImages = [
-  'https://ik.imagekit.io/qxfudjvlf/taxarc/2ndsecphoto.jpg',
-  'https://ik.imagekit.io/qxfudjvlf/taxarc/photo1.jpg',
-  'https://ik.imagekit.io/qxfudjvlf/taxarc/photo2.jpg',
+  'https://ik.imagekit.io/qxfudjvlf/taxarc/ACCURACY.jpeg',
+  'https://ik.imagekit.io/qxfudjvlf/taxarc/RELIABILITY.jpeg',
+  'https://ik.imagekit.io/qxfudjvlf/taxarc/PRIVACY.jpeg',
 ]
 
 const Home = () => {
@@ -399,17 +399,17 @@ const Home = () => {
                       <div className='mt-10'>
                         <LogoLoop
                           logos={[
-                            { src: '/1.png', alt: 'Tool 1' },
-                            { src: '/2.png', alt: 'Tool 2' },
-                            { src: '/3.png', alt: 'Tool 3' },
-                            { src: '/4.png', alt: 'Tool 4' },
-                            { src: '/5.png', alt: 'Tool 5' },
-                            { src: '/6.png', alt: 'Tool 6' },
-                            { src: '/7.png', alt: 'Tool 7' },
-                            { src: '/8.png', alt: 'Tool 8' },
-                            { src: '/9.png', alt: 'Tool 9' },
-                            { src: '/10.png', alt: 'Tool 10' },
-                            { src: '/11.png', alt: 'Tool 11' },
+                            { src: 'https://ik.imagekit.io/qxfudjvlf/taxarc/1.png', alt: 'Tool 1' },
+                            { src: 'https://ik.imagekit.io/qxfudjvlf/taxarc/2.png', alt: 'Tool 2' },
+                            { src: 'https://ik.imagekit.io/qxfudjvlf/taxarc/3.png', alt: 'Tool 3' },
+                            { src: 'https://ik.imagekit.io/qxfudjvlf/taxarc/4.png', alt: 'Tool 4' },
+                            { src: 'https://ik.imagekit.io/qxfudjvlf/taxarc/5.png', alt: 'Tool 5' },
+                            { src: 'https://ik.imagekit.io/qxfudjvlf/taxarc/6.png', alt: 'Tool 6' },
+                            { src: 'https://ik.imagekit.io/qxfudjvlf/taxarc/7.png', alt: 'Tool 7' },
+                            { src: 'https://ik.imagekit.io/qxfudjvlf/taxarc/8.png', alt: 'Tool 8' },
+                            { src: 'https://ik.imagekit.io/qxfudjvlf/taxarc/9.png', alt: 'Tool 9' },
+                            { src: 'https://ik.imagekit.io/qxfudjvlf/taxarc/10.png', alt: 'Tool 10' },
+                            { src: 'https://ik.imagekit.io/qxfudjvlf/taxarc/11.png', alt: 'Tool 11' },
                           ]}
                           speed={80}
                           logoHeight={60}
