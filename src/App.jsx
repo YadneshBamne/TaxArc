@@ -1,5 +1,6 @@
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
 import { Navbar, Footer } from './components'
 import {
   Home,
@@ -15,10 +16,19 @@ import {
 } from './pages'
 import { Footer7 } from './components/footer-7'
 
+const ScrollToTop = () => {
+  const { pathname } = useLocation()
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+  return null
+}
+
 const App = () => {
   return (
     <Router>
       <div className='min-h-screen flex flex-col'>
+        <ScrollToTop />
         <Navbar />
         <main className='grow'>
           <Routes>

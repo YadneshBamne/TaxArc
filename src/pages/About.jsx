@@ -53,7 +53,7 @@ const About = () => {
           muted
           playsInline
         >
-          <source src='https://ik.imagekit.io/qxfudjvlf/taxarc/C0027.MP4' type='video/mp4' />
+          <source src='https://ik.imagekit.io/qxfudjvlf/taxarc/About%20Us%20Video.mp4' type='video/mp4' />
         </video>
         <div className='absolute inset-0 bg-black/40'></div>
 
@@ -172,7 +172,7 @@ const About = () => {
             >
               <div className='relative w-full max-w-md lg:max-w-lg'>
                 <img
-                  src='https://ik.imagekit.io/qxfudjvlf/taxarc/hemant.jpeg'
+                  src='https://ik.imagekit.io/qxfudjvlf/taxarc/CA%20Hemant%20Vora.jpeg'
                   alt='Hemant R. Vora - Strategic Advisor of TaxArc Global'
                   className='w-full h-auto rounded-3xl  object-cover'
                 />
@@ -235,28 +235,25 @@ const About = () => {
             </h2>
           </motion.div>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto'>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-16 max-w-3xl mx-auto'>
             {/* Vision Card */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className='rounded-2xl overflow-hidden shadow-2xl'
+              className='flex flex-col items-center text-center bg-white rounded-2xl shadow-lg pt-10 pb-8 px-8'
             >
-              <div className='bg-[#015482] h-42 flex items-center justify-center'>
-                <h3 className='text-2xl font-bold text-white'>VISION</h3>
+              <div
+                className='w-28 h-28 bg-[#015482] flex items-center justify-center mb-6'
+                style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
+              >
+                <Eye className='w-10 h-10 text-white' />
               </div>
-              <div className='relative bg-gray-100 pt-20 pb-8 px-6'>
-                <div className='absolute -top-10 left-1/2 -translate-x-1/2'>
-                  <div className='w-20 h-20 bg-[#015482] rotate-45 flex items-center justify-center'>
-                    <Eye className='w-20 h-20 text-white -rotate-45' />
-                  </div>
-                </div>
-                <p className='text-center text-gray-700 text-sm leading-relaxed mt-4'>
-                  To be a globally trusted professional services partner, recognized for excellence in tax, accounting and bookkeeping operations, precision-driven execution, and uncompromising data security.
-                </p>
-              </div>
+              <h3 className='text-xl font-bold tracking-widest mb-4'>VISION</h3>
+              <p className='text-gray-600 text-sm leading-relaxed'>
+                To be a globally trusted professional services partner, recognized for excellence in tax, accounting and bookkeeping operations, precision-driven execution, and uncompromising data security.
+              </p>
             </motion.div>
 
             {/* Mission Card */}
@@ -264,22 +261,19 @@ const About = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className=' rounded-2xl overflow-hidden shadow-2xl'
+              transition={{ duration: 0.6, delay: 0.15 }}
+              className='flex flex-col items-center text-center bg-white rounded-2xl shadow-lg pt-10 pb-8 px-8'
             >
-              <div className='bg-[#015482] h-42 flex items-center justify-center'>
-                <h3 className='text-2xl font-bold text-white'>MISSION</h3>
+              <div
+                className='w-28 h-28 bg-[#015482] flex items-center justify-center mb-6'
+                style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
+              >
+                <Target className='w-10 h-10 text-white' />
               </div>
-              <div className='relative  pt-20 pb-10 px-6'>
-                <div className='absolute -top-10 left-1/2 -translate-x-1/2'>
-                  <div className='w-20 h-20 bg-[#015482] rotate-45 flex items-center justify-center'>
-                    <Target className='w-20 h-20 pb-2 text-white -rotate-45' />
-                  </div>
-                </div>
-                <p className='text-center text-gray-700 text-sm leading-relaxed mt-4'>
-                  To deliver reliable, high-quality outsourced accounting and tax support, powered by qualified professionals, structured processes, intelligent technology and strict confidentiality.
-                </p>
-              </div>
+              <h3 className='text-xl font-bold tracking-widest mb-4'>MISSION</h3>
+              <p className='text-gray-600 text-sm leading-relaxed'>
+                To deliver reliable, high-quality outsourced accounting and tax support, powered by qualified professionals, structured processes, intelligent technology and strict confidentiality.
+              </p>
             </motion.div>
           </div>
         </div>
@@ -363,9 +357,7 @@ const About = () => {
                     <h3 className='text-sm font-bold text-gray-900 mb-2 leading-snug whitespace-pre-line'>{item.title}</h3>
                     <p className='text-xs text-gray-500 leading-relaxed'>{item.desc}</p>
                   </div>
-                  <div className='mt-3 bg-[#015482] text-white text-xs font-semibold px-5 py-1.5 rounded-full'>
-                    Step {item.step}
-                  </div>
+
                 </motion.div>
               ))}
             </div>

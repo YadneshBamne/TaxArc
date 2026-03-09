@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from 'motion/react'
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [prevScrollPos, setPrevScrollPos] = useState(0)
   const [visible, setVisible] = useState(true)
@@ -15,7 +16,10 @@ const Navbar = () => {
   const isAboutPage = location.pathname === '/about'
   const isTransparentPage = isHomePage || isAboutPage
 
-  const toggleMenu = () => setIsOpen(!isOpen)
+  const toggleMenu = () => {
+    setIsOpen(!isOpen)
+    setMobileServicesOpen(false)
+  }
 
   // Close menu on route change
   useEffect(() => {
@@ -68,9 +72,35 @@ const Navbar = () => {
             <div className='p-6 pt-20 space-y-4'>
               <Link to="/" className='block py-3 text-gray-800 hover:text-[#17D3CF] font-medium text-lg border-b border-gray-100' onClick={toggleMenu}>Home</Link>
               <Link to="/about" className='block py-3 text-gray-800 hover:text-[#17D3CF] font-medium text-lg border-b border-gray-100' onClick={toggleMenu}>About Us</Link>
-              <Link to="/new-taxation" className='block py-3 text-gray-800 hover:text-[#17D3CF] font-medium text-lg border-b border-gray-100' onClick={toggleMenu}>Tax Preparation</Link>
-              <Link to="/accounting-bookkeeping" className='block py-3 text-gray-800 hover:text-[#17D3CF] font-medium text-lg border-b border-gray-100' onClick={toggleMenu}>Accounting & Bookkeeping</Link>
-              <Link to="/payroll" className='block py-3 text-gray-800 hover:text-[#17D3CF] font-medium text-lg border-b border-gray-100' onClick={toggleMenu}>Payroll</Link>
+
+              {/* Mobile Services Dropdown */}
+              <div className='border-b border-gray-100'>
+                <button
+                  className='w-full flex items-center justify-between py-3 text-gray-800 font-medium text-lg'
+                  onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                >
+                  Services
+                  <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${mobileServicesOpen ? 'rotate-180' : ''}`} />
+                </button>
+                <AnimatePresence initial={false}>
+                  {mobileServicesOpen && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.2 }}
+                      style={{ overflow: 'hidden' }}
+                    >
+                      <div className='pl-4 pb-3 space-y-1'>
+                        <Link to="/new-taxation" className='block py-2 text-gray-600 hover:text-[#17D3CF] font-medium' onClick={toggleMenu}>Tax Preparation</Link>
+                        <Link to="/accounting-bookkeeping" className='block py-2 text-gray-600 hover:text-[#17D3CF] font-medium' onClick={toggleMenu}>Accounting & Bookkeeping</Link>
+                        <Link to="/payroll" className='block py-2 text-gray-600 hover:text-[#17D3CF] font-medium' onClick={toggleMenu}>Payroll</Link>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+
               <Link to="/contact" className='block py-3 text-gray-800 hover:text-[#17D3CF] font-medium text-lg' onClick={toggleMenu}>Contact Us</Link>
             </div>
           </motion.div>
@@ -85,14 +115,14 @@ const Navbar = () => {
         className={`fixed top-0 left-0 w-full transition-all duration-300 ${navBgClass} ${visible ? 'translate-y-0' : '-translate-y-full'}`}
         style={{ zIndex: 9998 }}
       >
-        <div className='container mx-auto px-4 py-4'>
+        <div className='container mx-auto px-2 py-2'>
           <div className='flex justify-between items-center'>
             {/* Logo */}
             <Link to="/" className='flex items-center'>
               <img 
-                src="/brand1.png" 
+                src="https://ik.imagekit.io/qxfudjvlf/taxarc/brand1.png?updatedAt=1772856706945" 
                 alt="TaxArc Global" 
-                className='h-18 w-auto mb-1'
+                className='h-22 w-auto mb-1'
               />
             </Link>
 

@@ -8,7 +8,9 @@ const defaultSections = [
     title: "Main Pages",
     links: [
       { name: "Home", href: "/" },
-      { name: "Blog", href: "/" },
+      { name: "Tax Preparation", href: "/new-taxation" },
+      { name: "Accounting & Bookkeeping", href: "/accounting-bookkeeping" },
+      { name: "Payroll", href: "/new-payroll" },
     ],
   },
   {
@@ -22,9 +24,9 @@ const defaultSections = [
     title: "Get In Touch",
     links: [
       { 
-        name: "harshika.vora@gmail.com", 
-        href: "mailto:harshika.vora@gmail.com",
-        icon: <Mail className="size-4" />
+        name: "Tower B,  1801-1802, 1819-1820, Navratna Corporate Park, Ambli Road, Ashok Vatika, Bopal, Ahmedabad, Gujarat 380058", 
+        href: "#",
+        icon: <MapPin className="size-4" />
       },
       { 
         name: "+91 9909469067", 
@@ -32,9 +34,9 @@ const defaultSections = [
         icon: <Phone className="size-4" />
       },
       { 
-        name: "Tower B,  1801-1802, 1819-1820, Navratna Corporate Park, Ambli Road, Ashok Vatika, Bopal, Ahmedabad, Gujarat 380058", 
-        href: "#",
-        icon: <MapPin className="size-4" />
+        name: "harshika@taxarcglobal.com", 
+        href: "mailto:harshika@taxarcglobal.com",
+        icon: <Mail className="size-4" />
       },
     ],
   },
@@ -60,7 +62,7 @@ export const Footer7 = ({
   },
 
   sections = defaultSections,
-  description = "TaxArc Global is a global tax & accounting firm registered with the Institute of Chartered Accountants of India (ICAI) based out in Ahmedabad, Gujarat.",
+  description = "Professional Tax & Accounting Services by Harshika & Co., Chartered Accountants, India.",
   socialLinks = defaultSocialLinks,
   copyright = "© 2026 TaxArc Global. All rights reserved.",
   legalLinks = defaultLegalLinks

@@ -3,15 +3,32 @@ import { motion, AnimatePresence } from 'motion/react'
 import { X } from 'lucide-react'
 
 const LegalModal = ({ isOpen, onClose, type }) => {
-  // Prevent background scroll when modal is open
+  // Prevent background scroll when modal is open (position:fixed is the most reliable method)
   useEffect(() => {
     if (isOpen) {
+      const scrollY = window.scrollY
+      document.body.style.position = 'fixed'
+      document.body.style.top = `-${scrollY}px`
+      document.body.style.left = '0'
+      document.body.style.right = '0'
       document.body.style.overflow = 'hidden'
     } else {
-      document.body.style.overflow = 'unset'
+      const scrollY = document.body.style.top
+      document.body.style.position = ''
+      document.body.style.top = ''
+      document.body.style.left = ''
+      document.body.style.right = ''
+      document.body.style.overflow = ''
+      window.scrollTo(0, parseInt(scrollY || '0', 10) * -1)
     }
     return () => {
-      document.body.style.overflow = 'unset'
+      const scrollY = document.body.style.top
+      document.body.style.position = ''
+      document.body.style.top = ''
+      document.body.style.left = ''
+      document.body.style.right = ''
+      document.body.style.overflow = ''
+      if (scrollY) window.scrollTo(0, parseInt(scrollY, 10) * -1)
     }
   }, [isOpen])
 
@@ -180,7 +197,11 @@ const LegalModal = ({ isOpen, onClose, type }) => {
           />
 
           {/* Modal */}
-          <div className='fixed inset-0 flex items-center justify-center p-4' style={{ zIndex: 100000 }}>
+          <div
+            className='fixed inset-0 flex items-center justify-center p-4'
+            style={{ zIndex: 100000 }}
+            onWheel={(e) => e.stopPropagation()}
+          >
             <motion.div
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -199,7 +220,7 @@ const LegalModal = ({ isOpen, onClose, type }) => {
               </button>
 
               {/* Content */}
-              <div className='p-6 md:p-10 overflow-y-auto'>
+              <div className='flex-1 min-h-0 p-6 md:p-10 overflow-y-auto overscroll-contain'>
                 {type === 'terms' ? termsContent : privacyContent}
               </div>
             </motion.div>

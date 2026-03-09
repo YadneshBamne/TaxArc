@@ -12,7 +12,7 @@ const BookkeepingAccounting = () => {
         <div 
           className='absolute inset-0 bg-cover bg-center bg-no-repeat'
           style={{
-            backgroundImage: 'url(https://ik.imagekit.io/qxfudjvlf/taxarc/photo1.jpg)',
+            backgroundImage: 'url(https://ik.imagekit.io/qxfudjvlf/taxarc/Accounting.png)',
           }}
         >
           <div className='absolute inset-0 bg-black/40'></div>
@@ -154,7 +154,7 @@ const BookkeepingAccounting = () => {
       </section>
 
       {/* Key Benefits Section */}
-      <section className='py-20'>
+      <section className='py-35'>
         <div className='container mx-auto px-4'>
           <div className='max-w-5xl mx-auto'>
             {/* Header */}
@@ -246,7 +246,7 @@ const BookkeepingAccounting = () => {
           </div>
         </div>
       </section>
-            <section className='py-20 bg-white'>
+      <section className='mb-30 bg-white'>
         <div className='container mx-auto px-4'>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center'>
             {/* Left Column - Image */}
@@ -259,7 +259,7 @@ const BookkeepingAccounting = () => {
             >
               <div className='relative w-full max-w-xl mx-auto lg:mx-0'>
                 <img 
-                  src="https://images.unsplash.com/photo-1555436169-20e93ea9a7ff?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                  src="https://ik.imagekit.io/qxfudjvlf/taxarc/homepageleft.jpeg" 
                   alt="Work with experts" 
                   className='rounded-3xl w-full h-auto shadow-lg object-cover'
                 />
@@ -274,14 +274,14 @@ const BookkeepingAccounting = () => {
               viewport={{ once: true }}
               className='order-1 lg:order-2 flex flex-col justify-center'
             >
-              <h2 className='text-4xl md:text-5xl font-bold text-gray-900 mb-8 leading-tight'>
+              <h2 className='text-4xl md:text-4xl font-bold text-gray-900 mb-8 leading-tight'>
                 Your Business Deserves Better.<br />
                 Scale Smarter with<br /> <span className='font-inter italic bg-[#015482] bg-clip-text text-transparent'>TaxArc Global</span>.
               </h2>
               
               <Link 
                 to="/contact" 
-                className='inline-flex items-center bg-white border-2 border-gray-300 text-gray-900 px-8 py-3 rounded-full hover:border-[#17d3cf] hover:bg-blue-50 transition group font-semibold w-fit'
+                className='inline-flex items-center bg-white border-2 border-gray-300 text-gray-900 px-8 py-3 rounded-full hover:border[#015482] hover:bg-blue-50 transition group font-semibold w-fit'
               >
                 Get Started
                 <motion.div

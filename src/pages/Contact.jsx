@@ -188,7 +188,7 @@ const Contact = () => {
                 <a href="mailto:harshika.vora@gmail.com"
                 className="text-sm text-gray-600 hover:text-[#17D3CF] transition-colors"
               >
-                harshika.vora@gmail.com
+                harshika@taxarcglobal.com
               </a>
             </div>
           </div>

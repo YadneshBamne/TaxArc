@@ -4,6 +4,7 @@ import { ArrowRight, Shield, CheckCircle,BookOpen,Clock,DollarSign,Users, Trendi
 import { motion } from 'motion/react'
 import { Accordion } from '../components'
 import { Carousel, CarouselContent, CarouselItem } from '../components/ui/carousel'
+import { LogoLoop } from '../components/LogoLoop'
 
 
 const arcImages = [
@@ -60,17 +61,17 @@ const Home = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className='text-5xl md:text-6xl font-bold text-white mb-6 leading-tight'
+              className='text-5xl md:text-5xl font-bold text-white mb-2 leading-tight'
             >
-               Outsourced Team for 
+               Outsourced Professional Team for 
             </motion.h1>
             <motion.p 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className='text-4xl md:text-4xl font-inter italic text-white mb-10 leading-tight'
+              className='text-4xl md:text-4xl font-inter italic text-white mb-6 leading-tight'
             >
-              US Tax & Accounting Excellence
+              U.S. Tax & Accounting Support
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -110,7 +111,7 @@ const Home = () => {
                   Our Philosophy - ARC
                 </h2>
                 <p className='text-3xl font-inter italic mb-6 bg-[#015482] bg-clip-text text-transparent'>
-                  Accurate. Relibility. Confidentiality
+                  Accurate. Reliability. Confidentiality.
                 </p>
                 <p className='text-gray-700 mb-8 leading-relaxed'>
                   This is the framework at TaxArc Global, our name reflects our operating philosophy A-R-C. This is the framework that governs how we deliver work, manage risk, and build long-term client partnerships. It helps us achieve the level of assurance expected by professionally managed organizations.
@@ -158,7 +159,7 @@ const Home = () => {
             className='mb-12'
           >
             <h2 className='text-3xl md:text-4xl  font-bold text-gray-900'>
-              Explore Our <span className='font-inter italic  text-[#015482]'>Services</span>
+              Our <span className='font-inter italic  text-[#015482]'>Services</span>
             </h2>
           </motion.div>
 
@@ -167,19 +168,19 @@ const Home = () => {
               {
                 title: 'Tax Preparation',
                 image: 'https://ik.imagekit.io/qxfudjvlf/taxarc/photo2.jpg',
-                description: 'Accurate, IRS Compliant, deadline-driven tax preparation outsourcing to US CPAs, Enrolled Agents, and tax practices. Our trained professional teams handle individual and business returns with accuracy, compliance, and comprehensive functionality. Manage peak season workload without stretching your capacity.',
+                description: 'Accurate, IRS-compliant tax preparation for individuals and businesses. Scale your capacity during peak season with support from trained professionals.',
                 link: '/new-taxation'
               },
               {
                 title: 'Accounting & Bookkeeping',
                 image: 'https://ik.imagekit.io/qxfudjvlf/taxarc/photo1.jpg',
-                description: 'Precise, US GAAP-compliant accounting and bookkeeping outsourcing to US accounting firms, CPA practices and US businesses. Our dedicated teams manage everything from daily bookkeeping to year-end closing and financial reporting. Reduce administrative work and focus on what matters most: your clients.',
+                description: 'US GAAP-compliant bookkeeping and accounting for firms and businesses. From daily books to year-end reporting, we handle the numbers so you focus on clients.',
                 link: '/accounting-bookkeeping'
               },
               {
                 title: 'Payroll Management',
                 image: 'https://images.unsplash.com/photo-1554224154-22dec7ec8818?q=80&w=2070',
-                description: 'From payroll processing and tax withholdings to quarterly filings and year-end reporting, TaxArc Global provides structured, end-to-end payroll support built around US federal and state compliance requirements. Our team integrates seamlessly into your workflow, handling complexity so your practice doesn\'t have to.',
+                description: 'End-to-end payroll management aligned with US federal and state compliance. From processing to filings and year-end reporting, handled seamlessly.',
                 link: '/payroll'
               }
             ].map((service, index) => (
@@ -241,7 +242,7 @@ const Home = () => {
                     Why <span className='font-inter italic text-[#015482]'>Us?</span>
                   </motion.h2>
 
-                  <motion.div
+                  {/* <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -254,7 +255,7 @@ const Home = () => {
                     <p className='text-gray-700 leading-relaxed max-w-3xl mx-auto'>
                       Our teams of CPAs, Chartered Accountants, and experienced tax and accounting professionals integrate seamlessly into your existing software ecosystem, minimizing onboarding time and ensuring a smooth, efficient transition from day one.
                     </p>
-                  </motion.div>
+                  </motion.div> */}
                 </div>
       
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto'>
@@ -271,9 +272,9 @@ const Home = () => {
                         <BookOpen className='w-6 h-6 text-[#015482]' />
                       </div>
                       <div>
-                        <h3 className='text-xl font-bold mb-3'>Experienced Indian CA & CPA (US)-led firm</h3>
+                        <h3 className='text-xl font-bold mb-3'>Specialized Professionals, Seamlessly Integrated</h3>
                         <p className='text-gray-600 leading-relaxed'>
-                          Our teams of CPAs, Chartered Accountants, and experienced tax and accounting professionals bring deep, specialized knowledge of US tax regulations, US GAAP, and federal and state compliance
+                          Our teams of CPAs, Chartered Accountants, and experienced tax and accounting professionals integrate seamlessly into your existing software ecosystem, minimizing onboarding time and ensuring a smooth, efficient transition from day one.
                         </p>
                       </div>
                     </div>
@@ -387,7 +388,7 @@ const Home = () => {
               </div>
             </section>
 
-                  <section className='py-20'>
+                  <section className='py-20 mb-20'>
                     <div className='container mx-auto px-4'>
                       <div className='text-center mb-12'>
                         <h2 className='text-4xl md:text-5xl font-bold mb-4'>
@@ -395,8 +396,28 @@ const Home = () => {
                         </h2>
                       </div>
                       
-                      <div className='mt-10 flex justify-center'>
-                        <img src='https://ik.imagekit.io/qxfudjvlf/taxarc/allogos.png' alt='Tools we work with' className='w-full max-w-4xl h-auto' />
+                      <div className='mt-10'>
+                        <LogoLoop
+                          logos={[
+                            { src: '/1.png', alt: 'Tool 1' },
+                            { src: '/2.png', alt: 'Tool 2' },
+                            { src: '/3.png', alt: 'Tool 3' },
+                            { src: '/4.png', alt: 'Tool 4' },
+                            { src: '/5.png', alt: 'Tool 5' },
+                            { src: '/6.png', alt: 'Tool 6' },
+                            { src: '/7.png', alt: 'Tool 7' },
+                            { src: '/8.png', alt: 'Tool 8' },
+                            { src: '/9.png', alt: 'Tool 9' },
+                            { src: '/10.png', alt: 'Tool 10' },
+                            { src: '/11.png', alt: 'Tool 11' },
+                          ]}
+                          speed={80}
+                          logoHeight={60}
+                          gap={48}
+                          pauseOnHover
+                          fadeOut
+                          fadeOutColor="#ffffff"
+                        />
                       </div>
                     </div>
                   </section>
@@ -430,7 +451,7 @@ const Home = () => {
               viewport={{ once: true }}
               className='order-1 lg:order-2 flex flex-col justify-center'
             >
-              <h2 className='text-4xl md:text-5xl font-bold text-gray-900 mb-8 leading-tight'>
+              <h2 className='text-4xl md:text-4xl font-bold text-gray-900 mb-8 leading-tight'>
                 Your Business Deserves Better.<br />
                 Scale Smarter with<br /> <span className='font-inter italic bg-[#015482] bg-clip-text text-transparent'>TaxArc Global</span>.
               </h2>
