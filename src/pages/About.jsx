@@ -391,9 +391,6 @@ const About = () => {
                   <div className='flex-1 border-2 border-[#015482] rounded-xl p-4 bg-white'>
                     <h3 className='text-sm font-bold text-gray-900 mb-1 leading-snug whitespace-pre-line'>{item.title}</h3>
                     <p className='text-xs text-gray-500 leading-relaxed mb-3'>{item.desc}</p>
-                    <div className='inline-block bg-[#015482] text-white text-xs font-semibold px-4 py-1 rounded-full'>
-                      Step {item.step}
-                    </div>
                   </div>
                 </motion.div>
               ))}
@@ -516,8 +513,8 @@ const About = () => {
               </motion.div>
             </div>
 
-            {/* Row 3 */}
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto'>
+            {/* Row 3 - 2 side by side centered */}
+            <div className='flex justify-center gap-16 mb-12'>
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -539,7 +536,10 @@ const About = () => {
                 <ShieldAlert fill='#CCD9ED' className='w-12 h-12 text-[#015482] mb-4' />
                 <p className='text-sm font-semibold'>Harmful website<br />monitoring</p>
               </motion.div>
+            </div>
 
+            {/* Last item - odd one centered */}
+            <div className='flex justify-center'>
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
