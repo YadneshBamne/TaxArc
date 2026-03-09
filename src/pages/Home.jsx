@@ -156,7 +156,7 @@ const Home = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className='mb-12'
+            className='mb-12 text-center'
           >
             <h2 className='text-3xl md:text-4xl  font-bold text-gray-900'>
               Our <span className='font-inter italic  text-[#015482]'>Services</span>
