@@ -19,7 +19,8 @@ const NewPayroll = () => {
         </div>
 
         {/* Content */}
-        <div className='container mx-auto px-4 md:px-8 relative z-10 text-center'>
+        <div  className="max-w-4xl mx-auto text-center rounded-2xl p-12 bg-white/10 backdrop-blur-sm border border-white/20"
+          >
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

@@ -104,7 +104,7 @@ const Contact = () => {
               "url(https://ik.imagekit.io/qxfudjvlf/navratna?updatedAt=1773260906125)",
           }}
         >
-          <div className="absolute inset-0 bg-black/50"></div>
+          <div className="absolute inset-0 bg-black/70"></div>
         </div>
 
         {/* Content */}
@@ -113,7 +113,7 @@ const Contact = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto text-center  rounded-lg p-12"
+            className="max-w-4xl mx-auto text-center rounded-2xl p-12 bg-white/10 backdrop-blur-sm border border-white/20"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Contact Us

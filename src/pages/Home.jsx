@@ -120,7 +120,7 @@ const Home = () => {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                   Our Philosophy -{" "}
                   <span className="font-inter text-[#015482]">ARC</span>
                 </h2>
@@ -189,7 +189,7 @@ const Home = () => {
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-30">
             {[
               {
                 title: "TAX\nPREPARATION",
@@ -229,12 +229,12 @@ const Home = () => {
                 />
 
                 {/* Title */}
-                <h3 className="text-[#015482] font-extrabold text-xl text-center mb-6 leading-tight tracking-wide whitespace-pre-line">
+                <h3 className="text-[#015482] font-extrabold text-2xl text-center mb-6 leading-tight tracking-wide whitespace-pre-line">
                   {service.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-600 text-sm leading-relaxed text-center flex-1">
+                <p className="text-gray-600 text-md leading-relaxed text-center flex-1">
                   {service.description}
                 </p>
 
@@ -324,8 +324,7 @@ const Home = () => {
                     Turnaround You Can Rely On
                   </h3>
                   <p className="text-gray-600 leading-relaxed">
-                    Defined timelines, structured workflows, and deadline-driven
-                    delivery, especially critical during peak tax season.
+                    Defined timelines, structured workflows, and disciplined execution ensure predictable turnaround on every engagement. Our deadline-driven approach helps firms maintain smooth operations and meet critical filing timelines, especially during peak tax season.
                   </p>
                 </div>
               </div>
@@ -434,12 +433,12 @@ const Home = () => {
       <section className="py-20 mb-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Tools we <span className="italic text-[#015482]">work with</span>.
+            <h2 className="text-4xl md:text-5xl font-bold mb-10">
+              Tools we <span className="italic text-[#015482] ">work with</span>.
             </h2>
           </div>
 
-          <div className="mt-10">
+          <div className="mt-14">
             <LogoLoop
               logos={[
                 {
