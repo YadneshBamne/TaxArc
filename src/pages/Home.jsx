@@ -179,80 +179,97 @@ const Home = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="mb-12 text-center"
+            className="mb-16 text-center"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
               Our{" "}
-              <span className="font-inter italic  text-[#015482]">
+              <span className="font-inter italic text-[#015482]">
                 Services
               </span>
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {[
               {
-                title: "Tax Preparation",
-                image: "https://ik.imagekit.io/qxfudjvlf/taxarc/photo2.jpg",
+                title: "TAX\nPREPARATION",
                 description:
                   "Accurate, IRS-compliant tax preparation for individuals and businesses. Scale your capacity during peak season with support from trained professionals.",
                 link: "/new-taxation",
+                icon: (
+                  <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" width="30" height="30">
+                    <rect x="10" y="6" width="28" height="36" rx="3" stroke="white" strokeWidth="2.5" fill="none"/>
+                    <path d="M16 16h16M16 22h16M16 28h10" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+                    <rect x="18" y="3" width="12" height="7" rx="2" fill="#015482" stroke="white" strokeWidth="1.5"/>
+                    <text x="28" y="47" fontSize="9" fontWeight="800" fill="white" textAnchor="middle" fontFamily="sans-serif">TAX</text>
+                  </svg>
+                ),
               },
               {
-                title: "Accounting & Bookkeeping",
-                image: "https://ik.imagekit.io/qxfudjvlf/taxarc/photo1.jpg",
+                title: "ACCOUNTING &\nBOOKKEEPING",
                 description:
                   "US GAAP-compliant bookkeeping and accounting for firms and businesses. From daily books to year-end reporting, we handle the numbers so you focus on clients.",
                 link: "/accounting-bookkeeping",
+                icon: (
+                  <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" width="30" height="30">
+                    <rect x="8" y="8" width="28" height="34" rx="3" stroke="white" strokeWidth="2.5" fill="none"/>
+                    <rect x="12" y="14" width="20" height="6" rx="1.5" stroke="white" strokeWidth="1.5" fill="white" fillOpacity="0.15"/>
+                    <rect x="12" y="24" width="8" height="6" rx="1.5" fill="white" fillOpacity="0.3"/>
+                    <rect x="24" y="24" width="8" height="6" rx="1.5" fill="white" fillOpacity="0.3"/>
+                    <rect x="12" y="34" width="8" height="4" rx="1" fill="white" fillOpacity="0.3"/>
+                    <rect x="24" y="34" width="8" height="4" rx="1" fill="white" fillOpacity="0.3"/>
+                    <circle cx="42" cy="38" r="9" fill="#015482" stroke="white" strokeWidth="2"/>
+                    <text x="42" y="42" fontSize="10" fontWeight="800" fill="white" textAnchor="middle" fontFamily="sans-serif">$</text>
+                  </svg>
+                ),
               },
               {
-                title: "Payroll Services",
-                image:
-                  "https://images.unsplash.com/photo-1554224154-22dec7ec8818?q=80&w=2070",
+                title: "PAYROLL\nSERVICES",
                 description:
                   "End-to-end payroll management aligned with US federal and state compliance. From processing to filings and year-end reporting, handled seamlessly.",
                 link: "/payroll",
+                icon: (
+                  <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" width="30" height="30">
+                    <circle cx="20" cy="18" r="7" stroke="white" strokeWidth="2.5" fill="none"/>
+                    <path d="M8 38c0-6 4-10 12-10s12 4 12 10" stroke="white" strokeWidth="2.5" strokeLinecap="round"/>
+                    <circle cx="38" cy="14" r="5" stroke="white" strokeWidth="2" fill="none"/>
+                    <path d="M33 30c2-3 5-4 8-4" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+                    <circle cx="44" cy="38" r="9" fill="#015482" stroke="white" strokeWidth="2"/>
+                    <text x="44" y="42" fontSize="10" fontWeight="800" fill="white" textAnchor="middle" fontFamily="sans-serif">$</text>
+                  </svg>
+                ),
               },
             ].map((service, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.5, delay: index * 0.12 }}
                 viewport={{ once: true }}
-                className="group"
+                className="relative flex flex-col items-center pt-12 pb-10 px-8 border-2 border-dashed border-[#015482] rounded-3xl bg-white"
               >
-                {/* Image Card with Overlays */}
-                <div className="relative mb-6 overflow-hidden rounded-2xl aspect-4/3">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-
-                  {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent"></div>
-
-                  {/* Title - Bottom Left */}
-                  <div className="absolute bottom-4 left-4">
-                    <h3 className="text-white font-bold text-xl">
-                      {service.title}
-                    </h3>
-                  </div>
-
-                  {/* Arrow Button - Bottom Right */}
-                  <Link
-                    to={service.link}
-                    className="absolute bottom-4 right-4 w-10 h-10 bg-[#015482] rounded-full flex items-center justify-center hover:bg-[#17d3cf] transition-colors group/btn"
-                  >
-                    <ArrowUpRight className="w-5 h-5 text-white group-hover/btn:scale-110 transition-transform" />
-                  </Link>
+                {/* Floating circle icon */}
+                <div className="absolute -top-8 w-16 h-16 rounded-full bg-[#015482] flex items-center justify-center shadow-lg border-4 border-white">
+                  {service.icon}
                 </div>
 
+                {/* Title */}
+                <h3 className="text-[#015482] font-extrabold text-xl text-center mb-6 leading-tight tracking-wide whitespace-pre-line">
+                  {service.title}
+                </h3>
+
                 {/* Description */}
-                <p className="text-gray-700 leading-relaxed text-start">
+                <p className="text-gray-600 text-sm leading-relaxed text-center flex-1">
                   {service.description}
                 </p>
+
+                {/* Arrow button */}
+                <Link
+                  to={service.link}
+                  className="mt-8 w-12 h-12 bg-[#015482] rounded-full flex items-center justify-center hover:bg-[#17d3cf] transition-colors"
+                >
+                  <ArrowUpRight className="w-5 h-5 text-white" />
+                </Link>
               </motion.div>
             ))}
           </div>
