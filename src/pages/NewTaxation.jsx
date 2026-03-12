@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'motion/react'
 import { Link } from 'react-router-dom'
-import { FileText,ArrowRight, ArrowLeftRight, Settings, Sparkles, CreditCard, TrendingUp, Database, Building2, CheckCircle2, Clock, BarChart3, Layers, Banknote, LandmarkIcon, BookUser, DollarSign, ChartBarBigIcon, SparkleIcon, Zap, LockIcon, HandshakeIcon, Clock10 } from 'lucide-react'
+import { FileText, ArrowRight, ArrowLeftRight, Settings, Sparkles, CreditCard, TrendingUp, Database, Building2, CheckCircle2, Clock, BarChart3, Layers, Banknote, LandmarkIcon, BookUser, DollarSign, ChartBarBigIcon, SparkleIcon, Zap, LockIcon, HandshakeIcon, Clock10, Globe, RotateCcw, ClipboardList, Monitor } from 'lucide-react'
 
 const NewTaxation = () => {
   return (
@@ -36,7 +36,91 @@ const NewTaxation = () => {
         </div>
       </section>
 
+      {/* Who We Serve Section */}
+      <section className='py-16 bg-gray-50 border-b border-gray-100'>
+        <div className='container mx-auto px-4'>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className='text-center mb-10'
+          >
+            <p className='text-3xl md:text-4xl font-inter font-bold uppercase tracking-widest text-[#015482] mb-2'>Who We Serve</p>
+            <h2 className='text-2xl md:text-3xl font-bold text-gray-900'>
+              Built for Tax Professionals
+            </h2>
+          </motion.div>
 
+          <div className='flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 max-w-4xl mx-auto'>
+
+            {/* CPA & EA Firms */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.05 }}
+              className='flex flex-col items-center gap-3 bg-white border border-gray-200 rounded-2xl px-10 py-8 w-full sm:w-auto hover:shadow-lg hover:border-[#015482]/40 transition-all duration-300'
+            >
+              <div className='w-14 h-14 rounded-full bg-[#015482]/10 flex items-center justify-center'>
+                <svg xmlns="http://www.w3.org/2000/svg" className='w-7 h-7 text-[#015482]' viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                </svg>
+              </div>
+              <div className='text-center'>
+                <p className='text-base font-bold text-gray-900'>CPA &amp; EA Firms</p>
+                <p className='text-xs text-gray-500 mt-1'>Credentialed Tax Professionals</p>
+              </div>
+            </motion.div>
+
+            <span className='hidden sm:block text-gray-300 text-3xl font-light'>·</span>
+
+            {/* Accounting Practices */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className='flex flex-col items-center gap-3 bg-white border border-gray-200 rounded-2xl px-10 py-8 w-full sm:w-auto hover:shadow-lg hover:border-[#015482]/40 transition-all duration-300'
+            >
+              <div className='w-14 h-14 rounded-full bg-[#015482]/10 flex items-center justify-center'>
+                <svg xmlns="http://www.w3.org/2000/svg" className='w-7 h-7 text-[#015482]' viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                </svg>
+              </div>
+              <div className='text-center'>
+                <p className='text-base font-bold text-gray-900'>Accounting Practices</p>
+                <p className='text-xs text-gray-500 mt-1'>Public &amp; Private Firms</p>
+              </div>
+            </motion.div>
+
+            <span className='hidden sm:block text-gray-300 text-3xl font-light'>·</span>
+
+            {/* Small-to-Mid Businesses */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.15 }}
+              className='flex flex-col items-center gap-3 bg-white border border-gray-200 rounded-2xl px-10 py-8 w-full sm:w-auto hover:shadow-lg hover:border-[#015482]/40 transition-all duration-300'
+            >
+              <div className='w-14 h-14 rounded-full bg-[#015482]/10 flex items-center justify-center'>
+                <svg xmlns="http://www.w3.org/2000/svg" className='w-7 h-7 text-[#015482]' viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2"/>
+                  <path d="M8 21h8M12 17v4"/>
+                </svg>
+              </div>
+              <div className='text-center'>
+                <p className='text-base font-bold text-gray-900'>Small-to-Mid Businesses</p>
+                <p className='text-xs text-gray-500 mt-1'>Across All Industries</p>
+              </div>
+            </motion.div>
+
+          </div>
+        </div>
+      </section>
 
       {/* Services Section */}
       <section className='py-20 bg-white'>
@@ -59,93 +143,145 @@ const NewTaxation = () => {
             </motion.div>
 
             {/* Services Grid */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className='grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8'
-            >
-              {/* Service 1 */}
-              <div className='text-center'>
-                <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <FileText className='w-8 h-8 text-[#015482]' />
-                </div>
-                <p className='text-sm font-medium text-gray-900'>
-                  Data<br />Gathering
-                </p>
-              </div>
+            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5'>
 
-              {/* Service 2 */}
-              <div className='text-center'>
-                <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <LandmarkIcon className='w-8 h-8 text-[#015482]' />
+              {/* Card 1 - Individual Returns */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.05 }}
+                className='group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:border-[#015482]/40 transition-all duration-300'
+              >
+                <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
+                  <FileText className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
-                <p className='text-sm font-medium text-gray-900'>
-                  Tax Preparation<br />& Review
+                <h3 className='text-md font-bold text-gray-900 mb-2 leading-snug'>Individual Returns (Form 1040)</h3>
+                <p className='text-sm text-gray-500 leading-relaxed'>
+                  Including Schedule C, D, E, self-employment income, rental income, K-1 pass-throughs, and foreign income.
                 </p>
-              </div>
+              </motion.div>
 
-              {/* Service 3 */}
-              <div className='text-center'>
-                <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <CheckCircle2 className='w-8 h-8 text-[#015482]' />
+              {/* Card 2 - Business Returns */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className='group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:border-[#015482]/40 transition-all duration-300'
+              >
+                <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
+                  <Building2 className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
-                <p className='text-sm font-medium text-gray-900'>
-                 Adjustments <br />& Reconciliationss
+                <h3 className='text-md font-bold text-gray-900 mb-2 leading-snug'>Business Returns</h3>
+                <p className='text-sm text-gray-500 leading-relaxed'>
+                  C-Corporations (Form 1120), S-Corporations (Form 1120S), Partnerships (Form 1065), and single- or multi-member LLCs.
                 </p>
-              </div>
+              </motion.div>
 
-              {/* Service 4 */}
-              <div className='text-center'>
-                <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <BookUser className='w-8 h-8 text-[#015482]' />
+              {/* Card 3 - State & Multi-State Returns */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.15 }}
+                className='group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:border-[#015482]/40 transition-all duration-300'
+              >
+                <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
+                  <Globe className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
-                <p className='text-sm font-medium text-gray-900'>
-                  Tax Planning <br /> & Advisory
+                <h3 className='text-md font-bold text-gray-900 mb-2 leading-snug'>State &amp; Multi-State Returns</h3>
+                <p className='text-sm text-gray-500 leading-relaxed'>
+                  Preparation of required state filings including nexus considerations and apportionment schedules.
                 </p>
-              </div>
+              </motion.div>
 
-              {/* Service 5 */}
-              <div className='text-center'>
-                <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <DollarSign className='w-8 h-8 text-[#015482]' />
+              {/* Card 4 - Estimated Tax Projections */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className='group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:border-[#015482]/40 transition-all duration-300'
+              >
+                <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
+                  <TrendingUp className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
-                <p className='text-sm font-medium text-gray-900'>
-                  Financial Statement<br />Preparation
+                <h3 className='text-md font-bold text-gray-900 mb-2 leading-snug'>Estimated Tax Projections</h3>
+                <p className='text-sm text-gray-500 leading-relaxed'>
+                  Quarterly tax projection workpapers to support advisory and planning discussions.
                 </p>
-              </div>
+              </motion.div>
 
-              {/* Service 6 */}
-              <div className='text-center'>
-                <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <ChartBarBigIcon className='w-8 h-8 text-[#015482]' />
+              {/* Card 5 - Tax Extension Preparation */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.25 }}
+                className='group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:border-[#015482]/40 transition-all duration-300'
+              >
+                <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
+                  <Clock className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
-                <p className='text-sm font-medium text-gray-900'>
-                  White-Label<br />Bookkeeping
+                <h3 className='text-md font-bold text-gray-900 mb-2 leading-snug'>Tax Extension Preparation</h3>
+                <p className='text-sm text-gray-500 leading-relaxed'>
+                  Preparation of extension filings supported by liability estimates.
                 </p>
-              </div>
+              </motion.div>
 
-              {/* Service 7 */}
-              <div className='text-center'>
-                <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <Database className='w-8 h-8 text-[#015482]' />
+              {/* Card 6 - Prior-Year Amendments */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className='group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:border-[#015482]/40 transition-all duration-300'
+              >
+                <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
+                  <RotateCcw className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
-                <p className='text-sm font-medium text-gray-900'>
-                  QuickBooks & Xero <br/>Setup / Migration
+                <h3 className='text-md font-bold text-gray-900 mb-2 leading-snug'>Prior-Year Amendments</h3>
+                <p className='text-sm text-gray-500 leading-relaxed'>
+                  Amended returns including Form 1040-X and Form 1120-X with supporting workpapers.
                 </p>
-              </div>
+              </motion.div>
 
-              {/* Service 8 */}
-              <div className='text-center'>
-                <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <Zap className='w-8 h-8 text-[#015482]' />
+              {/* Card 7 - Workpaper Preparation */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.35 }}
+                className='group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:border-[#015482]/40 transition-all duration-300'
+              >
+                <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
+                  <ClipboardList className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
-                <p className='text-sm font-medium text-gray-900'>
-                  Month End &<br />Year-End Close
+                <h3 className='text-md font-bold text-gray-900 mb-2 leading-snug'>Workpaper Preparation</h3>
+                <p className='text-sm text-gray-500 leading-relaxed'>
+                  Organized, review-ready workpapers aligned with your firm's internal standards.
                 </p>
-              </div>
-            </motion.div>
+              </motion.div>
+
+              {/* Card 8 - Software Flexibility */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className='group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:border-[#015482]/40 transition-all duration-300'
+              >
+                <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
+                  <Monitor className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
+                </div>
+                <h3 className='text-md font-bold text-gray-900 mb-2 leading-snug'>Software Flexibility</h3>
+                <p className='text-sm text-gray-500 leading-relaxed'>
+                  Experience working with UltraTax, Lacerte, Drake, ProConnect, and TaxAct.
+                </p>
+              </motion.div>
+
+            </div>
           </div>
         </div>
       </section>
