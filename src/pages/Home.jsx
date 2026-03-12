@@ -41,7 +41,7 @@ const Home = () => {
     {
       title: "Accuracy",
       content:
-        "At TaxArc, our work ethos is built on the bedrock of accuracy. ARC. This is the framework that governs every decision we make, every process, and every piece of advice we tender to our valued clients. In today's complex financial landscape, having a partner who prioritizes these fundamental principles is invaluable, and that's exactly what we strive to be for every client.",
+        "In a compliance-driven and deadline-sensitive environment, precision is non-negotiable. We operate through structured workflows, standardized checklists, and multi-level quality reviews to ensure consistency at every point.",
     },
     {
       title: "Reliability",
@@ -196,48 +196,21 @@ const Home = () => {
                 description:
                   "Accurate, IRS-compliant tax preparation for individuals and businesses. Scale your capacity during peak season with support from trained professionals.",
                 link: "/new-taxation",
-                icon: (
-                  <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" width="30" height="30">
-                    <rect x="10" y="6" width="28" height="36" rx="3" stroke="white" strokeWidth="2.5" fill="none"/>
-                    <path d="M16 16h16M16 22h16M16 28h10" stroke="white" strokeWidth="2" strokeLinecap="round"/>
-                    <rect x="18" y="3" width="12" height="7" rx="2" fill="#015482" stroke="white" strokeWidth="1.5"/>
-                    <text x="28" y="47" fontSize="9" fontWeight="800" fill="white" textAnchor="middle" fontFamily="sans-serif">TAX</text>
-                  </svg>
-                ),
+                img: "/1.png",
               },
               {
                 title: "ACCOUNTING &\nBOOKKEEPING",
                 description:
                   "US GAAP-compliant bookkeeping and accounting for firms and businesses. From daily books to year-end reporting, we handle the numbers so you focus on clients.",
                 link: "/accounting-bookkeeping",
-                icon: (
-                  <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" width="30" height="30">
-                    <rect x="8" y="8" width="28" height="34" rx="3" stroke="white" strokeWidth="2.5" fill="none"/>
-                    <rect x="12" y="14" width="20" height="6" rx="1.5" stroke="white" strokeWidth="1.5" fill="white" fillOpacity="0.15"/>
-                    <rect x="12" y="24" width="8" height="6" rx="1.5" fill="white" fillOpacity="0.3"/>
-                    <rect x="24" y="24" width="8" height="6" rx="1.5" fill="white" fillOpacity="0.3"/>
-                    <rect x="12" y="34" width="8" height="4" rx="1" fill="white" fillOpacity="0.3"/>
-                    <rect x="24" y="34" width="8" height="4" rx="1" fill="white" fillOpacity="0.3"/>
-                    <circle cx="42" cy="38" r="9" fill="#015482" stroke="white" strokeWidth="2"/>
-                    <text x="42" y="42" fontSize="10" fontWeight="800" fill="white" textAnchor="middle" fontFamily="sans-serif">$</text>
-                  </svg>
-                ),
+                img: "/2.png",
               },
               {
                 title: "PAYROLL\nSERVICES",
                 description:
                   "End-to-end payroll management aligned with US federal and state compliance. From processing to filings and year-end reporting, handled seamlessly.",
                 link: "/payroll",
-                icon: (
-                  <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" width="30" height="30">
-                    <circle cx="20" cy="18" r="7" stroke="white" strokeWidth="2.5" fill="none"/>
-                    <path d="M8 38c0-6 4-10 12-10s12 4 12 10" stroke="white" strokeWidth="2.5" strokeLinecap="round"/>
-                    <circle cx="38" cy="14" r="5" stroke="white" strokeWidth="2" fill="none"/>
-                    <path d="M33 30c2-3 5-4 8-4" stroke="white" strokeWidth="2" strokeLinecap="round"/>
-                    <circle cx="44" cy="38" r="9" fill="#015482" stroke="white" strokeWidth="2"/>
-                    <text x="44" y="42" fontSize="10" fontWeight="800" fill="white" textAnchor="middle" fontFamily="sans-serif">$</text>
-                  </svg>
-                ),
+                img: "/3.png",
               },
             ].map((service, index) => (
               <motion.div
@@ -246,12 +219,14 @@ const Home = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.12 }}
                 viewport={{ once: true }}
-                className="relative flex flex-col items-center pt-12 pb-10 px-8 border-2 border-dashed border-[#015482] rounded-3xl bg-white"
+                className="relative flex flex-col items-center pt-16 pb-10 px-8 border-2 border-dashed border-[#015482] rounded-3xl bg-white"
               >
-                {/* Floating circle icon */}
-                <div className="absolute -top-8 w-16 h-16 rounded-full bg-[#015482] flex items-center justify-center shadow-lg border-4 border-white">
-                  {service.icon}
-                </div>
+                {/* Floating PNG icon */}
+                <img
+                  src={service.img}
+                  alt={service.title}
+                  className="absolute -top-12 w-24 h-24 object-contain drop-shadow-lg"
+                />
 
                 {/* Title */}
                 <h3 className="text-[#015482] font-extrabold text-xl text-center mb-6 leading-tight tracking-wide whitespace-pre-line">

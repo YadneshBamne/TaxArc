@@ -361,8 +361,8 @@ const About = () => {
                   className='relative z-10 flex flex-col items-center'
                   style={{ width: `${100 / row.length}%` }}
                 >
-                  <div className='w-16 h-16 rounded-full border-2 border-[#015482] bg-white flex items-center justify-center shadow-sm'>
-                    <span className='text-lg font-bold text-[#015482]'>{item.step}</span>
+                  <div className='w-16 h-16 rounded-full bg-[#015482] border-2 border-[#015482]  flex items-center justify-center shadow-sm'>
+                    <span className='text-lg font-bold text-white'>{item.step}</span>
                   </div>
                   <div style={{ width: 0, height: 0, borderLeft: '7px solid transparent', borderRight: '7px solid transparent', borderTop: '10px solid #015482' }} />
                 </motion.div>

@@ -26,7 +26,7 @@ const NewPayroll = () => {
             transition={{ duration: 0.8 }}
           >
             <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
-              Payroll
+              Payroll Services
             </h1>
             <p className='text-xl md:text-2xl text-white font-light'>
              Every Employee Paid Right.<br/>Every Obligation Met.
@@ -300,9 +300,13 @@ const NewPayroll = () => {
               viewport={{ once: true }}
               className='order-1 lg:order-2 flex flex-col justify-center'
             >
-              <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-8 leading-tight'>
-                Your Business Deserves Better.<br />
-                Scale Smarter with<br /> <span className='font-inter italic bg-[#015482] bg-clip-text text-transparent'>TaxArc Global</span>.
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 leading-tight">
+                Scale Smarter with
+                <br />{" "}
+                <span className="font-inter italic bg-[#015482] bg-clip-text text-transparent">
+                  Tax<span className="text-[#17D3CF]">Arc</span> Global
+                </span>
+                .
               </h2>
               
               <Link 
