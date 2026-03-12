@@ -47,9 +47,6 @@ const NewTaxation = () => {
             className='text-center mb-10'
           >
             <p className='text-3xl md:text-4xl font-inter font-bold uppercase tracking-widest text-[#015482] mb-2'>Who We Serve</p>
-            <h2 className='text-2xl md:text-3xl font-bold text-gray-900'>
-              Built for Tax Professionals
-            </h2>
           </motion.div>
 
           <div className='flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 max-w-4xl mx-auto'>
