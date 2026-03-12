@@ -12,10 +12,10 @@ const NewPayroll = () => {
         <div 
           className='absolute inset-0 bg-cover bg-center bg-no-repeat'
           style={{
-            backgroundImage: 'url(https://ik.imagekit.io/qxfudjvlf/taxarc/Payrollnew.jpeg?updatedAt=1773041276167)',
+            backgroundImage: 'url(https://ik.imagekit.io/qxfudjvlf/taxarc/Payroll%20Services.jpeg)',
           }}
         >
-          <div className='absolute inset-0 bg-black/40'></div>
+          <div className='absolute inset-0 bg-black/70'></div>
         </div>
 
         {/* Content */}

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { motion } from 'motion/react'
-import { BookOpen, Clock, Shield, Users, DollarSign, TrendingUp, ArrowRight, Eye, Target, Gem, Lock, UserCircle2, Key, Home, Printer, Settings, Network, Database, ShieldAlert, HardDrive, ArrowUpRight, ChevronDown,Phone } from 'lucide-react'
+import { BookOpen, Clock, Shield, Users, DollarSign, TrendingUp, ArrowRight, Eye, Target, Gem, Lock, UserCircle2, Key, Home, Printer, Settings, Network, Database, ShieldAlert, HardDrive, ArrowUpRight, ChevronDown,Phone, MonitorCloudIcon, Cpu, MonitorCheck, UsbIcon, Building, PrinterX, SlidersHorizontal, HardDriveDownload } from 'lucide-react'
 import LogoLoop from '../components/LogoLoop'
 
 const About = () => {
@@ -29,7 +30,7 @@ const About = () => {
     },
     {
       question: "How do I get started?",
-      answer: "Getting started is simple! Fill out the contact form above, send us an email, or give us a call. We'll schedule a consultation to understand your needs and provide a customized solution with transparent pricing."
+      answer: <>Getting started is simple! Fill out the <Link to="/contact" className="text-[#17D3CF] underline hover:text-[#015482]">contact form</Link>, send us an email or give us a call. We'll schedule a consultation to understand your needs and provide a customized solution with transparent and fair pricing.</>
     }
   ]
 
@@ -55,7 +56,7 @@ const About = () => {
         >
           <source src='https://ik.imagekit.io/qxfudjvlf/taxarc/About%20Us%20Video.mp4' type='video/mp4' />
         </video>
-        <div className='absolute inset-0 bg-black/40'></div>
+        <div className='absolute inset-0 bg-black/75'></div>
 
         {/* Content */}
         <div className='container mx-auto px-4 md:px-8 relative z-10'>
@@ -92,6 +93,17 @@ const About = () => {
       {/* Meet Our CEO Section */}
       <section className='py-20'>
         <div className='container mx-auto px-4'>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className='text-center mb-16'
+          >
+            <h2 className='text-4xl md:text-5xl font-bold mb-4'>
+              Meet our <span className='font-inter italic text-[#015482]'>Leadership Team</span>
+            </h2>
+          </motion.div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto'>
             {/* Left Content */}
             <motion.div
@@ -101,14 +113,30 @@ const About = () => {
               transition={{ duration: 0.8 }}
               className='order-2 lg:order-1'
             >
-              <h2 className='text-4xl md:text-5xl font-bold mb-2'>
+              {/* <h2 className='text-4xl md:text-5xl font-bold mb-2'>
                 Meet our Founder
-              </h2>
-              <h3 className='text-4xl md:text-5xl font-inter italic text-[#015482] mb-4'>
-                Harshika Vora
-              </h3>
+              </h2> */}
+              <div className='flex items-center gap-3 mb-2'>
+                <h3 className='text-3xl md:text-5xl font-inter italic '>
+                  Founder | <span className='text-[#015482]'>Harshika Vora</span>
+                </h3>
+                <a
+                  href='https://www.linkedin.com/in/harshika-vora-ca-cpa-7541a9154/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='shrink-0 mt-1'
+                  aria-label='Harshika Vora on LinkedIn'
+                >
+                  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28' className='w-10 h-10' fill='#0A66C2'>
+                    <path d='M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z'/>
+                  </svg>
+                </a>
+              </div>
+              <p className='text-lg font-semibold text-gray-800 mb-2'>
+                CPA(US) (License Awaited), FCA (India), B. Com
+              </p>
               <p className='text-lg font-semibold text-gray-800 mb-6'>
-                CA (India) and U.S. CPA (License Awaited)
+                Proprietor – Harshika & Co.
               </p>
 
               <div className='space-y-4 text-gray-700 leading-relaxed'>
@@ -187,14 +215,13 @@ const About = () => {
               transition={{ duration: 0.8 }}
               className='order-2 lg:order-2'
             >
-              <h2 className='text-4xl md:text-5xl font-bold mb-2'>
-                Meet our Strategic Advisor
-              </h2>
-              <h3 className='text-4xl md:text-5xl font-inter italic text-[#015482] mb-4'>
-                Hemant R. Vora
-              </h3>
+              <h3 className='text-3xl md:text-5xl font-inter italic mb-1'>
+                  Strategic Advisor | <span className='text-[#015482]'>Hemant R. Vora</span>
+                </h3>
+              <p className='text-lg font-semibold text-gray-800 mb-2'>
+                FCA (India), Inter CS, LLB, B. Com
+              </p>
               <p className='text-lg font-semibold text-gray-800 mb-6'>
-                CA (India), FCA, Inter CS, LLB, B.Com<br />
                 Proprietor – Hemant R. Vora & Co. (Est. 1981)
               </p>
 
@@ -428,7 +455,9 @@ const About = () => {
                 transition={{ duration: 0.6 }}
                 className='flex flex-col items-center text-center'
               >
-                <Shield fill='#CCD9ED' className='w-12 h-12 text-[#015482] mb-4' />
+                <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
+                  <Cpu fill='#CCD9ED' className='w-8 h-8 text-[#015482]' />
+                </div>
                 <p className='text-sm font-semibold'>Latest configuration<br />devices</p>
               </motion.div>
 
@@ -439,7 +468,9 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className='flex flex-col items-center text-center'
               >
-                <Lock fill='#CCD9ED' className='w-12 h-12 text-[#015482] mb-4' />
+                <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
+                  <Key fill='#CCD9ED' className='w-8 h-8 text-[#015482]' />
+                </div>
                 <p className='text-sm font-semibold'>Licensed support<br />software</p>
               </motion.div>
 
@@ -450,7 +481,9 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className='flex flex-col items-center text-center'
               >
-                <UserCircle2  className='w-12 h-12 text-[#015482]  mb-4' />
+                <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
+                  <MonitorCheck className='w-8 h-8 text-[#015482]' />
+                </div>
                 <p className='text-sm font-semibold'>Secured<br />workstations</p>
               </motion.div>
 
@@ -461,7 +494,9 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className='flex flex-col items-center text-center'
               >
-                <Key className='w-12 h-12 text-[#015482] mb-4' />
+                <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
+                  <UsbIcon className='w-8 h-8 text-[#015482]' />
+                </div>
                 <p className='text-sm font-semibold'>No external<br />devices</p>
               </motion.div>
             </div>
@@ -475,7 +510,9 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className='flex flex-col items-center text-center'
               >
-                <Home className='w-12 h-12 text-[#015482] mb-4' />
+                <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
+                  <Building className='w-8 h-8 text-[#015482]' />
+                </div>
                 <p className='text-sm font-semibold'>100% on-site<br />operations</p>
               </motion.div>
 
@@ -486,7 +523,9 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 0.5 }}
                 className='flex flex-col items-center text-center'
               >
-                <Printer fill='#CCD9ED' className='w-12 h-12 text-[#015482] mb-4' />
+                <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
+                  <PrinterX fill='#CCD9ED' className='w-8 h-8 text-[#015482]' />
+                </div>
                 <p className='text-sm font-semibold'>Printing<br />restrictions</p>
               </motion.div>
 
@@ -497,7 +536,9 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 0.6 }}
                 className='flex flex-col items-center text-center'
               >
-                <Settings fill='#CCD9ED' className='w-12 h-12 text-[#015482] mb-4' />
+                <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
+                  <SlidersHorizontal fill='#CCD9ED' className='w-8 h-8 text-[#015482]' />
+                </div>
                 <p className='text-sm font-semibold'>Centralized<br />control</p>
               </motion.div>
 
@@ -508,12 +549,14 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 0.7 }}
                 className='flex flex-col items-center text-center'
               >
-                <Network fill='#CCD9ED' className='w-12 h-12 text-[#015482] mb-4' />
+                <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
+                  <Network fill='#CCD9ED' className='w-8 h-8 text-[#015482]' />
+                </div>
                 <p className='text-sm font-semibold'>Multiple LAN networks</p>
               </motion.div>
             </div>
 
-            {/* Row 3 - 2 side by side centered */}
+            {/* Row 3 - last 3 icons centered */}
             <div className='flex justify-center gap-16 mb-12'>
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -522,7 +565,9 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 0.8 }}
                 className='flex flex-col items-center text-center'
               >
-                <Database fill='#CCD9ED' className='w-12 h-12 text-[#015482] mb-4' />
+                <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
+                  <Database fill='#CCD9ED' className='w-8 h-8 text-[#015482]' />
+                </div>
                 <p className='text-sm font-semibold'>Functional access<br />to data</p>
               </motion.div>
 
@@ -533,13 +578,12 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 0.9 }}
                 className='flex flex-col items-center text-center'
               >
-                <ShieldAlert fill='#CCD9ED' className='w-12 h-12 text-[#015482] mb-4' />
+                <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
+                  <ShieldAlert fill='#CCD9ED' className='w-8 h-8 text-[#015482]' />
+                </div>
                 <p className='text-sm font-semibold'>Harmful website<br />monitoring</p>
               </motion.div>
-            </div>
 
-            {/* Last item - odd one centered */}
-            <div className='flex justify-center'>
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -547,7 +591,9 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 1.0 }}
                 className='flex flex-col items-center text-center'
               >
-                <HardDrive fill='#CCD9ED' className='w-12 h-12 text-[#015482] mb-4' />
+                <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
+                  <HardDriveDownload fill='#CCD9ED' className='w-8 h-8 text-[#015482]' />
+                </div>
                 <p className='text-sm font-semibold'>Automated<br />Backups</p>
               </motion.div>
             </div>
@@ -571,18 +617,12 @@ const About = () => {
                   <h2 className='text-4xl md:text-5xl font-bold text-gray-900 mb-1'>
                     Friendly Asked
                   </h2>
-                  <h3 className='text-4xl md:text-5xl italic font-inter text-[#015482] mb-12'>
+                  <h3 className='text-4xl md:text-5xl italic font-inter text-[#015482] mb-7'>
                     Questions.
                   </h3>
 
                   {/* Still have a question box */}
                   <div className=''>
-                    <h4 className='text-xl font-bold text-gray-900 mb-3'>
-                      Still have a question?
-                    </h4>
-                    <p className='text-gray-600 text-sm mb-6 leading-relaxed'>
-                      Our team is ready to assist you with anything you need.
-                    </p>
                     <a
                       href='tel:+919909469067'
                       className='inline-flex items-center gap-3 bg-[#015482] hover:bg-[#15c2be] text-white px-6 py-3 rounded-full font-medium transition-colors'

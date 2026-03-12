@@ -94,7 +94,7 @@ const Navbar = () => {
                       <div className='pl-4 pb-3 space-y-1'>
                         <Link to="/new-taxation" className='block py-2 text-gray-600 hover:text-[#17D3CF] font-medium' onClick={toggleMenu}>Tax Preparation</Link>
                         <Link to="/accounting-bookkeeping" className='block py-2 text-gray-600 hover:text-[#17D3CF] font-medium' onClick={toggleMenu}>Accounting & Bookkeeping</Link>
-                        <Link to="/payroll" className='block py-2 text-gray-600 hover:text-[#17D3CF] font-medium' onClick={toggleMenu}>Payroll</Link>
+                        <Link to="/payroll" className='block py-2 text-gray-600 hover:text-[#17D3CF] font-medium' onClick={toggleMenu}>Payroll Services</Link>
                       </div>
                     </motion.div>
                   )}
@@ -151,7 +151,7 @@ const Navbar = () => {
                     >
                       <Link to="/new-taxation" className='block px-4 py-2 text-gray-800 hover:bg-cyan-50 hover:text-[#17D3CF] transition'>Tax Preparation</Link>
                       <Link to="/accounting-bookkeeping" className='block px-4 py-2 text-gray-800 hover:bg-cyan-50 hover:text-[#17D3CF] transition'>Accounting & Bookkeeping</Link>
-                      <Link to="/payroll" className='block px-4 py-2 text-gray-800 hover:bg-cyan-50 hover:text-[#17D3CF] transition'>Payroll</Link>
+                      <Link to="/payroll" className='block px-4 py-2 text-gray-800 hover:bg-cyan-50 hover:text-[#17D3CF] transition'>Payroll Services</Link>
                     </motion.div>
                   )}
                 </AnimatePresence>

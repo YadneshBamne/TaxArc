@@ -5,9 +5,8 @@ import LegalModal from './LegalModal';
 
 const defaultSections = [
   {
-    title: "Main Pages",
+    title: "Services",
     links: [
-      { name: "Home", href: "/" },
       { name: "Tax Preparation", href: "/new-taxation" },
       { name: "Accounting & Bookkeeping", href: "/accounting-bookkeeping" },
       { name: "Payroll", href: "/new-payroll" },
@@ -16,6 +15,7 @@ const defaultSections = [
   {
     title: "Company",
     links: [
+      { name: "Home", href: "/" },
       { name: "Contact", href: "/contact" },
       { name: "About Us", href: "/about" },
     ],
@@ -56,7 +56,7 @@ const defaultLegalLinks = [
 export const Footer7 = ({
   logo = {
     url: "/",
-    src: "/brand.png",
+    src: "https://ik.imagekit.io/qxfudjvlf/taxarc/brand1.png?updatedAt=1772856706945",
     alt: "TaxArc Global",
     title: "TaxArc Global",
   },
@@ -87,7 +87,9 @@ export const Footer7 = ({
           className="flex w-full flex-col justify-between gap-10 lg:flex-row lg:items-start lg:text-left">
           <div className="flex w-full flex-col justify-between gap-6 lg:items-start lg:max-w-md">
             {/* Logo */}
-
+            <Link to={logo.url} className="flex items-center space-x-2">
+              <img src={logo.src} alt={logo.alt} className="h-20 w-auto" />
+            </Link>
             <p className="text-sm text-gray-600 leading-relaxed">
               {description}
             </p>

@@ -101,7 +101,7 @@ const Contact = () => {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage:
-              "url(https://ik.imagekit.io/qxfudjvlf/taxarc/Navratna.jpg)",
+              "url(https://ik.imagekit.io/qxfudjvlf/navratna?updatedAt=1773260906125)",
           }}
         >
           <div className="absolute inset-0 bg-black/50"></div>
@@ -150,9 +150,9 @@ const Contact = () => {
       >
         {/* Heading */}
         <div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-3">Get In Touch</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-3">Let’s Connect</h2>
           <p className="text-gray-500 leading-relaxed">
-            We'd love to hear from you. Reach out via any of the channels below and we'll respond promptly.
+            We’d love to hear from you.
           </p>
         </div>
 
@@ -163,18 +163,6 @@ const Contact = () => {
         <div className="space-y-4">
 
           {/* Address */}
-          <div className="flex items-start gap-5 p-5 rounded-2xl border border-gray-100 hover:border-[#015482]/40 hover:shadow-md transition-all duration-300 group">
-            <div className="w-12 h-12 bg-[#015482]/10 group-hover:bg-[#015482] rounded-xl flex items-center justify-center shrink-0 transition-colors duration-300">
-              <MapPin className="w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300" />
-            </div>
-            <div>
-              <p className="text-xs text-gray-400 font-medium uppercase tracking-wider mb-1">Office Address</p>
-              <h3 className="text-base font-bold text-gray-900 mb-1">TaxArc Global</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                Tower B, 1801-1802, 1819-1820, Navratna Corporate Park, Ambli Road, Ashok Vatika, Bopal, Ahmedabad, Gujarat 380058
-              </p>
-            </div>
-          </div>
 
           {/* Email */}
           <div className="flex items-start gap-5 p-5 rounded-2xl border border-gray-100 hover:border-[#015482]/40 hover:shadow-md transition-all duration-300 group">
@@ -211,6 +199,18 @@ const Contact = () => {
           </div>
 
         </div>
+          <div className="flex items-start gap-5 p-5 rounded-2xl border border-gray-100 hover:border-[#015482]/40 hover:shadow-md transition-all duration-300 group">
+            <div className="w-12 h-12 bg-[#015482]/10 group-hover:bg-[#015482] rounded-xl flex items-center justify-center shrink-0 transition-colors duration-300">
+              <MapPin className="w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300" />
+            </div>
+            <div>
+              <p className="text-xs text-gray-400 font-medium uppercase tracking-wider mb-1">Office Address</p>
+              <h3 className="text-base font-bold text-gray-900 mb-1">Visit Us</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Tower B, 1801-1802, 1819-1820, Navratna Corporate Park, Ambli Road, Ashok Vatika, Bopal, Ahmedabad, Gujarat 380058
+              </p>
+            </div>
+          </div>
       </motion.div>
 
       {/* Right - Map */}

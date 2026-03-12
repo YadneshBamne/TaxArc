@@ -12,10 +12,10 @@ const NewTaxation = () => {
         <div 
           className='absolute inset-0 bg-cover bg-center bg-no-repeat'
           style={{
-            backgroundImage: 'url(https://ik.imagekit.io/qxfudjvlf/taxarc/Tax.png)',
+            backgroundImage: 'url(https://ik.imagekit.io/qxfudjvlf/taxarc/Taxation.jpeg)',
           }}
         >
-          <div className='absolute inset-0 bg-black/40'></div>
+          <div className='absolute inset-0 bg-black/70'></div>
         </div>
 
         {/* Content */}
