@@ -52,7 +52,7 @@ const BookkeepingAccounting = () => {
             transition={{ duration: 0.6 }}
             className='text-center mb-10'
           >
-            <p className='text-3xl md:text-4xl font-inter font-bold uppercase tracking-widest text-[#015482] mb-2'>Who We Serve</p>
+            <p className='text-3xl md:text-4xl font-inter  font-bold mb-2'>Who We <span className='text-[#015482] italic'>Serve</span></p>
           </motion.div>
 
           <div className='flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 max-w-4xl mx-auto'>
