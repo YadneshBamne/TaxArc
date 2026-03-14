@@ -19,20 +19,22 @@ const BookkeepingAccounting = () => {
         </div>
 
         {/* Content */}
-        <div  className="max-w-4xl mx-auto text-center rounded-2xl p-12 bg-white/10 backdrop-blur-sm border border-white/20"
+        <div className='container mx-auto px-4 sm:px-6 md:px-8 relative z-10'>
+        <div className="w-full max-w-4xl mx-auto text-center rounded-xl sm:rounded-2xl md:rounded-3xl px-4 py-8 sm:px-8 sm:py-10 md:px-12 md:py-12 bg-white/10 backdrop-blur-sm border border-white/20"
           >
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
+            <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-4 sm:mb-6'>
              Accounting & Bookkeeping
             </h1>
-            <p className='text-xl md:text-2xl text-white font-light'>
+            <p className='text-base sm:text-lg md:text-xl lg:text-2xl text-white font-light leading-relaxed'>
               Clean Books. Clear Insights. Confident Decisions.
             </p>
           </motion.div>
+        </div>
         </div>
       </section>
 

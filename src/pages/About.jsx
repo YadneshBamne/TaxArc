@@ -59,15 +59,15 @@ const About = () => {
         <div className='absolute inset-0 bg-black/40'></div>
 
         {/* Content */}
-        <div  className="max-w-4xl mx-auto text-center rounded-2xl p-12 bg-white/10 backdrop-blur-sm border border-white/20"
-          >
+        <div className='container mx-auto px-4 sm:px-6 md:px-8 relative z-10'>
+          <div className="w-full max-w-4xl mx-auto text-center rounded-xl sm:rounded-2xl md:rounded-3xl px-4 py-8 sm:px-8 sm:py-10 md:px-12 md:py-12 bg-white/10 backdrop-blur-sm border border-white/20">
           <div className='max-w-4xl mx-auto text-center'>
             <motion.h2 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className='text-5xl md:text-6xl font-bold text-white mb-12'
+              className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-5 sm:mb-8 md:mb-10'
             >
               About Us
             </motion.h2>
@@ -77,13 +77,14 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className='text-lg md:text-xl text-white leading-relaxed mb-8'
+              className='text-base sm:text-lg md:text-xl text-white leading-relaxed'
             >
               TaxArc Global is a global professional services outsourcing firm providing structured, 
               secure, and dependable support across tax, accounting and bookkeeping operations to 
               businesses and professional organizations worldwide.
             </motion.p>
           </div>
+        </div>
         </div>
       </section>
 
