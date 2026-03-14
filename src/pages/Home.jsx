@@ -214,7 +214,7 @@ const Home = () => {
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 gap-12 md:grid-cols-2 xl:grid-cols-3 xl:gap-14 mt-25">
+          <div className="grid grid-cols-1 gap-22 md:grid-cols-2 xl:grid-cols-3 xl:gap-14 mt-25">
             {services.map((service, index) => (
               <motion.div
                 key={index}
