@@ -103,7 +103,7 @@ const About = () => {
             className='text-center mb-16'
           >
             <h2 className='text-4xl md:text-5xl font-bold mb-4'>
-              Meet our <span className='font-inter italic text-[#015482]'>Leadership Team</span>
+              Meet our <span className='font-inter italic text-[#015482]'><br></br>Leadership Team</span>
             </h2>
           </motion.div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto'>
@@ -115,7 +115,7 @@ const About = () => {
               transition={{ duration: 0.8 }}
               className='order-2 lg:order-1'
             >
-              <div className='flex items-center gap-3 mb-1'>
+              <div className='hidden lg:flex items-center gap-3 mb-1'>
                 <h3 className='text-3xl md:text-5xl font-inter italic'>
                   <span className='text-[#015482]'>Harshika Vora</span>
                 </h3>
@@ -131,11 +131,11 @@ const About = () => {
                   </svg>
                 </a>
               </div>
-              <p className='text-3xl md:text-5xl italic font-semibold text-gray-700 mb-2'>Founder</p>
-              <p className='text-lg font-semibold text-gray-800'>
+              <p className='hidden lg:block text-3xl md:text-5xl italic font-semibold text-gray-700 mb-2'>Founder</p>
+              <p className='hidden lg:block text-lg font-semibold text-gray-800'>
                 CPA(US) (License Awaited), FCA (India), B. Com
               </p>
-              <p className='text-lg font-semibold text-gray-800 mb-6'>
+              <p className='hidden lg:block text-lg font-semibold text-gray-800 mb-6'>
                 Proprietor – Harshika & Co.
               </p>
 
@@ -171,6 +171,31 @@ const About = () => {
               className='order-1 lg:order-2 flex justify-center lg:justify-end'
             >
               <div className='relative w-full max-w-md lg:max-w-lg'>
+                <div className='lg:hidden text-center mb-6'>
+                  <div className='flex items-center justify-center gap-3 mb-1'>
+                    <h3 className='text-3xl font-inter italic'>
+                      <span className='text-[#015482]'>Harshika Vora</span>
+                    </h3>
+                    <a
+                      href='https://www.linkedin.com/in/harshika-vora-ca-cpa-7541a9154/'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='shrink-0'
+                      aria-label='Harshika Vora on LinkedIn'
+                    >
+                      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28' className='w-7 h-7' fill='#0A66C2'>
+                        <path d='M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z'/>
+                      </svg>
+                    </a>
+                  </div>
+                  <p className='text-3xl italic font-semibold text-gray-700 mb-2'>Founder</p>
+                  <p className='text-base font-semibold text-gray-800'>
+                    CPA(US) (License Awaited), FCA (India), B. Com
+                  </p>
+                  <p className='text-base font-semibold text-gray-800 mb-4'>
+                    Proprietor – Harshika & Co.
+                  </p>
+                </div>
                 <img
                   src='https://ik.imagekit.io/qxfudjvlf/taxarc/harshika.jpeg'
                   alt='Harshika Vora - CEO of TaxArc Global'
@@ -195,6 +220,18 @@ const About = () => {
               className='order-1 lg:order-1 flex justify-center lg:justify-start'
             >
               <div className='relative w-full max-w-md lg:max-w-lg'>
+                <div className='lg:hidden text-center mb-6'>
+                  <h3 className='text-3xl font-inter italic mb-1'>
+                    <span className='text-[#015482]'>Hemant R. Vora</span>
+                  </h3>
+                  <p className='text-3xl italic font-semibold text-gray-700 mb-2'>Strategic Advisor</p>
+                  <p className='text-base font-semibold text-gray-800'>
+                    FCA (India), Inter CS, LLB, B. Com
+                  </p>
+                  <p className='text-base font-semibold text-gray-800 mb-4'>
+                    Proprietor - Hemant R. Vora & Co. (Est. 1981)
+                  </p>
+                </div>
                 <img
                   src='https://ik.imagekit.io/qxfudjvlf/taxarc/CA%20Hemant%20Vora.jpeg'
                   alt='Hemant R. Vora - Strategic Advisor of TaxArc Global'
@@ -211,14 +248,14 @@ const About = () => {
               transition={{ duration: 0.8 }}
               className='order-2 lg:order-2'
             >
-              <h3 className='text-3xl md:text-5xl font-inter italic mb-1'>
+              <h3 className='hidden lg:block text-3xl md:text-5xl font-inter italic mb-1'>
                 <span className='text-[#015482]'>Hemant R. Vora</span>
               </h3>
-              <p className='text-3xl md:text-5xl italic font-semibold text-gray-700 mb-2'>Strategic Advisor</p>
-              <p className='text-lg font-semibold text-gray-800'>
+              <p className='hidden lg:block text-3xl md:text-5xl italic font-semibold text-gray-700 mb-2'>Strategic Advisor</p>
+              <p className='hidden lg:block text-lg font-semibold text-gray-800'>
                 FCA (India), Inter CS, LLB, B. Com
               </p>
-              <p className='text-lg font-semibold text-gray-800 mb-6'>
+              <p className='hidden lg:block text-lg font-semibold text-gray-800 mb-6'>
                 Proprietor – Hemant R. Vora & Co. (Est. 1981)
               </p>
 
@@ -255,7 +292,7 @@ const About = () => {
             className='max-w-6xl mx-auto bg-[#015482] rounded-[28px] px-5 md:px-12 py-8 md:py-12'
           >
             <div className='space-y-10 md:space-y-12'>
-              <div className='relative pt-5 md:pt-6'>
+              <div className='relative md:pt-6'>
                 <div className='absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 z-10 bg-[#28C9C9] text-white rounded-xl px-10 md:px-16 py-3'>
                   <p className='text-2xl md:text-3xl font-bold tracking-[0.12em] leading-none'>VISION</p>
                 </div>
@@ -266,7 +303,7 @@ const About = () => {
                 </div>
               </div>
 
-              <div className='relative pt-5 md:pt-6'>
+              <div className='relative md:pt-6'>
                 <div className='absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 z-10 bg-[#28C9C9] text-white rounded-xl px-10 md:px-16 py-3'>
                   <p className='text-2xl md:text-3xl font-bold tracking-[0.12em] leading-none'>MISSION</p>
                 </div>
@@ -532,7 +569,7 @@ const About = () => {
             </div>
 
             {/* Row 3 - last 3 icons centered */}
-            <div className='flex justify-center gap-16 mb-12'>
+            <div className='grid grid-cols-2 md:flex md:justify-center gap-8 md:gap-16 mb-12 max-w-xl mx-auto'>
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -564,7 +601,7 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 1.0 }}
-                className='flex flex-col items-center text-center'
+                className='col-span-2 md:col-span-1 flex flex-col items-center text-center'
               >
                 <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
                   <HardDriveDownload fill='#CCD9ED' className='w-8 h-8 text-[#015482]' />
