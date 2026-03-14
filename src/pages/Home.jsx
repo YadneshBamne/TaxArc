@@ -26,6 +26,30 @@ const arcImages = [
   "https://ik.imagekit.io/qxfudjvlf/taxarc/PRIVACY.jpeg",
 ];
 
+const services = [
+  {
+    title: "TAX\nPREPARATION",
+    description:
+      "Accurate, IRS-compliant tax preparation for individuals and businesses. Scale your capacity during peak season with support from trained professionals.",
+    link: "/new-taxation",
+    img: "/6.png",
+  },
+  {
+    title: "ACCOUNTING &\nBOOKKEEPING",
+    description:
+      "US GAAP-compliant bookkeeping and accounting for firms and businesses. From daily books to year-end reporting, we handle the numbers so you focus on clients.",
+    link: "/accounting-bookkeeping",
+    img: "/7.png",
+  },
+  {
+    title: "PAYROLL\nSERVICES",
+    description:
+      "End-to-end payroll management aligned with US federal and state compliance. From processing to filings and year-end reporting, handled seamlessly.",
+    link: "/payroll",
+    img: "/8.png",
+  },
+];
+
 const Home = () => {
   const [carouselApi, setCarouselApi] = useState(null);
 
@@ -60,15 +84,16 @@ const Home = () => {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-start">
         {/* Background Image with Overlay */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage:
-              "url(https://ik.imagekit.io/qxfudjvlf/taxarc/unnamed%202.jpg.jpeg)",
-          }}
+        <video 
+          className='absolute bg-[#768286] inset-0 w-full h-full object-cover'
+          autoPlay
+          loop
+          muted
+          playsInline
         >
-          <div className="absolute inset-0 bg-linear-to-r from-black/60 via-black/50 to-black/30"></div>
-        </div>
+          <source src='https://ik.imagekit.io/qxfudjvlf/taxarc/4.mp4' type='video/mp4' />
+        </video>
+        <div className='absolute inset-0 bg-black/40'></div>
 
         {/* Content */}
         <div className="container mx-auto px-4 md:px-8 relative z-10">
@@ -189,61 +214,40 @@ const Home = () => {
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-30">
-            {[
-              {
-                title: "TAX\nPREPARATION",
-                description:
-                  "Accurate, IRS-compliant tax preparation for individuals and businesses. Scale your capacity during peak season with support from trained professionals.",
-                link: "/new-taxation",
-                img: "/1.png",
-              },
-              {
-                title: "ACCOUNTING &\nBOOKKEEPING",
-                description:
-                  "US GAAP-compliant bookkeeping and accounting for firms and businesses. From daily books to year-end reporting, we handle the numbers so you focus on clients.",
-                link: "/accounting-bookkeeping",
-                img: "/2.png",
-              },
-              {
-                title: "PAYROLL\nSERVICES",
-                description:
-                  "End-to-end payroll management aligned with US federal and state compliance. From processing to filings and year-end reporting, handled seamlessly.",
-                link: "/payroll",
-                img: "/3.png",
-              },
-            ].map((service, index) => (
+          <div className="grid grid-cols-1 gap-12 md:grid-cols-2 xl:grid-cols-3 xl:gap-14 mt-25">
+            {services.map((service, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.12 }}
                 viewport={{ once: true }}
-                className="relative flex flex-col items-center pt-16 pb-10 px-8 border-2 border-dashed border-[#015482] rounded-3xl bg-white"
+                className="relative flex min-h-112 flex-col rounded-[2.25rem] border border-dashed border-[#ffffff] bg-[#015482] px-8 pb-10 pt-24 shadow-[0_22px_60px_rgba(1,84,130,0.14)]"
               >
-                {/* Floating PNG icon */}
-                <img
-                  src={service.img}
-                  alt={service.title}
-                  className="absolute -top-12 w-24 h-24 object-contain drop-shadow-lg"
-                />
+                <div className="absolute left-8 top-0 h-16 w-11 -translate-y-10 rounded-b-full bg-white"></div>
 
-                {/* Title */}
-                <h3 className="text-[#015482] font-extrabold text-2xl text-center mb-6 leading-tight tracking-wide whitespace-pre-line">
+                <div className="absolute left-0.5 top-0 -translate-y-1/2 rounded-full shadow-lg">
+                  <img
+                    src={service.img}
+                    alt={service.title.replace("\n", " ")}
+                    className="h-30 w-30"
+                  />
+                </div>
+
+                <h3 className="max-w-48 whitespace-pre-line text-left text-3xl font-extrabold leading-[1.05] text-white sm:text-2xl">
                   {service.title}
                 </h3>
 
-                {/* Description */}
-                <p className="text-gray-600 text-md leading-relaxed text-center flex-1">
+                <p className="mt-10 max-w-[18rem] flex-1 text-left text-base leading-7 text-white/95">
                   {service.description}
                 </p>
 
-                {/* Arrow button */}
                 <Link
                   to={service.link}
-                  className="mt-8 w-12 h-12 bg-[#015482] rounded-full flex items-center justify-center hover:bg-[#17d3cf] transition-colors"
+                  aria-label={`View ${service.title.replace("\n", " ")}`}
+                  className="mt-10 flex h-14 w-14 items-center justify-center rounded-full bg-white text-[#015482] transition-colors hover:bg-[#17d3cf] hover:text-white"
                 >
-                  <ArrowUpRight className="w-5 h-5 text-white" />
+                  <ArrowUpRight className="h-7 w-7" />
                 </Link>
               </motion.div>
             ))}

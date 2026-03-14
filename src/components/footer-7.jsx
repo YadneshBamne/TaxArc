@@ -16,7 +16,7 @@ const defaultSections = [
     title: "Company",
     links: [
       { name: "Home", href: "/" },
-      { name: "Contact", href: "/contact" },
+      { name: "Contact Us", href: "/contact" },
       { name: "About Us", href: "/about" },
     ],
   },
@@ -62,7 +62,7 @@ export const Footer7 = ({
   },
 
   sections = defaultSections,
-  description = "Professional Tax & Accounting Services by Harshika & Co., Chartered Accountants, India.",
+  description = <>Professional Tax & Accounting Services by<br/> Harshika & Co.,<br/> Chartered Accountants, India.</>,
   socialLinks = defaultSocialLinks,
   copyright = "© 2026 TaxArc Global. All rights reserved.",
   legalLinks = defaultLegalLinks

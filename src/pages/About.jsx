@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'motion/react'
-import { BookOpen, Clock, Shield, Users, DollarSign, TrendingUp, ArrowRight, Eye, Target, Gem, Lock, UserCircle2, Key, Home, Printer, Settings, Network, Database, ShieldAlert, HardDrive, ArrowUpRight, ChevronDown,Phone, MonitorCloudIcon, Cpu, MonitorCheck, UsbIcon, Building, PrinterX, SlidersHorizontal, HardDriveDownload } from 'lucide-react'
+import { BookOpen, Clock, Shield, Users, DollarSign, TrendingUp, ArrowRight, Gem, Lock, UserCircle2, Key, Home, Printer, Settings, Network, Database, ShieldAlert, HardDrive, ArrowUpRight, ChevronDown,Phone, MonitorCloudIcon, Cpu, MonitorCheck, UsbIcon, Building, PrinterX, SlidersHorizontal, HardDriveDownload } from 'lucide-react'
 import LogoLoop from '../components/LogoLoop'
 
 const About = () => {
@@ -158,10 +158,6 @@ const About = () => {
                 <p>
                   TaxArc Global operates under her direction as a process-driven, compliance-first delivery organization, emphasizing SOP adherence, audit-ready workpapers, confidentiality, and consistent quality.
                 </p>
-
-                <p>
-                  Every engagement is structured for partner-level review, reduced rework, and predictable delivery, supporting CPA firms in scaling capacity without compromising professional standards.
-                </p>
               </div>
             </motion.div>
 
@@ -247,62 +243,40 @@ const About = () => {
         </div>
       </section>
 
-      {/* Vision, Mission & Values Section */}
-      <section className='py-20 bg-white'>
+      {/* Vision & Mission Section */}
+      <section className='py-20'>
         <div className='container mx-auto px-4'>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className='text-center mb-16'
+            className='max-w-6xl mx-auto bg-[#015482] rounded-[28px] px-5 md:px-12 py-8 md:py-12'
           >
-            <h2 className='text-4xl md:text-5xl font-bold mb-4'>
-              Our <span className='font-inter italic text-[#015482]'>Vision & Mission</span>
-            </h2>
+            <div className='space-y-10 md:space-y-12'>
+              <div className='relative pt-5 md:pt-6'>
+                <div className='absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 z-10 bg-[#28C9C9] text-white rounded-xl px-10 md:px-16 py-3'>
+                  <p className='text-2xl md:text-3xl font-bold tracking-[0.12em] leading-none'>VISION</p>
+                </div>
+                <div className='bg-[#f3f3f3] rounded-2xl  mt-3 px-6 md:px-10 py-10 md:py-12 text-center'>
+                  <p className='text-xl md:text-[1.5rem] text-black leading-normal max-w-4xl mx-auto'>
+                    To be a globally trusted professional services partner, recognized for excellence in tax, accounting and bookkeeping operations, precision-driven execution, and uncompromising data security.
+                  </p>
+                </div>
+              </div>
+
+              <div className='relative pt-5 md:pt-6'>
+                <div className='absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 z-10 bg-[#28C9C9] text-white rounded-xl px-10 md:px-16 py-3'>
+                  <p className='text-2xl md:text-3xl font-bold tracking-[0.12em] leading-none'>MISSION</p>
+                </div>
+                <div className='bg-[#f3f3f3] rounded-2xl px-6 mt-3 md:px-10 py-10 md:py-12 text-center'>
+                  <p className='text-xl md:text-[1.5rem] text-black leading-normal max-w-4xl mx-auto'>
+                    To deliver reliable, high-quality outsourced accounting and tax support, powered by qualified professionals, structured processes, intelligent technology and strict confidentiality.
+                  </p>
+                </div>
+              </div>
+            </div>
           </motion.div>
-
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-16 max-w-3xl mx-auto'>
-            {/* Vision Card */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className='flex flex-col items-center text-center bg-white rounded-2xl shadow-lg pt-10 pb-8 px-8'
-            >
-              <div
-                className='w-28 h-28 bg-[#015482] flex items-center justify-center mb-6'
-                style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
-              >
-                <Eye className='w-10 h-10 text-white' />
-              </div>
-              <h3 className='text-xl font-bold tracking-widest mb-4'>VISION</h3>
-              <p className='text-gray-600 text-sm leading-relaxed'>
-                To be a globally trusted professional services partner, recognized for excellence in tax, accounting and bookkeeping operations, precision-driven execution, and uncompromising data security.
-              </p>
-            </motion.div>
-
-            {/* Mission Card */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.15 }}
-              className='flex flex-col items-center text-center bg-white rounded-2xl shadow-lg pt-10 pb-8 px-8'
-            >
-              <div
-                className='w-28 h-28 bg-[#015482] flex items-center justify-center mb-6'
-                style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
-              >
-                <Target className='w-10 h-10 text-white' />
-              </div>
-              <h3 className='text-xl font-bold tracking-widest mb-4'>MISSION</h3>
-              <p className='text-gray-600 text-sm leading-relaxed'>
-                To deliver reliable, high-quality outsourced accounting and tax support, powered by qualified professionals, structured processes, intelligent technology and strict confidentiality.
-              </p>
-            </motion.div>
-          </div>
         </div>
       </section>
 
@@ -406,7 +380,7 @@ const About = () => {
                   className='relative flex items-start gap-4'
                 >
                   {/* Pin circle on left */}
-                  <div className='relative z-10 flex flex-col items-center flex-shrink-0'>
+                  <div className='relative z-10 flex flex-col items-center shrink-0'>
                     <div className='w-16 h-16 rounded-full border-2 border-[#015482] bg-white flex items-center justify-center shadow-sm'>
                       <span className='text-lg font-bold text-[#015482]'>{item.step}</span>
                     </div>
