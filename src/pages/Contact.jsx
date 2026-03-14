@@ -108,24 +108,24 @@ const Contact = () => {
         </div>
 
         {/* Content */}
-        <div className="container mx-auto px-4 md:px-8 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto text-center rounded-2xl p-12 bg-white/10 backdrop-blur-sm border border-white/20"
+            className="w-full max-w-4xl mx-auto text-center rounded-xl sm:rounded-2xl md:rounded-3xl px-4 py-8 sm:px-8 sm:py-10 md:px-12 md:py-12 bg-white/10 backdrop-blur-sm border border-white/20"
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
               Contact Us
             </h1>
-            <p className="text-lg md:text-xl text-white leading-relaxed mb-4">
+            <p className="text-base sm:text-lg md:text-xl text-white leading-relaxed mb-3 sm:mb-4">
               We collaborate with CPA firms and
               businesses across the globe. Our systems, communication processes,
               and delivery frameworks are built to work seamlessly across time
               zones— ensuring clarity, responsiveness, and consistent
               turnaround, no matter where you're located.
             </p>
-            <p className="text-lg md:text-xl text-white leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-white leading-relaxed">
               Whether you're a CPA firm looking to streamline seasonal workload,
               or a business owner seeking reliable accounting, taxation, or
               payroll support, we're here to help you run your operations
