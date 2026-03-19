@@ -82,10 +82,10 @@ const Home = () => {
   return (
     <div className="w-full bg-white">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-start">
+      <section className="relative h-screen flex items-center justify-start overflow-hidden">
         {/* Background Image with Overlay */}
         <video 
-          className='absolute bg-[#768286] inset-0 w-full h-full object-cover'
+          className='absolute bg-[#768286] inset-0 w-full h-full object-cover scale-110 '
           autoPlay
           loop
           muted
@@ -93,7 +93,7 @@ const Home = () => {
         >
           <source src='https://ik.imagekit.io/qxfudjvlf/taxarc/4.mp4' type='video/mp4' />
         </video>
-        <div className='absolute inset-0 bg-black/40'></div>
+        <div className='absolute inset-0 bg-black/30'></div>
 
         {/* Content */}
         <div className="container mx-auto px-4 md:px-8 relative z-10">
@@ -147,10 +147,10 @@ const Home = () => {
               >
                 <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                   Our Philosophy -{" "}
-                  <span className="font-inter text-[#015482]">ARC</span>
+                  <span className="font-inter text-[#039FA5]">ARC</span>
                 </h2>
                 <p className="text-3xl font-inter italic mb-6 bg-[#015482] bg-clip-text text-transparent">
-                  Accuracy, Reliability & Confidentiality
+                  <span className="text-[#039FA5]">A</span>ccuracy, <span className="text-[#039FA5]">R</span>eliability & <span className="text-[#039FA5]">C</span>onfidentiality
                 </p>
                 <p className="text-gray-700 mb-8 leading-relaxed">
                   At TaxArc Global, our name reflects the philosophy that guides
@@ -434,7 +434,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="py-20 mb-20">
+      <section className="py-20 mb-10">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-10">
@@ -442,118 +442,101 @@ const Home = () => {
             </h2>
           </div>
 
-          <div className="mt-14">
-            <LogoLoop
-              logos={[
-                {
-                  src: "https://ik.imagekit.io/qxfudjvlf/taxarc/1.png",
-                  alt: "Tool 1",
-                },
-                {
-                  src: "https://ik.imagekit.io/qxfudjvlf/taxarc/2.png",
-                  alt: "Tool 2",
-                },
-                {
-                  src: "https://ik.imagekit.io/qxfudjvlf/taxarc/3.png",
-                  alt: "Tool 3",
-                },
-                {
-                  src: "https://ik.imagekit.io/qxfudjvlf/taxarc/4.png",
-                  alt: "Tool 4",
-                },
-                {
-                  src: "https://ik.imagekit.io/qxfudjvlf/taxarc/5.png",
-                  alt: "Tool 5",
-                },
-                {
-                  src: "https://ik.imagekit.io/qxfudjvlf/taxarc/6.png",
-                  alt: "Tool 6",
-                },
-                {
-                  src: "https://ik.imagekit.io/qxfudjvlf/taxarc/7.png",
-                  alt: "Tool 7",
-                },
-                {
-                  src: "https://ik.imagekit.io/qxfudjvlf/taxarc/8.png",
-                  alt: "Tool 8",
-                },
-                {
-                  src: "https://ik.imagekit.io/qxfudjvlf/taxarc/9.png",
-                  alt: "Tool 9",
-                },
-                {
-                  src: "https://ik.imagekit.io/qxfudjvlf/taxarc/10.png",
-                  alt: "Tool 10",
-                },
-                {
-                  src: "https://ik.imagekit.io/qxfudjvlf/taxarc/11.png",
-                  alt: "Tool 11",
-                },
-              ]}
-              speed={80}
-              logoHeight={60}
-              gap={48}
-              pauseOnHover
-              fadeOut
-              fadeOutColor="#ffffff"
-            />
+          <div className="grid grid-cols-3 gap-4 md:gap-6 max-w-3xl mx-auto">
+            {[
+              { src: "https://ik.imagekit.io/qxfudjvlf/taxarc/1.png", alt: "Tool 1" },
+              { src: "https://ik.imagekit.io/qxfudjvlf/taxarc/2.png", alt: "Tool 2" },
+              { src: "https://ik.imagekit.io/qxfudjvlf/taxarc/3.png", alt: "Tool 3" },
+              { src: "https://ik.imagekit.io/qxfudjvlf/taxarc/4.png", alt: "Tool 4" },
+              { src: "https://ik.imagekit.io/qxfudjvlf/taxarc/5.png", alt: "Tool 5" },
+              { src: "https://ik.imagekit.io/qxfudjvlf/taxarc/6.png", alt: "Tool 6" },
+              { src: "https://ik.imagekit.io/qxfudjvlf/taxarc/7.png", alt: "Tool 7" },
+              { src: "https://ik.imagekit.io/qxfudjvlf/taxarc/8.png", alt: "Tool 8" },
+              { src: "https://ik.imagekit.io/qxfudjvlf/taxarc/9.png", alt: "Tool 9" },
+              { src: "https://ik.imagekit.io/qxfudjvlf/taxarc/10.png", alt: "Tool 10" },
+              { src: "https://ik.imagekit.io/qxfudjvlf/taxarc/11.png", alt: "Tool 11" },
+            ].map((logo, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.05 }}
+                className="flex items-center justify-center p-4 md:p-6 rounded-2xl border border-gray-100 bg-white hover:shadow-md hover:border-gray-200 transition-all duration-300"
+              >
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  className="h-10 md:h-14 w-auto object-contain"
+                />
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Work with Experts Section */}
-      <section className="mb-30 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Left Column - Image */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="order-2 lg:order-1"
-            >
-              <div className="relative w-full max-w-xl mx-auto lg:mx-0">
-                <img
-                  src="https://ik.imagekit.io/qxfudjvlf/taxarc/homepageleft.jpeg"
-                  alt="Work with experts"
-                  className="rounded-3xl w-full h-auto shadow-lg object-cover"
-                />
+      {/* CTA Banner Section */}
+      <section className="py-20 px-4 md:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="bg-[#015482] rounded-3xl overflow-hidden"
+        >
+          <div className="flex flex-col lg:flex-row items-stretch">
+            {/* Left: Text Content */}
+            <div className="relative flex-1 px-8 py-10 md:px-12 md:py-12 flex flex-col justify-center overflow-hidden">
+              {/* Grid overlay */}
+              <div
+                className="absolute inset-0 pointer-events-none opacity-10"
+                style={{
+                  backgroundImage: `
+                    linear-gradient(to right, rgba(255,255,255,0.5) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255,255,255,0.5) 1px, transparent 1px)
+                  `,
+                  backgroundSize: '40px 40px',
+                }}
+              />
+              <div className="relative z-10">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">
+                  Scale Smarter with
+                  <br />{" "}
+                  <span className="font-inter italic bg-white bg-clip-text text-transparent">
+                    Tax<span className="text-[#17D3CF]">Arc</span> Global
+                  </span>
+                  .
+                </h2>
+
+                <ul className="space-y-2 mb-10">
+                  <li className="text-white/90 text-sm md:text-base">Schedule a Free Consultation</li>
+                  <li className="text-white/90 text-sm md:text-base">Discover Custom Solutions</li>
+                  <li className="text-white/90 text-sm md:text-base">Start Building Your Competitive Advantage</li>
+                </ul>
+                <div>
+                  <Link
+                    to="/contact"
+                    className="inline-flex items-center gap-3 bg-white text-gray-900 font-semibold px-6 py-3 rounded-full hover:bg-gray-100 transition-colors w-fit"
+                  >
+                    Get Started
+                    <span className="w-8 h-8 bg-[#17D3CF] rounded-full flex items-center justify-center shrink-0">
+                      <ArrowUpRight className="w-4 h-4 text-white" />
+                    </span>
+                  </Link>
+                </div>
               </div>
-            </motion.div>
+            </div>
 
-            {/* Right Column - Content */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="order-1 lg:order-2 flex flex-col justify-center"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 leading-tight">
-                Scale Smarter with
-                <br />{" "}
-                <span className="font-inter italic bg-[#015482] bg-clip-text text-transparent">
-                  Tax<span className="text-[#17D3CF]">Arc</span> Global
-                </span>
-                .
-              </h2>
-
-              <Link
-                to="/contact"
-                className="inline-flex items-center bg-white border-2 border-gray-300 text-gray-900 px-8 py-3 rounded-full hover:border[#015482] hover:bg-blue-50 transition group font-semibold w-fit"
-              >
-                Get Started
-                <motion.div
-                  className="ml-3 w-8 h-8 bg-[#015482] hover:bg-[#17d3cf] rounded-full flex items-center justify-center"
-                  whileHover={{ scale: 1.1 }}
-                >
-                  <ArrowRight className="w-5 h-5 text-white" />
-                </motion.div>
-              </Link>
-            </motion.div>
+            {/* Right: Image */}
+            <div className="lg:w-[45%] shrink-0">
+              <img
+                src="https://ik.imagekit.io/qxfudjvlf/taxarc/homepageleft.jpeg"
+                alt="Experts working together"
+                className="w-full h-64 lg:h-full object-cover lg:rounded-r-3xl"
+              />
+            </div>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* CTA Section */}

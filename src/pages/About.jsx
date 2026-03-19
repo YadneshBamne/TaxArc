@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'motion/react'
-import { BookOpen, Clock, Shield, Users, DollarSign, TrendingUp, ArrowRight, Gem, Lock, UserCircle2, Key, Home, Printer, Settings, Network, Database, ShieldAlert, HardDrive, ArrowUpRight, ChevronDown,Phone, MonitorCloudIcon, Cpu, MonitorCheck, UsbIcon, Building, PrinterX, SlidersHorizontal, HardDriveDownload } from 'lucide-react'
+import { BookOpen, Clock, Shield, Users, DollarSign, TrendingUp, ArrowRight, Gem, Lock, UserCircle2, Key, Home, Printer, Settings, Network, Database, ShieldAlert, HardDrive, ArrowUpRight, ChevronDown,Phone, MonitorCloudIcon, Cpu, MonitorCheck, UsbIcon, Building, PrinterX, SlidersHorizontal, HardDriveDownload, Search, FileText, Wifi, CheckCircle2 } from 'lucide-react'
 import LogoLoop from '../components/LogoLoop'
+import RadialOrbitalTimeline from '../components/ui/radial-orbital-timeline'
 
 const About = () => {
-
-      const [openFaq, setOpenFaq] = useState(null)
+    const [openFaq, setOpenFaq] = useState(null)
     const faqs = [
     {
       question: "What services do you offer?",
@@ -26,7 +26,7 @@ const About = () => {
     },
     {
       question: "What software platforms do you support?",
-      answer: "We work with all major accounting software including QuickBooks, Xero, CCH Axcess, Intuit Lacerte, and other popular platforms. Our team is trained to adapt to your preferred software to ensure seamless integration."
+      answer: "We support a wide range of leading accounting and financial platforms including Drake Software, Wave, Xero, TaxAct, QuickBooks, Intuit ProConnect, Cash App, Gusto, ADP, Intuit Lacerte, and CCH Axcess—ensuring seamless integration with the tools you already use."
     },
     {
       question: "How do I get started?",
@@ -42,7 +42,7 @@ const About = () => {
 
 
   return (
-    <div className='w-full bg-white '>
+    <div className='w-full bg-white'>
 
       {/* About Us Section */}
       <section className='relative py-32 min-h-screen flex items-center justify-center'>
@@ -293,7 +293,7 @@ const About = () => {
           >
             <div className='space-y-10 md:space-y-12'>
               <div className='relative md:pt-6'>
-                <div className='absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 z-10 bg-[#28C9C9] text-white rounded-xl px-10 md:px-16 py-3'>
+                <div className='absolute left-1/2 top-0 md:top-9 -translate-x-1/2 -translate-y-1/2 z-10 bg-[#28C9C9] text-white rounded-xl px-10 md:px-16 py-3'>
                   <p className='text-2xl md:text-3xl font-bold tracking-[0.12em] leading-none'>VISION</p>
                 </div>
                 <div className='bg-[#f3f3f3] rounded-2xl  mt-3 px-6 md:px-10 py-10 md:py-12 text-center'>
@@ -304,7 +304,7 @@ const About = () => {
               </div>
 
               <div className='relative md:pt-6'>
-                <div className='absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 z-10 bg-[#28C9C9] text-white rounded-xl px-10 md:px-16 py-3'>
+                <div className='absolute left-1/2 top-0 md:top-9 -translate-x-1/2 -translate-y-1/2 z-10 bg-[#28C9C9] text-white rounded-xl px-10 md:px-16 py-3'>
                   <p className='text-2xl md:text-3xl font-bold tracking-[0.12em] leading-none'>MISSION</p>
                 </div>
                 <div className='bg-[#f3f3f3] rounded-2xl px-6 mt-3 md:px-10 py-10 md:py-12 text-center'>
@@ -319,128 +319,69 @@ const About = () => {
       </section>
 
       {/* Workflow Process Section */}
-<section className='py-20 '>
-  <div className='container mx-auto px-4'>
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6 }}
-      className='text-center mb-16'
-    >
-      <h2 className='text-4xl md:text-5xl font-bold mb-4'>
-        Our <span className='italic text-[#015482]'>Workflow Process</span>
-      </h2>
-    </motion.div>
+      <section className='py-20'>
+        <div className='container mx-auto px-4'>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className='text-center'
+          >
+            <h2 className='text-4xl md:text-5xl font-bold mb-4'>
+              Our <span className='italic text-[#015482]'>Workflow Process</span>
+            </h2>
+          </motion.div>
 
-    <div className='max-w-6xl mx-auto space-y-20'>
-      {[
-        [
-          { step: '01', title: 'Task\nInitiation', desc: 'Job assigned by client', icon: 'search' },
-          { step: '02', title: 'Deadline\nSetting', desc: 'Agreement on task completion time', icon: 'person' },
-          { step: '03', title: 'Data\nExchange', desc: 'Sharing of necessary documents', icon: 'doc' },
-          { step: '04', title: 'Client\nReview', desc: 'Client reviews and responds to queries', icon: 'wifi' },
-          { step: '05', title: 'Query\nCompilation', desc: 'List of queries prepared by client', icon: 'doc' },
-        ],
-        [
-          { step: '06', title: 'Task\nPreparation', desc: 'Arrow assigns processes data', icon: 'search' },
-          { step: '07', title: 'Final\nReview', desc: 'Senior manager checks for accuracy', icon: 'person' },
-          { step: '08', title: 'Delivery', desc: 'Task is completed & delivered', icon: 'doc' },
-          { step: '09', title: 'Feedback', desc: 'Note what worked well, and where there is scope of improvement', icon: 'wifi' },
-        ],
-      ].map((row, rowIndex) => (
-        <div key={rowIndex}>
+          {/* Radial Orbital Timeline Integration */}
+          <div className='max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-2 lg:gap-8'>
+            {/* Left Content (Desktop Only) */}
+            <motion.div 
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className='w-full text-right lg:text-left lg:w-1/4 space-y-4 px-4'
+            >
+              <h3 className='text-3xl font-bold text-[#015482] leading-tight mt-10'>Precision<br />Process</h3>
+              <p className='text-gray-600 leading-relaxed text-sm'>
+                Our workflow is meticulously designed to ensure every tax and accounting task is handled with absolute clarity. From initial data gathering to the final review, our cyclical process keeps you informed and maintains uncompromising quality at every step.
+              </p>
+            </motion.div>
 
-          {/* ── DESKTOP layout (md+): horizontal pins + cards ── */}
-          <div className='hidden md:block'>
-            {/* Icons row with connector line */}
-            <div className='relative flex items-center justify-around mb-6'>
-              <div
-                className='absolute h-0.5 bg-[#015482] z-0'
-                style={{
-                  top: '32px',
-                  left: `${100 / (2 * row.length)}%`,
-                  right: `${100 / (2 * row.length)}%`,
-                }}
+            {/* Timeline */}
+            <div className='w-full lg:w-1/2'>
+              <RadialOrbitalTimeline
+                timelineData={[
+                  { id: 1, icon: Search, title: 'Task Initiation', content: 'Job assigned by client', status: 'completed', date: 'Step 01', energy: 100, relatedIds: [2] },
+                  { id: 2, icon: UserCircle2, title: 'Deadline Setting', content: 'Agreement on task completion time', status: 'completed', date: 'Step 02', energy: 90, relatedIds: [3] },
+                  { id: 3, icon: FileText, title: 'Data Exchange', content: 'Sharing of necessary documents', status: 'completed', date: 'Step 03', energy: 80, relatedIds: [4] },
+                  { id: 4, icon: Wifi, title: 'Client Review', content: 'Client reviews and responds to queries', status: 'in-progress', date: 'Step 04', energy: 70, relatedIds: [5] },
+                  { id: 5, icon: FileText, title: 'Query Compilation', content: 'List of queries prepared by client', status: 'pending', date: 'Step 05', energy: 60, relatedIds: [6] },
+                  { id: 6, icon: Search, title: 'Task Preparation', content: 'Arrow assigns processes data', status: 'pending', date: 'Step 06', energy: 50, relatedIds: [7] },
+                  { id: 7, icon: UserCircle2, title: 'Final Review', content: 'Senior manager checks for accuracy', status: 'pending', date: 'Step 07', energy: 40, relatedIds: [8] },
+                  { id: 8, icon: FileText, title: 'Delivery', content: 'Task is completed & delivered', status: 'pending', date: 'Step 08', energy: 60, relatedIds: [9] },
+                  { id: 9, icon: Wifi, title: 'Feedback', content: 'Note what worked well, and where there is scope of improvement', status: 'pending', date: 'Step 09', energy: 80, relatedIds: [1] },
+                ]}
               />
-              {row.map((item, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: -20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className='relative z-10 flex flex-col items-center'
-                  style={{ width: `${100 / row.length}%` }}
-                >
-                  <div className='w-16 h-16 rounded-full bg-[#015482] border-2 border-[#015482]  flex items-center justify-center shadow-sm'>
-                    <span className='text-lg font-bold text-white'>{item.step}</span>
-                  </div>
-                  <div style={{ width: 0, height: 0, borderLeft: '7px solid transparent', borderRight: '7px solid transparent', borderTop: '10px solid #015482' }} />
-                </motion.div>
-              ))}
             </div>
 
-            {/* Cards row */}
-            <div className='grid gap-4' style={{ gridTemplateColumns: `repeat(${row.length}, 1fr)` }}>
-              {row.map((item, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className='flex flex-col items-center'
-                >
-                  <div className='w-full border-2 border-[#015482] rounded-xl p-4 text-center bg-white flex flex-col justify-start' style={{ minHeight: '130px' }}>
-                    <h3 className='text-sm font-bold text-gray-900 mb-2 leading-snug whitespace-pre-line'>{item.title}</h3>
-                    <p className='text-xs text-gray-500 leading-relaxed'>{item.desc}</p>
-                  </div>
-
-                </motion.div>
-              ))}
-            </div>
+            {/* Right Content (Desktop Only) */}
+            <motion.div 
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className='w-full text-left lg:text-right lg:w-1/4 space-y-4 px-2'
+            >
+              <h3 className='text-3xl font-bold text-[#015482] leading-tight'>Seamless<br />Delivery</h3>
+              <p className='text-gray-600 leading-relaxed text-sm'>
+                Continuous collaboration forms the backbone of our service. By actively assigning tasks, setting clear deadlines, and gathering vital feedback, we create an efficient, transparent, and seamlessly connected experience tailored to your firm's unique needs.
+              </p>
+            </motion.div>
           </div>
-
-          {/* ── MOBILE layout: vertical stacked list with left connector ── */}
-          <div className='md:hidden relative'>
-            {/* Vertical line */}
-            <div className='absolute left-8 top-0 bottom-0 w-0.5 bg-[#015482] z-0' />
-
-            <div className='space-y-6'>
-              {row.map((item, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className='relative flex items-start gap-4'
-                >
-                  {/* Pin circle on left */}
-                  <div className='relative z-10 flex flex-col items-center shrink-0'>
-                    <div className='w-16 h-16 rounded-full border-2 border-[#015482] bg-white flex items-center justify-center shadow-sm'>
-                      <span className='text-lg font-bold text-[#015482]'>{item.step}</span>
-                    </div>
-                    {/* Pin tail pointing right toward card */}
-                    <div style={{ width: 0, height: 0, borderTop: '7px solid transparent', borderBottom: '7px solid transparent', borderLeft: '10px solid #015482', position: 'absolute', right: '-10px', top: '50%', transform: 'translateY(-50%)' }} />
-                  </div>
-
-                  {/* Card */}
-                  <div className='flex-1 border-2 border-[#015482] rounded-xl p-4 bg-white'>
-                    <h3 className='text-sm font-bold text-gray-900 mb-1 leading-snug whitespace-pre-line'>{item.title}</h3>
-                    <p className='text-xs text-gray-500 leading-relaxed mb-3'>{item.desc}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-
         </div>
-      ))}
-    </div>
-  </div>
-</section>
+      </section>
 
       {/* IT Infrastructure and Security Measures Section */}
       <section className='py-20 bg-white'>

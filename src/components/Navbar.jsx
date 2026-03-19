@@ -39,10 +39,10 @@ const Navbar = () => {
   }, [prevScrollPos])
 
   const navBgClass = isScrolled 
-    ? 'bg-white/95 backdrop-blur-md shadow-lg' 
-    : 'bg-transparent'
+    ? 'bg-white backdrop-blur-md shadow-lg' 
+    : 'bg-white backdrop-blur-md shadow-lg'
 
-  const textColorClass = !isScrolled ? 'text-white' : 'text-gray-800'
+  const textColorClass = !isScrolled ? 'text-gray-800' : 'text-gray-800'
   const hoverColorClass = !isScrolled ? 'hover:text-cyan-400' : 'hover:text-blue-600'
 
   // Mobile menu rendered as a portal to body — escapes the nav's transform stacking context
@@ -112,7 +112,7 @@ const Navbar = () => {
   return (
     <>
       <nav 
-        className={`fixed top-0 left-0 w-full transition-all duration-300 ${navBgClass} ${visible ? 'translate-y-0' : '-translate-y-full'}`}
+        className={`fixed top-0 left-0 w-full transition-all rounded-b-[2rem] duration-300 ${navBgClass} ${visible ? 'translate-y-0' : '-translate-y-full'}`}
         style={{ zIndex: 9998 }}
       >
         <div className='container mx-auto px-2 py-2'>

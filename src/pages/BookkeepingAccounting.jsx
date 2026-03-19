@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'motion/react'
 import { Link } from 'react-router-dom'
-import { FileText, ArrowRight, ArrowLeftRight, Settings, Sparkles, CreditCard, TrendingUp, Database, Building2, CheckCircle2, Clock, BarChart3, Layers, Banknote, LandmarkIcon, BookUser, DollarSign, ChartBarBigIcon, SparkleIcon, Zap, RotateCcw } from 'lucide-react'
+import { FileText, ArrowUpRight, ArrowLeftRight, Settings, Sparkles, CreditCard, TrendingUp, Database, Building2, CheckCircle2, Clock, BarChart3, Layers, Banknote, LandmarkIcon, BookUser, DollarSign, ChartBarBigIcon, SparkleIcon, Zap, RotateCcw } from 'lucide-react'
 
 const BookkeepingAccounting = () => {
   return (
@@ -45,7 +45,7 @@ const BookkeepingAccounting = () => {
 
 
       {/* Who We Serve Section */}
-      <section className='py-16 bg-gray-50 border-b border-gray-100'>
+      <section className='py-20 bg-gray-50 border-b border-gray-100'>
         <div className='container mx-auto px-4'>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -292,7 +292,7 @@ const BookkeepingAccounting = () => {
       </section>
 
       {/* Key Benefits Section */}
-      <section className='py-35'>
+      <section className='py-20'>
         <div className='container mx-auto px-4'>
           <div className='max-w-5xl mx-auto'>
             {/* Header */}
@@ -384,58 +384,67 @@ const BookkeepingAccounting = () => {
           </div>
         </div>
       </section>
-      <section className='mb-30 bg-white'>
-        <div className='container mx-auto px-4'>
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center'>
-            {/* Left Column - Image */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className='order-2 lg:order-1'
-            >
-              <div className='relative w-full max-w-xl mx-auto lg:mx-0'>
-                <img 
-                  src="https://ik.imagekit.io/qxfudjvlf/taxarc/homepageleft.jpeg" 
-                  alt="Work with experts" 
-                  className='rounded-3xl w-full h-auto shadow-lg object-cover'
-                />
-              </div>
-            </motion.div>
+      <section className="py-20 px-4 md:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="bg-[#015482] rounded-3xl overflow-hidden"
+        >
+          <div className="flex flex-col lg:flex-row items-stretch">
+            {/* Left: Text Content */}
+            <div className="relative flex-1 px-8 py-10 md:px-12 md:py-12 flex flex-col justify-center overflow-hidden">
+              {/* Grid overlay */}
+              <div
+                className="absolute inset-0 pointer-events-none opacity-10"
+                style={{
+                  backgroundImage: `
+                    linear-gradient(to right, rgba(255,255,255,0.5) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255,255,255,0.5) 1px, transparent 1px)
+                  `,
+                  backgroundSize: '40px 40px',
+                }}
+              />
+              <div className="relative z-10">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">
+                  Scale Smarter with
+                  <br />{" "}
+                  <span className="font-inter italic bg-white bg-clip-text text-transparent">
+                    Tax<span className="text-[#17D3CF]">Arc</span> Global
+                  </span>
+                  .
+                </h2>
 
-            {/* Right Column - Content */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className='order-1 lg:order-2 flex flex-col justify-center'
-            >
-                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 leading-tight">
-                Scale Smarter with
-                <br />{" "}
-                <span className="font-inter italic bg-[#015482] bg-clip-text text-transparent">
-                  Tax<span className="text-[#17D3CF]">Arc</span> Global
-                </span>
-                .
-              </h2>
-              
-              <Link 
-                to="/contact" 
-                className='inline-flex items-center bg-white border-2 border-gray-300 text-gray-900 px-8 py-3 rounded-full hover:border[#015482] hover:bg-blue-50 transition group font-semibold w-fit'
-              >
-                Get Started
-                <motion.div
-                  className='ml-3 w-8 h-8 bg-[#015482] hover:bg-[#17d3cf] rounded-full flex items-center justify-center'
-                  whileHover={{ scale: 1.1 }}
-                >
-                  <ArrowRight className='w-5 h-5 text-white' />
-                </motion.div>
-              </Link>
-            </motion.div>
+                <ul className="space-y-2 mb-10">
+                  <li className="text-white/90 text-sm md:text-base">Schedule a Free Consultation</li>
+                  <li className="text-white/90 text-sm md:text-base">Discover Custom Solutions</li>
+                  <li className="text-white/90 text-sm md:text-base">Start Building Your Competitive Advantage</li>
+                </ul>
+                <div>
+                  <Link
+                    to="/contact"
+                    className="inline-flex items-center gap-3 bg-white text-gray-900 font-semibold px-6 py-3 rounded-full hover:bg-gray-100 transition-colors w-fit"
+                  >
+                    Get Started
+                    <span className="w-8 h-8 bg-[#17D3CF] rounded-full flex items-center justify-center shrink-0">
+                      <ArrowUpRight className="w-4 h-4 text-white" />
+                    </span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Right: Image */}
+            <div className="lg:w-[45%] shrink-0">
+              <img
+                src="https://ik.imagekit.io/qxfudjvlf/taxarc/homepageleft.jpeg"
+                alt="Experts working together"
+                className="w-full h-64 lg:h-full object-cover lg:rounded-r-3xl"
+              />
+            </div>
           </div>
-        </div>
+        </motion.div>
       </section>
     </div>
   )
