@@ -80,7 +80,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="w-full bg-white">
+    <div className="page-sections w-full bg-white">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-start overflow-hidden">
         {/* Background Image with Overlay */}

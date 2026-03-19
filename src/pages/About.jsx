@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'motion/react'
-import { BookOpen, Clock, Shield, Users, DollarSign, TrendingUp, ArrowRight, Gem, Lock, UserCircle2, Key, Home, Printer, Settings, Network, Database, ShieldAlert, HardDrive, ArrowUpRight, ChevronDown,Phone, MonitorCloudIcon, Cpu, MonitorCheck, UsbIcon, Building, PrinterX, SlidersHorizontal, HardDriveDownload, Search, FileText, Wifi, CheckCircle2 } from 'lucide-react'
+import { BookOpen, Clock, Shield, Users, DollarSign, TrendingUp, ArrowRight, Gem, Lock, UserCircle2, Key, Home, Printer, Settings, Network, Database, ShieldAlert, HardDrive, ArrowUpRight, ChevronDown,Phone, MonitorCloudIcon, Cpu, MonitorCheck, UsbIcon, Building, PrinterX, SlidersHorizontal, HardDriveDownload, Search, FileText, Wifi, CheckCircle2, Eye, Target } from 'lucide-react'
 import LogoLoop from '../components/LogoLoop'
 import RadialOrbitalTimeline from '../components/ui/radial-orbital-timeline'
 
@@ -42,7 +42,7 @@ const About = () => {
 
 
   return (
-    <div className='w-full bg-white'>
+    <div className='page-sections w-full bg-white'>
 
       {/* About Us Section */}
       <section className='relative py-32 min-h-screen flex items-center justify-center'>
@@ -117,7 +117,7 @@ const About = () => {
             >
               <div className='hidden lg:flex items-center gap-3 mb-1'>
                 <h3 className='text-3xl md:text-5xl font-inter italic'>
-                  <span className='text-[#015482]'>Harshika Vora</span>
+                  <span className='text-[#015482] font-bold'>Harshika Vora</span>
                 </h3>
                 <a
                   href='https://www.linkedin.com/in/harshika-vora-ca-cpa-7541a9154/'
@@ -174,7 +174,7 @@ const About = () => {
                 <div className='lg:hidden text-center mb-6'>
                   <div className='flex items-center justify-center gap-3 mb-1'>
                     <h3 className='text-3xl font-inter italic'>
-                      <span className='text-[#015482]'>Harshika Vora</span>
+                      <span className='text-[#015482] font-bold'>Harshika Vora</span>
                     </h3>
                     <a
                       href='https://www.linkedin.com/in/harshika-vora-ca-cpa-7541a9154/'
@@ -222,7 +222,7 @@ const About = () => {
               <div className='relative w-full max-w-md lg:max-w-lg'>
                 <div className='lg:hidden text-center mb-6'>
                   <h3 className='text-3xl font-inter italic mb-1'>
-                    <span className='text-[#015482]'>Hemant R. Vora</span>
+                    <span className='text-[#015482] font-bold'>Hemant R. Vora</span>
                   </h3>
                   <p className='text-3xl italic font-semibold text-gray-700 mb-2'>Strategic Advisor</p>
                   <p className='text-base font-semibold text-gray-800'>
@@ -249,7 +249,7 @@ const About = () => {
               className='order-2 lg:order-2'
             >
               <h3 className='hidden lg:block text-3xl md:text-5xl font-inter italic mb-1'>
-                <span className='text-[#015482]'>Hemant R. Vora</span>
+                <span className='text-[#015482] font-bold'>Hemant R. Vora</span>
               </h3>
               <p className='hidden lg:block text-3xl md:text-5xl italic font-semibold text-gray-700 mb-2'>Strategic Advisor</p>
               <p className='hidden lg:block text-lg font-semibold text-gray-800'>
@@ -282,32 +282,34 @@ const About = () => {
       </section>
 
       {/* Vision & Mission Section */}
-      <section className='py-20'>
-        <div className='container mx-auto px-4'>
+      <section className='py-16 md:py-20'>
+        <div className='w-full px-4 sm:px-6 md:px-8'>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className='max-w-6xl mx-auto bg-[#015482] rounded-[28px] px-5 md:px-12 py-8 md:py-12'
+            className='w-full'
           >
-            <div className='space-y-10 md:space-y-12'>
-              <div className='relative md:pt-6'>
-                <div className='absolute left-1/2 top-0 md:top-9 -translate-x-1/2 -translate-y-1/2 z-10 bg-[#28C9C9] text-white rounded-xl px-10 md:px-16 py-3'>
-                  <p className='text-2xl md:text-3xl font-bold tracking-[0.12em] leading-none'>VISION</p>
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 w-full'>
+              <div className='relative pt-12'>
+                <div className='absolute left-1/2 top-0 -translate-x-1/2 z-10 w-24 h-24 md:w-28 md:h-28 rounded-full bg-[#015482] text-white border-2 border-white flex items-center justify-center'>
+                  <Eye className='w-12 h-12 md:w-14 md:h-14' strokeWidth={1.8} />
                 </div>
-                <div className='bg-[#f3f3f3] rounded-2xl  mt-3 px-6 md:px-10 py-10 md:py-12 text-center'>
+                <div className='h-full bg-white border-2 border-dotted border-[#1f2937] rounded-[2.2rem] px-6 md:px-10 py-14 md:py-16 text-center'>
+                  <h3 className='text-[#015482] text-2xl md:text-3xl font-bold tracking-[0.12em] mb-6'>VISION</h3>
                   <p className='text-xl md:text-[1.5rem] text-black leading-normal max-w-4xl mx-auto'>
                     To be a globally trusted professional services partner, recognized for excellence in tax, accounting and bookkeeping operations, precision-driven execution, and uncompromising data security.
                   </p>
                 </div>
               </div>
 
-              <div className='relative md:pt-6'>
-                <div className='absolute left-1/2 top-0 md:top-9 -translate-x-1/2 -translate-y-1/2 z-10 bg-[#28C9C9] text-white rounded-xl px-10 md:px-16 py-3'>
-                  <p className='text-2xl md:text-3xl font-bold tracking-[0.12em] leading-none'>MISSION</p>
+              <div className='relative pt-12'>
+                <div className='absolute left-1/2 top-0 -translate-x-1/2 z-10 w-24 h-24 md:w-28 md:h-28 rounded-full bg-[#015482] text-white border-2 border-white flex items-center justify-center'>
+                  <Target className='w-12 h-12 md:w-14 md:h-14' strokeWidth={1.8} />
                 </div>
-                <div className='bg-[#f3f3f3] rounded-2xl px-6 mt-3 md:px-10 py-10 md:py-12 text-center'>
+                <div className='h-full bg-white border-2 border-dotted border-[#1f2937] rounded-[2.2rem] px-6 md:px-10 py-14 md:py-16 text-center'>
+                  <h3 className='text-[#015482] text-2xl md:text-3xl font-bold tracking-[0.12em] mb-6'>MISSION</h3>
                   <p className='text-xl md:text-[1.5rem] text-black leading-normal max-w-4xl mx-auto'>
                     To deliver reliable, high-quality outsourced accounting and tax support, powered by qualified professionals, structured processes, intelligent technology and strict confidentiality.
                   </p>
@@ -353,15 +355,11 @@ const About = () => {
             <div className='w-full lg:w-1/2'>
               <RadialOrbitalTimeline
                 timelineData={[
-                  { id: 1, icon: Search, title: 'Task Initiation', content: 'Job assigned by client', status: 'completed', date: 'Step 01', energy: 100, relatedIds: [2] },
-                  { id: 2, icon: UserCircle2, title: 'Deadline Setting', content: 'Agreement on task completion time', status: 'completed', date: 'Step 02', energy: 90, relatedIds: [3] },
-                  { id: 3, icon: FileText, title: 'Data Exchange', content: 'Sharing of necessary documents', status: 'completed', date: 'Step 03', energy: 80, relatedIds: [4] },
-                  { id: 4, icon: Wifi, title: 'Client Review', content: 'Client reviews and responds to queries', status: 'in-progress', date: 'Step 04', energy: 70, relatedIds: [5] },
-                  { id: 5, icon: FileText, title: 'Query Compilation', content: 'List of queries prepared by client', status: 'pending', date: 'Step 05', energy: 60, relatedIds: [6] },
-                  { id: 6, icon: Search, title: 'Task Preparation', content: 'Arrow assigns processes data', status: 'pending', date: 'Step 06', energy: 50, relatedIds: [7] },
-                  { id: 7, icon: UserCircle2, title: 'Final Review', content: 'Senior manager checks for accuracy', status: 'pending', date: 'Step 07', energy: 40, relatedIds: [8] },
-                  { id: 8, icon: FileText, title: 'Delivery', content: 'Task is completed & delivered', status: 'pending', date: 'Step 08', energy: 60, relatedIds: [9] },
-                  { id: 9, icon: Wifi, title: 'Feedback', content: 'Note what worked well, and where there is scope of improvement', status: 'pending', date: 'Step 09', energy: 80, relatedIds: [1] },
+                  { id: 1, icon: Search, title: 'Client Onboarding', content: 'Establishing secure access and gathering essential requirements.', status: 'completed', date: 'Step 01', energy: 100, relatedIds: [2] },
+                  { id: 2, icon: UserCircle2, title: 'Data Sharing', content: 'Securely transferring documents and collecting all necessary information.', status: 'completed', date: 'Step 02', energy: 90, relatedIds: [3] },
+                  { id: 3, icon: FileText, title: 'Preparation', content: 'Experienced tax and accounting professionals prepare returns and financial reports.', status: 'completed', date: 'Step 03', energy: 80, relatedIds: [4] },
+                  { id: 4, icon: Wifi, title: 'Internal Review', content: 'A multi-level quality assurance process designed to ensure accuracy and reliability.', status: 'in-progress', date: 'Step 04', energy: 70, relatedIds: [5] },
+                  { id: 5, icon: FileText, title: 'Final Delivery', content: 'Timely delivery of review-ready work, ensuring all deadlines are met.', status: 'pending', date: 'Step 05', energy: 60, relatedIds: [6] },
                 ]}
               />
             </div>
@@ -509,14 +507,14 @@ const About = () => {
               </motion.div>
             </div>
 
-            {/* Row 3 - last 3 icons centered */}
-            <div className='grid grid-cols-2 md:flex md:justify-center gap-8 md:gap-16 mb-12 max-w-xl mx-auto'>
+            {/* Row 3 - spread left and right icons outward */}
+            <div className='grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-6 mb-12 max-w-xl md:max-w-2xl mx-auto'>
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.8 }}
-                className='flex flex-col items-center text-center'
+                className='flex flex-col items-center text-center md:justify-self-start'
               >
                 <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
                   <Database fill='#CCD9ED' className='w-8 h-8 text-[#015482]' />
@@ -529,7 +527,7 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.9 }}
-                className='flex flex-col items-center text-center'
+                className='flex flex-col items-center text-center md:justify-self-center'
               >
                 <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
                   <ShieldAlert fill='#CCD9ED' className='w-8 h-8 text-[#015482]' />
@@ -542,7 +540,7 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 1.0 }}
-                className='col-span-2 md:col-span-1 flex flex-col items-center text-center'
+                className='col-span-2 md:col-span-1 flex flex-col items-center text-center md:justify-self-end'
               >
                 <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
                   <HardDriveDownload fill='#CCD9ED' className='w-8 h-8 text-[#015482]' />

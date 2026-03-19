@@ -5,7 +5,7 @@ import { FileText, ArrowUpRight, ArrowLeftRight, Settings, Sparkles, CreditCard,
 
 const BookkeepingAccounting = () => {
   return (
-    <div className='w-full bg-white'>
+    <div className='page-sections w-full bg-white'>
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center'>
         {/* Background Image with Overlay */}
