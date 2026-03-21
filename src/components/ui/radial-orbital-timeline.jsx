@@ -179,7 +179,7 @@ export default function RadialOrbitalTimeline({
             const isExpanded = expandedItems[item.id];
             const isRelated = isRelatedToActive(item.id);
             const isPulsing = pulseEffect[item.id];
-            const Icon = item.icon;
+            const stepNumber = index + 1;
 
             const nodeStyle = {
               transform: `translate(${position.x}px, ${position.y}px)`,
@@ -229,7 +229,7 @@ export default function RadialOrbitalTimeline({
                   transition-all duration-300 transform
                   ${isExpanded ? "scale-150 shadow-md shadow-[#015482]/30" : ""}
                 `}>
-                  <Icon size={16} />
+                  <span className="text-xl font-extrabold leading-none">{stepNumber}</span>
                 </div>
                 <div
                   className={`
