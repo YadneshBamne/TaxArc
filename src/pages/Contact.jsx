@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "motion/react";
+import { Toaster, toast } from "sonner";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import {
   MapPin,
   Mail,
@@ -10,6 +12,8 @@ import {
 } from "lucide-react";
 
 const Contact = () => {
+  const { executeRecaptcha } = useGoogleReCaptcha();
+  
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -17,6 +21,7 @@ const Contact = () => {
     services: [],
   });
 
+  const [loading, setLoading] = useState(false);
   const [openFaq, setOpenFaq] = useState(null);
 
   const toggleFaq = (index) => {
@@ -79,21 +84,129 @@ const Contact = () => {
     "Payroll",
   ];
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
-    // Reset form
-    setFormData({
-      fullName: "",
-      email: "",
-      message: "",
-      services: [],
-    });
+    
+    // Validate required fields
+    if (!formData.fullName.trim() || !formData.email.trim() || !formData.message.trim()) {
+      toast.error("Please fill in all required fields.", {
+        style: {
+          backgroundColor: "#015482",
+          color: "white",
+          border: "1px solid #17D3CF",
+        },
+      });
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      // Get reCAPTCHA token
+      if (!executeRecaptcha) {
+        toast.error("reCAPTCHA not ready. Please try again.", {
+          style: {
+            backgroundColor: "#015482",
+            color: "white",
+            border: "1px solid #17D3CF",
+          },
+        });
+        setLoading(false);
+        return;
+      }
+
+      const token = await executeRecaptcha("contactForm");
+
+      const servicesText = formData.services.length > 0 
+        ? formData.services.join(", ") 
+        : "None selected";
+
+      // Format email body according to template
+      const emailBody = `Hi Harshika,
+
+You've received a new inquiry through the website.
+
+Here are the details:
+
+Name: ${formData.fullName}
+Email: ${formData.email}
+Message: ${formData.message}
+
+Services Interested In:
+${servicesText}`;
+
+      const emailData = {
+        access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY,
+        from_name: formData.fullName,
+        email: formData.email,
+        subject: "New Inquiry from Contact Form | TaxArc Global",
+        message: emailBody,
+        to_email: "harshika@taxarcglobal.com",
+        recaptcha_token: token,
+      };
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(emailData),
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        toast.success("Thank you! We'll get back to you soon", {
+          style: {
+            backgroundColor: "#015482",
+            color: "white",
+            border: "1px solid #17D3CF",
+          },
+        });
+        setFormData({
+          fullName: "",
+          email: "",
+          message: "",
+          services: [],
+        });
+      } else {
+        toast.error(result.message || "Failed to send message. Please try again.", {
+          style: {
+            backgroundColor: "#015482",
+            color: "white",
+            border: "1px solid #17D3CF",
+          },
+        });
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast.error("Something went wrong. Please try again later.", {
+        style: {
+          backgroundColor: "#015482",
+          color: "white",
+          border: "1px solid #17D3CF",
+        },
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
     <div className="page-sections w-full bg-white">
+      <Toaster
+        position="bottom-right"
+        theme="dark"
+        toastOptions={{
+          duration: 4000,
+          style: {
+            backgroundColor: "#015482",
+            color: "white",
+            border: "1px solid #17D3CF",
+            borderRadius: "8px",
+          },
+        }}
+      />
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center">
         {/* Background Image with Overlay */}
@@ -413,8 +526,12 @@ const Contact = () => {
                     )}
                   </div>
 
-                  <button className="w-full flex items-center justify-between bg-[#015482] hover:bg-[#17D3CF] transition text-white font-medium text-sm px-6 py-3.5 rounded-full">
-                    <span>Send Message</span>
+                  <button 
+                    type="submit"
+                    disabled={loading}
+                    className="w-full flex items-center justify-between bg-[#015482] hover:bg-[#17D3CF] disabled:opacity-70 disabled:cursor-not-allowed transition text-white font-medium text-sm px-6 py-3.5 rounded-full"
+                  >
+                    <span>{loading ? "Sending..." : "Send Message"}</span>
                     <span className="w-8 h-8 bg-opacity-20 rounded-full flex items-center justify-center">
                       <ArrowUpRight size={25} className="text-white" />
                     </span>
