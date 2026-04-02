@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { Toaster, toast } from "sonner";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import { useLocation } from "react-router-dom";
 import {
   MapPin,
   Mail,
@@ -13,6 +14,19 @@ import {
 
 const Contact = () => {
   const { executeRecaptcha } = useGoogleReCaptcha();
+  const location = useLocation();
+  
+  // Scroll to contact form if hash is present
+  useEffect(() => {
+    if (location.hash === "#contact-form") {
+      const element = document.getElementById("contact-form");
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 100);
+      }
+    }
+  }, [location]);
   
   const [formData, setFormData] = useState({
     fullName: "",
@@ -216,7 +230,7 @@ ${servicesText}`;
               "url(https://ik.imagekit.io/qxfudjvlf/navratna?updatedAt=1773260906125)",
           }}
         >
-          <div className="absolute inset-0 bg-black/70"></div>
+          <div className="absolute inset-0 "></div>
         </div>
 
         {/* Content */}
@@ -225,23 +239,17 @@ ${servicesText}`;
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="w-full max-w-4xl mx-auto text-center rounded-xl sm:rounded-2xl md:rounded-3xl px-4 py-8 sm:px-8 sm:py-10 md:px-12 md:py-12 bg-white/10 backdrop-blur-sm border border-white/20"
+            className="w-full max-w-4xl mx-auto text-center rounded-xl sm:rounded-2xl md:rounded-3xl px-4 py-8 sm:px-8 sm:py-10 md:px-12 md:py-12 bg-white/10 backdrop-blur-sm border border-black"
           >
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-black mb-4 sm:mb-6">
               Contact Us
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-white leading-relaxed mb-3 sm:mb-4">
+            <p className="text-base sm:text-lg md:text-xl text-black font-light leading-relaxed mb-3 sm:mb-4">
               We collaborate with CPA firms and
               businesses across the globe. Our systems, communication processes,
               and delivery frameworks are built to work seamlessly across time
               zones— ensuring clarity, responsiveness, and consistent
               turnaround, no matter where you're located.
-            </p>
-            <p className="text-base sm:text-lg md:text-xl text-white leading-relaxed">
-              Whether you're a CPA firm looking to streamline seasonal workload,
-              or a business owner seeking reliable accounting, taxation, or
-              payroll support, we're here to help you run your operations
-              smoothly and invest more time into growth.
             </p>
           </motion.div>
         </div>
@@ -357,21 +365,32 @@ ${servicesText}`;
       {/* Drop Us a Message Section */}
       <section className="mt-10 ">
         <div className="container mx-auto px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="flex flex-col lg:flex-row justify-between items-center gap-12 lg:gap-20">
+          <div className="w-full">
+            <div className='flex flex-col lg:flex-row justify-between items-stretch gap-12 lg:gap-20'>
               {/* Left - Message Header & Contact Info */}
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="w-full lg:w-auto lg:max-w-md space-y-8"
+                className="relative w-full lg:flex-1 overflow-hidden rounded-xl p-8 md:px-12 md:py-12 bg-[#015482] flex flex-col justify-center"
               >
-                <div>
-                  <h2 className="text-4xl md:text-5xl mt-4 font-bold text-gray-900 mb-4">
-                    Drop Us a <br/> <span className="italic text-[#015482] font-inter">Message</span>
+                {/* Grid overlay */}
+                <div
+                  className="absolute inset-0 pointer-events-none opacity-30"
+                  style={{
+                  backgroundImage: `
+                    linear-gradient(to right, rgba(255,255,255,0.5) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255,255,255,0.5) 1px, transparent 1px)
+                  `,
+                  backgroundSize: '40px 40px',
+                  }}
+                />
+                <div className="relative z-10">
+                  <h2 className="text-4xl md:text-5xl mt-4 font-bold text-white mb-4">
+                    Drop Us a <br/> <span className="italic text-[#17D3CF] font-inter">Message</span>
                   </h2>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-white leading-relaxed">
                     We're always happy to hear from you <br/>and will get back to you<br/>
                     as soon as possible.
                   </p>
@@ -387,6 +406,7 @@ ${servicesText}`;
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
                 className="w-full lg:w-auto lg:max-w-2xl lg:flex-1"
+                id="contact-form"
               >
                 <form
                   onSubmit={handleSubmit}

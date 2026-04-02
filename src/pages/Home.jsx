@@ -82,10 +82,10 @@ const Home = () => {
   return (
     <div className="page-sections w-full bg-white">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-start overflow-hidden">
+      <section className="relative min-h-screen pt-24 md:pt-32 flex items-center justify-start overflow-hidden">
         {/* Background Image with Overlay */}
         <video 
-          className='absolute bg-[#768286] inset-0 w-full h-full object-cover scale-110 '
+          className='absolute top-0 left-0 bg-[#768286] w-full h-full object-cover scale-110 '
           autoPlay
           loop
           muted
@@ -134,7 +134,7 @@ const Home = () => {
       </section>
 
       {/* Philosophy Section */}
-      <section className="py-20 bg-white">
+      <section className="py-10 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Left Column - Text and Accordion */}
@@ -197,7 +197,7 @@ const Home = () => {
       </section>
 
       {/*    Section */}
-      <section className="py-20 bg-white">
+      <section className="py-10 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -255,7 +255,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="py-10 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <motion.h2
@@ -434,49 +434,40 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="py-20 mb-10">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-10">
-              Tools we <span className="italic text-[#015482] ">work with</span>.
+      <section className='py-10'>
+        <div className='container mx-auto px-4'>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className='text-center mb-16'
+          >
+            <h2 className='text-4xl md:text-5xl font-bold mb-4'>
+              Tools we <span className='italic text-[#015482]'>work with</span>
             </h2>
-          </div>
+          </motion.div>
 
-          <div className="grid grid-cols-3 gap-4 md:gap-6 max-w-3xl mx-auto">
-            {[
-              { src: "https://ik.imagekit.io/qxfudjvlf/taxarc/1.png", alt: "Tool 1" },
-              { src: "https://ik.imagekit.io/qxfudjvlf/taxarc/2.png", alt: "Tool 2" },
-              { src: "https://ik.imagekit.io/qxfudjvlf/taxarc/3.png", alt: "Tool 3" },
-              { src: "https://ik.imagekit.io/qxfudjvlf/taxarc/4.png", alt: "Tool 4" },
-              { src: "https://ik.imagekit.io/qxfudjvlf/taxarc/5.png", alt: "Tool 5" },
-              { src: "https://ik.imagekit.io/qxfudjvlf/taxarc/6.png", alt: "Tool 6" },
-              { src: "https://ik.imagekit.io/qxfudjvlf/taxarc/7.png", alt: "Tool 7" },
-              { src: "https://ik.imagekit.io/qxfudjvlf/taxarc/8.png", alt: "Tool 8" },
-              { src: "https://ik.imagekit.io/qxfudjvlf/taxarc/9.png", alt: "Tool 9" },
-              { src: "https://ik.imagekit.io/qxfudjvlf/taxarc/10.png", alt: "Tool 10" },
-              { src: "https://ik.imagekit.io/qxfudjvlf/taxarc/11.png", alt: "Tool 11" },
-            ].map((logo, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: i * 0.05 }}
-                className="flex items-center justify-center p-4 md:p-6 rounded-2xl border border-gray-100 bg-white hover:shadow-md hover:border-gray-200 transition-all duration-300"
-              >
-                <img
-                  src={logo.src}
-                  alt={logo.alt}
-                  className="h-10 md:h-14 w-auto object-contain"
-                />
-              </motion.div>
-            ))}
-          </div>
+          <LogoLoop 
+            logos={[
+              { src: 'https://ik.imagekit.io/qxfudjvlf/taxarc/1.png', alt: 'Tool 1' },
+              { src: 'https://ik.imagekit.io/qxfudjvlf/taxarc/2.png', alt: 'Tool 2' },
+              { src: 'https://ik.imagekit.io/qxfudjvlf/taxarc/3.png', alt: 'Tool 3' },
+              { src: 'https://ik.imagekit.io/qxfudjvlf/taxarc/4.png', alt: 'Tool 4' },
+              { src: 'https://ik.imagekit.io/qxfudjvlf/taxarc/5.png', alt: 'Tool 5' },
+              { src: 'https://ik.imagekit.io/qxfudjvlf/taxarc/6.png', alt: 'Tool 6' },
+              { src: 'https://ik.imagekit.io/qxfudjvlf/taxarc/7.png', alt: 'Tool 7' },
+              { src: 'https://ik.imagekit.io/qxfudjvlf/taxarc/8.png', alt: 'Tool 8' },
+              { src: 'https://ik.imagekit.io/qxfudjvlf/taxarc/9.png', alt: 'Tool 9' },
+              { src: 'https://ik.imagekit.io/qxfudjvlf/taxarc/10.png', alt: 'Tool 10' },
+              { src: 'https://ik.imagekit.io/qxfudjvlf/taxarc/11.png', alt: 'Tool 11' },
+            ]}
+          />
         </div>
       </section>
 
       {/* CTA Banner Section */}
-      <section className="py-20 px-4 md:px-8">
+      <section className="py-10 px-4 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -509,9 +500,7 @@ const Home = () => {
                 </h2>
 
                 <ul className="space-y-2 mb-10">
-                  <li className="text-white/90 text-sm md:text-base">Schedule a Free Consultation</li>
-                  <li className="text-white/90 text-sm md:text-base">Discover Custom Solutions</li>
-                  <li className="text-white/90 text-sm md:text-base">Start Building Your Competitive Advantage</li>
+                  <li className="text-white/90 text-sm md:text-base">Schedule a free consultation to discover custom solutions for your business.</li>
                 </ul>
                 <div>
                   <Link

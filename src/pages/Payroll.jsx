@@ -15,7 +15,7 @@ const Payroll = () => {
             backgroundImage: 'url(https://ik.imagekit.io/qxfudjvlf/taxarc/Payrollnew.jpeg?updatedAt=1773041276167)',
           }}
         >
-          <div className='absolute inset-0 bg-black/50'></div>
+          <div className='absolute inset-0'></div>
         </div>
 
         {/* Content */}
@@ -25,10 +25,10 @@ const Payroll = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
-              <span className='text-white'>Payroll</span>
+            <h1 className='text-5xl md:text-7xl font-bold text-black mb-6'>
+              <span className='text-black'>Payroll</span>
             </h1>
-            <p className='text-xl md:text-2xl text-white font-light'>
+            <p className='text-xl md:text-2xl text-black font-light'>
               Reliable Payroll management
             </p>
           </motion.div>

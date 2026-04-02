@@ -15,22 +15,22 @@ const NewTaxation = () => {
             backgroundImage: 'url(https://ik.imagekit.io/qxfudjvlf/taxarc/Taxation.jpeg)',
           }}
         >
-          <div className='absolute inset-0 bg-black/70'></div>
+          <div className='absolute inset-0'></div>
         </div>
 
         {/* Content */}
         <div className='container mx-auto px-4 sm:px-6 md:px-8 relative z-10'>
-        <div className="w-full max-w-4xl mx-auto text-center rounded-xl sm:rounded-2xl md:rounded-3xl px-4 py-8 sm:px-8 sm:py-10 md:px-12 md:py-12 bg-white/10 backdrop-blur-sm border border-white/20"
+        <div className="w-full max-w-4xl mx-auto text-center rounded-xl sm:rounded-2xl md:rounded-3xl px-4 py-8 sm:px-8 sm:py-10 md:px-12 md:py-12 bg-white/10 backdrop-blur-sm border border-black"
           >
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-4 sm:mb-6'>
+            <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-black mb-4 sm:mb-6'>
               Tax Preparation
             </h1>
-            <p className='text-base sm:text-lg md:text-xl lg:text-2xl text-white font-light leading-relaxed'>
+            <p className='text-base sm:text-lg md:text-xl lg:text-2xl text-black font-light leading-relaxed'>
               Reliable Outsourced Tax Production. Delivered to Your Standards. On Your Timeline.
             </p>
           </motion.div>

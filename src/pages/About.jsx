@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import { motion } from 'motion/react'
 import { BookOpen, Clock, Shield, Users, DollarSign, TrendingUp, ArrowRight, Gem, Lock, UserCircle2, Key, Home, Printer, Settings, Network, Database, ShieldAlert, HardDrive, ArrowUpRight, ChevronDown,Phone, MonitorCloudIcon, Cpu, MonitorCheck, UsbIcon, Building, PrinterX, SlidersHorizontal, HardDriveDownload, Search, FileText, Wifi, CheckCircle2, Eye, Target } from 'lucide-react'
 import LogoLoop from '../components/LogoLoop'
-import RadialOrbitalTimeline from '../components/ui/radial-orbital-timeline'
 
 const About = () => {
     const [openFaq, setOpenFaq] = useState(null)
@@ -30,7 +29,7 @@ const About = () => {
     },
     {
       question: "How do I get started?",
-      answer: <>Getting started is simple! Fill out the <Link to="/contact" className="text-[#17D3CF] underline hover:text-[#015482]">contact form</Link>, send us an email or give us a call. We'll schedule a consultation to understand your needs and provide a customized solution with transparent and fair pricing.</>
+      answer: <>Getting started is simple! Fill out the <Link to="/contact#contact-form" className="text-[#17D3CF] underline hover:text-[#015482]">contact form</Link>, send us an email or give us a call. We'll schedule a consultation to understand your needs and provide a customized solution with transparent and fair pricing.</>
     }
   ]
 
@@ -56,18 +55,18 @@ const About = () => {
         >
           <source src='https://ik.imagekit.io/qxfudjvlf/taxarc/About%20Us%20Video.mp4' type='video/mp4' />
         </video>
-        <div className='absolute inset-0 bg-black/40'></div>
+        <div className='absolute inset-0 '></div>
 
         {/* Content */}
         <div className='container mx-auto px-4 sm:px-6 md:px-8 relative z-10'>
-          <div className="w-full max-w-4xl mx-auto text-center rounded-xl sm:rounded-2xl md:rounded-3xl px-4 py-8 sm:px-8 sm:py-10 md:px-12 md:py-12 bg-white/10 backdrop-blur-sm border border-white/20">
+          <div className="w-full max-w-4xl mx-auto text-center rounded-xl sm:rounded-2xl md:rounded-3xl px-4 py-8 sm:px-8 sm:py-10 md:px-12 md:py-12 bg-white/10 backdrop-blur-sm border border-black">
           <div className='max-w-4xl mx-auto text-center'>
             <motion.h2 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-5 sm:mb-8 md:mb-10'
+              className='text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-black mb-5 sm:mb-8 md:mb-10'
             >
               About Us
             </motion.h2>
@@ -77,7 +76,7 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className='text-base sm:text-lg md:text-xl text-white leading-relaxed'
+              className='text-base sm:text-lg md:text-xl text-black font-light leading-relaxed'
             >
               TaxArc Global is a global professional services outsourcing firm providing structured, 
               secure, and dependable support across tax, accounting and bookkeeping operations to 
@@ -141,7 +140,7 @@ const About = () => {
 
               <div className='space-y-4 text-gray-700 leading-relaxed'>
                 <p>
-                  TaxArc Global is led by Harshika Vora, a Chartered Accountant (India) and U.S. CPA (License Awaited) with nearly 9years of professional experience across Indian and U.S. taxation, accounting, audit, and compliance.
+                  TaxArc Global is led by Harshika Vora, a Chartered Accountant (India) and U.S. CPA (License Awaited) with nearly 9 years of professional experience across Indian and U.S. taxation, accounting, audit, and compliance.
                 </p>
 
                 <p>
@@ -154,10 +153,6 @@ const About = () => {
 
                 <p>
                   The professional values that define her Indian practice — ethics, integrity, accountability, and strict confidentiality — are the foundation on which TaxArc Global is built, making it not just an outsourcing provider, but a reliable back-office partner your firm can trust with bookkeeping, tax preparation, and payroll support — so you can focus on what grows your practice.
-                </p>
-
-                <p>
-                  TaxArc Global operates under her direction as a process-driven, compliance-first delivery organization, emphasizing SOP adherence, audit-ready workpapers, confidentiality, and consistent quality.
                 </p>
               </div>
             </motion.div>
@@ -298,7 +293,7 @@ const About = () => {
                 </div>
                 <div className='h-full bg-white border-2 border-dotted border-[#1f2937] rounded-[2.2rem] px-6 md:px-10 py-14 md:py-16 text-center'>
                   <h3 className='text-[#015482] text-2xl md:text-3xl font-bold tracking-[0.12em] mb-6'>VISION</h3>
-                  <p className='text-xl md:text-[1.5rem] text-black leading-normal max-w-4xl mx-auto'>
+                  <p className=' text-black leading-normal max-w-4xl mx-auto'>
                     To be a globally trusted professional services partner, recognized for excellence in tax, accounting and bookkeeping operations, precision-driven execution, and uncompromising data security.
                   </p>
                 </div>
@@ -310,7 +305,7 @@ const About = () => {
                 </div>
                 <div className='h-full bg-white border-2 border-dotted border-[#1f2937] rounded-[2.2rem] px-6 md:px-10 py-14 md:py-16 text-center'>
                   <h3 className='text-[#015482] text-2xl md:text-3xl font-bold tracking-[0.12em] mb-6'>MISSION</h3>
-                  <p className='text-xl md:text-[1.5rem] text-black leading-normal max-w-4xl mx-auto'>
+                  <p className=' text-black leading-normal max-w-4xl mx-auto'>
                     To deliver reliable, high-quality outsourced accounting and tax support, powered by qualified professionals, structured processes, intelligent technology and strict confidentiality.
                   </p>
                 </div>
@@ -328,55 +323,86 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className='text-center'
+            className='text-center mb-16'
           >
             <h2 className='text-4xl md:text-5xl font-bold mb-4'>
               Our <span className='italic text-[#015482]'>Workflow Process</span>
             </h2>
+            <p className='text-gray-600 leading-relaxed max-w-3xl mx-auto'>
+              Our workflow is meticulously designed to ensure every tax and accounting task is handled with absolute clarity. From initial data gathering to the final review, our cyclical process keeps you informed and maintains uncompromising quality at every step.
+            </p>
           </motion.div>
 
-          {/* Radial Orbital Timeline Integration */}
-          <div className='max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-2 lg:gap-8'>
-            {/* Left Content (Desktop Only) */}
-            <motion.div 
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className='w-full text-right lg:text-left lg:w-1/4 space-y-4 px-4'
-            >
-              <h3 className='text-3xl font-bold text-[#015482] leading-tight mt-10'>Precision<br />Process</h3>
-              <p className='text-gray-600 leading-relaxed text-sm'>
-                Our workflow is meticulously designed to ensure every tax and accounting task is handled with absolute clarity. From initial data gathering to the final review, our cyclical process keeps you informed and maintains uncompromising quality at every step.
-              </p>
-            </motion.div>
+          {/* Grid Layout */}
+          <div className='max-w-6xl mx-auto'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-8 lg:mb-12'>
+              {/* Step 1 */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className='relative border border-gray-200 rounded-2xl p-8 hover:shadow-lg hover:border-[#015482]/40 transition-all'
+              >
+                <div className='absolute -top-6 left-1/2 transform -translate-x-1/2 bg-[#015482] text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg'>01</div>
+                <h3 className='text-xl font-bold text-center mb-3 pt-4'>Client Onboarding</h3>
+                <p className='text-gray-600 text-center text-sm'>Establishing secure access and gathering essential requirements.</p>
+              </motion.div>
 
-            {/* Timeline */}
-            <div className='w-full lg:w-1/2'>
-              <RadialOrbitalTimeline
-                timelineData={[
-                  { id: 1, icon: Search, title: 'Client Onboarding', content: 'Establishing secure access and gathering essential requirements.', status: 'completed', date: 'Step 01', energy: 100, relatedIds: [2] },
-                  { id: 2, icon: UserCircle2, title: 'Data Sharing', content: 'Securely transferring documents and collecting all necessary information.', status: 'completed', date: 'Step 02', energy: 90, relatedIds: [3] },
-                  { id: 3, icon: FileText, title: 'Preparation', content: 'Experienced tax and accounting professionals prepare returns and financial reports.', status: 'completed', date: 'Step 03', energy: 80, relatedIds: [4] },
-                  { id: 4, icon: Wifi, title: 'Internal Review', content: 'A multi-level quality assurance process designed to ensure accuracy and reliability.', status: 'in-progress', date: 'Step 04', energy: 70, relatedIds: [5] },
-                  { id: 5, icon: FileText, title: 'Final Delivery', content: 'Timely delivery of review-ready work, ensuring all deadlines are met.', status: 'pending', date: 'Step 05', energy: 60, relatedIds: [6] },
-                ]}
-              />
+              {/* Step 2 */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className='relative border border-gray-200 rounded-2xl p-8 hover:shadow-lg hover:border-[#015482]/40 transition-all'
+              >
+                <div className='absolute -top-6 left-1/2 transform -translate-x-1/2 bg-[#015482] text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg'>02</div>
+                <h3 className='text-xl font-bold text-center mb-3 pt-4'>Data Sharing</h3>
+                <p className='text-gray-600 text-center text-sm'>Securely transferring documents and collecting all necessary information.</p>
+              </motion.div>
+
+              {/* Step 3 */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className='relative border border-gray-200 rounded-2xl p-8 hover:shadow-lg hover:border-[#015482]/40 transition-all'
+              >
+                <div className='absolute -top-6 left-1/2 transform -translate-x-1/2 bg-[#015482] text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg'>03</div>
+                <h3 className='text-xl font-bold text-center mb-3 pt-4'>Preparation</h3>
+                <p className='text-gray-600 text-center text-sm'>Experienced tax and accounting professionals prepare returns and financial reports.</p>
+              </motion.div>
             </div>
 
-            {/* Right Content (Desktop Only) */}
-            <motion.div 
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className='w-full text-left lg:text-right lg:w-1/4 space-y-4 px-2'
-            >
-              <h3 className='text-3xl font-bold text-[#015482] leading-tight'>Seamless<br />Delivery</h3>
-              <p className='text-gray-600 leading-relaxed text-sm'>
-                Continuous collaboration forms the backbone of our service. By actively assigning tasks, setting clear deadlines, and gathering vital feedback, we create an efficient, transparent, and seamlessly connected experience tailored to your firm's unique needs.
-              </p>
-            </motion.div>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto'>
+              {/* Step 4 - Left Side */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className='relative border border-gray-200 rounded-2xl p-8 hover:shadow-lg hover:border-[#015482]/40 transition-all'
+              >
+                <div className='absolute -top-6 left-1/2 transform -translate-x-1/2 bg-[#015482] text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg'>04</div>
+                <h3 className='text-xl font-bold text-center mb-3 pt-4'>Internal Review</h3>
+                <p className='text-gray-600 text-center text-sm'>A multi-level quality assurance process designed to ensure accuracy and reliability.</p>
+              </motion.div>
+
+              {/* Step 5 - Left Side */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className='relative border border-gray-200 rounded-2xl p-8 hover:shadow-lg hover:border-[#015482]/40 transition-all'
+              >
+                <div className='absolute -top-6 left-1/2 transform -translate-x-1/2 bg-[#015482] text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg'>05</div>
+                <h3 className='text-xl font-bold text-center mb-3 pt-4'>Final Delivery</h3>
+                <p className='text-gray-600 text-center text-sm'>Timely delivery of review-ready work, ensuring all deadlines are met.</p>
+              </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -552,6 +578,9 @@ const About = () => {
         </div>
       </section>
 
+      {/* Tools We Use Section */}
+
+
       <section className='py-20 bg-gray-50'>
         <div className='container mx-auto px-4'>
           <div className='max-w-7xl mx-auto'>
@@ -566,7 +595,7 @@ const About = () => {
                   className='lg:sticky lg:top-8'
                 >
                   <h2 className='text-4xl md:text-5xl font-bold text-gray-900 mb-1'>
-                    Friendly Asked
+                    Frequently Asked
                   </h2>
                   <h3 className='text-4xl md:text-5xl italic font-inter text-[#015482] mb-7'>
                     Questions.

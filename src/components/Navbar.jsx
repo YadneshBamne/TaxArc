@@ -122,7 +122,7 @@ const Navbar = () => {
               <img 
                 src="https://ik.imagekit.io/qxfudjvlf/taxarc/brand1.png?updatedAt=1772856706945" 
                 alt="TaxArc Global" 
-                className='h-20 md:22  w-auto mb-1'
+                className='h-32 md:22  w-auto mb-1'
               />
             </Link>
 
