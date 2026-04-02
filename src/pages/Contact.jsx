@@ -155,7 +155,7 @@ ${servicesText}`;
         email: formData.email,
         subject: "New Inquiry from Contact Form | TaxArc Global",
         message: emailBody,
-        to_email: "itendswithus0809@gmail.com",
+        to_email: "yadneshbamne05@gmail.com",
       };
 
       const response = await fetch("https://api.web3forms.com/submit", {
