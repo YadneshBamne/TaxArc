@@ -142,7 +142,6 @@ ${servicesText}`;
         subject: "New Inquiry from Contact Form | TaxArc Global",
         message: emailBody,
         to_email: "harshika@taxarcglobal.com",
-        recaptcha_token: token,
       };
 
       const response = await fetch("https://api.web3forms.com/submit", {
