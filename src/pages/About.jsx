@@ -418,7 +418,7 @@ const About = () => {
             className='text-center mb-16'
           >
             <h2 className='text-4xl md:text-5xl font-bold mb-4'>
-              Our IT Infrastructure and <span className='font-inter italic text-[#015482]'>Security Measures</span>
+              Our IT Infrastructure &amp; <span className='font-inter italic text-[#015482]'>Security Measures</span>
             </h2>
           </motion.div>
 
@@ -643,7 +643,7 @@ const About = () => {
                               </svg>
                             </div>
                           ) : (
-                            <div className='w-8 h-8 bg-[#015482] rounded-full flex items-center justify-center'>
+                            <div className='w-8 h-8 bg-[#17D3CF] rounded-full flex items-center justify-center'>
                               <svg width='16' height='16' viewBox='0 0 16 16' fill='none' stroke='white' strokeWidth='2'>
                                 <line x1='8' y1='3' x2='8' y2='13' />
                                 <line x1='3' y1='8' x2='13' y2='8' />

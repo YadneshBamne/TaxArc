@@ -75,7 +75,6 @@ const BookkeepingAccounting = () => {
               </div>
               <div className='text-center'>
                 <p className='text-base font-bold text-gray-900'>CPA &amp; EA Firms</p>
-                <p className='text-xs text-gray-500 mt-1'>Credentialed Tax Professionals</p>
               </div>
             </motion.div>
 
@@ -97,7 +96,6 @@ const BookkeepingAccounting = () => {
               </div>
               <div className='text-center'>
                 <p className='text-base font-bold text-gray-900'>Accounting Practices</p>
-                <p className='text-xs text-gray-500 mt-1'>Public &amp; Private Firms</p>
               </div>
             </motion.div>
 
@@ -118,8 +116,7 @@ const BookkeepingAccounting = () => {
                 </svg>
               </div>
               <div className='text-center'>
-                <p className='text-base font-bold text-gray-900'>Small-to-Mid Businesses</p>
-                <p className='text-xs text-gray-500 mt-1'>Across All Industries</p>
+                <p className='text-base font-bold text-gray-900'>Small and midsized <br/> business</p>
               </div>
             </motion.div>
 

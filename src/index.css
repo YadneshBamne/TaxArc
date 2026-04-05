@@ -26,3 +26,15 @@
 .page-sections > section + section {
   margin-top: var(--page-section-gap);
 }
+
+/* Center Calendly loader explicitly */
+.calendly-spinner {
+  position: absolute !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  margin-top: 100px !important;
+}
+
+.calendly-badge-widget {
+  z-index: 9999 !important;
+}

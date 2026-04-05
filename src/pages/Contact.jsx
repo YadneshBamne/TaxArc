@@ -3,6 +3,7 @@ import { motion } from "motion/react";
 import { Toaster, toast } from "sonner";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { useLocation } from "react-router-dom";
+import { InlineWidget, useCalendlyEventListener } from "react-calendly";
 import {
   MapPin,
   Mail,
@@ -10,7 +11,9 @@ import {
   Send,
   ChevronDown,
   ArrowUpRight,
+  Calendar,
 } from "lucide-react";
+import { trackCalendlyEvent, trackCalendlyBooking, getUserTimezone } from "../lib/ga4";
 
 const Contact = () => {
   const { executeRecaptcha } = useGoogleReCaptcha();
@@ -27,6 +30,35 @@ const Contact = () => {
       }
     }
   }, [location]);
+
+  // Track Calendly booking events using the official React hook
+  useCalendlyEventListener({
+    onProfilePageViewed: () => {
+      trackCalendlyEvent({
+        timezone: getUserTimezone(),
+        action: 'booking_page_viewed',
+      });
+    },
+    onEventScheduled: (e) => {
+      if (window.gtag) {
+        trackCalendlyBooking({
+          timezone: getUserTimezone(),
+          event_name: 'consultation_booked',
+          timestamp: new Date().toISOString(),
+        });
+      }
+      
+      // Show success toast
+      toast.success("Booking confirmed! Check your email for details and Google Meet link.", {
+        style: {
+          backgroundColor: "#015482",
+          color: "white",
+          border: "1px solid #17D3CF",
+        },
+        duration: 5000,
+      });
+    },
+  });
   
   const [formData, setFormData] = useState({
     fullName: "",
@@ -359,7 +391,50 @@ ${servicesText}`;
   </div>
 </section>
 
-      {/* Office Images Section */}
+
+
+      {/* <section className=" bg-white">
+        <div className="">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className=""
+          >
+
+            <div className="text-center">
+
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 px-4">
+                Book Your 30-Minute <span className="text-[#015482]">Consultation</span>
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto px-4">
+                Ready to discuss your tax, accounting, or payroll needs? Select a time that works for you. 
+                We'll set up a Google Meet link and send you all the details.
+              </p>
+            </div>
+
+            <div className="w-full max-w-[100vw] mx-auto relative min-h-125 flex items-center justify-center">
+              <InlineWidget 
+                url="https://calendly.com/yadnesh2105/30min" 
+                styles={{
+                  minHeight: '750px',
+                  width: '100%',
+                }}
+                pageSettings={{
+                  hideEventTypeDetails: false,
+                  hideLandingPageDetails: false,
+                  primaryColor: '015482',
+                  textColor: '111827',
+                }}
+              />
+            </div>
+
+
+          </motion.div>
+        </div>
+      </section> */}
+
 
 
       {/* Drop Us a Message Section */}

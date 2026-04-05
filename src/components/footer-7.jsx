@@ -24,9 +24,9 @@ const defaultSections = [
     title: "Get In Touch",
     links: [
       { 
-        name: "Tower B,  1801-1802, 1819-1820, Navratna Corporate Park, Ambli Road, Ashok Vatika, Bopal, Ahmedabad, Gujarat 380058", 
-        href: "#",
-        icon: <MapPin className="size-4" />
+        name: "harshika@taxarcglobal.com", 
+        href: "mailto:harshika@taxarcglobal.com",
+        icon: <Mail className="size-4" />
       },
       { 
         name: "+91 9909469067", 
@@ -34,9 +34,9 @@ const defaultSections = [
         icon: <Phone className="size-4" />
       },
       { 
-        name: "harshika@taxarcglobal.com", 
-        href: "mailto:harshika@taxarcglobal.com",
-        icon: <Mail className="size-4" />
+        name: "Tower B,  1801-1802, 1819-1820, Navratna Corporate Park, Ambli Road, Ashok Vatika, Bopal, Ahmedabad, Gujarat 380058", 
+        href: "#",
+        icon: <MapPin className="size-4" />
       },
     ],
   },

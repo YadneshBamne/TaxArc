@@ -37,7 +37,7 @@ const services = [
   {
     title: "ACCOUNTING &\nBOOKKEEPING",
     description:
-      "US GAAP-compliant bookkeeping and accounting for firms and businesses. From daily books to year-end reporting, we handle the numbers so you focus on clients.",
+      "US GAAP-compliant bookkeeping and accounting for firms and businesses. From daily books to year-end reporting, we handle number so you focus on growth.",
     link: "/accounting-bookkeeping",
     img: "/7.png",
   },
@@ -70,12 +70,12 @@ const Home = () => {
     {
       title: "Reliability",
       content:
-        "We understand that your business depends on consistent, dependable service. Our team is committed to delivering reliable results, meeting deadlines, and being there when you need us most. Your success is our priority, and we work tirelessly to ensure you can count on us.",
+        "We understand that your business depends on consistent and dependable service. Our team is committed to delivering reliable results, meeting deadlines, and being there when you need us most. Your success is our priority, and we work tirelessly to ensure you can count on us.",
     },
     {
       title: "Confidentiality",
       content:
-        "Your financial information is sensitive and deserves the highest level of protection. We maintain strict confidentiality protocols and security measures to safeguard your data. Trust is the foundation of our relationship, and we take that responsibility seriously.",
+        "Your financial information is sensitive and deserves the highest level of protection. We maintain strict confidentiality protocols and security measures to safeguard your data. Confidentiality is the foundation of our organization, and we take it seriously.",
     },
   ];
 
@@ -85,13 +85,13 @@ const Home = () => {
       <section className="relative min-h-screen pt-24 md:pt-32 flex items-center justify-start overflow-hidden">
         {/* Background Image with Overlay */}
         <video 
-          className='absolute top-0 left-0 bg-[#768286] w-full h-full object-cover scale-110 '
+          className='absolute top-0 left-0 bg-[#768286] w-full h-full object-cover '
           autoPlay
           loop
           muted
           playsInline
         >
-          <source src='https://ik.imagekit.io/qxfudjvlf/taxarc/4.mp4' type='video/mp4' />
+          <source src='./Banner.mp4' type='video/mp4' />
         </video>
         <div className='absolute inset-0 bg-black/30'></div>
 
@@ -104,7 +104,7 @@ const Home = () => {
               transition={{ duration: 0.8 }}
               className="text-5xl md:text-5xl font-bold text-white mb-2 leading-tight"
             >
-              Outsourced Professional Team for
+              Your Outsourced Professional Team for
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 30 }}
@@ -147,10 +147,10 @@ const Home = () => {
               >
                 <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                   Our Philosophy -{" "}
-                  <span className="font-inter text-[#039FA5]">ARC</span>
+                  <span className="font-inter text-[#015482]">ARC</span>
                 </h2>
                 <p className="text-3xl font-inter italic mb-6 bg-[#015482] bg-clip-text text-transparent">
-                  <span className="text-[#039FA5]">A</span>ccuracy, <span className="text-[#039FA5]">R</span>eliability & <span className="text-[#039FA5]">C</span>onfidentiality
+                  <span className="text-[#039FA5] text-[2.2rem] font-bold">A</span>ccuracy, <span className="text-[#039FA5] text-[2.2rem] font-bold">R</span>eliability & <span className="text-[#039FA5] text-[2.2rem] font-bold">C</span>onfidentiality
                 </p>
                 <p className="text-gray-700 mb-8 leading-relaxed">
                   At TaxArc Global, our name reflects the philosophy that guides
@@ -302,7 +302,7 @@ const Home = () => {
                     Specialized Professionals, Seamlessly Integrated
                   </h3>
                   <p className="text-gray-600 leading-relaxed">
-                    Our teams of CPAs, Chartered Accountants, and experienced
+                    Our team of CPAs, Chartered Accountants and experienced
                     tax and accounting professionals integrate seamlessly into
                     your existing software ecosystem, minimizing onboarding time
                     and ensuring a smooth, efficient transition from day one.
@@ -352,7 +352,7 @@ const Home = () => {
                   </h3>
                   <p className="text-gray-600 leading-relaxed">
                     NDA-backed engagements, secure file transfer protocols, and
-                    strict data privacy practices — your client data is always
+                    strict data privacy practices ensures that your data is always
                     protected.
                   </p>
                 </div>
@@ -375,7 +375,7 @@ const Home = () => {
                   <h3 className="text-xl font-bold mb-3">Cost Efficiency</h3>
                   <p className="text-gray-600 leading-relaxed">
                     Significant reduction in operational costs compared to
-                    in-house staffing — without compromising on quality or
+                    in-house staffing without compromising on quality or
                     accuracy.
                   </p>
                 </div>
@@ -399,8 +399,9 @@ const Home = () => {
                     Flexible Engagement Model
                   </h3>
                   <p className="text-gray-600 leading-relaxed">
-                    Flexible team sizing to accommodate seasonal peaks, project
-                    expansions, or ongoing support needs.
+                    We offer flexible engagement structures — project-based, hourly, or dedicated support —
+allowing firms to scale assistance based on workload, seasonality, and specific engagement
+needs.
                   </p>
                 </div>
               </div>
