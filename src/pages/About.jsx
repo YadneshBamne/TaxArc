@@ -78,9 +78,9 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className='text-base sm:text-lg md:text-xl text-black font-light leading-relaxed'
             >
-              TaxArc Global is a global professional services outsourcing firm providing structured, 
+              TaxArc Global is a global professional outsourcing firm providing structured, 
               secure, and dependable support across tax, accounting and bookkeeping operations to 
-              businesses and professional organizations worldwide.
+              businesses and professional organizations.
             </motion.p>
           </div>
         </div>
@@ -132,7 +132,7 @@ const About = () => {
               </div>
               <p className='hidden lg:block text-3xl md:text-5xl italic font-semibold text-gray-700 mb-2'>Founder</p>
               <p className='hidden lg:block text-lg font-semibold text-gray-800'>
-                CPA(US) (License Awaited), FCA (India), B. Com
+                Founder|CPA(US) Exam Qualified | FCA (India) | B.Com
               </p>
               <p className='hidden lg:block text-lg font-semibold text-gray-800 mb-6'>
                 Proprietor – Harshika & Co.
@@ -140,19 +140,33 @@ const About = () => {
 
               <div className='space-y-4 text-gray-700 leading-relaxed'>
                 <p>
-                  TaxArc Global is led by Harshika Vora, a Chartered Accountant (India) and U.S. CPA (License Awaited) with nearly 9 years of professional experience across Indian and U.S. taxation, accounting, audit, and compliance.
+                  TaxArc Global is founded and led by a Chartered
+Accountant (India) and US CPA Exam Qualified professional
+with nearly 9 years of experience across Indian and US
+taxation, accounting, audit, and compliance.
                 </p>
 
                 <p>
-                  Having qualified as a Chartered Accountant and experience in taxation, accounting, and financial advisory — shaped by years of working within a 45-year-old family-led CA firm where compliance discipline, client confidentiality, and uncompromising attention to detail were never optional and thus bringing strong regulatory discipline and documentation rigor to every engagement.
+                  Her professional foundation was built within a decades-old
+family CA practice an environment where compliance
+discipline, client confidentiality, and uncompromising
+attention to detail were never optional. That culture of
+rigor and accountability is what TaxArc Global is built on.
                 </p>
 
                 <p>
-                  Over the past years, she has worked with the U.S. CPA firms, supporting U.S. individual and business tax preparation, bookkeeping, accounting, and audit engagements. Her experience with U.S. firm workflows, review standards, and tax and accounting software environments enables TaxArc Global to function as a seamless offshore extension of in-house teams.
+                  Over the past years, she has worked directly with US CPA
+firms on individual and business tax preparation,
+bookkeeping, accounting, and audit engagements —
+gaining hands-on familiarity with US firm workflows, review
+standards, and the software environments her clients rely
+on.
                 </p>
 
                 <p>
-                  The professional values that define her Indian practice — ethics, integrity, accountability, and strict confidentiality — are the foundation on which TaxArc Global is built, making it not just an outsourcing provider, but a reliable back-office partner your firm can trust with bookkeeping, tax preparation, and payroll support — so you can focus on what grows your practice.
+                  This enables TaxArc Global to function as a seamless
+offshore extension of your in-house team, not just a
+vendor.
                 </p>
               </div>
             </motion.div>
@@ -185,7 +199,7 @@ const About = () => {
                   </div>
                   <p className='text-3xl italic font-semibold text-gray-700 mb-2'>Founder</p>
                   <p className='text-base font-semibold text-gray-800'>
-                    CPA(US) (License Awaited), FCA (India), B. Com
+                    CPA(US) (License Awaited), FCA (India), B.Com
                   </p>
                   <p className='text-base font-semibold text-gray-800 mb-4'>
                     Proprietor – Harshika & Co.
@@ -221,7 +235,7 @@ const About = () => {
                   </h3>
                   <p className='text-3xl italic font-semibold text-gray-700 mb-2'>Strategic Advisor</p>
                   <p className='text-base font-semibold text-gray-800'>
-                    FCA (India), Inter CS, LLB, B. Com
+                    FCA (India), Inter CS, LL.B, B.Com
                   </p>
                   <p className='text-base font-semibold text-gray-800 mb-4'>
                     Proprietor - Hemant R. Vora & Co. (Est. 1981)

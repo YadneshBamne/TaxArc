@@ -27,7 +27,7 @@ const BookkeepingAccounting = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-black mb-4 sm:mb-6'>
+            <h1 className='text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-4 sm:mb-6'>
              Accounting & Bookkeeping
             </h1>
             <p className='text-base sm:text-lg md:text-xl lg:text-2xl text-black font-light leading-relaxed'>
@@ -377,6 +377,18 @@ const BookkeepingAccounting = () => {
                   </p>
                 </div>
               </div>
+                                          <div className='flex items-start gap-4'>
+                              <div className='w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
+                                <CheckCircle2 className='w-6 h-6 text-[#015482]' />
+                              </div>
+                              <div>
+                                <h3 className='text-lg font-bold text-gray-900 mb-2'>Software Flexibility</h3>
+                                <p className='text-sm text-gray-600'>
+                                  Works within your existing software environment — UltraTax CS, Lacerte, Drake,
+              ProConnect, TaxAct, and other major tax software.
+                                </p>
+                              </div>
+                            </div>
             </motion.div>
           </div>
         </div>

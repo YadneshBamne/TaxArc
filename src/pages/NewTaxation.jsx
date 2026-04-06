@@ -30,8 +30,8 @@ const NewTaxation = () => {
             <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-black mb-4 sm:mb-6'>
               Tax Preparation
             </h1>
-            <p className='text-base sm:text-lg md:text-xl lg:text-2xl text-black font-light leading-relaxed'>
-              Reliable Outsourced Tax Production. Delivered to Your Standards. On Your Timeline.
+            <p className='text-base sm:text-lg md:text-xl lg:text-xl text-black font-light leading-relaxed'>
+              Reliable Outsourced Tax Preparation. Delivered to Your Standards. On Your Timeline.
             </p>
           </motion.div>
         </div>
@@ -69,7 +69,6 @@ const NewTaxation = () => {
               </div>
               <div className='text-center'>
                 <p className='text-base font-bold text-gray-900'>CPA &amp; EA Firms</p>
-                <p className='text-xs text-gray-500 mt-1'>Credentialed Tax Professionals</p>
               </div>
             </motion.div>
 
@@ -91,7 +90,6 @@ const NewTaxation = () => {
               </div>
               <div className='text-center'>
                 <p className='text-base font-bold text-gray-900'>Accounting Practices</p>
-                <p className='text-xs text-gray-500 mt-1'>Public &amp; Private Firms</p>
               </div>
             </motion.div>
 
@@ -112,8 +110,7 @@ const NewTaxation = () => {
                 </svg>
               </div>
               <div className='text-center'>
-                <p className='text-base font-bold text-gray-900'>Small-to-Mid Businesses</p>
-                <p className='text-xs text-gray-500 mt-1'>Across All Industries</p>
+                <p className='text-base font-bold text-gray-900'>Small and midsized <br/>business</p>
               </div>
             </motion.div>
 
@@ -137,7 +134,10 @@ const NewTaxation = () => {
                Our Tax Preparation <span className='text-[#015482] italic font-inter'>Services</span>
               </h2>
               <p className='text-base md:text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto'>
-                We function as a seamless extension of your practice. You remain the firm of record and client-facing professionals. We work in the background — preparing returns to your specifications, using your preferred software, and delivering review-ready work products. Our process is built around accuracy and reliability, confidentiality.
+                Our process is built around accuracy, reliability, and confidentiality. You remain the
+firm of record —client-facing and in control. We work in the background, preparing
+returns to your specifications, using your preferred software, and delivering work that
+is ready for your review.
               </p>
             </motion.div>
 
@@ -155,9 +155,11 @@ const NewTaxation = () => {
                 <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
                   <FileText className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
-                <h3 className='text-md font-bold text-gray-900 mb-2 leading-snug'>Individual Returns (Form 1040)</h3>
+                <h3 className='text-md font-bold text-gray-900 mb-2 leading-snug'>Individual Tax Returns (Form 1040)</h3>
                 <p className='text-sm text-gray-500 leading-relaxed'>
-                  Including Schedule C, D, E, self-employment income, rental income, K-1 pass-throughs, and foreign income.
+                 Preparation of federal individual returns including
+Schedules A, B, C, D, and E, delivered review-ready
+for your sign-off.
                 </p>
               </motion.div>
 
@@ -172,9 +174,11 @@ const NewTaxation = () => {
                 <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
                   <Building2 className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
-                <h3 className='text-md font-bold text-gray-900 mb-2 leading-snug'>Business Returns</h3>
+                <h3 className='text-md font-bold text-gray-900 mb-2 leading-snug'>S-Corporation Returns (Form 1120-S)</h3>
                 <p className='text-sm text-gray-500 leading-relaxed'>
-                  C-Corporations (Form 1120), S-Corporations (Form 1120S), Partnerships (Form 1065), and single- or multi-member LLCs.
+                 Full preparation of S-Corp returns including K-1
+schedules, ready for partner or shareholder
+distribution.
                 </p>
               </motion.div>
 
@@ -189,9 +193,10 @@ const NewTaxation = () => {
                 <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
                   <Globe className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
-                <h3 className='text-md font-bold text-gray-900 mb-2 leading-snug'>State &amp; Multi-State Returns</h3>
+                <h3 className='text-md font-bold text-gray-900 mb-2 leading-snug'>Partnership Returns (Form 1065)</h3>
                 <p className='text-sm text-gray-500 leading-relaxed'>
-                  Preparation of required state filings including nexus considerations and apportionment schedules.
+                  Partnership return preparation with K-1 allocations
+prepared to your firm's specifications.
                 </p>
               </motion.div>
 
@@ -206,9 +211,11 @@ const NewTaxation = () => {
                 <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
                   <TrendingUp className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
-                <h3 className='text-md font-bold text-gray-900 mb-2 leading-snug'>Estimated Tax Projections</h3>
+                <h3 className='text-md font-bold text-gray-900 mb-2 leading-snug'>C-Corporation
+Returns (Form 1120)</h3>
                 <p className='text-sm text-gray-500 leading-relaxed'>
-                  Quarterly tax projection workpapers to support advisory and planning discussions.
+                  Corporate return preparation including depreciation
+schedules and supporting workpapers.
                 </p>
               </motion.div>
 
@@ -223,9 +230,11 @@ const NewTaxation = () => {
                 <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
                   <Clock className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
-                <h3 className='text-md font-bold text-gray-900 mb-2 leading-snug'>Tax Extension Preparation</h3>
+                <h3 className='text-md font-bold text-gray-900 mb-2 leading-snug'>Payroll Tax Returns</h3>
                 <p className='text-sm text-gray-500 leading-relaxed'>
-                  Preparation of extension filings supported by liability estimates.
+                  Preparation of Form 941, Form 940, and supporting
+payroll tax reconciliations on a quarterly and annual
+basis.
                 </p>
               </motion.div>
 
@@ -240,9 +249,10 @@ const NewTaxation = () => {
                 <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
                   <RotateCcw className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
-                <h3 className='text-md font-bold text-gray-900 mb-2 leading-snug'>Prior-Year Amendments</h3>
+                <h3 className='text-md font-bold text-gray-900 mb-2 leading-snug'>Year-End Reporting</h3>
                 <p className='text-sm text-gray-500 leading-relaxed'>
-                  Amended returns including Form 1040-X and Form 1120-X with supporting workpapers.
+                  W-2 and 1099-NEC preparation for your clients'
+employees and contractors, review-ready for filing.
                 </p>
               </motion.div>
 
@@ -257,9 +267,11 @@ const NewTaxation = () => {
                 <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
                   <ClipboardList className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
-                <h3 className='text-md font-bold text-gray-900 mb-2 leading-snug'>Workpaper Preparation</h3>
+                <h3 className='text-md font-bold text-gray-900 mb-2 leading-snug'>Extensions &
+Estimates</h3>
                 <p className='text-sm text-gray-500 leading-relaxed'>
-                  Organized, review-ready workpapers aligned with your firm's internal standards.
+                  Preparation of Form 4868, Form 7004, and quarterly
+estimated tax calculations as needed.
                 </p>
               </motion.div>
 
@@ -274,9 +286,11 @@ const NewTaxation = () => {
                 <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
                   <Monitor className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
-                <h3 className='text-md font-bold text-gray-900 mb-2 leading-snug'>Software Flexibility</h3>
+                <h3 className='text-md font-bold text-gray-900 mb-2 leading-snug'>Bookkeeping & Trial
+Balance Support</h3>
                 <p className='text-sm text-gray-500 leading-relaxed'>
-                  Experience working with UltraTax, Lacerte, Drake, ProConnect, and TaxAct.
+                  Cleanup and preparation of books to trial balance
+stage, ready for tax return preparation.
                 </p>
               </motion.div>
 
@@ -371,6 +385,19 @@ const NewTaxation = () => {
                   <h3 className='text-lg font-bold text-gray-900 mb-2'>Consistent quality</h3>
                   <p className='text-sm text-gray-600'>
                     Multi-point internal review before delivery — you receive work that's ready to sign.
+                  </p>
+                </div>
+              </div>
+
+                            <div className='flex items-start gap-4'>
+                <div className='w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
+                  <CheckCircle2 className='w-6 h-6 text-[#015482]' />
+                </div>
+                <div>
+                  <h3 className='text-lg font-bold text-gray-900 mb-2'>Software Flexibility</h3>
+                  <p className='text-sm text-gray-600'>
+                    Works within your existing software environment — UltraTax CS, Lacerte, Drake,
+ProConnect, TaxAct, and other major tax software.
                   </p>
                 </div>
               </div>

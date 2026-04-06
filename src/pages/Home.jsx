@@ -91,7 +91,7 @@ const Home = () => {
           muted
           playsInline
         >
-          <source src='./Banner.mp4' type='video/mp4' />
+          <source src='./bannerr.mp4' type='video/mp4' />
         </video>
         <div className='absolute inset-0 bg-black/30'></div>
 

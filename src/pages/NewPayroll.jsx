@@ -136,7 +136,7 @@ const NewPayroll = () => {
                Our Payroll<span className='text-[#015482] italic font-inter'> Services</span>
               </h2>
               <p className='text-base md:text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto'>
-                We provide comprehensive payroll processing for businesses of all sizes and white-label payroll management for accounting firms serving business clients. Whether you need end-to-end outsourced payroll or a dependable back-office partner to handle the processing behind your client-facing service, we deliver accuracy, compliance, and efficiency at every pay cycle.
+                We provide comprehensive payroll processing for businesses of all sizes and white-label payroll management for accounting firms serving business clients. Whether you need end-to-end outsourced payroll or a dependable back-office partner to handle the processing behind your client-facing service,<br/> we deliver accuracy, compliance, and efficiency at every pay cycle.
               </p>
             </motion.div>
 
@@ -205,9 +205,11 @@ const NewPayroll = () => {
                 <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
                   <LandmarkIcon className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
-                <h3 className='text-sm font-bold text-gray-900 mb-2 leading-snug'>Direct Deposit Management</h3>
+                <h3 className='text-sm font-bold text-gray-900 mb-2 leading-snug'>W-2 & 1099
+Preparation</h3>
                 <p className='text-xs text-gray-500 leading-relaxed'>
-                  Secure and timely electronic payments for employees and contractors.
+                  Year-end wage and contractor forms prepared and
+review-ready for filing.
                 </p>
               </motion.div>
 
@@ -222,9 +224,10 @@ const NewPayroll = () => {
                 <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
                   <UserPlus className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
-                <h3 className='text-sm font-bold text-gray-900 mb-2 leading-snug'>New Hire Reporting</h3>
+                <h3 className='text-sm font-bold text-gray-900 mb-2 leading-snug'>Payroll Reporting</h3>
                 <p className='text-xs text-gray-500 leading-relaxed'>
-                  Automated compliance with federal and state new hire reporting requirements.
+                  Payroll registers, liability summaries, and
+reconciliation reports delivered ready for your review.
                 </p>
               </motion.div>
 
@@ -239,45 +242,14 @@ const NewPayroll = () => {
                 <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
                   <Database className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
-                <h3 className='text-sm font-bold text-gray-900 mb-2 leading-snug'>W-2 &amp; 1099 Preparation and Filing</h3>
+                <h3 className='text-sm font-bold text-gray-900 mb-2 leading-snug'>White-Label Payroll
+Support</h3>
                 <p className='text-xs text-gray-500 leading-relaxed'>
-                  Year-end reporting forms prepared, electronically filed, and distributed.
+                  All work prepared within your workflow and delivered
+under your firm's brand — invisible to your clients.
                 </p>
               </motion.div>
 
-              {/* Card 7 - Sales Tax Compliance */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.35 }}
-                className='group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:border-[#015482]/40 transition-all duration-300'
-              >
-                <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
-                  <Receipt className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
-                </div>
-                <h3 className='text-sm font-bold text-gray-900 mb-2 leading-snug'>Sales Tax Compliance</h3>
-                <p className='text-xs text-gray-500 leading-relaxed'>
-                  Multi-state sales tax calculation, filing, and remittance.
-                </p>
-              </motion.div>
-
-              {/* Card 8 - Payroll Reporting */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                className='group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:border-[#015482]/40 transition-all duration-300'
-              >
-                <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
-                  <BarChart3 className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
-                </div>
-                <h3 className='text-sm font-bold text-gray-900 mb-2 leading-snug'>Payroll Reporting</h3>
-                <p className='text-xs text-gray-500 leading-relaxed'>
-                  Detailed payroll registers, labor cost summaries, and departmental breakdowns for management review.
-                </p>
-              </motion.div>
 
               {/* Card 9 - White-Label Payroll for Firms */}
               <motion.div

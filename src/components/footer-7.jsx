@@ -88,7 +88,7 @@ export const Footer7 = ({
           <div className="flex w-full flex-col justify-between gap-6 lg:items-start lg:max-w-md">
             {/* Logo */}
             <Link to={logo.url} className="flex items-center space-x-2">
-              <img src={logo.src} alt={logo.alt} className="h-20 w-auto" />
+              <img src={logo.src} alt={logo.alt} className="h-28 w-auto" />
             </Link>
             <p className="text-sm text-gray-600 leading-relaxed">
               {description}
