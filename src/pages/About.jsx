@@ -201,7 +201,7 @@ offshore extension of your in-house team, not just a vendor.
                   </div>
                   <p className='text-3xl italic font-semibold text-gray-700 mb-2'>Founder</p>
                   <p className='text-base font-semibold text-gray-800'>
-                    Founder | CPA (US) Exam Qualified | FCA (India) | B.Com
+                  CPA (US) Exam Qualified | FCA (India) | B.Com
                   </p>
                   <p className='text-base font-semibold text-gray-800 mb-4'>
                     Proprietor – Harshika & Co.
@@ -264,7 +264,7 @@ offshore extension of your in-house team, not just a vendor.
               </h3>
               <p className='hidden lg:block text-3xl md:text-5xl italic font-semibold text-gray-700 mb-2'>Strategic Advisor</p>
               <p className='hidden lg:block text-lg font-semibold text-gray-800'>
-                FCA (India), Inter CS, LLB, B. Com
+                FCA (India), Inter CS, LL.B, B.Com
               </p>
               <p className='hidden lg:block text-lg font-semibold text-gray-800 mb-6'>
                 Proprietor – Hemant R. Vora & Co. (Est. 1981)
