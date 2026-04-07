@@ -308,7 +308,7 @@ offshore extension of your in-house team, not just a vendor.
                   <Eye className='w-12 h-12 md:w-14 md:h-14' strokeWidth={1.8} />
                 </div>
                 <div className='h-96 bg-white border-2 border-dotted border-[#1f2937] rounded-[2.2rem] px-6 md:px-10 py-14 md:py-16 text-center flex flex-col items-center justify-center'>
-                  <h3 className='text-[#015482] text-2xl md:text-3xl font-bold tracking-[0.12em] mb-6'>VISION</h3>
+                  <h3 className='text-[#015482] text-4xl md:text-5xl font-bold tracking-[0.12em] mb-6'>VISION</h3>
                   <p className=' text-black leading-normal max-w-4xl mx-auto'>
                     To be a globally trusted professional services partner, recognized for excellence in tax, accounting and bookkeeping operations, precision-driven execution, and uncompromising data security.
                   </p>
@@ -320,7 +320,7 @@ offshore extension of your in-house team, not just a vendor.
                   <Target className='w-12 h-12 md:w-14 md:h-14' strokeWidth={1.8} />
                 </div>
                 <div className='h-96 bg-white border-2 border-dotted border-[#1f2937] rounded-[2.2rem] px-6 md:px-10 py-14 md:py-16 text-center flex flex-col items-center justify-center'>
-                  <h3 className='text-[#015482] text-2xl md:text-3xl font-bold tracking-[0.12em] mb-6'>MISSION</h3>
+                  <h3 className='text-[#015482] text-4xl md:text-5xl font-bold tracking-[0.12em] mb-6'>MISSION</h3>
                   <p className=' text-black leading-normal max-w-4xl mx-auto'>
                     To deliver reliable, high-quality outsourced accounting and tax support, powered by qualified professionals, structured processes, intelligent technology and strict confidentiality.
                   </p>
