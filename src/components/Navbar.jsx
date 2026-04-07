@@ -43,7 +43,7 @@ const Navbar = () => {
     : 'bg-white/95 backdrop-blur-md shadow-lg'
 
   const textColorClass = !isScrolled ? 'text-gray-800' : 'text-gray-800'
-  const hoverColorClass = !isScrolled ? 'hover:text-cyan-400' : 'hover:text-blue-600'
+  const hoverColorClass = !isScrolled ? 'hover:text-[#17D3CF]' : 'hover:text-[#17D3CF]'
 
   // Mobile menu rendered as a portal to body — escapes the nav's transform stacking context
   const mobileMenu = (

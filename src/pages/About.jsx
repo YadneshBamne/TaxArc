@@ -135,7 +135,7 @@ const About = () => {
               </div>
               <p className='hidden lg:block text-3xl md:text-5xl italic font-semibold text-gray-700 mb-2'>Founder</p>
               <p className='hidden lg:block text-lg font-semibold text-gray-800'>
-                Founder|CPA(US) Exam Qualified | FCA (India) | B.Com
+               CPA(US) Exam Qualified | FCA (India) | B.Com
               </p>
               <p className='hidden lg:block text-lg font-semibold text-gray-800 mb-6'>
                 Proprietor – Harshika & Co.
