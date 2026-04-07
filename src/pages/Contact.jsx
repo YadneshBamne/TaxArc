@@ -253,39 +253,39 @@ ${servicesText}`;
         }}
       />
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center">
-        {/* Background Image with Overlay */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage:
-              "url(https://ik.imagekit.io/qxfudjvlf/navratna?updatedAt=1773260906125)",
-          }}
-        >
-          <div className="absolute inset-0 "></div>
-        </div>
+<section className="relative min-h-screen flex items-center justify-center">
+  <div
+    className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+    style={{
+      backgroundImage: "url(https://ik.imagekit.io/qxfudjvlf/navratna?updatedAt=1773260906125)",
+    }}
+  />
 
-        {/* Content */}
-        <div className="container mx-auto px-4 sm:px-6 md:px-8 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="w-full max-w-4xl mx-auto text-center rounded-xl sm:rounded-2xl md:rounded-3xl px-4 py-8 sm:px-8 sm:py-10 md:px-12 md:py-12 bg-white/10 backdrop-blur-sm border border-black"
-          >
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-black mb-4 sm:mb-6">
-              Contact Us
-            </h1>
-            <p className="text-base sm:text-lg md:text-xl text-black font-light leading-relaxed mb-3 sm:mb-4">
-              We collaborate with CPA firms and
-              businesses across the globe. Our systems, communication processes,
-              and delivery frameworks are built to work seamlessly across time
-              zones— ensuring clarity, responsiveness, and consistent
-              turnaround, no matter where you're located.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+  {/* Gradient band — transparent top & bottom, dark only in the middle */}
+  <div
+    className="absolute inset-0"
+    style={{ background: "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.60) 30%, rgba(0,0,0,0.60) 70%, transparent 100%)" }}
+  />
+
+  <div className="container mx-auto px-4 sm:px-6 md:px-8 relative z-10">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="max-w-4xl mx-auto text-center"
+    >
+      <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold text-white mb-2 sm:mb-4">
+        Contact Us
+      </h1>
+      <div className="w-16 h-px bg-white/50 mx-auto mb-2" />
+      <p className="text-base sm:text-lg md:text-xl text-white/90 font-bold leading-relaxed">
+        We collaborate with CPA firms and businesses across the globe. Our systems, communication
+        processes, and delivery frameworks are built to work seamlessly across time zones — ensuring
+        clarity, responsiveness, and consistent turnaround, no matter where you're located.
+      </p>
+    </motion.div>
+  </div>
+</section>
 
       {/* Contact Information & Map Section */}
 <section className="py-20 bg-white">

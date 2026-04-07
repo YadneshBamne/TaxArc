@@ -44,48 +44,51 @@ const About = () => {
     <div className='page-sections w-full bg-white'>
 
       {/* About Us Section */}
-      <section className='relative py-32 min-h-screen flex items-center justify-center'>
-        {/* Background Video with Overlay */}
-        <video 
-          className='absolute inset-0 w-full h-full object-cover'
-          autoPlay
-          loop
-          muted
-          playsInline
-        >
-          <source src='https://ik.imagekit.io/qxfudjvlf/taxarc/About%20Us%20Video.mp4' type='video/mp4' />
-        </video>
-        <div className='absolute inset-0 '></div>
+ <section className='relative py-32 min-h-screen flex items-center justify-center'>
+  <video
+    className='absolute inset-0 w-full h-full object-cover'
+    autoPlay
+    loop
+    muted
+    playsInline
+  >
+    <source src='https://ik.imagekit.io/qxfudjvlf/taxarc/About%20Us%20Video.mp4' type='video/mp4' />
+  </video>
 
-        {/* Content */}
-        <div className='container mx-auto px-4 sm:px-6 md:px-8 relative z-10'>
-          <div className="w-full max-w-4xl mx-auto text-center rounded-xl sm:rounded-2xl md:rounded-3xl px-4 py-8 sm:px-8 sm:py-10 md:px-12 md:py-12 bg-white/10 backdrop-blur-sm border border-black">
-          <div className='max-w-4xl mx-auto text-center'>
-            <motion.h2 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className='text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-black mb-5 sm:mb-8 md:mb-10'
-            >
-              About Us
-            </motion.h2>
-            
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className='text-base sm:text-lg md:text-xl text-black font-light leading-relaxed'
-            >
-              TaxArc Global is a global professional outsourcing firm providing structured, 
-              secure, and dependable support across tax, accounting and bookkeeping operations to 
-              businesses and professional organizations.
-            </motion.p>
-          </div>
-        </div>
-        </div>
-      </section>
+  {/* Gradient band — transparent top & bottom, dark only in the middle */}
+  <div
+    className='absolute inset-0'
+    style={{ background: 'linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.60) 30%, rgba(0,0,0,0.60) 70%, transparent 100%)' }}
+  />
+
+  <div className='container mx-auto px-4 sm:px-6 md:px-8 relative z-10'>
+    <div className='max-w-4xl mx-auto text-center'>
+      <motion.h2
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className='text-4xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold text-white mb-2 sm:mb-4 md:mb-6'
+      >
+        About Us
+      </motion.h2>
+
+      <div className='w-16 h-px bg-white/50 mx-auto mb-2' />
+
+      <motion.p
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className='text-xl sm:text-lg md:text-xl text-white/90 font-semibold leading-relaxed'
+      >
+        TaxArc Global is a global professional outsourcing firm providing structured,
+        secure, and dependable support across tax, accounting and bookkeeping operations to
+        businesses and professional organizations.
+      </motion.p>
+    </div>
+  </div>
+</section>
 
 
       {/* Why Choose Us Section */}
@@ -147,15 +150,15 @@ taxation, accounting, audit, and compliance.
                 </p>
 
                 <p>
-                  Her professional foundation was built within a decades-old
-family CA practice an environment where compliance
+Her professional foundation was built within a decades-old
+family CA practice — an environment where compliance
 discipline, client confidentiality, and uncompromising
 attention to detail were never optional. That culture of
 rigor and accountability is what TaxArc Global is built on.
                 </p>
 
                 <p>
-                  Over the past years, she has worked directly with US CPA
+Over the past years, she has worked directly with US CPA
 firms on individual and business tax preparation,
 bookkeeping, accounting, and audit engagements —
 gaining hands-on familiarity with US firm workflows, review
@@ -164,9 +167,8 @@ on.
                 </p>
 
                 <p>
-                  This enables TaxArc Global to function as a seamless
-offshore extension of your in-house team, not just a
-vendor.
+This enables TaxArc Global to function as a seamless
+offshore extension of your in-house team, not just a vendor.
                 </p>
               </div>
             </motion.div>
@@ -199,7 +201,7 @@ vendor.
                   </div>
                   <p className='text-3xl italic font-semibold text-gray-700 mb-2'>Founder</p>
                   <p className='text-base font-semibold text-gray-800'>
-                    CPA(US) (License Awaited), FCA (India), B.Com
+                    Founder | CPA (US) Exam Qualified | FCA (India) | B.Com
                   </p>
                   <p className='text-base font-semibold text-gray-800 mb-4'>
                     Proprietor – Harshika & Co.
@@ -292,7 +294,7 @@ vendor.
 
       {/* Vision & Mission Section */}
       <section className='py-16 md:py-20'>
-        <div className='w-full px-4 sm:px-6 md:px-8'>
+        <div className='w-full px-4 sm:px-6 md:px-8 flex justify-center'>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -300,12 +302,12 @@ vendor.
             transition={{ duration: 0.6 }}
             className='w-full'
           >
-            <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 w-full'>
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 w-full max-w-7xl mx-auto'>
               <div className='relative pt-12'>
                 <div className='absolute left-1/2 top-0 -translate-x-1/2 z-10 w-24 h-24 md:w-28 md:h-28 rounded-full bg-[#015482] text-white border-2 border-white flex items-center justify-center'>
                   <Eye className='w-12 h-12 md:w-14 md:h-14' strokeWidth={1.8} />
                 </div>
-                <div className='h-full bg-white border-2 border-dotted border-[#1f2937] rounded-[2.2rem] px-6 md:px-10 py-14 md:py-16 text-center'>
+                <div className='h-96 bg-white border-2 border-dotted border-[#1f2937] rounded-[2.2rem] px-6 md:px-10 py-14 md:py-16 text-center flex flex-col items-center justify-center'>
                   <h3 className='text-[#015482] text-2xl md:text-3xl font-bold tracking-[0.12em] mb-6'>VISION</h3>
                   <p className=' text-black leading-normal max-w-4xl mx-auto'>
                     To be a globally trusted professional services partner, recognized for excellence in tax, accounting and bookkeeping operations, precision-driven execution, and uncompromising data security.
@@ -317,7 +319,7 @@ vendor.
                 <div className='absolute left-1/2 top-0 -translate-x-1/2 z-10 w-24 h-24 md:w-28 md:h-28 rounded-full bg-[#015482] text-white border-2 border-white flex items-center justify-center'>
                   <Target className='w-12 h-12 md:w-14 md:h-14' strokeWidth={1.8} />
                 </div>
-                <div className='h-full bg-white border-2 border-dotted border-[#1f2937] rounded-[2.2rem] px-6 md:px-10 py-14 md:py-16 text-center'>
+                <div className='h-96 bg-white border-2 border-dotted border-[#1f2937] rounded-[2.2rem] px-6 md:px-10 py-14 md:py-16 text-center flex flex-col items-center justify-center'>
                   <h3 className='text-[#015482] text-2xl md:text-3xl font-bold tracking-[0.12em] mb-6'>MISSION</h3>
                   <p className=' text-black leading-normal max-w-4xl mx-auto'>
                     To deliver reliable, high-quality outsourced accounting and tax support, powered by qualified professionals, structured processes, intelligent technology and strict confidentiality.

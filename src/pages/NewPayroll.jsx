@@ -7,36 +7,34 @@ const NewPayroll = () => {
   return (
     <div className='page-sections w-full bg-white'>
       {/* Hero Section */}
-      <section className='relative min-h-screen flex items-center justify-center'>
-        {/* Background Image with Overlay */}
-        <div 
-          className='absolute inset-0 bg-cover bg-center bg-no-repeat'
-          style={{
-            backgroundImage: 'url(https://ik.imagekit.io/qxfudjvlf/taxarc/Payroll%20Services.jpeg)',
-          }}
-        >
-          <div className='absolute inset-0'></div>
-        </div>
+<section className='relative min-h-screen flex items-center justify-center'>
+  <div
+    className='absolute inset-0 bg-cover bg-center bg-no-repeat'
+    style={{ backgroundImage: 'url(https://ik.imagekit.io/qxfudjvlf/taxarc/Payroll%20Services.jpeg)' }}
+  />
 
-        {/* Content */}
-        <div className='container mx-auto px-4 sm:px-6 md:px-8 relative z-10'>
-        <div className="w-full max-w-4xl mx-auto text-center rounded-xl sm:rounded-2xl md:rounded-3xl px-4 py-8 sm:px-8 sm:py-10 md:px-12 md:py-12 bg-white/10 backdrop-blur-sm border border-black"
-          >
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-black mb-4 sm:mb-6'>
-              Payroll Services
-            </h1>
-            <p className='text-base sm:text-lg md:text-xl lg:text-2xl text-black font-light leading-relaxed'>
-             Every Employee Paid Right.<br/>Every Obligation Met.
-            </p>
-          </motion.div>
-        </div>
-        </div>
-      </section>
+  {/* Gradient band — transparent top & bottom, dark only in the middle */}
+  <div
+    className='absolute inset-0'
+    style={{ background: 'linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.55) 35%, rgba(0,0,0,0.55) 65%, transparent 100%)' }}
+  />
+
+  <div className='relative z-10 text-center px-4'>
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+    >
+      <h1 className='text-5xl sm:text-6xl md:text-7xl font-extrabold text-white mb-4'>
+        Payroll Services
+      </h1>
+      <div className='w-16 h-px bg-white/60 mx-auto mb-2' />
+      <p className='text-lg sm:text-xl md:text-2xl text-white/90 font-bold leading-relaxed'>
+        Every Employee Paid Right.<br />Every Obligation Met.
+      </p>
+    </motion.div>
+  </div>
+</section>
 
 
 
@@ -173,7 +171,7 @@ const NewPayroll = () => {
                 </div>
                 <h3 className='text-sm font-bold text-gray-900 mb-2 leading-snug'>Federal Payroll Tax Compliance</h3>
                 <p className='text-xs text-gray-500 leading-relaxed'>
-                  Preparation and filing of Form 941 (quarterly) and Form 940 (annual FUTA), along with federal deposit management.
+                 Preparation of Form 941 and Form 940, with payroll tax deposit tracking and reconciliation.
                 </p>
               </motion.div>
 
@@ -188,9 +186,9 @@ const NewPayroll = () => {
                 <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
                   <Globe className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
-                <h3 className='text-sm font-bold text-gray-900 mb-2 leading-snug'>State &amp; Local Payroll Tax Filings</h3>
+                <h3 className='text-sm font-bold text-gray-900 mb-2 leading-snug'>State & Local Payroll Tax Filings</h3>
                 <p className='text-xs text-gray-500 leading-relaxed'>
-                  SUTA filings and compliance across all applicable state and local jurisdictions.
+                 SUTA and state payroll tax preparation across applicable jurisdictions.
                 </p>
               </motion.div>
 
@@ -205,11 +203,9 @@ const NewPayroll = () => {
                 <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
                   <LandmarkIcon className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
-                <h3 className='text-sm font-bold text-gray-900 mb-2 leading-snug'>W-2 & 1099
-Preparation</h3>
+                <h3 className='text-sm font-bold text-gray-900 mb-2 leading-snug'>W-2 & 1099 Preparation</h3>
                 <p className='text-xs text-gray-500 leading-relaxed'>
-                  Year-end wage and contractor forms prepared and
-review-ready for filing.
+                  Year-end wage and contractor forms prepared and review-ready for filing.
                 </p>
               </motion.div>
 
@@ -226,8 +222,7 @@ review-ready for filing.
                 </div>
                 <h3 className='text-sm font-bold text-gray-900 mb-2 leading-snug'>Payroll Reporting</h3>
                 <p className='text-xs text-gray-500 leading-relaxed'>
-                  Payroll registers, liability summaries, and
-reconciliation reports delivered ready for your review.
+Payroll registers, liability summaries, and reconciliation reports delivered ready for your review.
                 </p>
               </motion.div>
 
@@ -242,11 +237,9 @@ reconciliation reports delivered ready for your review.
                 <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
                   <Database className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
-                <h3 className='text-sm font-bold text-gray-900 mb-2 leading-snug'>White-Label Payroll
-Support</h3>
+                <h3 className='text-sm font-bold text-gray-900 mb-2 leading-snug'>White-Label Payroll Support</h3>
                 <p className='text-xs text-gray-500 leading-relaxed'>
-                  All work prepared within your workflow and delivered
-under your firm's brand — invisible to your clients.
+                  All work prepared within your workflow and delivered under your firm's brand — invisible to your clients.
                 </p>
               </motion.div>
 
@@ -362,14 +355,18 @@ under your firm's brand — invisible to your clients.
                   </p>
                 </div>
               </div>
-              <div className='flex items-start gap-4'>
-                <div className='w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <Building2 className='w-6 h-6 text-[#015482]' />
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center">
+                  <CheckCircle2 className="w-6 h-6 text-[#015482]" />
                 </div>
                 <div>
-                  <h3 className='text-lg font-bold text-gray-900 mb-2'>Scalable for growth</h3>
-                  <p className='text-sm text-gray-600'>
-                    From a 3-person start up to a 150-employee business, our process scales without disruption
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">
+                    Software Flexibility
+                  </h3>
+                  <p className="text-sm text-gray-600">
+                    Works within your existing software environment — UltraTax
+                    CS, Lacerte, Drake, ProConnect, TaxAct, and other major tax
+                    software.
                   </p>
                 </div>
               </div>
