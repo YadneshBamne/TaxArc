@@ -66,7 +66,7 @@ const NewTaxation = () => {
                 </svg>
               </div>
               <div className='text-center'>
-                <p className='text-base font-bold text-gray-900'>CPA &amp; EA Firms</p>
+                <p className='text-[1.19rem] font-bold text-gray-900'>CPA &amp; EA Firms</p>
               </div>
             </motion.div>
 
@@ -87,7 +87,7 @@ const NewTaxation = () => {
                 </svg>
               </div>
               <div className='text-center'>
-                <p className='text-base font-bold text-gray-900'>Accounting Practices</p>
+                <p className='text-[1.19rem] font-bold text-gray-900'>Accounting Practices</p>
               </div>
             </motion.div>
 
@@ -108,7 +108,7 @@ const NewTaxation = () => {
                 </svg>
               </div>
               <div className='text-center'>
-                <p className='text-base font-bold text-gray-900'>Small and midsized <br/>business</p>
+                <p className='text-[1.19rem] font-bold text-gray-900'>Small and midsized <br/>business</p>
               </div>
             </motion.div>
 
@@ -131,7 +131,7 @@ const NewTaxation = () => {
               <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-6'>
                Our Tax Preparation <span className='text-[#015482] italic font-inter'>Services</span>
               </h2>
-              <p className='text-base md:text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto'>
+              <p className='text-[1.19rem] md:text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto'>
                 Our process is built around accuracy, reliability, and confidentiality. You remain the
 firm of record —client-facing and in control. We work in the background, preparing
 returns to your specifications, using your preferred software, and delivering work that
@@ -436,9 +436,7 @@ ProConnect, TaxAct, and other major tax software.
                 </h2>
 
                 <ul className="space-y-2 mb-10">
-                  <li className="text-white/90 text-sm md:text-base">Schedule a Free Consultation</li>
-                  <li className="text-white/90 text-sm md:text-base">Discover Custom Solutions</li>
-                  <li className="text-white/90 text-sm md:text-base">Start Building Your Competitive Advantage</li>
+                  <li className="text-white/90 text-sm md:text-base">Schedule a free consultation to discover custom solutions for your business.</li>
                 </ul>
                 <div>
                   <Link

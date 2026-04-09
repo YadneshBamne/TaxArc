@@ -9,7 +9,7 @@ const defaultSections = [
     links: [
       { name: "Tax Preparation", href: "/new-taxation" },
       { name: "Accounting & Bookkeeping", href: "/accounting-bookkeeping" },
-      { name: "Payroll", href: "/new-payroll" },
+      { name: "Payroll Services", href: "/new-payroll" },
     ],
   },
   {

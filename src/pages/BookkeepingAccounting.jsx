@@ -58,7 +58,7 @@ const BookkeepingAccounting = () => {
             </h1>
             <div className="w-16 h-px bg-white/50 mx-auto mb-2" />
             <p className="text-xl sm:text-lg md:text-xl lg:text-2xl text-white/90 font-bold leading-relaxed">
-              US GAAP-compliant bookkeeping and accounting for firms and businesses. <br/>From daily books to year-end reporting, we handle the numbers so you focus on growth.
+              Precision accounting that powers better decisions.
             </p>
           </motion.div>
         </div>
@@ -153,7 +153,7 @@ const BookkeepingAccounting = () => {
             </span>
 
             {/* Small-to-Mid Businesses */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -180,7 +180,7 @@ const BookkeepingAccounting = () => {
                   Small and midsized <br /> business
                 </p>
               </div>
-            </motion.div>
+            </motion.div> */}
           </div>
         </div>
       </section>
@@ -495,12 +495,12 @@ const BookkeepingAccounting = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-gray-900 mb-2">
-                    Software Flexibility
+                    Flexible Engagement Models
                   </h3>
                   <p className="text-sm text-gray-600">
-                    Works within your existing software environment — UltraTax
-                    CS, Lacerte, Drake, ProConnect, TaxAct, and other major tax
-                    software.
+                    We offer flexible engagement structures — project-based, hourly, or dedicated support —
+allowing firms to scale assistance based on workload, seasonality, and specific engagement
+needs.
                   </p>
                 </div>
               </div>
@@ -542,13 +542,7 @@ const BookkeepingAccounting = () => {
 
                 <ul className="space-y-2 mb-10">
                   <li className="text-white/90 text-sm md:text-base">
-                    Schedule a Free Consultation
-                  </li>
-                  <li className="text-white/90 text-sm md:text-base">
-                    Discover Custom Solutions
-                  </li>
-                  <li className="text-white/90 text-sm md:text-base">
-                    Start Building Your Competitive Advantage
+                    Schedule a free consultation to discover custom solutions for your business.
                   </li>
                 </ul>
                 <div>

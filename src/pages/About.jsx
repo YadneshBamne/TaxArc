@@ -44,7 +44,7 @@ const About = () => {
     <div className='page-sections w-full bg-white'>
 
       {/* About Us Section */}
- <section className='relative py-32 min-h-screen flex items-center justify-center'>
+ <section className='relative py-16 md:py-20 min-h-screen flex items-center justify-center'>
   <video
     className='absolute inset-0 w-full h-full object-cover'
     autoPlay
@@ -80,7 +80,7 @@ const About = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.2 }}
-        className='text-xl sm:text-lg md:text-xl text-white/90 font-semibold leading-relaxed'
+        className='text-[1.19rem] text-white/90 font-semibold leading-relaxed'
       >
         TaxArc Global is a global professional outsourcing firm providing structured,
         secure, and dependable support across tax, accounting and bookkeeping operations to
@@ -95,14 +95,14 @@ const About = () => {
 
 
       {/* Meet Our CEO Section */}
-      <section className='py-20'>
+      <section className='py-16 md:py-20'>
         <div className='container mx-auto px-4'>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className='text-center mb-16'
+            className='text-center mb-12'
           >
             <h2 className='text-4xl md:text-5xl font-bold mb-4'>
               Meet our <span className='font-inter italic text-[#015482]'><br></br>Leadership Team</span>
@@ -134,14 +134,14 @@ const About = () => {
                 </a>
               </div>
               <p className='hidden lg:block text-3xl md:text-5xl italic font-semibold text-gray-700 mb-2'>Founder</p>
-              <p className='hidden lg:block text-lg font-semibold text-gray-800'>
+              <p className='hidden lg:block text-[1.19rem] font-semibold text-gray-800'>
                CPA(US) Exam Qualified | FCA (India) | B.Com
               </p>
-              <p className='hidden lg:block text-lg font-semibold text-gray-800 mb-6'>
+              <p className='hidden lg:block text-[1.19rem] font-semibold text-gray-800 mb-6'>
                 Proprietor – Harshika & Co.
               </p>
 
-              <div className='space-y-4 text-gray-700 leading-relaxed'>
+              <div className='space-y-4 text-gray-700 text-[1.19rem] leading-relaxed'>
                 <p>
                   TaxArc Global is founded and led by a Chartered
 Accountant (India) and US CPA Exam Qualified professional
@@ -200,15 +200,15 @@ offshore extension of your in-house team, not just a vendor.
                     </a>
                   </div>
                   <p className='text-3xl italic font-semibold text-gray-700 mb-2'>Founder</p>
-                  <p className='text-base font-semibold text-gray-800'>
+                  <p className='text-[1.19rem] font-semibold text-gray-800'>
                   CPA (US) Exam Qualified | FCA (India) | B.Com
                   </p>
-                  <p className='text-base font-semibold text-gray-800 mb-4'>
+                  <p className='text-[1.19rem] font-semibold text-gray-800 mb-4'>
                     Proprietor – Harshika & Co.
                   </p>
                 </div>
                 <img
-                  src='https://ik.imagekit.io/qxfudjvlf/taxarc/harshika.jpeg'
+                  src='https://ik.imagekit.io/qxfudjvlf/taxarc/harshika.jpeg?updatedAt=1775736540181'
                   alt='Harshika Vora - CEO of TaxArc Global'
                   className='w-full h-auto rounded-3xl  object-cover'
                 />
@@ -219,7 +219,7 @@ offshore extension of your in-house team, not just a vendor.
       </section>
 
       {/* Meet Our Strategic Advisor Section */}
-      <section className='py-20 bg-white'>
+      <section className='md:py-4 bg-white'>``
         <div className='container mx-auto px-4'>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto'>
             {/* Left Image */}
@@ -236,10 +236,10 @@ offshore extension of your in-house team, not just a vendor.
                     <span className='text-[#015482] font-bold'>Hemant R. Vora</span>
                   </h3>
                   <p className='text-3xl italic font-semibold text-gray-700 mb-2'>Strategic Advisor</p>
-                  <p className='text-base font-semibold text-gray-800'>
+                  <p className='text-[1.19rem] font-semibold text-gray-800'>
                     FCA (India), Inter CS, LL.B, B.Com
                   </p>
-                  <p className='text-base font-semibold text-gray-800 mb-4'>
+                  <p className='text-[1.19rem] font-semibold text-gray-800 mb-4'>
                     Proprietor - Hemant R. Vora & Co. (Est. 1981)
                   </p>
                 </div>
@@ -263,14 +263,14 @@ offshore extension of your in-house team, not just a vendor.
                 <span className='text-[#015482] font-bold'>Hemant R. Vora</span>
               </h3>
               <p className='hidden lg:block text-3xl md:text-5xl italic font-semibold text-gray-700 mb-2'>Strategic Advisor</p>
-              <p className='hidden lg:block text-lg font-semibold text-gray-800'>
+              <p className='hidden lg:block text-[1.19rem] font-semibold text-gray-800'>
                 FCA (India), Inter CS, LL.B, B.Com
               </p>
-              <p className='hidden lg:block text-lg font-semibold text-gray-800 mb-6'>
+              <p className='hidden lg:block text-[1.19rem] font-semibold text-gray-800 mb-6'>
                 Proprietor – Hemant R. Vora & Co. (Est. 1981)
               </p>
 
-              <div className='space-y-4 text-gray-700 leading-relaxed'>
+              <div className='space-y-4 text-gray-700 text-[1.19rem]  leading-relaxed'>
                 <p>
                   TaxArc Global's strategic strength is anchored in the mentorship and guidance of CA Hemant R. Vora — a respected Chartered Accountant with over 45 years of professional experience in compliance, advisory, and practice leadership. As the Founder of Hemant R. Vora & Co., established in 1981, he has built a reputation rooted in technical precision, ethical governance, and enduring client trust across diverse industries. His career reflects not only depth of expertise but also the discipline and foresight required to build and sustain a reputable professional institution.
                 </p>
@@ -283,7 +283,7 @@ offshore extension of your in-house team, not just a vendor.
                   Beyond strategy, his mentorship shapes the firm's culture. He instills the values of integrity, accountability, and long-term client stewardship—principles that define TaxArc Global's approach to serving international partners. His presence adds institutional maturity, reinforces credibility, and ensures that the firm evolves with stability, clarity, and professional conviction.
                 </p>
 
-                <p className='font-semibold text-gray-900 text-lg mt-6'>
+                <p className='font-semibold text-gray-900 text-[1.19rem] mt-6'>
                   Trusted Advisor. Strategic Architect. Mentor Behind the Mission.
                 </p>
               </div>
@@ -293,7 +293,7 @@ offshore extension of your in-house team, not just a vendor.
       </section>
 
       {/* Vision & Mission Section */}
-      <section className='py-16 md:py-20'>
+      <section className='md:py-4 bg-gray-50'>
         <div className='w-full px-4 sm:px-6 md:px-8 flex justify-center'>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -309,7 +309,7 @@ offshore extension of your in-house team, not just a vendor.
                 </div>
                 <div className='h-96 bg-white border-2 border-dotted border-[#1f2937] rounded-[2.2rem] px-6 md:px-10 py-14 md:py-16 text-center flex flex-col items-center justify-center'>
                   <h3 className='text-[#015482] text-4xl md:text-5xl font-bold tracking-[0.12em] mb-6'>VISION</h3>
-                  <p className=' text-black leading-normal max-w-4xl mx-auto'>
+                  <p className=' text-black leading-normal max-w-4xl text-[1.19rem] mx-auto'>
                     To be a globally trusted professional services partner, recognized for excellence in tax, accounting and bookkeeping operations, precision-driven execution, and uncompromising data security.
                   </p>
                 </div>
@@ -321,7 +321,7 @@ offshore extension of your in-house team, not just a vendor.
                 </div>
                 <div className='h-96 bg-white border-2 border-dotted border-[#1f2937] rounded-[2.2rem] px-6 md:px-10 py-14 md:py-16 text-center flex flex-col items-center justify-center'>
                   <h3 className='text-[#015482] text-4xl md:text-5xl font-bold tracking-[0.12em] mb-6'>MISSION</h3>
-                  <p className=' text-black leading-normal max-w-4xl mx-auto'>
+                  <p className=' text-black leading-normal text-[1.19rem] max-w-4xl mx-auto'>
                     To deliver reliable, high-quality outsourced accounting and tax support, powered by qualified professionals, structured processes, intelligent technology and strict confidentiality.
                   </p>
                 </div>
@@ -332,26 +332,26 @@ offshore extension of your in-house team, not just a vendor.
       </section>
 
       {/* Workflow Process Section */}
-      <section className='py-20'>
+      <section className='md:py-4'>
         <div className='container mx-auto px-4'>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className='text-center mb-16'
+            className='text-center mb-12'
           >
             <h2 className='text-4xl md:text-5xl font-bold mb-4'>
               Our <span className='italic text-[#015482]'>Workflow Process</span>
             </h2>
-            <p className='text-gray-600 leading-relaxed max-w-3xl mx-auto'>
+            <p className='text-gray-600 pb-10 text-[1.19rem] leading-relaxed max-w-3xl mx-auto'>
               Our workflow is meticulously designed to ensure every tax and accounting task is handled with absolute clarity. From initial data gathering to the final review, our cyclical process keeps you informed and maintains uncompromising quality at every step.
             </p>
           </motion.div>
 
           {/* Grid Layout */}
           <div className='max-w-6xl mx-auto'>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-8 lg:mb-12'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-8'>
               {/* Step 1 */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -362,7 +362,7 @@ offshore extension of your in-house team, not just a vendor.
               >
                 <div className='absolute -top-6 left-1/2 transform -translate-x-1/2 bg-[#015482] text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg'>01</div>
                 <h3 className='text-xl font-bold text-center mb-3 pt-4'>Client Onboarding</h3>
-                <p className='text-gray-600 text-center text-sm'>Establishing secure access and gathering essential requirements.</p>
+                <p className='text-gray-600 text-center  text-[1.19rem]'>Establishing secure access and gathering essential requirements.</p>
               </motion.div>
 
               {/* Step 2 */}
@@ -375,7 +375,7 @@ offshore extension of your in-house team, not just a vendor.
               >
                 <div className='absolute -top-6 left-1/2 transform -translate-x-1/2 bg-[#015482] text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg'>02</div>
                 <h3 className='text-xl font-bold text-center mb-3 pt-4'>Data Sharing</h3>
-                <p className='text-gray-600 text-center text-sm'>Securely transferring documents and collecting all necessary information.</p>
+                <p className='text-gray-600 text-center text-[1.19rem]'>Securely transferring documents and collecting all necessary information.</p>
               </motion.div>
 
               {/* Step 3 */}
@@ -388,7 +388,7 @@ offshore extension of your in-house team, not just a vendor.
               >
                 <div className='absolute -top-6 left-1/2 transform -translate-x-1/2 bg-[#015482] text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg'>03</div>
                 <h3 className='text-xl font-bold text-center mb-3 pt-4'>Preparation</h3>
-                <p className='text-gray-600 text-center text-sm'>Experienced tax and accounting professionals prepare returns and financial reports.</p>
+                <p className='text-gray-600 text-center text-[1.19rem]'>Experienced tax and accounting professionals prepare returns and financial reports.</p>
               </motion.div>
             </div>
 
@@ -403,7 +403,7 @@ offshore extension of your in-house team, not just a vendor.
               >
                 <div className='absolute -top-6 left-1/2 transform -translate-x-1/2 bg-[#015482] text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg'>04</div>
                 <h3 className='text-xl font-bold text-center mb-3 pt-4'>Internal Review</h3>
-                <p className='text-gray-600 text-center text-sm'>A multi-level quality assurance process designed to ensure accuracy and reliability.</p>
+                <p className='text-gray-600 text-center text-[1.19rem]'>A multi-level quality assurance process designed to ensure accuracy and reliability.</p>
               </motion.div>
 
               {/* Step 5 - Left Side */}
@@ -416,7 +416,7 @@ offshore extension of your in-house team, not just a vendor.
               >
                 <div className='absolute -top-6 left-1/2 transform -translate-x-1/2 bg-[#015482] text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg'>05</div>
                 <h3 className='text-xl font-bold text-center mb-3 pt-4'>Final Delivery</h3>
-                <p className='text-gray-600 text-center text-sm'>Timely delivery of review-ready work, ensuring all deadlines are met.</p>
+                <p className='text-gray-600 text-center text-[1.19rem]'>Timely delivery of review-ready work, ensuring all deadlines are met.</p>
               </motion.div>
             </div>
           </div>
@@ -424,14 +424,14 @@ offshore extension of your in-house team, not just a vendor.
       </section>
 
       {/* IT Infrastructure and Security Measures Section */}
-      <section className='py-20 bg-white'>
+      <section className='md:mb-4 bg-white'>
         <div className='container mx-auto px-4'>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className='text-center mb-16'
+            className='text-center mb-12'
           >
             <h2 className='text-4xl md:text-5xl font-bold mb-4'>
               Our IT Infrastructure &amp; <span className='font-inter italic text-[#015482]'>Security Measures</span>
@@ -451,7 +451,7 @@ offshore extension of your in-house team, not just a vendor.
                 <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
                   <Cpu fill='#CCD9ED' className='w-8 h-8 text-[#015482]' />
                 </div>
-                <p className='text-sm font-semibold'>Latest configuration<br />devices</p>
+                <p className='text-[1.19rem] font-semibold'>Latest configuration<br />devices</p>
               </motion.div>
 
               <motion.div
@@ -464,7 +464,7 @@ offshore extension of your in-house team, not just a vendor.
                 <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
                   <Key fill='#CCD9ED' className='w-8 h-8 text-[#015482]' />
                 </div>
-                <p className='text-sm font-semibold'>Licensed support<br />software</p>
+                <p className='text-[1.19rem] font-semibold'>Licensed support<br />software</p>
               </motion.div>
 
               <motion.div
@@ -477,7 +477,7 @@ offshore extension of your in-house team, not just a vendor.
                 <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
                   <MonitorCheck className='w-8 h-8 text-[#015482]' />
                 </div>
-                <p className='text-sm font-semibold'>Secured<br />workstations</p>
+                <p className='text-[1.19rem] font-semibold'>Secured<br />workstations</p>
               </motion.div>
 
               <motion.div
@@ -490,7 +490,7 @@ offshore extension of your in-house team, not just a vendor.
                 <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
                   <UsbIcon className='w-8 h-8 text-[#015482]' />
                 </div>
-                <p className='text-sm font-semibold'>No external<br />devices</p>
+                <p className='text-[1.19rem] font-semibold'>No external<br />devices</p>
               </motion.div>
             </div>
 
@@ -506,7 +506,7 @@ offshore extension of your in-house team, not just a vendor.
                 <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
                   <Building className='w-8 h-8 text-[#015482]' />
                 </div>
-                <p className='text-sm font-semibold'>100% on-site<br />operations</p>
+                <p className='text-[1.19rem] font-semibold'>100% on-site<br />operations</p>
               </motion.div>
 
               <motion.div
@@ -519,7 +519,7 @@ offshore extension of your in-house team, not just a vendor.
                 <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
                   <PrinterX fill='#CCD9ED' className='w-8 h-8 text-[#015482]' />
                 </div>
-                <p className='text-sm font-semibold'>Printing<br />restrictions</p>
+                <p className='text-[1.19rem] font-semibold'>Printing<br />restrictions</p>
               </motion.div>
 
               <motion.div
@@ -532,7 +532,7 @@ offshore extension of your in-house team, not just a vendor.
                 <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
                   <SlidersHorizontal fill='#CCD9ED' className='w-8 h-8 text-[#015482]' />
                 </div>
-                <p className='text-sm font-semibold'>Centralized<br />control</p>
+                <p className='text-[1.19rem] font-semibold'>Centralized<br />control</p>
               </motion.div>
 
               <motion.div
@@ -545,7 +545,7 @@ offshore extension of your in-house team, not just a vendor.
                 <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
                   <Network fill='#CCD9ED' className='w-8 h-8 text-[#015482]' />
                 </div>
-                <p className='text-sm font-semibold'>Multiple LAN networks</p>
+                <p className='text-[1.19rem] font-semibold'>Multiple LAN networks</p>
               </motion.div>
             </div>
 
@@ -561,7 +561,7 @@ offshore extension of your in-house team, not just a vendor.
                 <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
                   <Database fill='#CCD9ED' className='w-8 h-8 text-[#015482]' />
                 </div>
-                <p className='text-sm font-semibold'>Functional access<br />to data</p>
+                <p className='text-[1.19rem] font-semibold'>Functional access<br />to data</p>
               </motion.div>
 
               <motion.div
@@ -574,7 +574,7 @@ offshore extension of your in-house team, not just a vendor.
                 <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
                   <ShieldAlert fill='#CCD9ED' className='w-8 h-8 text-[#015482]' />
                 </div>
-                <p className='text-sm font-semibold'>Harmful website<br />monitoring</p>
+                <p className='text-[1.19rem] font-semibold'>Harmful website<br />monitoring</p>
               </motion.div>
 
               <motion.div
@@ -587,7 +587,7 @@ offshore extension of your in-house team, not just a vendor.
                 <div className='w-16 h-16 mx-auto mb-4 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
                   <HardDriveDownload fill='#CCD9ED' className='w-8 h-8 text-[#015482]' />
                 </div>
-                <p className='text-sm font-semibold'>Automated<br />Backups</p>
+                <p className='text-[1.19rem] font-semibold'>Automated<br />Backups</p>
               </motion.div>
             </div>
           </div>
@@ -597,7 +597,7 @@ offshore extension of your in-house team, not just a vendor.
       {/* Tools We Use Section */}
 
 
-      <section className='py-20 bg-gray-50'>
+      <section className='py-16 md:py-20 bg-gray-50'>
         <div className='container mx-auto px-4'>
           <div className='max-w-7xl mx-auto'>
             <div className='grid grid-cols-1 lg:grid-cols-12 gap-12'>

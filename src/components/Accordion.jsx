@@ -14,7 +14,7 @@ const AccordionItem = ({ title, content, isOpen, onMouseEnter, onMouseLeave, del
       onMouseLeave={onMouseLeave}
     >
       <button
-        className='w-full py-5 flex justify-between items-center text-left group'
+        className='w-full py-5 flex justify-between  items-center text-left group'
       >
         <span className='font-medium text-2xl text-gray-900'>{title}</span>
         <motion.div
@@ -22,7 +22,7 @@ const AccordionItem = ({ title, content, isOpen, onMouseEnter, onMouseLeave, del
           transition={{ duration: 0.3 }}
           className='shrink-0 ml-4'
         >
-          <div className='w-8 h-8 rounded-full bg-[#015482] flex items-center justify-center'>
+          <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors duration-300 ${isOpen ? 'bg-[#17D3CF]' : 'bg-[#015482]'}`}>
             <Plus className='w-5 h-5 text-white' strokeWidth={2.5} />
           </div>
         </motion.div>
@@ -51,7 +51,7 @@ const Accordion = ({ items }) => {
   const [openIndex, setOpenIndex] = useState(null)
 
   return (
-    <div className='w-full'>
+    <div className='w-full '>
       {items.map((item, index) => (
         <AccordionItem
           key={index}

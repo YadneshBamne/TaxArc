@@ -257,7 +257,7 @@ ${servicesText}`;
   <div
     className="absolute inset-0 bg-cover bg-center bg-no-repeat"
     style={{
-      backgroundImage: "url(https://ik.imagekit.io/qxfudjvlf/navratna?updatedAt=1773260906125)",
+      backgroundImage: "url(https://ik.imagekit.io/qxfudjvlf/taxarc/navratna11?updatedAt=1775735979795)",
     }}
   />
 

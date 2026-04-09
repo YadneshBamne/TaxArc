@@ -147,12 +147,12 @@ const Home = () => {
               >
                 <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                   Our Philosophy -{" "}
-                  <span className="font-inter text-[#015482]">ARC</span>
+                  <span className="font-inter text-[#039FA5]">ARC</span>
                 </h2>
                 <p className="text-3xl font-inter italic mb-6 bg-[#015482] bg-clip-text text-transparent">
                   <span className="text-[#039FA5] text-[2.2rem] font-bold">A</span>ccuracy, <span className="text-[#039FA5] text-[2.2rem] font-bold">R</span>eliability & <span className="text-[#039FA5] text-[2.2rem] font-bold">C</span>onfidentiality
                 </p>
-                <p className="text-gray-700 mb-8 leading-relaxed">
+                <p className="text-[1.19rem] text-gray-700 mb-8 leading-relaxed">
                   At TaxArc Global, our name reflects the philosophy that guides
                   everything we do - the ARC Framework. This framework defines
                   how we deliver work, manage risk, and build long-term client
@@ -238,7 +238,7 @@ const Home = () => {
                   {service.title}
                 </h3>
 
-                <p className="mt-10 max-w-[18rem] flex-1 text-left text-base leading-7 text-white/95">
+                <p className="mt-10 max-w-[18rem] text-[1.19rem] flex-1 text-left text-base leading-7 text-white/95">
                   {service.description}
                 </p>
 
@@ -301,7 +301,7 @@ const Home = () => {
                   <h3 className="text-xl font-bold mb-3">
                     Specialized Professionals, Seamlessly Integrated
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-600 text-[1.19rem] leading-relaxed">
                     Our team of CPAs, Chartered Accountants and experienced
                     tax and accounting professionals integrate seamlessly into
                     your existing software ecosystem, minimizing onboarding time
@@ -327,7 +327,7 @@ const Home = () => {
                   <h3 className="text-xl font-bold mb-3">
                     Turnaround You Can Rely On
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-600 text-[1.19rem] leading-relaxed">
                     Defined timelines, structured workflows, and disciplined execution ensure predictable turnaround on every engagement. Our deadline-driven approach helps firms maintain smooth operations and meet critical filing timelines, especially during peak tax season.
                   </p>
                 </div>
@@ -350,7 +350,7 @@ const Home = () => {
                   <h3 className="text-xl font-bold mb-3">
                     Data Security & Confidentiality
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-600 text-[1.19rem] leading-relaxed">
                     NDA-backed engagements, secure file transfer protocols, and
                     strict data privacy practices ensures that your data is always
                     protected.
@@ -373,7 +373,7 @@ const Home = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-3">Cost Efficiency</h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-600 text-[1.19rem] leading-relaxed">
                     Significant reduction in operational costs compared to
                     in-house staffing without compromising on quality or
                     accuracy.
@@ -398,7 +398,7 @@ const Home = () => {
                   <h3 className="text-xl font-bold mb-3">
                     Flexible Engagement Model
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-600 text-[1.19rem] leading-relaxed">
                     We offer flexible engagement structures — project-based, hourly, or dedicated support —
 allowing firms to scale assistance based on workload, seasonality, and specific engagement
 needs.
@@ -423,7 +423,7 @@ needs.
                   <h3 className="text-xl font-bold mb-3">
                     Quality & Continuous Improvement
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-600 text-[1.19rem] leading-relaxed">
                     Regular internal reviews, quality control checkpoints, and
                     process optimization to ensure excellence in every
                     engagement.
@@ -501,7 +501,7 @@ needs.
                 </h2>
 
                 <ul className="space-y-2 mb-10">
-                  <li className="text-white/90 text-sm md:text-base">Schedule a free consultation to discover custom solutions for your business.</li>
+                  <li className="text-white/90 text-[1.19rem]">Schedule a free consultation to discover custom solutions for your business.</li>
                 </ul>
                 <div>
                   <Link

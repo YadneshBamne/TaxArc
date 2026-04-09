@@ -361,12 +361,12 @@ Payroll registers, liability summaries, and reconciliation reports delivered rea
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-gray-900 mb-2">
-                    Software Flexibility
+                    Flexible Engagement Models
                   </h3>
                   <p className="text-sm text-gray-600">
-                    Works within your existing software environment — UltraTax
-                    CS, Lacerte, Drake, ProConnect, TaxAct, and other major tax
-                    software.
+                    We offer flexible engagement structures — project-based, hourly, or dedicated support —
+allowing firms to scale assistance based on workload, seasonality, and specific engagement
+needs.
                   </p>
                 </div>
               </div>
@@ -407,9 +407,7 @@ Payroll registers, liability summaries, and reconciliation reports delivered rea
                 </h2>
 
                 <ul className="space-y-2 mb-10">
-                  <li className="text-white/90 text-sm md:text-base">Schedule a Free Consultation</li>
-                  <li className="text-white/90 text-sm md:text-base">Discover Custom Solutions</li>
-                  <li className="text-white/90 text-sm md:text-base">Start Building Your Competitive Advantage</li>
+                  <li className="text-white/90 text-sm md:text-base">Schedule a free consultation to discover custom solutions for your business.</li>
                 </ul>
                 <div>
                   <Link
