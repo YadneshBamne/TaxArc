@@ -262,10 +262,7 @@ ${servicesText}`;
   />
 
   {/* Gradient band — transparent top & bottom, dark only in the middle */}
-  <div
-    className="absolute inset-0"
-    style={{ background: "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.60) 30%, rgba(0,0,0,0.60) 70%, transparent 100%)" }}
-  />
+  {/* Removed: Gradient overlay for frosted glass effect */}
 
   <div className="container mx-auto px-4 sm:px-6 md:px-8 relative z-10">
     <motion.div
@@ -274,15 +271,17 @@ ${servicesText}`;
       transition={{ duration: 0.8 }}
       className="max-w-4xl mx-auto text-center"
     >
-      <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold text-white mb-2 sm:mb-4">
-        Contact Us
-      </h1>
-      <div className="w-16 h-px bg-white/50 mx-auto mb-2" />
-      <p className="text-base sm:text-lg md:text-xl text-white/90 font-bold leading-relaxed">
-        We collaborate with CPA firms and businesses across the globe. Our systems, communication
-        processes, and delivery frameworks are built to work seamlessly across time zones — ensuring
-        clarity, responsiveness, and consistent turnaround, no matter where you're located.
-      </p>
+      <div className="bg-black/50 backdrop-blur-lg border border-white/30 px-6 sm:px-8 md:px-12 py-8 md:py-12 rounded-2xl shadow-lg">
+        <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold text-white mb-2 sm:mb-4">
+          Contact Us
+        </h1>
+        <div className="w-16 h-px bg-white/60 mx-auto mb-2" />
+        <p className="text-base sm:text-lg md:text-xl text-white font-bold leading-relaxed">
+          We collaborate with CPA firms and businesses across the globe. Our systems, communication
+          processes, and delivery frameworks are built to work seamlessly across time zones — ensuring
+          clarity, responsiveness, and consistent turnaround, no matter where you're located.
+        </p>
+      </div>
     </motion.div>
   </div>
 </section>

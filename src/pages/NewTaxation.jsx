@@ -14,10 +14,7 @@ const NewTaxation = () => {
   />
 
   {/* Gradient band — transparent top & bottom, dark only in the middle */}
-  <div
-    className='absolute inset-0'
-    style={{ background: 'linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.60) 30%, rgba(0,0,0,0.60) 70%, transparent 100%)' }}
-  />
+  {/* Removed: Gradient overlay for frosted glass effect */}
 
   <div className='relative z-10 text-center px-4'>
     <motion.div
@@ -25,13 +22,15 @@ const NewTaxation = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <h1 className='text-4xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold text-white mb-4 sm:mb-6'>
-        Tax Preparation
-      </h1>
-      <div className='w-16 h-px bg-white/50 mx-auto mb-2' />
-      <p className='text-xl sm:text-lg md:text-xl lg:text-xl text-white/90 font-bold leading-relaxed'>
-        Reliable Outsourced Tax Preparation. Delivered to Your Standards. On Your Timeline.
-      </p>
+      <div className='bg-black/50 backdrop-blur-lg border border-white/30 px-6 sm:px-8 md:px-12 py-8 md:py-12 rounded-2xl shadow-lg inline-block max-w-2xl'>
+        <h1 className='text-4xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold text-white mb-4 sm:mb-6'>
+          Tax Preparation
+        </h1>
+        <div className='w-16 h-px bg-white/60 mx-auto mb-2' />
+        <p className='text-xl sm:text-lg md:text-xl lg:text-xl text-white font-bold leading-relaxed'>
+          Reliable Outsourced Tax Preparation. Delivered to Your Standards. On Your Timeline.
+        </p>
+      </div>
     </motion.div>
   </div>
 </section>
@@ -153,7 +152,7 @@ is ready for your review.
                 <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
                   <FileText className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
-                <h3 className='text-md font-bold text-gray-900 mb-2 leading-snug'>Individual Tax Returns (Form 1040)</h3>
+                <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug'>Individual Tax Returns (Form 1040)</h3>
                 <p className='text-sm text-gray-500 leading-relaxed'>
                  Preparation of federal individual returns including
 Schedules A, B, C, D, and E, delivered review-ready
@@ -172,7 +171,7 @@ for your sign-off.
                 <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
                   <Building2 className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
-                <h3 className='text-md font-bold text-gray-900 mb-2 leading-snug'>S-Corporation Returns (Form 1120-S)</h3>
+                <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug'>S-Corporation Returns (Form 1120-S)</h3>
                 <p className='text-sm text-gray-500 leading-relaxed'>
                  Full preparation of S-Corp returns including K-1
 schedules, ready for partner or shareholder
@@ -191,7 +190,7 @@ distribution.
                 <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
                   <Globe className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
-                <h3 className='text-md font-bold text-gray-900 mb-2 leading-snug'>Partnership Returns (Form 1065)</h3>
+                <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug'>Partnership Returns (Form 1065)</h3>
                 <p className='text-sm text-gray-500 leading-relaxed'>
                   Partnership return preparation with K-1 allocations
 prepared to your firm's specifications.
@@ -209,7 +208,7 @@ prepared to your firm's specifications.
                 <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
                   <TrendingUp className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
-                <h3 className='text-md font-bold text-gray-900 mb-2 leading-snug'>C-Corporation
+                <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug'>C-Corporation
 Returns (Form 1120)</h3>
                 <p className='text-sm text-gray-500 leading-relaxed'>
                   Corporate return preparation including depreciation

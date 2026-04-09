@@ -56,36 +56,27 @@ const About = () => {
   </video>
 
   {/* Gradient band — transparent top & bottom, dark only in the middle */}
-  <div
-    className='absolute inset-0'
-    style={{ background: 'linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.60) 30%, rgba(0,0,0,0.60) 70%, transparent 100%)' }}
-  />
+  {/* Removed: Gradient overlay for frosted glass effect */}
 
   <div className='container mx-auto px-4 sm:px-6 md:px-8 relative z-10'>
     <div className='max-w-4xl mx-auto text-center'>
-      <motion.h2
+      <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className='text-4xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold text-white mb-2 sm:mb-4 md:mb-6'
+        className='bg-black/50 backdrop-blur-lg border border-white/30 px-6 sm:px-8 md:px-12 py-8 md:py-12 rounded-2xl shadow-lg'
       >
-        About Us
-      </motion.h2>
-
-      <div className='w-16 h-px bg-white/50 mx-auto mb-2' />
-
-      <motion.p
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-        className='text-[1.19rem] text-white/90 font-semibold leading-relaxed'
-      >
-        TaxArc Global is a global professional outsourcing firm providing structured,
-        secure, and dependable support across tax, accounting and bookkeeping operations to
-        businesses and professional organizations.
-      </motion.p>
+        <h2 className='text-4xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold text-white mb-2 sm:mb-4 md:mb-6'>
+          About Us
+        </h2>
+        <div className='w-16 h-px bg-white/60 mx-auto mb-2' />
+        <p className='text-[1.19rem] text-white font-semibold leading-relaxed'>
+          TaxArc Global is a global professional outsourcing firm providing structured,
+          secure, and dependable support across tax, accounting and bookkeeping operations to
+          businesses and professional organizations.
+        </p>
+      </motion.div>
     </div>
   </div>
 </section>
