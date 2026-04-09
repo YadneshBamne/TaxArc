@@ -90,7 +90,7 @@ export const Footer7 = ({
             <Link to={logo.url} className="flex items-center space-x-2">
               <img src={logo.src} alt={logo.alt} className="h-28 w-auto" />
             </Link>
-            <p className="text-sm text-gray-600 leading-relaxed">
+            <p className="text-[1] text-gray-600 leading-relaxed">
               {description}
             </p>
             <ul className="flex items-center space-x-6 text-gray-600">

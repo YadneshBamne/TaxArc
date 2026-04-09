@@ -38,8 +38,8 @@ const BookkeepingAccounting = () => {
           }}
         />
 
-        {/* Gradient band — transparent top & bottom, dark only in the middle */}
-        {/* Removed: Gradient overlay for frosted glass effect */}
+        {/* Cyan dim overlay */}
+        <div className="absolute inset-0 bg-[#1878AB]/30" />
 
         <div className="relative z-10 text-center px-4">
           <motion.div
@@ -47,12 +47,12 @@ const BookkeepingAccounting = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="bg-black/50 backdrop-blur-lg border border-white/30 px-6 sm:px-8 md:px-12 py-8 md:py-12 rounded-2xl shadow-lg inline-block max-w-2xl">
+            <div className="px-6 sm:px-8 md:px-12 py-8 md:py-12 rounded-2xl inline-block max-w-2xl">
               <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 sm:mb-6">
                 Accounting & Bookkeeping
               </h1>
               <div className="w-16 h-px bg-white/60 mx-auto mb-2" />
-              <p className="text-xl sm:text-lg md:text-xl lg:text-2xl text-white font-bold leading-relaxed">
+              <p className="text-[1.19rem] text-white font-bold leading-relaxed">
                 Precision accounting that powers better decisions.
               </p>
             </div>
@@ -104,7 +104,7 @@ const BookkeepingAccounting = () => {
                 </svg>
               </div>
               <div className="text-center">
-                <p className="text-base font-bold text-gray-900">
+                <p className="text-[1.19rem] font-bold text-gray-900">
                   CPA &amp; EA Firms
                 </p>
               </div>
@@ -138,7 +138,7 @@ const BookkeepingAccounting = () => {
                 </svg>
               </div>
               <div className="text-center">
-                <p className="text-base font-bold text-gray-900">
+                <p className="text-[1.19rem] font-bold text-gray-900">
                   Accounting Practices
                 </p>
               </div>
@@ -199,7 +199,7 @@ const BookkeepingAccounting = () => {
                   Services
                 </span>
               </h2>
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
+              <p className="text-[1.19rem] text-gray-700 leading-relaxed max-w-4xl mx-auto">
                 We provide full-scope accounting support across QuickBooks
                 Online, QuickBooks Desktop, Xero, and other major software. For
                 accounting firms, we act as a white-label, back-office team
@@ -223,10 +223,10 @@ const BookkeepingAccounting = () => {
                 <div className="w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300">
                   <FileText className="w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300" />
                 </div>
-                <h3 className="text-sm font-bold text-gray-900 mb-2 leading-snug">
+                <h3 className="text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug">
                   Monthly Bookkeeping
                 </h3>
-                <p className="text-xs text-gray-500 leading-relaxed">
+                <p className="text-lg text-gray-500 leading-relaxed">
                   Transaction categorization, bank and credit card
                   reconciliation, and ongoing ledger maintenance on a monthly
                   basis.
@@ -244,10 +244,10 @@ const BookkeepingAccounting = () => {
                 <div className="w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300">
                   <RotateCcw className="w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300" />
                 </div>
-                <h3 className="text-sm font-bold text-gray-900 mb-2 leading-snug">
+                <h3 className="text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug">
                   Catch-Up & Clean-Up Accounting
                 </h3>
-                <p className="text-xs text-gray-500 leading-relaxed">
+                <p className="text-lg text-gray-500 leading-relaxed">
                   Restoring and organizing months or years of disorganized or
                   incomplete financial records to bring books current.
                 </p>
@@ -264,10 +264,10 @@ const BookkeepingAccounting = () => {
                 <div className="w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300">
                   <BarChart3 className="w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300" />
                 </div>
-                <h3 className="text-sm font-bold text-gray-900 mb-2 leading-snug">
+                <h3 className="text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug">
                   Financial Statement Preparation
                 </h3>
-                <p className="text-xs text-gray-500 leading-relaxed">
+                <p className="text-lg text-gray-500 leading-relaxed">
                   Profit & Loss, Balance Sheet, and Cash Flow Statements
                   prepared monthly, quarterly, or annually and ready for your
                   review.
@@ -285,10 +285,10 @@ const BookkeepingAccounting = () => {
                 <div className="w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300">
                   <Clock className="w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300" />
                 </div>
-                <h3 className="text-sm font-bold text-gray-900 mb-2 leading-snug">
+                <h3 className="text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug">
                   Month-End & Year-End Close
                 </h3>
-                <p className="text-xs text-gray-500 leading-relaxed">
+                <p className="text-lg text-gray-500 leading-relaxed">
                   Closing procedures including accruals, prepayments,
                   depreciation schedules, and adjusting journal entries.
                 </p>
@@ -305,10 +305,10 @@ const BookkeepingAccounting = () => {
                 <div className="w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300">
                   <CreditCard className="w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300" />
                 </div>
-                <h3 className="text-sm font-bold text-gray-900 mb-2 leading-snug">
+                <h3 className="text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug">
                   Accounts Payable & Receivable
                 </h3>
-                <p className="text-xs text-gray-500 leading-relaxed">
+                <p className="text-lg text-gray-500 leading-relaxed">
                   Invoice tracking, receivable aging reports, and AP/AR
                   schedules prepared and delivered for your review.
                 </p>
@@ -325,10 +325,10 @@ const BookkeepingAccounting = () => {
                 <div className="w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300">
                   <Layers className="w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300" />
                 </div>
-                <h3 className="text-sm font-bold text-gray-900 mb-2 leading-snug">
+                <h3 className="text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug">
                   Chart of Accounts Setup
                 </h3>
-                <p className="text-xs text-gray-500 leading-relaxed">
+                <p className="text-lg text-gray-500 leading-relaxed">
                   Designing or restructuring the chart of accounts to accurately
                   reflect the client's business structure.
                 </p>
@@ -345,10 +345,10 @@ const BookkeepingAccounting = () => {
                 <div className="w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300">
                   <Database className="w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300" />
                 </div>
-                <h3 className="text-sm font-bold text-gray-900 mb-2 leading-snug">
+                <h3 className="text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug">
                   QuickBooks & Xero Setup
                 </h3>
-                <p className="text-xs text-gray-500 leading-relaxed">
+                <p className="text-lg text-gray-500 leading-relaxed">
                   New system setup, data migration, and integration support for
                   QuickBooks and Xero environments.
                 </p>
@@ -365,10 +365,10 @@ const BookkeepingAccounting = () => {
                 <div className="w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300">
                   <Building2 className="w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300" />
                 </div>
-                <h3 className="text-sm font-bold text-gray-900 mb-2 leading-snug">
+                <h3 className="text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug">
                   White-Label Bookkeeping for Firms
                 </h3>
-                <p className="text-xs text-gray-500 leading-relaxed">
+                <p className="text-lg text-gray-500 leading-relaxed">
                   Client bookkeeping fully prepared within your workflow and
                   delivered under your firm's brand.
                 </p>
@@ -412,10 +412,10 @@ const BookkeepingAccounting = () => {
                   <CheckCircle2 className="w-6 h-6 text-[#015482]" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">
+                  <h3 className="text-[1.19rem] font-bold text-gray-900 mb-2">
                     Audit-Ready Records
                   </h3>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-lg text-gray-600">
                     Well-maintained books that hold up under any compliance or
                     due diligence review.
                   </p>
@@ -428,10 +428,10 @@ const BookkeepingAccounting = () => {
                   <Clock className="w-6 h-6 text-[#015482]" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">
+                  <h3 className="text-[1.19rem] font-bold text-gray-900 mb-2">
                     Time-recovered
                   </h3>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-lg text-gray-600">
                     Daily tasks done efficiently so leadership can focus on
                     strategy, not spreadsheets.
                   </p>
@@ -444,10 +444,10 @@ const BookkeepingAccounting = () => {
                   <FileText className="w-6 h-6 text-[#015482]" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">
+                  <h3 className="text-[1.19rem] font-bold text-gray-900 mb-2">
                     Tax-season efficiency
                   </h3>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-lg text-gray-600">
                     Organized records significantly reduce the time and cost of
                     year-end tax preparation.
                   </p>
@@ -460,10 +460,10 @@ const BookkeepingAccounting = () => {
                   <BarChart3 className="w-6 h-6 text-[#015482]" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">
+                  <h3 className="text-[1.19rem] font-bold text-gray-900 mb-2">
                     Decision-grade reporting
                   </h3>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-lg text-gray-600">
                     Management reports built for financial review — not just
                     compliance.
                   </p>
@@ -476,10 +476,10 @@ const BookkeepingAccounting = () => {
                   <Layers className="w-6 h-6 text-[#015482]" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">
+                  <h3 className="text-[1.19rem] font-bold text-gray-900 mb-2">
                     Scalable processes
                   </h3>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-lg text-gray-600">
                     We put in place the right structure so accounting doesn't
                     slow down your own business.
                   </p>
@@ -490,10 +490,10 @@ const BookkeepingAccounting = () => {
                   <CheckCircle2 className="w-6 h-6 text-[#015482]" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">
+                  <h3 className="text-[1.19rem] font-bold text-gray-900 mb-2">
                     Flexible Engagement Models
                   </h3>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-lg text-gray-600">
                     We offer flexible engagement structures — project-based, hourly, or dedicated support —
 allowing firms to scale assistance based on workload, seasonality, and specific engagement
 needs.
@@ -537,7 +537,7 @@ needs.
                 </h2>
 
                 <ul className="space-y-2 mb-10">
-                  <li className="text-white/90 text-sm md:text-base">
+                  <li className="text-white/90 text-[1.19rem]">
                     Schedule a free consultation to discover custom solutions for your business.
                   </li>
                 </ul>

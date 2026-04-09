@@ -37,7 +37,7 @@ const AccordionItem = ({ title, content, isOpen, onMouseEnter, onMouseLeave, del
             transition={{ duration: 0.3 }}
             className='overflow-hidden'
           >
-            <p className='pb-5 text-gray-600 text-base leading-relaxed'>
+            <p className='pb-5 text-gray-600 text-[1.12rem] leading-relaxed'>
               {content}
             </p>
           </motion.div>

@@ -261,8 +261,8 @@ ${servicesText}`;
     }}
   />
 
-  {/* Gradient band — transparent top & bottom, dark only in the middle */}
-  {/* Removed: Gradient overlay for frosted glass effect */}
+  {/* Cyan dim overlay */}
+  <div className="absolute inset-0 bg-[#1878AB]/30" />
 
   <div className="container mx-auto px-4 sm:px-6 md:px-8 relative z-10">
     <motion.div
@@ -271,12 +271,12 @@ ${servicesText}`;
       transition={{ duration: 0.8 }}
       className="max-w-4xl mx-auto text-center"
     >
-      <div className="bg-black/50 backdrop-blur-lg border border-white/30 px-6 sm:px-8 md:px-12 py-8 md:py-12 rounded-2xl shadow-lg">
+      <div className=" px-6 sm:px-8 md:px-12 py-8 md:py-12 rounded-2xl">
         <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold text-white mb-2 sm:mb-4">
           Contact Us
         </h1>
         <div className="w-16 h-px bg-white/60 mx-auto mb-2" />
-        <p className="text-base sm:text-lg md:text-xl text-white font-bold leading-relaxed">
+        <p className="text-[1.19rem] text-white font-bold leading-relaxed">
           We collaborate with CPA firms and businesses across the globe. Our systems, communication
           processes, and delivery frameworks are built to work seamlessly across time zones — ensuring
           clarity, responsiveness, and consistent turnaround, no matter where you're located.
@@ -302,7 +302,7 @@ ${servicesText}`;
         {/* Heading */}
         <div>
           <h2 className="text-4xl font-bold text-gray-900 mb-3">Let’s Connect</h2>
-          <p className="text-gray-500 leading-relaxed">
+          <p className="text-[1.19rem] text-gray-500 leading-relaxed">
             We’d love to hear from you.
           </p>
         </div>
@@ -322,10 +322,10 @@ ${servicesText}`;
             </div>
             <div>
               <p className="text-xs text-gray-400 font-medium uppercase tracking-wider mb-1">Email Us</p>
-              <h3 className="text-base font-bold text-gray-900 mb-1">Send a Message</h3>
+              <h3 className="text-[1.19rem] font-bold text-gray-900 mb-1">Send a Message</h3>
               
                 <a href="mailto:harshika.vora@gmail.com"
-                className="text-sm text-gray-600 hover:text-[#17D3CF] transition-colors"
+                className="text-lg text-gray-600 hover:text-[#17D3CF] transition-colors"
               >
                 harshika@taxarcglobal.com
               </a>
@@ -339,10 +339,10 @@ ${servicesText}`;
             </div>
             <div>
               <p className="text-xs text-gray-400 font-medium uppercase tracking-wider mb-1">Call Us</p>
-              <h3 className="text-base font-bold text-gray-900 mb-1">Speak Directly</h3>
+              <h3 className="text-[1.19rem] font-bold text-gray-900 mb-1">Speak Directly</h3>
               
                <a href="tel:+919909469067"
-                className="text-sm text-gray-600 hover:text-[#17D3CF] transition-colors"
+                className="text-lg text-gray-600 hover:text-[#17D3CF] transition-colors"
               >
                 +91 99094 69067
               </a>
@@ -356,8 +356,8 @@ ${servicesText}`;
             </div>
             <div>
               <p className="text-xs text-gray-400 font-medium uppercase tracking-wider mb-1">Office Address</p>
-              <h3 className="text-base font-bold text-gray-900 mb-1">Visit Us</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
+              <h3 className="text-[1.19rem] font-bold text-gray-900 mb-1">Visit Us</h3>
+              <p className="text-lg text-gray-600 leading-relaxed">
                 Tower B, 1801-1802, 1819-1820, Navratna Corporate Park, Ambli Road, Ashok Vatika, Bopal, Ahmedabad, Gujarat 380058
               </p>
             </div>
@@ -464,7 +464,7 @@ ${servicesText}`;
                   <h2 className="text-4xl md:text-5xl mt-4 font-bold text-white mb-4">
                     Drop Us a <br/> <span className="italic text-[#17D3CF] font-inter">Message</span>
                   </h2>
-                  <p className="text-white leading-relaxed">
+                  <p className="text-white text-[1.19rem] leading-relaxed">
                     We're always happy to hear from you <br/>and will get back to you<br/>
                     as soon as possible.
                   </p>
@@ -491,7 +491,7 @@ ${servicesText}`;
                       htmlFor="fullName"
                       className="block text-sm font-semibold text-gray-900 mb-2"
                     >
-                      Full Name
+                      Full Name <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="text"
@@ -510,7 +510,7 @@ ${servicesText}`;
                       htmlFor="email"
                       className="block text-sm font-semibold text-gray-900 mb-2"
                     >
-                      Email Address
+                      Email Address <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="email"
@@ -529,7 +529,7 @@ ${servicesText}`;
                       htmlFor="message"
                       className="block text-sm font-semibold text-gray-900 mb-2"
                     >
-                      Write Your Message
+                      Write Your Message <span className="text-red-500">*</span>
                     </label>
                     <textarea
                       id="message"
@@ -545,10 +545,10 @@ ${servicesText}`;
 
                   {/* Remote Services */}
                   <div className="border border-gray-200 rounded-lg p-5">
-                    <p className="text-sm font-bold text-gray-900 mb-1">
-                      Remote Services of Interest
+                    <p className="text-lg font-bold text-gray-900 mb-1">
+                      Remote Services of Interest 
                     </p>
-                    <p className="text-xs text-gray-500 mb-4">
+                    <p className="text-[0.875rem] text-gray-500 mb-4">
                       You can select more than one service.
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-6 gap-y-4">
@@ -587,7 +587,7 @@ ${servicesText}`;
                               />
                             )}
                           </div>
-                          <span className="text-sm text-gray-900">{service}</span>
+                          <span className="text-sm text-gray-900 ">{service}</span>
                         </label>
                       ))}
                     </div>

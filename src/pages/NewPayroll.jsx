@@ -13,8 +13,8 @@ const NewPayroll = () => {
     style={{ backgroundImage: 'url(https://ik.imagekit.io/qxfudjvlf/taxarc/Payroll%20Services.jpeg)' }}
   />
 
-  {/* Gradient band — transparent top & bottom, dark only in the middle */}
-  {/* Removed: Gradient overlay for frosted glass effect */}
+  {/* Cyan dim overlay */}
+  <div className='absolute inset-0 bg-[#1878AB]/30' />
 
   <div className='relative z-10 text-center px-4'>
     <motion.div
@@ -22,12 +22,12 @@ const NewPayroll = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <div className='bg-black/50 backdrop-blur-lg border border-white/30 px-6 sm:px-8 md:px-12 py-8 md:py-12 rounded-2xl shadow-lg inline-block max-w-2xl'>
+      <div className=' px-6 sm:px-8 md:px-12 py-8 md:py-12 rounded-2xl inline-block max-w-2xl'>
         <h1 className='text-5xl sm:text-6xl md:text-7xl font-extrabold text-white mb-4'>
           Payroll Services
         </h1>
         <div className='w-16 h-px bg-white/60 mx-auto mb-2' />
-        <p className='text-lg sm:text-xl md:text-2xl text-white font-bold leading-relaxed'>
+        <p className='text-[1.19rem] text-white font-bold leading-relaxed'>
           Every Employee Paid Right.<br />Every Obligation Met.
         </p>
       </div>
@@ -67,7 +67,7 @@ const NewPayroll = () => {
                   </svg>
                 </div>
                 <div className='text-center'>
-                  <p className='text-base font-bold text-gray-900'>CPA &amp; EA Firms</p>
+                  <p className='text-[1.19rem] font-bold text-gray-900'>CPA &amp; EA Firms</p>
                 </div>
               </motion.div>
   
@@ -88,7 +88,7 @@ const NewPayroll = () => {
                   </svg>
                 </div>
                 <div className='text-center'>
-                  <p className='text-base font-bold text-gray-900'>Accounting Practices</p>
+                  <p className='text-[1.19rem] font-bold text-gray-900'>Accounting Practices</p>
                 </div>
               </motion.div>
   
@@ -109,7 +109,7 @@ const NewPayroll = () => {
                   </svg>
                 </div>
                 <div className='text-center'>
-                  <p className='text-base font-bold text-gray-900'>Small and midsized <br/> business</p>
+                  <p className='text-[1.19rem] font-bold text-gray-900'>Small and midsized <br/> business</p>
                 </div>
               </motion.div>
   
@@ -132,7 +132,7 @@ const NewPayroll = () => {
               <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-6'>
                Our Payroll<span className='text-[#015482] italic font-inter'> Services</span>
               </h2>
-              <p className='text-base md:text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto'>
+              <p className='text-[1.19rem] text-gray-700 leading-relaxed max-w-4xl mx-auto'>
                 We provide comprehensive payroll processing for businesses of all sizes and white-label payroll management for accounting firms serving business clients. Whether you need end-to-end outsourced payroll or a dependable back-office partner to handle the processing behind your client-facing service,<br/> we deliver accuracy, compliance, and efficiency at every pay cycle.
               </p>
             </motion.div>
@@ -151,8 +151,8 @@ const NewPayroll = () => {
                 <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
                   <Briefcase className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
-                <h3 className='text-sm font-bold text-gray-900 mb-2 leading-snug'>Full-Cycle Payroll Processing</h3>
-                <p className='text-xs text-gray-500 leading-relaxed'>
+                <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug'>Full-Cycle Payroll Processing</h3>
+                <p className='text-lg text-gray-500 leading-relaxed'>
                   Weekly, bi-weekly, semi-monthly, or monthly payroll runs for hourly, salaried, and contractor payments.
                 </p>
               </motion.div>
@@ -168,8 +168,8 @@ const NewPayroll = () => {
                 <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
                   <FileText className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
-                <h3 className='text-sm font-bold text-gray-900 mb-2 leading-snug'>Federal Payroll Tax Compliance</h3>
-                <p className='text-xs text-gray-500 leading-relaxed'>
+                <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug'>Federal Payroll Tax Compliance</h3>
+                <p className='text-lg text-gray-500 leading-relaxed'>
                  Preparation of Form 941 and Form 940, with payroll tax deposit tracking and reconciliation.
                 </p>
               </motion.div>
@@ -185,8 +185,8 @@ const NewPayroll = () => {
                 <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
                   <Globe className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
-                <h3 className='text-sm font-bold text-gray-900 mb-2 leading-snug'>State & Local Payroll Tax Filings</h3>
-                <p className='text-xs text-gray-500 leading-relaxed'>
+                <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug'>State & Local Payroll Tax Filings</h3>
+                <p className='text-lg text-gray-500 leading-relaxed'>
                  SUTA and state payroll tax preparation across applicable jurisdictions.
                 </p>
               </motion.div>
@@ -202,8 +202,8 @@ const NewPayroll = () => {
                 <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
                   <LandmarkIcon className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
-                <h3 className='text-sm font-bold text-gray-900 mb-2 leading-snug'>W-2 & 1099 Preparation</h3>
-                <p className='text-xs text-gray-500 leading-relaxed'>
+                <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug'>W-2 & 1099 Preparation</h3>
+                <p className='text-lg text-gray-500 leading-relaxed'>
                   Year-end wage and contractor forms prepared and review-ready for filing.
                 </p>
               </motion.div>
@@ -219,8 +219,8 @@ const NewPayroll = () => {
                 <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
                   <UserPlus className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
-                <h3 className='text-sm font-bold text-gray-900 mb-2 leading-snug'>Payroll Reporting</h3>
-                <p className='text-xs text-gray-500 leading-relaxed'>
+                <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug'>Payroll Reporting</h3>
+                <p className='text-lg text-gray-500 leading-relaxed'>
 Payroll registers, liability summaries, and reconciliation reports delivered ready for your review.
                 </p>
               </motion.div>
@@ -236,8 +236,8 @@ Payroll registers, liability summaries, and reconciliation reports delivered rea
                 <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
                   <Database className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
-                <h3 className='text-sm font-bold text-gray-900 mb-2 leading-snug'>White-Label Payroll Support</h3>
-                <p className='text-xs text-gray-500 leading-relaxed'>
+                <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug'>White-Label Payroll Support</h3>
+                <p className='text-lg text-gray-500 leading-relaxed'>
                   All work prepared within your workflow and delivered under your firm's brand — invisible to your clients.
                 </p>
               </motion.div>
@@ -254,8 +254,8 @@ Payroll registers, liability summaries, and reconciliation reports delivered rea
                 <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
                   <Handshake className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
-                <h3 className='text-sm font-bold text-gray-900 mb-2 leading-snug'>White-Label Payroll for Firms</h3>
-                <p className='text-xs text-gray-500 leading-relaxed'>
+                <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug'>White-Label Payroll for Firms</h3>
+                <p className='text-lg text-gray-500 leading-relaxed'>
                   Payroll reports, employee communications, and year-end forms branded under your firm's identity for seamless client experience.
                 </p>
               </motion.div>
@@ -296,8 +296,8 @@ Payroll registers, liability summaries, and reconciliation reports delivered rea
                   <Clock className='w-6 h-6 text-[#015482]' />
                 </div>
                 <div>
-                  <h3 className='text-lg font-bold text-gray-900 mb-2'>Timely compliance</h3>
-                  <p className='text-sm text-gray-600'>
+                  <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2'>Timely compliance</h3>
+                  <p className='text-lg text-gray-600'>
                     Every federal and state deposit and filing submitted accurately and on time
                   </p>
                 </div>
@@ -309,8 +309,8 @@ Payroll registers, liability summaries, and reconciliation reports delivered rea
                   <DatabaseIcon className='w-6 h-6 text-[#015482]' />
                 </div>
                 <div>
-                  <h3 className='text-lg font-bold text-gray-900 mb-2'>Seamless GL integration</h3>
-                  <p className='text-sm text-gray-600'>
+                  <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2'>Seamless GL integration</h3>
+                  <p className='text-lg text-gray-600'>
                     Payroll journal entries post directly to your accounting system, eliminating duplicate data entry
                   </p>
                 </div>
@@ -322,8 +322,8 @@ Payroll registers, liability summaries, and reconciliation reports delivered rea
                   <CheckCircle2 className='w-6 h-6 text-[#015482]' />
                 </div>
                 <div>
-                  <h3 className='text-lg font-bold text-gray-900 mb-2'>Operational efficiency</h3>
-                  <p className='text-sm text-gray-600'>
+                  <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2'>Operational efficiency</h3>
+                  <p className='text-lg text-gray-600'>
                     Eliminate hours of manual processing per pay cycle — for your team or your clients
                   </p>
                 </div>
@@ -335,8 +335,8 @@ Payroll registers, liability summaries, and reconciliation reports delivered rea
                   <Globe2 className='w-6 h-6 text-[#015482]' />
                 </div>
                 <div>
-                  <h3 className='text-lg font-bold text-gray-900 mb-2'>Multi-state capability</h3>
-                  <p className='text-sm text-gray-600'>
+                  <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2'>Multi-state capability</h3>
+                  <p className='text-lg text-gray-600'>
                    We handle nexus analysis, state registration guidance, and multi-jurisdiction tax management
                   </p>
                 </div>
@@ -348,8 +348,8 @@ Payroll registers, liability summaries, and reconciliation reports delivered rea
                   <UserIcon className='w-6 h-6 text-[#015482]' />
                 </div>
                 <div>
-                  <h3 className='text-lg font-bold text-gray-900 mb-2'>Employee and client confidence</h3>
-                  <p className='text-sm text-gray-600'>
+                  <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2'>Employee and client confidence</h3>
+                  <p className='text-lg text-gray-600'>
                     Reliable, on-time payroll builds trust at every level
                   </p>
                 </div>
@@ -359,10 +359,10 @@ Payroll registers, liability summaries, and reconciliation reports delivered rea
                   <CheckCircle2 className="w-6 h-6 text-[#015482]" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">
+                  <h3 className="text-[1.19rem] font-bold text-gray-900 mb-2">
                     Flexible Engagement Models
                   </h3>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-lg text-gray-600">
                     We offer flexible engagement structures — project-based, hourly, or dedicated support —
 allowing firms to scale assistance based on workload, seasonality, and specific engagement
 needs.
@@ -406,7 +406,7 @@ needs.
                 </h2>
 
                 <ul className="space-y-2 mb-10">
-                  <li className="text-white/90 text-sm md:text-base">Schedule a free consultation to discover custom solutions for your business.</li>
+                  <li className="text-white/90 text-[1.19rem]">Schedule a free consultation to discover custom solutions for your business.</li>
                 </ul>
                 <div>
                   <Link

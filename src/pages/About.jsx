@@ -55,8 +55,8 @@ const About = () => {
     <source src='https://ik.imagekit.io/qxfudjvlf/taxarc/About%20Us%20Video.mp4' type='video/mp4' />
   </video>
 
-  {/* Gradient band — transparent top & bottom, dark only in the middle */}
-  {/* Removed: Gradient overlay for frosted glass effect */}
+  {/* Cyan dim overlay */}
+  <div className='absolute inset-0 bg-[#1878AB]/30' />
 
   <div className='container mx-auto px-4 sm:px-6 md:px-8 relative z-10'>
     <div className='max-w-4xl mx-auto text-center'>
@@ -65,7 +65,7 @@ const About = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className='bg-black/50 backdrop-blur-lg border border-white/30 px-6 sm:px-8 md:px-12 py-8 md:py-12 rounded-2xl shadow-lg'
+        className=' px-6 sm:px-8 md:px-12 py-8 md:py-12 rounded-2xl'
       >
         <h2 className='text-4xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold text-white mb-2 sm:mb-4 md:mb-6'>
           About Us

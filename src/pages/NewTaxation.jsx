@@ -13,8 +13,8 @@ const NewTaxation = () => {
     style={{ backgroundImage: 'url(https://ik.imagekit.io/qxfudjvlf/taxarc/Taxation.jpeg)' }}
   />
 
-  {/* Gradient band — transparent top & bottom, dark only in the middle */}
-  {/* Removed: Gradient overlay for frosted glass effect */}
+  {/* Cyan dim overlay */}
+  <div className='absolute inset-0 bg-[#1878AB]/30' />
 
   <div className='relative z-10 text-center px-4'>
     <motion.div
@@ -22,8 +22,8 @@ const NewTaxation = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <div className='bg-black/50 backdrop-blur-lg border border-white/30 px-6 sm:px-8 md:px-12 py-8 md:py-12 rounded-2xl shadow-lg inline-block max-w-2xl'>
-        <h1 className='text-4xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold text-white mb-4 sm:mb-6'>
+      <div className=' px-6 sm:px-8 md:px-12 py-8 md:py-12 rounded-2xl inline-block max-w-2xl'>
+        <h1 className='text-4xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold  text-white mb-4 sm:mb-6'>
           Tax Preparation
         </h1>
         <div className='w-16 h-px bg-white/60 mx-auto mb-2' />
@@ -227,7 +227,7 @@ schedules and supporting workpapers.
                 <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
                   <Clock className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
-                <h3 className='text-md font-bold text-gray-900 mb-2 leading-snug'>Payroll Tax Returns</h3>
+                <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug'>Payroll Tax Returns</h3>
                 <p className='text-sm text-gray-500 leading-relaxed'>
                   Preparation of Form 941, Form 940, and supporting
 payroll tax reconciliations on a quarterly and annual
@@ -246,7 +246,7 @@ basis.
                 <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
                   <RotateCcw className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
-                <h3 className='text-md font-bold text-gray-900 mb-2 leading-snug'>Year-End Reporting</h3>
+                <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug'>Year-End Reporting</h3>
                 <p className='text-sm text-gray-500 leading-relaxed'>
                   W-2 and 1099-NEC preparation for your clients'
 employees and contractors, review-ready for filing.
@@ -264,7 +264,7 @@ employees and contractors, review-ready for filing.
                 <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
                   <ClipboardList className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
-                <h3 className='text-md font-bold text-gray-900 mb-2 leading-snug'>Extensions &
+                <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug'>Extensions &
 Estimates</h3>
                 <p className='text-sm text-gray-500 leading-relaxed'>
                   Preparation of Form 4868, Form 7004, and quarterly
@@ -283,7 +283,7 @@ estimated tax calculations as needed.
                 <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
                   <Monitor className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
-                <h3 className='text-md font-bold text-gray-900 mb-2 leading-snug'>Bookkeeping & Trial
+                <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug'>Bookkeeping & Trial
 Balance Support</h3>
                 <p className='text-sm text-gray-500 leading-relaxed'>
                   Cleanup and preparation of books to trial balance
@@ -327,8 +327,8 @@ stage, ready for tax return preparation.
                   <Banknote className='w-6 h-6 text-[#015482]' />
                 </div>
                 <div>
-                  <h3 className='text-lg font-bold text-gray-900 mb-2'>Capacity without the cost</h3>
-                  <p className='text-sm text-gray-600'>
+                  <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2'>Capacity without the cost</h3>
+                  <p className='text-[1.19rem] text-gray-600'>
                     Handle peak-season volume without permanent headcount additions
                   </p>
                 </div>
@@ -340,8 +340,8 @@ stage, ready for tax return preparation.
                   <LockIcon className='w-6 h-6 text-[#015482]' />
                 </div>
                 <div>
-                  <h3 className='text-lg font-bold text-gray-900 mb-2'>Confidentiality assured</h3>
-                  <p className='text-sm text-gray-600'>
+                  <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2'>Confidentiality assured</h3>
+                  <p className='text-[1.19rem] text-gray-600'>
                    Strict data handling protocols and NDA coverage on every engagement.
                   </p>
                 </div>
@@ -353,8 +353,8 @@ stage, ready for tax return preparation.
                   <Clock10 className='w-6 h-6 text-[#015482]' />
                 </div>
                 <div>
-                  <h3 className='text-lg font-bold text-gray-900 mb-2'>Faster turnaround</h3>
-                  <p className='text-sm text-gray-600'>
+                  <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2'>Faster turnaround</h3>
+                  <p className='text-[1.19rem] text-gray-600'>
                     Prepared returns delivered within agreed SLAs so your review queue stays manageable.
                   </p>
                 </div>
@@ -366,8 +366,8 @@ stage, ready for tax return preparation.
                   <HandshakeIcon className='w-6 h-6 text-[#015482]' />
                 </div>
                 <div>
-                  <h3 className='text-lg font-bold text-gray-900 mb-2'>Flexible engagement</h3>
-                  <p className='text-sm text-gray-600'>
+                  <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2'>Flexible engagement</h3>
+                  <p className='text-[1.19rem] text-gray-600'>
                     Per-return, monthly retainer, or seasonal block arrangements available.
                   </p>
                 </div>
@@ -379,8 +379,8 @@ stage, ready for tax return preparation.
                   <CheckCircle2 className='w-6 h-6 text-[#015482]' />
                 </div>
                 <div>
-                  <h3 className='text-lg font-bold text-gray-900 mb-2'>Consistent quality</h3>
-                  <p className='text-sm text-gray-600'>
+                  <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2'>Consistent quality</h3>
+                  <p className='text-[1.19rem] text-gray-600'>
                     Multi-point internal review before delivery — you receive work that's ready to sign.
                   </p>
                 </div>
@@ -391,8 +391,8 @@ stage, ready for tax return preparation.
                   <CheckCircle2 className='w-6 h-6 text-[#015482]' />
                 </div>
                 <div>
-                  <h3 className='text-lg font-bold text-gray-900 mb-2'>Software Flexibility</h3>
-                  <p className='text-sm text-gray-600'>
+                  <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2'>Software Flexibility</h3>
+                  <p className='text-[1.19rem] text-gray-600'>
                     Works within your existing software environment — UltraTax CS, Lacerte, Drake,
 ProConnect, TaxAct, and other major tax software.
                   </p>
@@ -435,7 +435,7 @@ ProConnect, TaxAct, and other major tax software.
                 </h2>
 
                 <ul className="space-y-2 mb-10">
-                  <li className="text-white/90 text-sm md:text-base">Schedule a free consultation to discover custom solutions for your business.</li>
+                  <li className="text-white/90 text-[1.19rem]">Schedule a free consultation to discover custom solutions for your business.</li>
                 </ul>
                 <div>
                   <Link
