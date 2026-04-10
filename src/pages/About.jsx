@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { motion } from 'motion/react'
-import { BookOpen, Clock, Shield, Users, DollarSign, TrendingUp, ArrowRight, Gem, Lock, UserCircle2, Key, Home, Printer, Settings, Network, Database, ShieldAlert, HardDrive, ArrowUpRight, ChevronDown,Phone, MonitorCloudIcon, Cpu, MonitorCheck, UsbIcon, Building, PrinterX, SlidersHorizontal, HardDriveDownload, Search, FileText, Wifi, CheckCircle2, Eye, Target } from 'lucide-react'
+import { motion, AnimatePresence } from 'motion/react'
+import { BookOpen, Clock, Shield, Users, DollarSign, TrendingUp, ArrowRight, Gem, Lock, UserCircle2, Key, Home, Printer, Settings, Network, Database, ShieldAlert, HardDrive, ArrowUpRight, ChevronDown,Phone, MonitorCloudIcon, Cpu, MonitorCheck, UsbIcon, Building, PrinterX, SlidersHorizontal, HardDriveDownload, Search, FileText, Wifi, CheckCircle2, Eye, Target, Plus } from 'lucide-react'
 import LogoLoop from '../components/LogoLoop'
 
 const About = () => {
@@ -634,40 +634,44 @@ offshore extension of your in-house team, not just a vendor.
                     <div
                       key={index}
                       className='bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-md transition-shadow'
+                      onMouseEnter={() => setOpenFaq(index)}
+                      onMouseLeave={() => setOpenFaq(null)}
                     >
                       <button
-                        onClick={() => toggleFaq(index)}
+                        onClick={() => setOpenFaq(openFaq === index ? null : index)}
                         className='w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-50 transition-colors'
                       >
                         <span className='text-base font-medium text-gray-900 pr-4'>
                           {faq.question}
                         </span>
                         <div className='shrink-0'>
-                          {openFaq === index ? (
-                            <div className='w-8 h-8 flex items-center justify-center text-[#015482]'>
-                              <svg width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2'>
-                                <line x1='5' y1='12' x2='19' y2='12' />
-                              </svg>
-                            </div>
-                          ) : (
-                            <div className='w-8 h-8 bg-[#17D3CF] rounded-full flex items-center justify-center'>
-                              <svg width='16' height='16' viewBox='0 0 16 16' fill='none' stroke='white' strokeWidth='2'>
-                                <line x1='8' y1='3' x2='8' y2='13' />
-                                <line x1='3' y1='8' x2='13' y2='8' />
-                              </svg>
-                            </div>
-                          )}
+                          <motion.div
+                            animate={{ 
+                              backgroundColor: openFaq === index ? '#17D3CF' : '#015482',
+                              rotate: openFaq === index ? 45 : 0
+                            }}
+                            transition={{ duration: 0.3 }}
+                            className='w-8 h-8 bg-[#015482] rounded-full flex items-center justify-center'
+                          >
+                            <Plus className='w-5 h-5 text-white' strokeWidth={2.5} />
+                          </motion.div>
                         </div>
                       </button>
-                      <div
-                        className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                          openFaq === index ? 'max-h-96' : 'max-h-0'
-                        }`}
-                      >
-                        <div className='px-6 pb-5 pt-2 text-gray-600 text-sm leading-relaxed border-t border-gray-100'>
-                          {faq.answer}
-                        </div>
-                      </div>
+                      <AnimatePresence>
+                        {openFaq === index && (
+                          <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: 'auto', opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.3 }}
+                            className='overflow-hidden'
+                          >
+                            <div className='px-6 pb-5 pt-2 text-gray-600 text-sm leading-relaxed border-t border-gray-100'>
+                              {faq.answer}
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
                     </div>
                   ))}
                 </motion.div>
