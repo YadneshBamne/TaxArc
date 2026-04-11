@@ -56,7 +56,7 @@ const NewTaxation = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.05 }}
-              className='flex flex-col items-center gap-3 bg-white border border-gray-200 rounded-2xl px-10 py-8 w-full sm:w-auto hover:shadow-lg hover:border-[#015482]/40 transition-all duration-300'
+              className='flex flex-col items-center gap-3 bg-white border border-gray-200 rounded-2xl px-10 py-8 w-64 h-48 hover:shadow-lg hover:border-[#015482]/40 transition-all duration-300'
             >
               <div className='w-14 h-14 rounded-full bg-[#015482]/10 flex items-center justify-center'>
                 <svg xmlns="http://www.w3.org/2000/svg" className='w-7 h-7 text-[#015482]' viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -77,7 +77,7 @@ const NewTaxation = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className='flex flex-col items-center gap-3 bg-white border border-gray-200 rounded-2xl px-10 py-8 w-full sm:w-auto hover:shadow-lg hover:border-[#015482]/40 transition-all duration-300'
+              className='flex flex-col items-center gap-3 bg-white border border-gray-200 rounded-2xl px-10 py-8 w-64 h-48 hover:shadow-lg hover:border-[#015482]/40 transition-all duration-300'
             >
               <div className='w-14 h-14 rounded-full bg-[#015482]/10 flex items-center justify-center'>
                 <svg xmlns="http://www.w3.org/2000/svg" className='w-7 h-7 text-[#015482]' viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

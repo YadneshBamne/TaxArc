@@ -56,8 +56,8 @@ const BookkeepingAccounting = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="px-6 sm:px-8 md:px-12 py-8 md:py-12 rounded-2xl inline-block max-w-2xl">
-              <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 sm:mb-6">
+            <div className="px-6 sm:px-8 md:px-12 py-8 md:py-12 rounded-2xl inline-block max-w-6xl">
+              <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 sm:mb-6 md:whitespace-nowrap text-center">
                 Accounting & Bookkeeping
               </h1>
               <div className="w-16 h-px bg-white/60 mx-auto mb-2" />
@@ -95,7 +95,7 @@ const BookkeepingAccounting = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.05 }}
-              className="flex flex-col items-center gap-3 bg-white border border-gray-200 rounded-2xl px-10 py-8 w-full sm:w-auto hover:shadow-lg hover:border-[#015482]/40 transition-all duration-300"
+              className="flex flex-col items-center gap-3 bg-white border border-gray-200 rounded-2xl px-10 py-8 w-64 h-48 hover:shadow-lg hover:border-[#015482]/40 transition-all duration-300"
             >
               <div className="w-14 h-14 rounded-full bg-[#015482]/10 flex items-center justify-center">
                 <svg
@@ -129,7 +129,7 @@ const BookkeepingAccounting = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="flex flex-col items-center gap-3 bg-white border border-gray-200 rounded-2xl px-10 py-8 w-full sm:w-auto hover:shadow-lg hover:border-[#015482]/40 transition-all duration-300"
+              className="flex flex-col items-center gap-3 bg-white border border-gray-200 rounded-2xl px-10 py-8 w-64 h-48 hover:shadow-lg hover:border-[#015482]/40 transition-all duration-300"
             >
               <div className="w-14 h-14 rounded-full bg-[#015482]/10 flex items-center justify-center">
                 <svg
@@ -163,7 +163,7 @@ const BookkeepingAccounting = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.15 }}
-              className='flex flex-col items-center gap-3 bg-white border border-gray-200 rounded-2xl px-10 py-8 w-full sm:w-auto hover:shadow-lg hover:border-[#015482]/40 transition-all duration-300'
+              className='flex flex-col items-center gap-3 bg-white border border-gray-200 rounded-2xl px-10 py-8 w-64 h-48 hover:shadow-lg hover:border-[#015482]/40 transition-all duration-300'
             >
               <div className='w-14 h-14 rounded-full bg-[#015482]/10 flex items-center justify-center'>
                 <svg xmlns="http://www.w3.org/2000/svg" className='w-7 h-7 text-[#015482]' viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -191,7 +191,7 @@ const BookkeepingAccounting = () => {
               transition={{ duration: 0.6 }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 md:whitespace-nowrap">
                 Our Accounting & Bookkeeping{" "}
                 <span className="text-[#015482] italic font-inter">
                   Services
