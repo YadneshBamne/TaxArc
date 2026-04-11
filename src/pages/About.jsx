@@ -274,14 +274,12 @@ offshore extension of your in-house team, not just a vendor.
                   Beyond strategy, his mentorship shapes the firm's culture. He instills the values of integrity, accountability, and long-term client stewardship—principles that define TaxArc Global's approach to serving international partners. His presence adds institutional maturity, reinforces credibility, and ensures that the firm evolves with stability, clarity, and professional conviction.
                 </p>
 
-                <p className='font-semibold text-gray-900 text-[1.19rem] mt-6'>
-                  Trusted Advisor. Strategic Architect. Mentor Behind the Mission.
-                </p>
+
               </div>
             </motion.div>
           </div>
         </div>
-      </section>
+      </section>  
 
       {/* Vision & Mission Section */}
       <section className='md:py-4 bg-gray-50'>

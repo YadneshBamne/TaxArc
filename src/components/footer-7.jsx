@@ -90,7 +90,7 @@ export const Footer7 = ({
             <Link to={logo.url} className="flex items-center space-x-2">
               <img src={logo.src} alt={logo.alt} className="h-28 w-auto" />
             </Link>
-            <p className="text-[1] text-gray-600 leading-relaxed">
+            <p className="text-[1] leading-relaxed">
               {description}
             </p>
             <ul className="flex items-center space-x-6 text-gray-600">
@@ -106,10 +106,10 @@ export const Footer7 = ({
           <div className="grid w-full gap-8 md:grid-cols-3 lg:gap-12">
             {sections.map((section, sectionIdx) => (
               <div key={sectionIdx}>
-                <h3 className="mb-4 font-bold text-gray-900">{section.title}</h3>
-                <ul className="space-y-3 text-sm text-gray-600">
+                <h3 className="mb-4 text-[1] leading-relaxed">{section.title}</h3>
+                <ul className="space-y-3 text-[1] leading-relaxed">
                   {section.links.map((link, linkIdx) => (
-                    <li key={linkIdx} className="font-medium hover:text-[#17D3CF] transition-colors">
+                    <li key={linkIdx} className=" hover:text-[#17D3CF] transition-colors">
                       {link.icon ? (
                         <a href={link.href} className="flex items-start gap-2" target={link.href.startsWith('http') ? "_blank" : undefined} rel={link.href.startsWith('http') ? "noopener noreferrer" : undefined}>
                           <span className="text-[#015482] mt-0.5">{link.icon}</span>

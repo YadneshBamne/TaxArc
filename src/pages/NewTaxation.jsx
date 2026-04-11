@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'motion/react'
 import { Link } from 'react-router-dom'
-  import { FileText, ArrowUpRight, ArrowLeftRight, Settings, Sparkles, CreditCard, TrendingUp, Database, Building2, CheckCircle2, Clock, BarChart3, Layers, Banknote, LandmarkIcon, BookUser, DollarSign, ChartBarBigIcon, SparkleIcon, Zap, LockIcon, HandshakeIcon, Clock10, Globe, RotateCcw, ClipboardList, Monitor } from 'lucide-react'
+  import { FileText, ArrowUpRight, ArrowLeftRight, Settings, Sparkles, CreditCard, TrendingUp, Database, Building2, CheckCircle2, Clock, BarChart3, Layers, Banknote, LandmarkIcon, BookUser, DollarSign, ChartBarBigIcon, SparkleIcon, Zap, LockIcon, HandshakeIcon, Clock10, Globe, RotateCcw, ClipboardList, Monitor, Handshake, Receipt, CalendarDays, Clock3, Scale, SlidersHorizontal, CheckCheck, Workflow, Laptop } from 'lucide-react'
 
 const NewTaxation = () => {
   return (
@@ -22,12 +22,12 @@ const NewTaxation = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <div className=' px-6 sm:px-8 md:px-12 py-8 md:py-12 rounded-2xl inline-block max-w-2xl'>
+      <div className=' px-6 sm:px-8 md:px-12 py-8 md:py-12 rounded-2xl inline-block max-w-5xl'>
         <h1 className='text-4xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold  text-white mb-4 sm:mb-6'>
           Tax Preparation
         </h1>
         <div className='w-16 h-px bg-white/60 mx-auto mb-2' />
-        <p className='text-xl sm:text-lg md:text-xl lg:text-xl text-white font-bold leading-relaxed'>
+        <p className='text-[1.19rem] text-white font-bold leading-relaxed'>
           Reliable Outsourced Tax Preparation. Delivered to Your Standards. On Your Timeline.
         </p>
       </div>
@@ -93,23 +93,7 @@ const NewTaxation = () => {
             <span className='hidden sm:block text-gray-300 text-3xl font-light'>·</span>
 
             {/* Small-to-Mid Businesses */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.15 }}
-              className='flex flex-col items-center gap-3 bg-white border border-gray-200 rounded-2xl px-10 py-8 w-full sm:w-auto hover:shadow-lg hover:border-[#015482]/40 transition-all duration-300'
-            >
-              <div className='w-14 h-14 rounded-full bg-[#015482]/10 flex items-center justify-center'>
-                <svg xmlns="http://www.w3.org/2000/svg" className='w-7 h-7 text-[#015482]' viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="2" y="3" width="20" height="14" rx="2"/>
-                  <path d="M8 21h8M12 17v4"/>
-                </svg>
-              </div>
-              <div className='text-center'>
-                <p className='text-[1.19rem] font-bold text-gray-900'>Small and midsized <br/>business</p>
-              </div>
-            </motion.div>
+
 
           </div>
         </div>
@@ -130,7 +114,7 @@ const NewTaxation = () => {
               <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-6'>
                Our Tax Preparation <span className='text-[#015482] italic font-inter'>Services</span>
               </h2>
-              <p className='text-[1.19rem] md:text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto'>
+              <p className='text-[1.19rem] text-gray-700 leading-relaxed max-w-4xl mx-auto'>
                 Our process is built around accuracy, reliability, and confidentiality. You remain the
 firm of record —client-facing and in control. We work in the background, preparing
 returns to your specifications, using your preferred software, and delivering work that
@@ -153,7 +137,7 @@ is ready for your review.
                   <FileText className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
                 <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug'>Individual Tax Returns (Form 1040)</h3>
-                <p className='text-sm text-gray-500 leading-relaxed'>
+                <p className='text-lg text-gray-500 leading-relaxed'>
                  Preparation of federal individual returns including
 Schedules A, B, C, D, and E, delivered review-ready
 for your sign-off.
@@ -172,7 +156,7 @@ for your sign-off.
                   <Building2 className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
                 <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug'>S-Corporation Returns (Form 1120-S)</h3>
-                <p className='text-sm text-gray-500 leading-relaxed'>
+                <p className='text-lg  text-gray-500 leading-relaxed'>
                  Full preparation of S-Corp returns including K-1
 schedules, ready for partner or shareholder
 distribution.
@@ -188,10 +172,10 @@ distribution.
                 className='group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:border-[#015482]/40 transition-all duration-300'
               >
                 <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
-                  <Globe className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
+                  <Handshake className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
                 <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug'>Partnership Returns (Form 1065)</h3>
-                <p className='text-sm text-gray-500 leading-relaxed'>
+                <p className='text-lg  text-gray-500 leading-relaxed'>
                   Partnership return preparation with K-1 allocations
 prepared to your firm's specifications.
                 </p>
@@ -210,7 +194,7 @@ prepared to your firm's specifications.
                 </div>
                 <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug'>C-Corporation
 Returns (Form 1120)</h3>
-                <p className='text-sm text-gray-500 leading-relaxed'>
+                <p className='text-lg  text-gray-500 leading-relaxed'>
                   Corporate return preparation including depreciation
 schedules and supporting workpapers.
                 </p>
@@ -225,10 +209,10 @@ schedules and supporting workpapers.
                 className='group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:border-[#015482]/40 transition-all duration-300'
               >
                 <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
-                  <Clock className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
+                  <Receipt className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
                 <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug'>Payroll Tax Returns</h3>
-                <p className='text-sm text-gray-500 leading-relaxed'>
+                <p className='text-lg  text-gray-500 leading-relaxed'>
                   Preparation of Form 941, Form 940, and supporting
 payroll tax reconciliations on a quarterly and annual
 basis.
@@ -244,10 +228,10 @@ basis.
                 className='group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:border-[#015482]/40 transition-all duration-300'
               >
                 <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
-                  <RotateCcw className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
+                  <CalendarDays className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
                 <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug'>Year-End Reporting</h3>
-                <p className='text-sm text-gray-500 leading-relaxed'>
+                <p className='text-lg  text-gray-500 leading-relaxed'>
                   W-2 and 1099-NEC preparation for your clients'
 employees and contractors, review-ready for filing.
                 </p>
@@ -262,11 +246,11 @@ employees and contractors, review-ready for filing.
                 className='group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:border-[#015482]/40 transition-all duration-300'
               >
                 <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
-                  <ClipboardList className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
+                  <Clock3 className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
                 <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug'>Extensions &
 Estimates</h3>
-                <p className='text-sm text-gray-500 leading-relaxed'>
+                <p className='text-lg  text-gray-500 leading-relaxed'>
                   Preparation of Form 4868, Form 7004, and quarterly
 estimated tax calculations as needed.
                 </p>
@@ -281,11 +265,11 @@ estimated tax calculations as needed.
                 className='group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:border-[#015482]/40 transition-all duration-300'
               >
                 <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
-                  <Monitor className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
+                  <Scale className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
                 <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug'>Bookkeeping & Trial
 Balance Support</h3>
-                <p className='text-sm text-gray-500 leading-relaxed'>
+                <p className='text-lg  text-gray-500 leading-relaxed'>
                   Cleanup and preparation of books to trial balance
 stage, ready for tax return preparation.
                 </p>
@@ -350,7 +334,7 @@ stage, ready for tax return preparation.
               {/* Benefit 3 */}
               <div className='flex items-start gap-4'>
                 <div className='w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <Clock10 className='w-6 h-6 text-[#015482]' />
+                  <Zap className='w-6 h-6 text-[#015482]' />
                 </div>
                 <div>
                   <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2'>Faster turnaround</h3>
@@ -363,7 +347,7 @@ stage, ready for tax return preparation.
               {/* Benefit 4 */}
               <div className='flex items-start gap-4'>
                 <div className='w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <HandshakeIcon className='w-6 h-6 text-[#015482]' />
+                  <SlidersHorizontal className='w-6 h-6 text-[#015482]' />
                 </div>
                 <div>
                   <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2'>Flexible engagement</h3>
@@ -376,7 +360,7 @@ stage, ready for tax return preparation.
               {/* Benefit 5 */}
               <div className='flex items-start gap-4'>
                 <div className='w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <CheckCircle2 className='w-6 h-6 text-[#015482]' />
+                  <CheckCheck className='w-6 h-6 text-[#015482]' />
                 </div>
                 <div>
                   <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2'>Consistent quality</h3>
@@ -388,7 +372,7 @@ stage, ready for tax return preparation.
 
                             <div className='flex items-start gap-4'>
                 <div className='w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <CheckCircle2 className='w-6 h-6 text-[#015482]' />
+                  <Laptop className='w-6 h-6 text-[#015482]' />
                 </div>
                 <div>
                   <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2'>Software Flexibility</h3>

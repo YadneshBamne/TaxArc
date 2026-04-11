@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'motion/react'
 import { Link } from 'react-router-dom'
-import { FileText, ArrowUpRight, ArrowLeftRight, Settings, Sparkles, CreditCard, TrendingUp, Database, Building2, CheckCircle2, Clock, BarChart3, Layers, Banknote, LandmarkIcon, BookUser, DollarSign, ChartBarBigIcon, SparkleIcon, Zap, Globe, UserPlus, Receipt, Briefcase, Handshake, DatabaseIcon, GlobeX, Globe2, UserIcon } from 'lucide-react'
+import { FileText, ArrowUpRight, ArrowLeftRight, Settings, Sparkles, CreditCard, TrendingUp, Database, Building2, CheckCircle2, Clock, BarChart3, Layers, Banknote, LandmarkIcon, BookUser, DollarSign, ChartBarBigIcon, SparkleIcon, Zap, Globe, UserPlus, Receipt, Briefcase, Handshake, DatabaseIcon, GlobeX, Globe2, UserIcon, RefreshCcw, ShieldCheck, MapPinned, FileBadge, EyeOff, BadgeCheck, CheckCircle, GitMerge, Gauge, Smile, SlidersVertical } from 'lucide-react'
 
 const NewPayroll = () => {
   return (
@@ -28,7 +28,7 @@ const NewPayroll = () => {
         </h1>
         <div className='w-16 h-px bg-white/60 mx-auto mb-2' />
         <p className='text-[1.19rem] text-white font-bold leading-relaxed'>
-          Every Employee Paid Right.<br />Every Obligation Met.
+          Every Employee Paid Right. Every Obligation Met.
         </p>
       </div>
     </motion.div>
@@ -149,7 +149,7 @@ const NewPayroll = () => {
                 className='group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:border-[#015482]/40 transition-all duration-300'
               >
                 <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
-                  <Briefcase className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
+                  <RefreshCcw className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
                 <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug'>Full-Cycle Payroll Processing</h3>
                 <p className='text-lg text-gray-500 leading-relaxed'>
@@ -166,7 +166,7 @@ const NewPayroll = () => {
                 className='group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:border-[#015482]/40 transition-all duration-300'
               >
                 <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
-                  <FileText className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
+                  <ShieldCheck className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
                 <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug'>Federal Payroll Tax Compliance</h3>
                 <p className='text-lg text-gray-500 leading-relaxed'>
@@ -183,7 +183,7 @@ const NewPayroll = () => {
                 className='group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:border-[#015482]/40 transition-all duration-300'
               >
                 <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
-                  <Globe className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
+                  <MapPinned className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
                 <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug'>State & Local Payroll Tax Filings</h3>
                 <p className='text-lg text-gray-500 leading-relaxed'>
@@ -200,7 +200,7 @@ const NewPayroll = () => {
                 className='group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:border-[#015482]/40 transition-all duration-300'
               >
                 <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
-                  <LandmarkIcon className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
+                  <FileBadge className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
                 <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug'>W-2 & 1099 Preparation</h3>
                 <p className='text-lg text-gray-500 leading-relaxed'>
@@ -217,7 +217,7 @@ const NewPayroll = () => {
                 className='group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:border-[#015482]/40 transition-all duration-300'
               >
                 <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
-                  <UserPlus className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
+                  <BarChart3 className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
                 <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug'>Payroll Reporting</h3>
                 <p className='text-lg text-gray-500 leading-relaxed'>
@@ -234,7 +234,7 @@ Payroll registers, liability summaries, and reconciliation reports delivered rea
                 className='group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:border-[#015482]/40 transition-all duration-300'
               >
                 <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
-                  <Database className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
+                  <EyeOff className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
                 <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug'>White-Label Payroll Support</h3>
                 <p className='text-lg text-gray-500 leading-relaxed'>
@@ -252,7 +252,7 @@ Payroll registers, liability summaries, and reconciliation reports delivered rea
                 className='group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:border-[#015482]/40 transition-all duration-300'
               >
                 <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
-                  <Handshake className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
+                  <BadgeCheck className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
                 </div>
                 <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug'>White-Label Payroll for Firms</h3>
                 <p className='text-lg text-gray-500 leading-relaxed'>
@@ -293,7 +293,7 @@ Payroll registers, liability summaries, and reconciliation reports delivered rea
               {/* Benefit 1 */}
               <div className='flex items-start gap-4'>
                 <div className='w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <Clock className='w-6 h-6 text-[#015482]' />
+                  <CheckCircle className='w-6 h-6 text-[#015482]' />
                 </div>
                 <div>
                   <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2'>Timely compliance</h3>
@@ -306,7 +306,7 @@ Payroll registers, liability summaries, and reconciliation reports delivered rea
               {/* Benefit 2 */}
               <div className='flex items-start gap-4'>
                 <div className='w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <DatabaseIcon className='w-6 h-6 text-[#015482]' />
+                  <GitMerge className='w-6 h-6 text-[#015482]' />
                 </div>
                 <div>
                   <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2'>Seamless GL integration</h3>
@@ -319,7 +319,7 @@ Payroll registers, liability summaries, and reconciliation reports delivered rea
               {/* Benefit 3 */}
               <div className='flex items-start gap-4'>
                 <div className='w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <CheckCircle2 className='w-6 h-6 text-[#015482]' />
+                  <Gauge className='w-6 h-6 text-[#015482]' />
                 </div>
                 <div>
                   <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2'>Operational efficiency</h3>
@@ -345,7 +345,7 @@ Payroll registers, liability summaries, and reconciliation reports delivered rea
               {/* Benefit 5 */}
               <div className='flex items-start gap-4'>
                 <div className='w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <UserIcon className='w-6 h-6 text-[#015482]' />
+                  <Smile className='w-6 h-6 text-[#015482]' />
                 </div>
                 <div>
                   <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2'>Employee and client confidence</h3>
@@ -356,7 +356,7 @@ Payroll registers, liability summaries, and reconciliation reports delivered rea
               </div>
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center">
-                  <CheckCircle2 className="w-6 h-6 text-[#015482]" />
+                  <SlidersVertical className="w-6 h-6 text-[#015482]" />
                 </div>
                 <div>
                   <h3 className="text-[1.19rem] font-bold text-gray-900 mb-2">

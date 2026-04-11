@@ -23,6 +23,15 @@ import {
   SparkleIcon,
   Zap,
   RotateCcw,
+  FileCheck,
+  Timer,
+  Calculator,
+  SlidersHorizontal,
+  CalendarCheck,
+  Brush,
+  CheckSquare,
+  ListTree,
+  BadgeCheck,
 } from "lucide-react";
 
 const BookkeepingAccounting = () => {
@@ -149,34 +158,23 @@ const BookkeepingAccounting = () => {
             </span>
 
             {/* Small-to-Mid Businesses */}
-            {/* <motion.div
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.15 }}
-              className="flex flex-col items-center gap-3 bg-white border border-gray-200 rounded-2xl px-10 py-8 w-full sm:w-auto hover:shadow-lg hover:border-[#015482]/40 transition-all duration-300"
+              className='flex flex-col items-center gap-3 bg-white border border-gray-200 rounded-2xl px-10 py-8 w-full sm:w-auto hover:shadow-lg hover:border-[#015482]/40 transition-all duration-300'
             >
-              <div className="w-14 h-14 rounded-full bg-[#015482]/10 flex items-center justify-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-7 h-7 text-[#015482]"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <rect x="2" y="3" width="20" height="14" rx="2" />
-                  <path d="M8 21h8M12 17v4" />
+              <div className='w-14 h-14 rounded-full bg-[#015482]/10 flex items-center justify-center'>
+                <svg xmlns="http://www.w3.org/2000/svg" className='w-7 h-7 text-[#015482]' viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2"/>
+                  <path d="M8 21h8M12 17v4"/>
                 </svg>
               </div>
-              <div className="text-center">
-                <p className="text-base font-bold text-gray-900">
-                  Small and midsized <br /> business
-                </p>
+              <div className='text-center'>
+                <p className='text-[1.19rem] font-bold text-gray-900'>Small and midsized <br/>business</p>
               </div>
-            </motion.div> */}
+            </motion.div>
           </div>
         </div>
       </section>
@@ -221,7 +219,7 @@ const BookkeepingAccounting = () => {
                 className="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:border-[#015482]/40 transition-all duration-300"
               >
                 <div className="w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300">
-                  <FileText className="w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300" />
+                  <CalendarCheck className="w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300" />
                 </div>
                 <h3 className="text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug">
                   Monthly Bookkeeping
@@ -242,7 +240,7 @@ const BookkeepingAccounting = () => {
                 className="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:border-[#015482]/40 transition-all duration-300"
               >
                 <div className="w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300">
-                  <RotateCcw className="w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300" />
+                  <Brush className="w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300" />
                 </div>
                 <h3 className="text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug">
                   Catch-Up & Clean-Up Accounting
@@ -262,7 +260,7 @@ const BookkeepingAccounting = () => {
                 className="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:border-[#015482]/40 transition-all duration-300"
               >
                 <div className="w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300">
-                  <BarChart3 className="w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300" />
+                  <FileText className="w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300" />
                 </div>
                 <h3 className="text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug">
                   Financial Statement Preparation
@@ -283,7 +281,7 @@ const BookkeepingAccounting = () => {
                 className="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:border-[#015482]/40 transition-all duration-300"
               >
                 <div className="w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300">
-                  <Clock className="w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300" />
+                  <CheckSquare className="w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300" />
                 </div>
                 <h3 className="text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug">
                   Month-End & Year-End Close
@@ -303,7 +301,7 @@ const BookkeepingAccounting = () => {
                 className="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:border-[#015482]/40 transition-all duration-300"
               >
                 <div className="w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300">
-                  <CreditCard className="w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300" />
+                  <ArrowLeftRight className="w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300" />
                 </div>
                 <h3 className="text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug">
                   Accounts Payable & Receivable
@@ -323,7 +321,7 @@ const BookkeepingAccounting = () => {
                 className="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:border-[#015482]/40 transition-all duration-300"
               >
                 <div className="w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300">
-                  <Layers className="w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300" />
+                  <ListTree className="w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300" />
                 </div>
                 <h3 className="text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug">
                   Chart of Accounts Setup
@@ -363,7 +361,7 @@ const BookkeepingAccounting = () => {
                 className="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:border-[#015482]/40 transition-all duration-300"
               >
                 <div className="w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300">
-                  <Building2 className="w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300" />
+                  <BadgeCheck className="w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300" />
                 </div>
                 <h3 className="text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug">
                   White-Label Bookkeeping for Firms
@@ -409,7 +407,7 @@ const BookkeepingAccounting = () => {
               {/* Benefit 1 */}
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center">
-                  <CheckCircle2 className="w-6 h-6 text-[#015482]" />
+                  <FileCheck className="w-6 h-6 text-[#015482]" />
                 </div>
                 <div>
                   <h3 className="text-[1.19rem] font-bold text-gray-900 mb-2">
@@ -425,7 +423,7 @@ const BookkeepingAccounting = () => {
               {/* Benefit 2 */}
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center">
-                  <Clock className="w-6 h-6 text-[#015482]" />
+                  <Timer className="w-6 h-6 text-[#015482]" />
                 </div>
                 <div>
                   <h3 className="text-[1.19rem] font-bold text-gray-900 mb-2">
@@ -441,7 +439,7 @@ const BookkeepingAccounting = () => {
               {/* Benefit 3 */}
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center">
-                  <FileText className="w-6 h-6 text-[#015482]" />
+                  <Calculator className="w-6 h-6 text-[#015482]" />
                 </div>
                 <div>
                   <h3 className="text-[1.19rem] font-bold text-gray-900 mb-2">
@@ -487,7 +485,7 @@ const BookkeepingAccounting = () => {
               </div>
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center">
-                  <CheckCircle2 className="w-6 h-6 text-[#015482]" />
+                  <SlidersHorizontal className="w-6 h-6 text-[#015482]" />
                 </div>
                 <div>
                   <h3 className="text-[1.19rem] font-bold text-gray-900 mb-2">
