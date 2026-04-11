@@ -262,7 +262,7 @@ ${servicesText}`;
   />
 
   {/* Cyan dim overlay */}
-  <div className="absolute inset-0 bg-[#1878AB]/30" />
+  <div className="absolute inset-0 bg-[#1878AB]/50" />
 
   <div className="container mx-auto px-4 sm:px-6 md:px-8 relative z-10">
     <motion.div
