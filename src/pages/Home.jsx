@@ -37,7 +37,7 @@ const services = [
   {
     title: "ACCOUNTING &\nBOOKKEEPING",
     description:
-      "US GAAP-compliant bookkeeping and accounting for firms and businesses. From daily books to year-end reporting, we handle number so you focus on growth.",
+      "U.S. GAAP-compliant bookkeeping and accounting for firms and businesses. From daily books to year-end reporting, we handle number so you focus on growth.",
     link: "/accounting-bookkeeping",
     img: "/7.png",
   },

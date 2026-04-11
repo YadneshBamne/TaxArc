@@ -172,7 +172,7 @@ const BookkeepingAccounting = () => {
                 </svg>
               </div>
               <div className='text-center'>
-                <p className='text-[1.19rem] font-bold text-gray-900'>Small and midsized <br/>business</p>
+                <p className='text-[1.19rem] font-bold text-gray-900'>Small & mid-size <br/>businesses</p>
               </div>
             </motion.div>
           </div>

@@ -44,7 +44,7 @@ const About = () => {
     <div className='page-sections w-full bg-white'>
 
       {/* About Us Section */}
- <section className='relative py-16 md:py-20 min-h-screen flex items-center justify-center'>
+ <section className='relative py-16 md:py-18 min-h-screen flex items-center justify-center'>
   <video
     className='absolute inset-0 w-full h-full object-cover'
     autoPlay
@@ -86,7 +86,7 @@ const About = () => {
 
 
       {/* Meet Our CEO Section */}
-      <section className='py-16 md:py-20'>
+      <section className='py-6 md:py-7'>
         <div className='container mx-auto px-4'>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -297,7 +297,7 @@ offshore extension of your in-house team, not just a vendor.
                   <Eye className='w-12 h-12 md:w-14 md:h-14' strokeWidth={1.8} />
                 </div>
                 <div className='h-96 bg-white border-2 border-dotted border-[#1f2937] rounded-[2.2rem] px-6 md:px-10 py-14 md:py-16 text-center flex flex-col items-center justify-center'>
-                  <h3 className='text-[#015482] text-4xl md:text-5xl font-bold tracking-[0.12em] mb-6'>VISION</h3>
+                  <h3 className='text-[#015482] text-4xl md:text-5xl font-bold mb-6'>Vision</h3>
                   <p className=' text-black leading-normal max-w-4xl text-[1.19rem] mx-auto'>
                     To be a globally trusted professional services partner, recognized for excellence in tax, accounting and bookkeeping operations, precision-driven execution, and uncompromising data security.
                   </p>
@@ -309,7 +309,7 @@ offshore extension of your in-house team, not just a vendor.
                   <Target className='w-12 h-12 md:w-14 md:h-14' strokeWidth={1.8} />
                 </div>
                 <div className='h-96 bg-white border-2 border-dotted border-[#1f2937] rounded-[2.2rem] px-6 md:px-10 py-14 md:py-16 text-center flex flex-col items-center justify-center'>
-                  <h3 className='text-[#015482] text-4xl md:text-5xl font-bold tracking-[0.12em] mb-6'>MISSION</h3>
+                  <h3 className='text-[#015482] text-4xl md:text-5xl font-bold mb-6'>Mission</h3>
                   <p className=' text-black leading-normal text-[1.19rem] max-w-4xl mx-auto'>
                     To deliver reliable, high-quality outsourced accounting and tax support, powered by qualified professionals, structured processes, intelligent technology and strict confidentiality.
                   </p>

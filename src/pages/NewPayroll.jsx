@@ -109,7 +109,7 @@ const NewPayroll = () => {
                   </svg>
                 </div>
                 <div className='text-center'>
-                  <p className='text-[1.19rem] font-bold text-gray-900'>Small and midsized <br/> business</p>
+                  <p className='text-[1.19rem] font-bold text-gray-900'>Small & mid-size <br/> businesses</p>
                 </div>
               </motion.div>
   
@@ -226,21 +226,6 @@ Payroll registers, liability summaries, and reconciliation reports delivered rea
               </motion.div>
 
               {/* Card 6 - W-2 & 1099 */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                className='group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:border-[#015482]/40 transition-all duration-300'
-              >
-                <div className='w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300'>
-                  <EyeOff className='w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300' />
-                </div>
-                <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug'>White-Label Payroll Support</h3>
-                <p className='text-lg text-gray-500 leading-relaxed'>
-                  All work prepared within your workflow and delivered under your firm's brand — invisible to your clients.
-                </p>
-              </motion.div>
 
 
               {/* Card 9 - White-Label Payroll for Firms */}
