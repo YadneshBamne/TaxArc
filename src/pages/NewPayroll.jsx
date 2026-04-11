@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'motion/react'
 import { Link } from 'react-router-dom'
-import { FileText, ArrowUpRight, ArrowLeftRight, Settings, Sparkles, CreditCard, TrendingUp, Database, Building2, CheckCircle2, Clock, BarChart3, Layers, Banknote, LandmarkIcon, BookUser, DollarSign, ChartBarBigIcon, SparkleIcon, Zap, Globe, UserPlus, Receipt, Briefcase, Handshake, DatabaseIcon, GlobeX, Globe2, UserIcon, RefreshCcw, ShieldCheck, MapPinned, FileBadge, EyeOff, BadgeCheck, CheckCircle, GitMerge, Gauge, Smile, SlidersVertical } from 'lucide-react'
+import { FileText, ArrowUpRight, ArrowLeftRight, Settings, Sparkles, CreditCard, TrendingUp, Database, Building2, CheckCircle2, Clock, BarChart3, Layers, Banknote, LandmarkIcon, BookUser, DollarSign, ChartBarBigIcon, SparkleIcon, Zap, Globe, UserPlus, Receipt, Briefcase, Handshake, DatabaseIcon, GlobeX, Globe2, UserIcon, RefreshCcw, ShieldCheck, MapPinned, FileBadge, EyeOff, BadgeCheck, CheckCircle, GitMerge, Gauge, Smile, SlidersVertical, Hand } from 'lucide-react'
 
 const NewPayroll = () => {
   return (
@@ -341,7 +341,7 @@ Payroll registers, liability summaries, and reconciliation reports delivered rea
               </div>
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center">
-                  <SlidersVertical className="w-6 h-6 text-[#015482]" />
+                  <Handshake className="w-6 h-6 text-[#015482]" />
                 </div>
                 <div>
                   <h3 className="text-[1.19rem] font-bold text-gray-900 mb-2">

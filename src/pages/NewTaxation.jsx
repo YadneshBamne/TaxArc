@@ -347,7 +347,7 @@ stage, ready for tax return preparation.
               {/* Benefit 4 */}
               <div className='flex items-start gap-4'>
                 <div className='w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center'>
-                  <SlidersHorizontal className='w-6 h-6 text-[#015482]' />
+                  <Handshake className='w-6 h-6 text-[#015482]' />
                 </div>
                 <div>
                   <h3 className='text-[1.19rem] font-bold text-gray-900 mb-2'>Flexible engagement</h3>

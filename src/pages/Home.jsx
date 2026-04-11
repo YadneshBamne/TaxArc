@@ -10,6 +10,7 @@ import {
   Users,
   TrendingUp,
   ArrowUpRight,
+  Handshake,
 } from "lucide-react";
 import { motion } from "motion/react";
 import { Accordion } from "../components";
@@ -392,7 +393,7 @@ const Home = () => {
             >
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center shrink-0">
-                  <Users className="w-6 h-6 text-[#015482]" />
+                  <Handshake className="w-6 h-6 text-[#015482]" />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-3">
