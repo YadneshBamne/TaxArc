@@ -343,21 +343,27 @@ export const LogoLoop = memo(
       [isVertical, scaleOnHover, renderItem]
     );
 
-    const logoLists = useMemo(
-      () =>
-        Array.from({ length: copyCount }, (_, copyIndex) => (
-          <ul
-            className={cx('flex items-center', isVertical && 'flex-col')}
-            key={`copy-${copyIndex}`}
-            role="list"
-            aria-hidden={copyIndex > 0}
-            ref={copyIndex === 0 ? seqRef : undefined}
-          >
-            {logos.map((item, itemIndex) => renderLogoItem(item, `${copyIndex}-${itemIndex}`))}
-          </ul>
-        )),
-      [copyCount, logos, renderLogoItem, isVertical]
-    );
+const logoLists = useMemo(
+  () => {
+    // Handle undefined, null, or empty logos array
+    if (!logos || !Array.isArray(logos) || logos.length === 0) return null;
+
+    return Array.from({ length: copyCount }, (_, copyIndex) => (
+      <ul
+        className={cx('flex items-center', isVertical && 'flex-col')}
+        key={`copy-${copyIndex}`}
+        role="list"
+        aria-hidden={copyIndex > 0}
+        ref={copyIndex === 0 ? seqRef : undefined}
+      >
+        {logos.map((item, itemIndex) =>
+          renderLogoItem(item, `${copyIndex}-${itemIndex}`)
+        )}
+      </ul>
+    ));
+  },
+  [copyCount, logos, renderLogoItem, isVertical]
+);
 
     const containerStyle = useMemo(
       () => ({

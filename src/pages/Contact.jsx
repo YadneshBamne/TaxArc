@@ -392,47 +392,7 @@ ${servicesText}`;
 
 
 
-      {/* <section className=" bg-white">
-        <div className="">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className=""
-          >
-
-            <div className="text-center">
-
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 px-4">
-                Book Your 30-Minute <span className="text-[#015482]">Consultation</span>
-              </h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto px-4">
-                Ready to discuss your tax, accounting, or payroll needs? Select a time that works for you. 
-                We'll set up a Google Meet link and send you all the details.
-              </p>
-            </div>
-
-            <div className="w-full max-w-[100vw] mx-auto relative min-h-125 flex items-center justify-center">
-              <InlineWidget 
-                url="https://calendly.com/yadnesh2105/30min" 
-                styles={{
-                  minHeight: '750px',
-                  width: '100%',
-                }}
-                pageSettings={{
-                  hideEventTypeDetails: false,
-                  hideLandingPageDetails: false,
-                  primaryColor: '015482',
-                  textColor: '111827',
-                }}
-              />
-            </div>
-
-
-          </motion.div>
-        </div>
-      </section> */}
+      
 
 
 

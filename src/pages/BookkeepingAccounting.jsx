@@ -4,38 +4,153 @@ import { Link } from "react-router-dom";
 import {
   FileText,
   ArrowUpRight,
-  ArrowLeftRight,
-  Settings,
-  Sparkles,
-  CreditCard,
-  TrendingUp,
-  Database,
-  Building2,
-  CheckCircle2,
-  Clock,
-  BarChart3,
-  Layers,
-  Banknote,
-  LandmarkIcon,
-  BookUser,
-  DollarSign,
-  ChartBarBigIcon,
-  SparkleIcon,
-  Zap,
-  RotateCcw,
-  FileCheck,
-  Timer,
-  Calculator,
-  SlidersHorizontal,
   CalendarCheck,
   Brush,
   CheckSquare,
+  RotateCcw,
   ListTree,
-  BadgeCheck,
+  Clock,
+  DollarSign,
+  TrendingUp,
+  BarChart3,
   Handshake,
+  CheckCircle,
+  Building,
+  Building2,
 } from "lucide-react";
+import { useSanityData } from "../hooks/useSanityData";
+import { ACCOUNTING_BOOKKEEPING_QUERY } from "../sanity/queries";
 
 const BookkeepingAccounting = () => {
+  // Fetch Accounting & Bookkeeping page data from Sanity
+  const { data: accountingData } = useSanityData(ACCOUNTING_BOOKKEEPING_QUERY);
+
+  // Icon mapping function
+  const getIcon = (iconName) => {
+    const icons = {
+      CalendarCheck,
+      Brush,
+      FileText,
+      CheckSquare,
+      RotateCcw,
+      ListTree,
+      Clock,
+      DollarSign,
+      TrendingUp,
+      BarChart3,
+      Handshake,
+      CheckCircle,
+      Building,
+      Building2,
+    };
+    return icons[iconName] || null;
+  };
+
+  // Hero section with fallback
+  const heroData = accountingData?.heroSection || {
+    heading: "Accounting & Bookkeeping",
+    subheading: "Precision accounting that powers better decisions.",
+    backgroundImage: "https://ik.imagekit.io/qxfudjvlf/taxarc/Accounting.jpeg",
+  };
+
+  // Who We Serve section with fallback
+  const whoWeServeData = accountingData?.whoWeServeSection || {
+    heading: "Who We Serve",
+    items: [
+      { icon: "Building", title: "CPA & EA Firms" },
+      { icon: "Building", title: "Accounting Practices" },
+      { icon: "Building2", title: "Small & mid-size businesses" },
+    ],
+  };
+
+  // Services section with fallback
+  const servicesData = accountingData?.servicesSection || {
+    heading: "Our Accounting & Bookkeeping Services",
+    subheading:
+      "We provide full-scope accounting support across QuickBooks Online, QuickBooks Desktop, Xero, and other major software. For accounting firms, we act as a white-label, back-office team handling the bookkeeping work you'd rather not staff internally. For businesses, we become your outsourced accounting department — managing everything from daily transactions to month-end close.",
+    services: [
+      {
+        icon: "CalendarCheck",
+        title: "Monthly Bookkeeping",
+        description:
+          "Transaction categorization, bank and credit card reconciliation, and ongoing ledger maintenance on a monthly basis.",
+      },
+      {
+        icon: "Brush",
+        title: "Catch-Up & Clean-Up Accounting",
+        description:
+          "Restoring and organizing months or years of disorganized or incomplete financial records to bring books current.",
+      },
+      {
+        icon: "FileText",
+        title: "Financial Statement Preparation",
+        description:
+          "Profit & Loss, Balance Sheet, and Cash Flow Statements prepared monthly, quarterly, or annually and ready for your review.",
+      },
+      {
+        icon: "CheckSquare",
+        title: "Month-End & Year-End Close",
+        description:
+          "Closing procedures including accruals, prepayments, depreciation schedules, and adjusting journal entries.",
+      },
+      {
+        icon: "RotateCcw",
+        title: "Accounts Payable & Receivable",
+        description:
+          "Invoice processing, aging analysis, collections follow-up, and payment tracking for better cash flow management.",
+      },
+      {
+        icon: "ListTree",
+        title: "Chart of Accounts Setup & Optimization",
+        description:
+          "Designing and optimizing account structures for QuickBooks, Xero, and other platforms to streamline reporting and compliance.",
+      },
+    ],
+  };
+
+  // Benefits section with fallback
+  const benefitsData = accountingData?.benefitsSection || {
+    heading: "Key Benefits",
+    benefits: [
+      {
+        icon: "Clock",
+        title: "Reclaim Your Time",
+        description:
+          "Stop spending hours on bookkeeping and accounting. Focus on growing your business or serving more clients.",
+      },
+      {
+        icon: "DollarSign",
+        title: "Reduce Costs",
+        description:
+          "Avoid the overhead of hiring and managing in-house accounting staff. Pay only for the services you need.",
+      },
+      {
+        icon: "TrendingUp",
+        title: "Gain Better Insights",
+        description:
+          "Access clean, organized financial data and timely reports to make informed business decisions.",
+      },
+      {
+        icon: "BarChart3",
+        title: "Scale with Confidence",
+        description:
+          "As your business grows, your accounting support grows with you without the strain of hiring and training.",
+      },
+      {
+        icon: "Handshake",
+        title: "Expert Support",
+        description:
+          "Leverage the experience of CPAs and accounting professionals without the full-time cost.",
+      },
+      {
+        icon: "CheckCircle",
+        title: "Compliance & Accuracy",
+        description:
+          "Ensure your books are maintained to the highest standards, ready for audits, loans, and tax filing.",
+      },
+    ],
+  };
+
   return (
     <div className="page-sections w-full bg-white">
       {/* Hero Section */}
@@ -43,8 +158,7 @@ const BookkeepingAccounting = () => {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage:
-              "url(https://ik.imagekit.io/qxfudjvlf/taxarc/Accounting.jpeg)",
+            backgroundImage: `url(${heroData?.backgroundImage})`,
           }}
         />
 
@@ -59,20 +173,16 @@ const BookkeepingAccounting = () => {
           >
             <div className="px-6 sm:px-8 md:px-12 py-8 md:py-12 rounded-2xl inline-block max-w-6xl">
               <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 sm:mb-6 md:whitespace-nowrap text-center">
-                Accounting & Bookkeeping
+                {heroData?.heading}
               </h1>
               <div className="w-16 h-px bg-white/60 mx-auto mb-2" />
               <p className="text-[1.19rem] text-white font-bold leading-relaxed">
-                Precision accounting that powers better decisions.
+                {heroData?.subheading}
               </p>
             </div>
           </motion.div>
         </div>
       </section>
-
-      {/* Quote Section */}
-
-      {/* Main Content Section */}
 
       {/* Who We Serve Section */}
       <section className="py-20 bg-gray-50 border-b border-gray-100">
@@ -85,97 +195,35 @@ const BookkeepingAccounting = () => {
             className="text-center mb-10"
           >
             <p className="text-3xl md:text-4xl font-inter  font-bold mb-2">
-              Who We <span className="text-[#015482] italic">Serve</span>
+              {whoWeServeData?.heading?.split(" ")[0]} {whoWeServeData?.heading?.split(" ").slice(1).join(" ") && <span className="text-[#015482] italic">{whoWeServeData.heading.split(" ").slice(1).join(" ")}</span>}
             </p>
           </motion.div>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 max-w-4xl mx-auto">
-            {/* CPA & EA Firms */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.05 }}
-              className="flex flex-col items-center gap-3 bg-white border border-gray-200 rounded-2xl px-10 py-8 w-64 h-48 hover:shadow-lg hover:border-[#015482]/40 transition-all duration-300"
-            >
-              <div className="w-14 h-14 rounded-full bg-[#015482]/10 flex items-center justify-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-7 h-7 text-[#015482]"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 flex-wrap max-w-6xl mx-auto">
+            {whoWeServeData?.items?.map((item, index) => (
+              <React.Fragment key={index}>
+                {index > 0 && <span className="hidden sm:block text-gray-300 text-3xl font-light">·</span>}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.05 }}
+                  className="flex flex-col items-center gap-3 bg-white border border-gray-200 rounded-2xl px-10 py-8 w-64 h-48 hover:shadow-lg hover:border-[#015482]/40 transition-all duration-300"
                 >
-                  <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
-                  <path d="M6 12v5c3 3 9 3 12 0v-5" />
-                </svg>
-              </div>
-              <div className="text-center">
-                <p className="text-[1.19rem] font-bold text-gray-900">
-                  CPA &amp; EA Firms
-                </p>
-              </div>
-            </motion.div>
-
-            <span className="hidden sm:block text-gray-300 text-3xl font-light">
-              ·
-            </span>
-
-            {/* Accounting Practices */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="flex flex-col items-center gap-3 bg-white border border-gray-200 rounded-2xl px-10 py-8 w-64 h-48 hover:shadow-lg hover:border-[#015482]/40 transition-all duration-300"
-            >
-              <div className="w-14 h-14 rounded-full bg-[#015482]/10 flex items-center justify-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-7 h-7 text-[#015482]"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
-                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
-                </svg>
-              </div>
-              <div className="text-center">
-                <p className="text-[1.19rem] font-bold text-gray-900">
-                  Accounting Practices
-                </p>
-              </div>
-            </motion.div>
-
-            <span className="hidden sm:block text-gray-300 text-3xl font-light">
-              ·
-            </span>
-
-            {/* Small-to-Mid Businesses */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.15 }}
-              className='flex flex-col items-center gap-3 bg-white border border-gray-200 rounded-2xl px-10 py-8 w-64 h-48 hover:shadow-lg hover:border-[#015482]/40 transition-all duration-300'
-            >
-              <div className='w-14 h-14 rounded-full bg-[#015482]/10 flex items-center justify-center'>
-                <svg xmlns="http://www.w3.org/2000/svg" className='w-7 h-7 text-[#015482]' viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="2" y="3" width="20" height="14" rx="2"/>
-                  <path d="M8 21h8M12 17v4"/>
-                </svg>
-              </div>
-              <div className='text-center'>
-                <p className='text-[1.19rem] font-bold text-gray-900'>Small & mid-size <br/>businesses</p>
-              </div>
-            </motion.div>
+                  <div className="w-14 h-14 rounded-full bg-[#015482]/10 flex items-center justify-center">
+                    {getIcon(item?.icon) ? React.createElement(getIcon(item?.icon), { className: "w-7 h-7 text-[#015482]" }) : (
+                      <svg xmlns="http://www.w3.org/2000/svg" className="w-7 h-7 text-[#015482]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <rect x="2" y="3" width="20" height="14" rx="2" />
+                        <path d="M8 21h8M12 17v4" />
+                      </svg>
+                    )}
+                  </div>
+                  <div className="text-center">
+                    <p className="text-[1.19rem] font-bold text-gray-900">{item?.title}</p>
+                  </div>
+                </motion.div>
+              </React.Fragment>
+            ))}
           </div>
         </div>
       </section>
@@ -192,317 +240,88 @@ const BookkeepingAccounting = () => {
               transition={{ duration: 0.6 }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 md:whitespace-nowrap">
-                Our Accounting & Bookkeeping{" "}
-                <span className="text-[#015482] italic font-inter">
-                  Services
-                </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                {servicesData?.heading?.split(" ")[0]} {servicesData?.heading?.split(" ").slice(1).join(" ") && <span className="text-[#015482] italic font-inter">{servicesData.heading.split(" ").slice(1).join(" ")}</span>}
               </h2>
               <p className="text-[1.19rem] text-gray-700 leading-relaxed max-w-4xl mx-auto">
-                We provide full-scope accounting support across QuickBooks
-                Online, QuickBooks Desktop, Xero, and other major software. For
-                accounting firms, we act as a white-label, back-office team
-                handling the bookkeeping work you'd rather not staff internally.
-                For businesses, we become your outsourced accounting department
-                — managing everything from daily transactions to month-end
-                close.
+                {servicesData?.subheading}
               </p>
             </motion.div>
 
             {/* Services Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-              {/* Card 1 - Monthly Bookkeeping */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.05 }}
-                className="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:border-[#015482]/40 transition-all duration-300"
-              >
-                <div className="w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300">
-                  <CalendarCheck className="w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300" />
-                </div>
-                <h3 className="text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug">
-                  Monthly Bookkeeping
-                </h3>
-                <p className="text-lg text-gray-500 leading-relaxed">
-                  Transaction categorization, bank and credit card
-                  reconciliation, and ongoing ledger maintenance on a monthly
-                  basis.
-                </p>
-              </motion.div>
-
-              {/* Card 2 - Catch-Up & Clean-Up */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                className="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:border-[#015482]/40 transition-all duration-300"
-              >
-                <div className="w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300">
-                  <Brush className="w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300" />
-                </div>
-                <h3 className="text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug">
-                  Catch-Up & Clean-Up Accounting
-                </h3>
-                <p className="text-lg text-gray-500 leading-relaxed">
-                  Restoring and organizing months or years of disorganized or
-                  incomplete financial records to bring books current.
-                </p>
-              </motion.div>
-
-              {/* Card 3 - Financial Statement Preparation */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.15 }}
-                className="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:border-[#015482]/40 transition-all duration-300"
-              >
-                <div className="w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300">
-                  <FileText className="w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300" />
-                </div>
-                <h3 className="text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug">
-                  Financial Statement Preparation
-                </h3>
-                <p className="text-lg text-gray-500 leading-relaxed">
-                  Profit & Loss, Balance Sheet, and Cash Flow Statements
-                  prepared monthly, quarterly, or annually and ready for your
-                  review.
-                </p>
-              </motion.div>
-
-              {/* Card 4 - Month-End & Year-End Close */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                className="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:border-[#015482]/40 transition-all duration-300"
-              >
-                <div className="w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300">
-                  <CheckSquare className="w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300" />
-                </div>
-                <h3 className="text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug">
-                  Month-End & Year-End Close
-                </h3>
-                <p className="text-lg text-gray-500 leading-relaxed">
-                  Closing procedures including accruals, prepayments,
-                  depreciation schedules, and adjusting journal entries.
-                </p>
-              </motion.div>
-
-              {/* Card 5 - Accounts Payable & Receivable */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.25 }}
-                className="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:border-[#015482]/40 transition-all duration-300"
-              >
-                <div className="w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300">
-                  <ArrowLeftRight className="w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300" />
-                </div>
-                <h3 className="text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug">
-                  Accounts Payable & Receivable
-                </h3>
-                <p className="text-lg text-gray-500 leading-relaxed">
-                  Invoice tracking, receivable aging reports, and AP/AR
-                  schedules prepared and delivered for your review.
-                </p>
-              </motion.div>
-
-              {/* Card 6 - Chart of Accounts */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                className="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:border-[#015482]/40 transition-all duration-300"
-              >
-                <div className="w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300">
-                  <ListTree className="w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300" />
-                </div>
-                <h3 className="text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug">
-                  Chart of Accounts Setup
-                </h3>
-                <p className="text-lg text-gray-500 leading-relaxed">
-                  Designing or restructuring the chart of accounts to accurately
-                  reflect the client's business structure.
-                </p>
-              </motion.div>
-
-              {/* Card 7 - QuickBooks & Xero */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.35 }}
-                className="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:border-[#015482]/40 transition-all duration-300"
-              >
-                <div className="w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300">
-                  <Database className="w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300" />
-                </div>
-                <h3 className="text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug">
-                  QuickBooks & Xero Setup
-                </h3>
-                <p className="text-lg text-gray-500 leading-relaxed">
-                  New system setup, data migration, and integration support for
-                  QuickBooks and Xero environments.
-                </p>
-              </motion.div>
-
-              {/* Card 8 - White-Label Bookkeeping */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                className="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:border-[#015482]/40 transition-all duration-300"
-              >
-                <div className="w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300">
-                  <BadgeCheck className="w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300" />
-                </div>
-                <h3 className="text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug">
-                  White-Label Bookkeeping for Firms
-                </h3>
-                <p className="text-lg text-gray-500 leading-relaxed">
-                  Client bookkeeping fully prepared within your workflow and
-                  delivered under your firm's brand.
-                </p>
-              </motion.div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {servicesData?.services?.map((service, index) => {
+                const IconComponent = getIcon(service?.icon);
+                return (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.05 }}
+                    className="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:border-[#015482]/40 transition-all duration-300"
+                  >
+                    <div className="w-11 h-11 mb-4 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300">
+                      {IconComponent ? <IconComponent className="w-5 h-5 text-[#015482] group-hover:text-white transition-colors duration-300" /> : <div className="w-5 h-5" />}
+                    </div>
+                    <h3 className="text-[1.19rem] font-bold text-gray-900 mb-2 leading-snug">{service?.title}</h3>
+                    <p className="text-lg text-gray-500 leading-relaxed">
+                      {service?.description}
+                    </p>
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
         </div>
       </section>
 
       {/* Key Benefits Section */}
-      <section className="py-20">
+      <section className="py-20 bg-gray-50 border-b border-gray-100">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             {/* Header */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-center mb-16"
+              className="text-center mb-12"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-                Key{" "}
-                <span className="text-[#015482] italic font-inter">
-                  Benefits
-                </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                {benefitsData?.heading?.split(" ")[0]} {benefitsData?.heading?.split(" ").slice(1).join(" ") && <span className="text-[#015482] italic font-inter">{benefitsData.heading.split(" ").slice(1).join(" ")}</span>}
               </h2>
             </motion.div>
 
             {/* Benefits Grid */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12"
-            >
-              {/* Benefit 1 */}
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center">
-                  <FileCheck className="w-6 h-6 text-[#015482]" />
-                </div>
-                <div>
-                  <h3 className="text-[1.19rem] font-bold text-gray-900 mb-2">
-                    Audit-Ready Records
-                  </h3>
-                  <p className="text-lg text-gray-600">
-                    Well-maintained books that hold up under any compliance or
-                    due diligence review.
-                  </p>
-                </div>
-              </div>
-
-              {/* Benefit 2 */}
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center">
-                  <Timer className="w-6 h-6 text-[#015482]" />
-                </div>
-                <div>
-                  <h3 className="text-[1.19rem] font-bold text-gray-900 mb-2">
-                    Time-recovered
-                  </h3>
-                  <p className="text-lg text-gray-600">
-                    Daily tasks done efficiently so leadership can focus on
-                    strategy, not spreadsheets.
-                  </p>
-                </div>
-              </div>
-
-              {/* Benefit 3 */}
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center">
-                  <Calculator className="w-6 h-6 text-[#015482]" />
-                </div>
-                <div>
-                  <h3 className="text-[1.19rem] font-bold text-gray-900 mb-2">
-                    Tax-season efficiency
-                  </h3>
-                  <p className="text-lg text-gray-600">
-                    Organized records significantly reduce the time and cost of
-                    year-end tax preparation.
-                  </p>
-                </div>
-              </div>
-
-              {/* Benefit 4 */}
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center">
-                  <BarChart3 className="w-6 h-6 text-[#015482]" />
-                </div>
-                <div>
-                  <h3 className="text-[1.19rem] font-bold text-gray-900 mb-2">
-                    Decision-grade reporting
-                  </h3>
-                  <p className="text-lg text-gray-600">
-                    Management reports built for financial review — not just
-                    compliance.
-                  </p>
-                </div>
-              </div>
-
-              {/* Benefit 5 */}
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center">
-                  <Layers className="w-6 h-6 text-[#015482]" />
-                </div>
-                <div>
-                  <h3 className="text-[1.19rem] font-bold text-gray-900 mb-2">
-                    Scalable processes
-                  </h3>
-                  <p className="text-lg text-gray-600">
-                    We put in place the right structure so accounting doesn't
-                    slow down your own business.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 shrink-0 bg-[#17D3CF]/10 rounded-lg flex items-center justify-center">
-                  <Handshake className="w-6 h-6 text-[#015482]" />
-                </div>
-                <div>
-                  <h3 className="text-[1.19rem] font-bold text-gray-900 mb-2">
-                    Flexible Engagement Models
-                  </h3>
-                  <p className="text-lg text-gray-600">
-                    We offer flexible engagement structures — project-based, hourly, or dedicated support —
-allowing firms to scale assistance based on workload, seasonality, and specific engagement
-needs.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {benefitsData?.benefits?.map((benefit, index) => {
+                const IconComponent = getIcon(benefit?.icon);
+                return (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.05 }}
+                    className="group bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg hover:border-[#015482]/40 transition-all duration-300"
+                  >
+                    <div className="w-12 h-12 mb-5 bg-[#015482]/10 rounded-xl flex items-center justify-center group-hover:bg-[#015482] transition-colors duration-300">
+                      {IconComponent ? <IconComponent className="w-6 h-6 text-[#015482] group-hover:text-white transition-colors duration-300" /> : <div className="w-6 h-6" />}
+                    </div>
+                    <h3 className="text-[1.19rem] font-bold text-gray-900 mb-3">{benefit?.title}</h3>
+                    <p className="text-base text-gray-600 leading-relaxed">
+                      {benefit?.description}
+                    </p>
+                  </motion.div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
+
+      {/* CTA Section */}
       <section className="py-20 px-4 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -528,17 +347,14 @@ needs.
               <div className="relative z-10">
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">
                   Scale Smarter with
-                  <br />{" "}
-                  <span className="font-inter italic bg-white bg-clip-text text-transparent">
+                  <br /> <span className="font-inter italic bg-white bg-clip-text text-transparent">
                     Tax<span className="text-[#17D3CF]">Arc</span> Global
                   </span>
                   .
                 </h2>
 
                 <ul className="space-y-2 mb-10">
-                  <li className="text-white/90 text-[1.19rem]">
-                    Schedule a free consultation to discover custom solutions for your business.
-                  </li>
+                  <li className="text-white/90 text-[1.19rem]">Schedule a free consultation to discover custom solutions for your business.</li>
                 </ul>
                 <div>
                   <Link

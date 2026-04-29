@@ -20,6 +20,8 @@ import {
   CarouselItem,
 } from "../components/ui/carousel";
 import { LogoLoop } from "../components/LogoLoop";
+import { useSanityData } from "../hooks/useSanityData";
+import { HOME_QUERY } from "../sanity/queries";
 
 const arcImages = [
   "https://ik.imagekit.io/qxfudjvlf/taxarc/ACCURACY.jpeg",
@@ -27,32 +29,116 @@ const arcImages = [
   "https://ik.imagekit.io/qxfudjvlf/taxarc/PRIVACY.jpeg",
 ];
 
-const services = [
-  {
-    title: "TAX\nPREPARATION",
-    description:
-      "Accurate, IRS-compliant tax preparation for individuals and businesses. Scale your capacity during peak season with support from trained professionals.",
-    link: "/new-taxation",
-    img: "/6.png",
-  },
-  {
-    title: "ACCOUNTING &\nBOOKKEEPING",
-    description:
-      "U.S. GAAP-compliant bookkeeping and accounting for firms and businesses. From daily books to year-end reporting, we handle number so you focus on growth.",
-    link: "/accounting-bookkeeping",
-    img: "/7.png",
-  },
-  {
-    title: "PAYROLL\nSERVICES",
-    description:
-      "End-to-end payroll management aligned with US federal and state compliance. From processing to filings and year-end reporting, handled seamlessly.",
-    link: "/payroll",
-    img: "/8.png",
-  },
-];
-
 const Home = () => {
   const [carouselApi, setCarouselApi] = useState(null);
+  
+  // Fetch homepage data from Sanity (hero section)
+  const { data: homeData, loading: homeLoading } = useSanityData(HOME_QUERY);
+  
+  // Hero section with fallback
+  const heroData = homeData?.heroSection || {
+    heading: "Your Outsourced Professional Team for",
+    subheading: "U.S. Tax & Accounting Support",
+    ctaButtonText: "Connect with us",
+    ctaButtonLink: "/contact",
+    backgroundVideo: "./bannerr.mp4",
+  };
+
+  // Philosophy section with fallback
+  const philosophyData = homeData?.philosophySection || {
+    heading: "Our Philosophy",
+    acronym: "ARC",
+    description:
+      "At TaxArc Global, our name reflects the philosophy that guides everything we do - the ARC Framework. This framework defines how we deliver work, manage risk, and build long-term client partnerships. It shapes our processes, ensures accountability, and enables us to deliver the level of reliability and assurance expected by professionally managed organizations.",
+    values: [
+      {
+        title: "Accuracy",
+        description:
+          "In a compliance-driven and deadline-sensitive environment, precision is non-negotiable. We operate through structured workflows, standardized checklists, and multi-level quality reviews to ensure consistency at every point.",
+      },
+      {
+        title: "Reliability",
+        description:
+          "We understand that your business depends on consistent and dependable service. Our team is committed to delivering reliable results, meeting deadlines, and being there when you need us most. Your success is our priority, and we work tirelessly to ensure you can count on us.",
+      },
+      {
+        title: "Confidentiality",
+        description:
+          "Your financial information is sensitive and deserves the highest level of protection. We maintain strict confidentiality protocols and security measures to safeguard your data. Confidentiality is the foundation of our organization, and we take it seriously.",
+      },
+    ],
+  };
+
+  // Services section with fallback
+  const servicesSection = homeData?.servicesSection || {
+    heading: "Services",
+    services: [
+      {
+        title: "TAX\nPREPARATION",
+        description:
+          "Accurate, IRS-compliant tax preparation for individuals and businesses. Scale your capacity during peak season with support from trained professionals.",
+        link: "/new-taxation",
+        image: { asset: { url: "/6.png" } },
+      },
+      {
+        title: "ACCOUNTING &\nBOOKKEEPING",
+        description:
+          "U.S. GAAP-compliant bookkeeping and accounting for firms and businesses. From daily books to year-end reporting, we handle number so you focus on growth.",
+        link: "/accounting-bookkeeping",
+        image: { asset: { url: "/7.png" } },
+      },
+      {
+        title: "PAYROLL\nSERVICES",
+        description:
+          "End-to-end payroll management aligned with US federal and state compliance. From processing to filings and year-end reporting, handled seamlessly.",
+        link: "/payroll",
+        image: { asset: { url: "/8.png" } },
+      },
+    ],
+  };
+
+  // Why Us section with fallback
+  const whyUsData = homeData?.whyUsSection || {
+    heading: "Why Us?",
+    features: [
+      {
+        icon: "BookOpen",
+        title: "Specialized Professionals, Seamlessly Integrated",
+        description:
+          "Our team of CPAs, Chartered Accountants and experienced tax and accounting professionals integrate seamlessly into your existing software ecosystem, minimizing onboarding time and ensuring a smooth, efficient transition from day one.",
+      },
+      {
+        icon: "Clock",
+        title: "Turnaround You Can Rely On",
+        description:
+          "Defined timelines, structured workflows, and disciplined execution ensure predictable turnaround on every engagement. Our deadline-driven approach helps firms maintain smooth operations and meet critical filing timelines, especially during peak tax season.",
+      },
+      {
+        icon: "Shield",
+        title: "Data Security & Confidentiality",
+        description:
+          "NDA-backed engagements, secure file transfer protocols, and strict data privacy practices ensures that your data is always protected.",
+      },
+      {
+        icon: "DollarSign",
+        title: "Cost Efficiency",
+        description:
+          "Significant reduction in operational costs compared to in-house staffing without compromising on quality or accuracy.",
+      },
+      {
+        icon: "Handshake",
+        title: "Flexible Engagement Model",
+        description:
+          "We offer flexible engagement structures — project-based, hourly, or dedicated support — allowing firms to scale assistance based on workload, seasonality, and specific engagement needs.",
+      },
+      {
+        icon: "TrendingUp",
+        title: "Quality & Continuous Improvement",
+        description:
+          "Regular internal reviews, quality control checkpoints, and process optimization to ensure excellence in every engagement.",
+      },
+    ],
+  };
 
   useEffect(() => {
     if (!carouselApi) return;
@@ -62,23 +148,25 @@ const Home = () => {
     return () => clearInterval(interval);
   }, [carouselApi]);
 
-  const accordionItems = [
-    {
-      title: "Accuracy",
-      content:
-        "In a compliance-driven and deadline-sensitive environment, precision is non-negotiable. We operate through structured workflows, standardized checklists, and multi-level quality reviews to ensure consistency at every point.",
-    },
-    {
-      title: "Reliability",
-      content:
-        "We understand that your business depends on consistent and dependable service. Our team is committed to delivering reliable results, meeting deadlines, and being there when you need us most. Your success is our priority, and we work tirelessly to ensure you can count on us.",
-    },
-    {
-      title: "Confidentiality",
-      content:
-        "Your financial information is sensitive and deserves the highest level of protection. We maintain strict confidentiality protocols and security measures to safeguard your data. Confidentiality is the foundation of our organization, and we take it seriously.",
-    },
-  ];
+  const accordionItems = philosophyData.values?.map((value) => ({
+    title: value.title,
+    content: value.description,
+  })) || [];
+
+  const getIcon = (iconName) => {
+    const iconMap = {
+      BookOpen,
+      Clock,
+      Shield,
+      CheckCircle,
+      DollarSign,
+      Users,
+      TrendingUp,
+      Handshake,
+      ArrowRight,
+    };
+    return iconMap[iconName] || BookOpen;
+  };
 
   return (
     <div className="page-sections w-full bg-white">
@@ -92,7 +180,7 @@ const Home = () => {
           muted
           playsInline
         >
-          <source src='./bannerr.mp4' type='video/mp4' />
+          <source src={heroData.backgroundVideo} type='video/mp4' />
         </video>
         <div className='absolute inset-0 bg-black/30'></div>
 
@@ -105,7 +193,7 @@ const Home = () => {
               transition={{ duration: 0.8 }}
               className="text-5xl md:text-5xl font-bold text-white mb-2 leading-tight"
             >
-              Your Outsourced Professional Team for
+              {heroData.heading}
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 30 }}
@@ -113,7 +201,7 @@ const Home = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-4xl md:text-4xl font-inter italic text-white mb-6 leading-tight"
             >
-              U.S. Tax & Accounting Support
+              {heroData.subheading}
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -121,10 +209,10 @@ const Home = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
             >
               <Link
-                to="/contact"
+                to={heroData.ctaButtonLink}
                 className="inline-flex items-center bg-white text-black px-4 py-4 rounded-full hover:bg-cyan-50 transition group font-semibold text-lg shadow-lg"
               >
-                Connect with us
+                {heroData.ctaButtonText}
                 <motion.div className="ml-3 w-10 h-10 bg-[#015482] hover:bg-[#17d3cf] rounded-full flex items-center justify-center transition-all ease-in">
                   <ArrowUpRight className="w-5 h-5 text-white" />
                 </motion.div>
@@ -147,19 +235,20 @@ const Home = () => {
                 viewport={{ once: true }}
               >
                 <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                  Our Philosophy -{" "}
-                  <span className="font-inter text-[#039FA5]">ARC</span>
+                  {philosophyData.heading} -{" "}
+                  <span className="font-inter text-[#039FA5]">{philosophyData.acronym}</span>
                 </h2>
                 <p className="text-3xl font-inter italic mb-6 bg-[#015482] bg-clip-text text-transparent">
-                  <span className="text-[#039FA5] text-[2.2rem] font-bold">A</span>ccuracy, <span className="text-[#039FA5] text-[2.2rem] font-bold">R</span>eliability & <span className="text-[#039FA5] text-[2.2rem] font-bold">C</span>onfidentiality
+                  {philosophyData.values?.map((val, i) => (
+                    <span key={i}>
+                      <span className="text-[#039FA5] text-[2.2rem] font-bold">{val.title.charAt(0)}</span>
+                      {val.title.slice(1).toLowerCase()}
+                      {i < philosophyData.values.length - 1 && ", "}
+                    </span>
+                  ))}
                 </p>
                 <p className="text-[1.19rem] text-gray-700 mb-8 leading-relaxed">
-                  At TaxArc Global, our name reflects the philosophy that guides
-                  everything we do - the ARC Framework. This framework defines
-                  how we deliver work, manage risk, and build long-term client
-                  partnerships. It shapes our processes, ensures accountability,
-                  and enables us to deliver the level of reliability and
-                  assurance expected by professionally managed organizations.
+                  {philosophyData.description}
                 </p>
               </motion.div>
 
@@ -210,13 +299,13 @@ const Home = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
               Our{" "}
               <span className="font-inter italic text-[#015482]">
-                Services
+                {servicesSection.heading}
               </span>
             </h2>
           </motion.div>
 
           <div className="grid grid-cols-1 gap-22 md:grid-cols-2 xl:grid-cols-3 xl:gap-14 mt-25">
-            {services.map((service, index) => (
+            {servicesSection.services?.map((service, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
@@ -229,7 +318,7 @@ const Home = () => {
 
                 <div className="absolute left-0.5 top-0 -translate-y-1/2 rounded-full shadow-lg">
                   <img
-                    src={service.img}
+                    src={service.image?.asset?.url || [`/6.png`, `/7.png`, `/8.png`][index]}
                     alt={service.title.replace("\n", " ")}
                     className="h-30 w-30"
                   />
@@ -266,7 +355,7 @@ const Home = () => {
               transition={{ duration: 0.6 }}
               className="text-4xl md:text-5xl font-bold mb-4"
             >
-              Why <span className="font-inter italic text-[#015482]">Us?</span>
+              {whyUsData.heading.split(" ").slice(0, -1).join(" ")} <span className="font-inter italic text-[#015482]">{whyUsData.heading.split(" ").pop()}</span>
             </motion.h2>
 
             {/* <motion.div
@@ -286,152 +375,30 @@ const Home = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {/* Card 1 */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="bg-white p-8 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow"
-            >
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center shrink-0">
-                  <BookOpen className="w-6 h-6 text-[#015482]" />
+            {whyUsData.features?.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-white p-8 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center shrink-0">
+                    {React.createElement(getIcon(feature.icon), {
+                      className: "w-6 h-6 text-[#015482]",
+                    })}
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
+                    <p className="text-gray-600 text-[1.19rem] leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-3">
-                    Specialized Professionals, Seamlessly Integrated
-                  </h3>
-                  <p className="text-gray-600 text-[1.19rem] leading-relaxed">
-                    Our team of CPAs, Chartered Accountants and experienced
-                    tax and accounting professionals integrate seamlessly into
-                    your existing software ecosystem, minimizing onboarding time
-                    and ensuring a smooth, efficient transition from day one.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Card 2 */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="bg-white p-8 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow"
-            >
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center shrink-0">
-                  <Clock className="w-6 h-6 text-[#015482]" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-3">
-                    Turnaround You Can Rely On
-                  </h3>
-                  <p className="text-gray-600 text-[1.19rem] leading-relaxed">
-                    Defined timelines, structured workflows, and disciplined execution ensure predictable turnaround on every engagement. Our deadline-driven approach helps firms maintain smooth operations and meet critical filing timelines, especially during peak tax season.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Card 3 */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-white p-8 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow"
-            >
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center shrink-0">
-                  <Shield className="w-6 h-6 text-[#015482]" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-3">
-                    Data Security & Confidentiality
-                  </h3>
-                  <p className="text-gray-600 text-[1.19rem] leading-relaxed">
-                    NDA-backed engagements, secure file transfer protocols, and
-                    strict data privacy practices ensures that your data is always
-                    protected.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Card 4 */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="bg-white p-8 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow"
-            >
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center shrink-0">
-                  <DollarSign className="w-6 h-6 text-[#015482]" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-3">Cost Efficiency</h3>
-                  <p className="text-gray-600 text-[1.19rem] leading-relaxed">
-                    Significant reduction in operational costs compared to
-                    in-house staffing without compromising on quality or
-                    accuracy.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Card 5 */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="bg-white p-8 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow"
-            >
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center shrink-0">
-                  <Handshake className="w-6 h-6 text-[#015482]" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-3">
-                    Flexible Engagement Model
-                  </h3>
-                  <p className="text-gray-600 text-[1.19rem] leading-relaxed">
-                    We offer flexible engagement structures — project-based, hourly, or dedicated support —
-allowing firms to scale assistance based on workload, seasonality, and specific engagement
-needs.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Card 6 */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              className="bg-white p-8 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow"
-            >
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center shrink-0">
-                  <TrendingUp className="w-6 h-6 text-[#015482]" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-3">
-                    Quality & Continuous Improvement
-                  </h3>
-                  <p className="text-gray-600 text-[1.19rem] leading-relaxed">
-                    Regular internal reviews, quality control checkpoints, and
-                    process optimization to ensure excellence in every
-                    engagement.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
