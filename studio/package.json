@@ -1,0 +1,19 @@
+{
+  "name": "taxarc-studio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "sanity dev",
+    "start": "sanity start",
+    "build": "sanity build"
+  },
+  "dependencies": {
+    "sanity": "^5.22.0",
+    "styled-components": "^6.0.8"
+  },
+  "devDependencies": {
+    "@types/styled-components": "^5.1.26",
+    "typescript": "^5.3.3"
+  }
+}
